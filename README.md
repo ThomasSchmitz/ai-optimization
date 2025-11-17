@@ -1,6 +1,6 @@
 # AI GEO - Generative Engine Optimization
 
-An educational website designed to help marketing professionals optimize their product sales websites, social media presence, and online content for AI visibility in tools like ChatGPT, Gemini, Bard, Copilot, Grok, and AI-powered search overviews.
+An educational website designed to help marketing professionals optimize their product sales websites, social media presence, and online content for AI visibility in tools like ChatGPT, Gemini, Bard, Copilot, Grok, Meta AI, and AI-powered search overviews.
 
 ## About
 
@@ -17,7 +17,7 @@ This website provides comprehensive guides, best practices, and resources for ma
 ## Features
 
 - 📚 Comprehensive guides for website, social media, and content optimization
-- 🤖 Coverage of major AI platforms (ChatGPT, Gemini, Copilot, Grok, Claude, Perplexity)
+- 🤖 Coverage of major AI platforms (ChatGPT, Gemini, Copilot, Grok, Claude, Perplexity, Meta AI)
 - ✅ Best practices for E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)
 - 🛠️ Practical resources and implementation checklists
 - 📊 Metrics and tracking strategies for AI visibility
