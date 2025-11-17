@@ -69,7 +69,22 @@ This directory contains comprehensive planning documentation for transforming th
 
 ---
 
-### 5. [README.md](README.md)
+### 5. [FRESH-IDEAS.md](FRESH-IDEAS.md)
+**Best for:** Innovation, Future Planning, Community Contributions
+
+**Contents:**
+- Copy-and-paste template for submitting new ideas
+- Status tracking for each idea
+- AI agent requirements for managing ideas
+- Current ideas under consideration
+- Archive of implemented/declined ideas
+- Guidelines for contributing ideas
+
+**Length:** ~7KB | **Reading Time:** 5-10 minutes
+
+---
+
+### 6. [README.md](README.md)
 **Best for:** New Visitors, Repository Overview
 
 **Contents:**
@@ -116,7 +131,7 @@ This directory contains comprehensive planning documentation for transforming th
 1. Check [PR-LIST.md](PR-LIST.md) for available work
 2. Read relevant section in [ROADMAP.md](ROADMAP.md)
 3. Review success criteria before starting
-4. Add new ideas to [FRESH-IDEAS.md](FRESH-IDEAS.md)
+4. Submit new ideas via [FRESH-IDEAS.md](FRESH-IDEAS.md)
 
 **Present to stakeholders:**
 1. Start with [EXECUTIVE-SUMMARY.md](EXECUTIVE-SUMMARY.md)
@@ -288,6 +303,17 @@ These planning documents should be:
 - **Revised** based on user feedback and analytics
 - **Expanded** as new opportunities emerge
 
+### AI Requirements
+
+Both [ROADMAP.md](ROADMAP.md) and [FRESH-IDEAS.md](FRESH-IDEAS.md) contain **AI Requirements** sections that provide detailed instructions for AI agents working on this repository. These requirements ensure:
+
+- PR status in ROADMAP.md is kept up-to-date as work progresses
+- New ideas in FRESH-IDEAS.md are regularly reviewed and evaluated
+- Approved ideas are properly incorporated into the roadmap
+- Both documents remain synchronized and accurate
+
+**AI agents should review the AI Requirements sections in both documents before starting any work.**
+
 **Last Updated:** November 2025  
 **Status:** Planning Phase  
 **Next Review:** After Phase 1 completion
@@ -300,6 +326,7 @@ These planning documents should be:
 - [Full Roadmap](ROADMAP.md) - Detailed implementation plan
 - [PR List](PR-LIST.md) - Quick reference table
 - [Visual Structure](STRUCTURE.md) - Diagrams and architecture
+- [Fresh Ideas](FRESH-IDEAS.md) - New ideas and future enhancements
 - [Main README](README.md) - Project overview
 - [Fresh Ideas](FRESH-IDEAS.md) - New ideas and future features
 

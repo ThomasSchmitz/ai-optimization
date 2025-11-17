@@ -27,13 +27,55 @@ Each PR includes a status indicator to track progress:
 
 ---
 
+## AI Requirements for Document Maintenance
+
+**For AI agents working on this repository:**
+
+1. **Update PR Status**: When you complete work on any PR listed in this roadmap, update its status:
+   - 🔵 **Not Started** - No work has begun
+   - 🟡 **In Progress** - Work is currently underway
+   - ✅ **Completed** - PR has been merged and work is done
+   - 🔴 **Blocked** - Work is blocked by dependencies or issues
+   - ⏸️ **Paused** - Work has been temporarily paused
+
+2. **Review Fresh Ideas**: Before starting any new work, check [FRESH-IDEAS.md](FRESH-IDEAS.md) for:
+   - New ideas that should be incorporated into your work
+   - Ideas that align with the current PR you're working on
+   - Ideas that should be promoted to the roadmap
+
+3. **Incorporate Approved Ideas**: When an idea in FRESH-IDEAS.md has status ✅ **Approved**:
+   - Add it to the appropriate phase in this roadmap
+   - Assign it a PR number (following the existing numbering scheme)
+   - Include all relevant details (priority, effort, dependencies, description, files)
+   - Update the idea's status in FRESH-IDEAS.md to 🚀 **Implemented**
+
+4. **Keep Documents Synchronized**:
+   - When you add new PRs to this roadmap, ensure they don't conflict with existing PRs
+   - Update the "Implementation Priority Matrix" if priorities change
+   - Update the "Estimated Timeline" if the scope changes significantly
+   - Cross-reference related PRs in their descriptions
+
+5. **Document Your Work**: When completing a PR:
+   - Update the "Files Modified" or "Files Created" sections to reflect actual changes
+   - Add notes about implementation decisions or deviations from the original plan
+   - Update any affected documentation (README.md, PLANNING-INDEX.md, etc.)
+
+6. **Regular Maintenance**:
+   - Review and update platform-specific PRs as AI platforms evolve
+   - Mark PRs as 🔴 **Blocked** if dependencies aren't met
+   - Archive or consolidate PRs that are no longer relevant
+
+These requirements ensure this roadmap stays accurate, up-to-date, and serves as a reliable source of truth for the project's direction.
+
+---
+
 ## Phase 1: Core Infrastructure & Navigation (PRs 1-3)
 
 ### PR #1: Multi-page Navigation Infrastructure
 **Priority**: High  
 **Estimated Effort**: Medium  
 **Dependencies**: None  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Establish the foundation for multi-page navigation
 
@@ -58,7 +100,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: High  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Create template and infrastructure for individual AI platform pages
 
@@ -81,7 +123,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Add search functionality and global resource pages
 
@@ -147,7 +189,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: High  
 **Estimated Effort**: Large  
 **Dependencies**: PR #2  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Comprehensive guide for optimizing for ChatGPT/OpenAI platforms
 
@@ -170,7 +212,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: High  
 **Estimated Effort**: Large  
 **Dependencies**: PR #2  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Deep dive into Google Gemini and AI Overviews optimization
 
@@ -194,7 +236,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: High  
 **Estimated Effort**: Large  
 **Dependencies**: PR #2  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Comprehensive Copilot optimization for enterprise and consumer markets
 
@@ -216,7 +258,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #2  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Strategies for optimizing for Grok's real-time X/Twitter integration
 
@@ -237,7 +279,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #2  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Optimizing for Claude's professional and research-focused user base
 
@@ -257,7 +299,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Large  
 **Dependencies**: PR #2  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Optimizing for Meta AI across Facebook, Instagram, WhatsApp, and Messenger
 
@@ -280,7 +322,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #2  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Search-focused AI platforms with strong citation requirements
 
@@ -301,7 +343,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Large  
 **Dependencies**: PR #2  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Comprehensive voice search optimization across Alexa, Siri, Google Assistant
 
@@ -325,7 +367,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Low  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #2  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Coverage of emerging and international AI platforms
 
@@ -350,7 +392,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: High  
 **Estimated Effort**: Large  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Comprehensive technical website optimization for AI
 
@@ -377,7 +419,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: High  
 **Estimated Effort**: Large  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Creating and optimizing content for AI discovery
 
@@ -403,7 +445,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: High  
 **Estimated Effort**: Large  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Social media strategies for AI platform visibility
 
@@ -429,7 +471,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: High  
 **Estimated Effort**: Large  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Building Experience, Expertise, Authoritativeness, and Trustworthiness
 
@@ -455,7 +497,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Measuring and monitoring AI visibility
 
@@ -482,7 +524,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Large  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: AI optimization strategies specific to e-commerce
 
@@ -510,7 +552,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Strategies for local businesses and multi-location brands
 
@@ -533,7 +575,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: AI optimization for B2B companies and professional services
 
@@ -560,7 +602,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Optimizing software and technology products for AI
 
@@ -582,7 +624,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Low  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Special considerations for regulated industries
 
@@ -604,7 +646,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Low  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: AI optimization for publishers, bloggers, and content creators
 
@@ -628,7 +670,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Large  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Build interactive tools for AI optimization assessment
 
@@ -651,7 +693,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Downloadable resources and implementation guides
 
@@ -674,7 +716,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Low  
 **Estimated Effort**: Large  
 **Dependencies**: All previous PRs  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Structured learning paths for different user types
 
@@ -699,7 +741,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Large  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Real-world examples and case studies
 
@@ -724,7 +766,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Large  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Regular updates on AI platform changes and optimization strategies
 
@@ -747,7 +789,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Medium  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Comprehensive FAQ and support resources
 
@@ -769,7 +811,7 @@ Each PR includes a status indicator to track progress:
 **Priority**: Low  
 **Estimated Effort**: Medium  
 **Dependencies**: PR #1  
-**Status**: 📋 Planned
+**Status**: 🔵 Not Started
 
 **Description**: Community features and external resources
 
