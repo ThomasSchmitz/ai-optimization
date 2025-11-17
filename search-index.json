@@ -177,6 +177,22 @@
       "content": "Structured data code (typically JSON-LD) added to web pages to help search engines and AI platforms better understand content context, relationships, and meaning. Examples include Product schema, Review schema, and FAQ schema."
     },
     {
+      "title": "Google Gemini Optimization Guide",
+      "url": "/pages/platforms/gemini.html",
+      "category": "platform",
+      "description": "Complete guide to optimizing for Google Gemini and AI Overviews, including multimodal optimization and traditional SEO integration.",
+      "keywords": ["Google Gemini", "Gemini AI", "AI Overviews", "Google Search", "multimodal optimization", "E-E-A-T", "featured snippets", "Knowledge Graph"],
+      "content": "Master optimization for Google Gemini and AI Overviews. Learn how to appear in AI-generated summaries, leverage multimodal capabilities, integrate with traditional Google Search SEO, optimize for E-E-A-T, and track your visibility in AI Overviews. Covers featured snippets, schema markup, and comprehensive content strategies."
+    },
+    {
+      "title": "Google AI Overviews Guide",
+      "url": "/pages/platforms/google-ai-overviews.html",
+      "category": "platform",
+      "description": "Deep dive into Google AI Overviews (SGE) - understanding when they appear, how to get cited, and tracking visibility.",
+      "keywords": ["AI Overviews", "Google SGE", "Search Generative Experience", "citations", "featured snippets", "AI search", "position zero", "SERP"],
+      "content": "Comprehensive guide to appearing in Google AI Overviews. Understand how AI Overviews work, when they appear, citation selection process, integration with traditional SEO, featured snippet optimization, content strategies, tracking methods, and business impact. Learn to maximize visibility in AI-powered search results."
+    },
+    {
       "title": "AI Overviews",
       "url": "/pages/glossary.html#A",
       "category": "glossary",
