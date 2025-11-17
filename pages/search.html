@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search AI GEO for optimization guides, platform information, and resources">
+    <title>Search | AI GEO</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .search-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .search-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .search-container {
+            max-width: 800px;
+            margin: -2rem auto 3rem;
+            position: relative;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 0.5rem;
+            background: white;
+            padding: 0.5rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .search-box input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            border: none;
+            outline: none;
+            border-radius: 50px;
+        }
+        
+        .search-box button {
+            padding: 1rem 2rem;
+            background: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .search-box button:hover {
+            background: #357ABD;
+        }
+        
+        .search-filters {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .filter-button {
+            padding: 0.5rem 1rem;
+            background: #f8f9fa;
+            border: 2px solid #ddd;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-button.active {
+            background: #4A90E2;
+            color: white;
+            border-color: #4A90E2;
+        }
+        
+        .search-results {
+            margin-top: 2rem;
+        }
+        
+        .search-result {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: white;
+            border-left: 4px solid #4A90E2;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .search-result:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .result-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .result-title a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+        
+        .result-title a:hover {
+            text-decoration: underline;
+        }
+        
+        .result-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #e3f2fd;
+            color: #1976D2;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .result-snippet {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .result-url {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        
+        .no-results h3 {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .search-suggestions {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .suggestion-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .suggestion-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .suggestion-list a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+        
+        .suggestion-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .search-stats {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .highlight {
+            background: #fff59d;
+            padding: 0 2px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/index.html">
+                        <h1>AI GEO</h1>
+                        <p class="tagline">Generative Engine Optimization</p>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/index.html#home">Home</a></li>
+                    <li><a href="/index.html#what-is-ai-geo">What is AI GEO?</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">AI Platforms <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/pages/platforms/chatgpt.html">ChatGPT</a></li>
+                            <li><a href="/pages/platforms/gemini.html">Google Gemini</a></li>
+                            <li><a href="/pages/platforms/copilot.html">Microsoft Copilot</a></li>
+                            <li><a href="/pages/platforms/grok.html">Grok (X/Twitter)</a></li>
+                            <li><a href="/pages/platforms/claude.html">Claude</a></li>
+                            <li><a href="/pages/platforms/perplexity.html">Perplexity AI</a></li>
+                            <li><a href="/pages/platforms/meta-ai.html">Meta AI</a></li>
+                            <li><a href="/pages/platforms/you-com.html">You.com</a></li>
+                            <li><a href="/pages/platforms/voice-search.html">Voice Search</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Guides <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/pages/guides/website-optimization.html">Website Optimization</a></li>
+                            <li><a href="/pages/guides/content-strategy.html">Content Strategy</a></li>
+                            <li><a href="/pages/guides/social-media-optimization.html">Social Media</a></li>
+                            <li><a href="/pages/guides/eeat-optimization.html">E-E-A-T & Authority</a></li>
+                            <li><a href="/pages/guides/analytics.html">Analytics & Tracking</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/index.html#best-practices">Best Practices</a></li>
+                    <li><a href="/index.html#resources">Resources</a></li>
+                    <li><a href="/pages/search.html" class="active">Search</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            </div>
+        </nav>
+        <nav class="breadcrumb-container show" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb" id="breadcrumb">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><span>Search</span></li>
+                </ol>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-hero">
+        <div class="container">
+            <h1>Search AI GEO</h1>
+            <p>Find guides, platform information, and optimization resources</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            placeholder="Search for platforms, guides, or topics..."
+                            aria-label="Search input"
+                        >
+                        <button id="search-button" aria-label="Search">Search</button>
+                    </div>
+                </div>
+                
+                <div class="search-filters">
+                    <button class="filter-button active" data-category="all">All</button>
+                    <button class="filter-button" data-category="platform">AI Platforms</button>
+                    <button class="filter-button" data-category="guide">Guides</button>
+                    <button class="filter-button" data-category="glossary">Glossary</button>
+                    <button class="filter-button" data-category="resource">Resources</button>
+                </div>
+                
+                <div id="search-stats" class="search-stats" style="display: none;"></div>
+                
+                <div id="search-results" class="search-results"></div>
+                
+                <div id="no-results" class="no-results" style="display: none;">
+                    <h3>No results found</h3>
+                    <p>Try different keywords or browse our popular topics below.</p>
+                </div>
+                
+                <div class="search-suggestions">
+                    <h3>Popular Topics</h3>
+                    <ul class="suggestion-list">
+                        <li><a href="/index.html#what-is-ai-geo">What is AI GEO?</a></li>
+                        <li><a href="/pages/glossary.html#ChatGPT">ChatGPT Optimization</a></li>
+                        <li><a href="/pages/glossary.html#E-E-A-T">E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)</a></li>
+                        <li><a href="/index.html#ai-tools">Major AI Platforms Overview</a></li>
+                        <li><a href="/index.html#optimization-guides">Optimization Guides</a></li>
+                        <li><a href="/index.html#best-practices">Best Practices for AI Visibility</a></li>
+                        <li><a href="/pages/glossary.html#Schema-Markup">Schema Markup</a></li>
+                        <li><a href="/pages/glossary.html#Voice-Search">Voice Search</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AI GEO</h3>
+                    <p>Empowering marketing professionals to optimize for the AI-powered future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Platforms</h4>
+                    <ul>
+                        <li><a href="/pages/platforms/chatgpt.html">ChatGPT</a></li>
+                        <li><a href="/pages/platforms/gemini.html">Google Gemini</a></li>
+                        <li><a href="/pages/platforms/copilot.html">Microsoft Copilot</a></li>
+                        <li><a href="/pages/platforms/grok.html">Grok</a></li>
+                        <li><a href="/pages/platforms/perplexity.html">Perplexity AI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Optimization Guides</h4>
+                    <ul>
+                        <li><a href="/pages/guides/website-optimization.html">Website Optimization</a></li>
+                        <li><a href="/pages/guides/content-strategy.html">Content Strategy</a></li>
+                        <li><a href="/pages/guides/social-media-optimization.html">Social Media</a></li>
+                        <li><a href="/pages/guides/eeat-optimization.html">E-E-A-T & Authority</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/index.html#what-is-ai-geo">What is AI GEO?</a></li>
+                        <li><a href="/index.html#best-practices">Best Practices</a></li>
+                        <li><a href="/pages/glossary.html">Glossary</a></li>
+                        <li><a href="/pages/search.html">Search</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI GEO. Educational resource for marketing professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="/search.js"></script>
+</body>
+</html>
