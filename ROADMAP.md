@@ -86,6 +86,46 @@ This roadmap outlines the strategic plan to transform the current single-page AI
 
 ---
 
+### PR #3.5: Marketing Funnel Journey Visualization
+**Priority**: Medium  
+**Estimated Effort**: Small  
+**Dependencies**: PR #1
+**Status**: ✅ Completed
+
+**Description**: Add visual marketing funnel section explaining how consumers use AI throughout their purchasing journey
+
+**Changes**:
+- Add marketing funnel section to homepage between hero and "What is AI GEO?"
+- Create four-stage funnel visualization (Awareness → Consideration → Decision → Retention)
+- Include real-world AI query examples for each stage
+- Add optimization strategies for each funnel stage
+- Implement color-coded design with gradient headers (Blue, Purple, Green, Orange)
+- Add hover effects and mobile-responsive styling
+
+**Content Sections**:
+- **Awareness Stage**: Exploratory searches, problem identification, trend discovery, educational queries
+- **Consideration Stage**: Product comparisons, feature research, reviews & ratings, use case validation  
+- **Decision Stage**: Final validation, pricing queries, trust signals, deal finding
+- **Retention Stage**: Support queries, troubleshooting, advanced usage, expansion opportunities
+
+**Files Modified**:
+- `index.html` - Added funnel section with stage cards (+108 lines)
+- `styles.css` - Added funnel styling, gradients, responsive design (+136 lines)
+
+**Educational Value**:
+- Helps marketers understand the full customer journey with AI
+- Provides context for platform-specific and strategy-specific optimization guides
+- Sets foundation for deeper content in subsequent PRs
+- Can be expanded in future PRs with industry-specific funnel variations
+
+**Future Enhancements**:
+- Industry-specific funnel variations (e.g., e-commerce, B2B, local business)
+- Interactive funnel tool with customizable stages
+- Case studies for each funnel stage
+- Downloadable funnel templates
+
+---
+
 ## Phase 2: Major AI Platform Deep-Dive Pages (PRs 4-12)
 
 ### PR #4: ChatGPT Optimization Guide
@@ -424,10 +464,15 @@ This roadmap outlines the strategic plan to transform the current single-page AI
 - Competitor comparisons
 - Visual search optimization
 - Voice commerce preparation
+- E-commerce-specific funnel journey optimization
 
 **Files Created**:
 - `pages/industries/ecommerce.html`
 - `pages/case-studies/ecommerce-success.html`
+
+**Connection to Marketing Funnel**:
+- Expands on the homepage funnel with e-commerce-specific queries and strategies
+- Maps shopping behaviors to funnel stages (discovery → comparison → purchase → loyalty)
 
 ---
 
@@ -467,10 +512,15 @@ This roadmap outlines the strategic plan to transform the current single-page AI
 - Case studies and white papers
 - Industry-specific optimization
 - Long sales cycle considerations
+- B2B funnel mapping (awareness → evaluation → decision → expansion)
 
 **Files Created**:
 - `pages/industries/b2b.html`
 - `pages/industries/professional-services.html`
+
+**Connection to Marketing Funnel**:
+- Adapts homepage funnel stages for complex B2B buying cycles
+- Addresses multiple stakeholders and longer decision timelines
 
 ---
 
