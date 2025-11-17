@@ -34,6 +34,7 @@ We are planning to transform this single-page resource into a comprehensive mult
 - **[ROADMAP.md](ROADMAP.md)** - Complete roadmap with detailed specifications (20-30 min read)
 - **[PR-LIST.md](PR-LIST.md)** - Quick reference list of all 30 planned pull requests (10-15 min read)
 - **[STRUCTURE.md](STRUCTURE.md)** - Visual diagrams and architecture (15-20 min read)
+- **[FRESH-IDEAS.md](FRESH-IDEAS.md)** - New ideas and future enhancements (5-10 min read)
 
 The expansion will include:
 - Dedicated deep-dive pages for each AI platform
