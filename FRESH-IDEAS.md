@@ -44,19 +44,47 @@ Use this template to add new ideas to this document:
 
 ---
 
-## AI Requirements
+## AI Requirements for Document Maintenance
 
 **For AI agents working on this repository:**
 
-1. **Review Fresh Ideas Regularly**: When starting work, review this document for new ideas that should be incorporated
-2. **Update Status**: As you review ideas, update their status accordingly
-3. **Incorporate into Roadmap**: When an idea is approved (✅ Approved):
-   - Add it to the appropriate phase in ROADMAP.md
-   - Assign it a PR number
-   - Include all relevant details (priority, effort, dependencies, description)
-   - Update the idea status to 🚀 Implemented once added to roadmap
-4. **Keep This Document Clean**: Archive or remove implemented ideas after 30 days
-5. **Document Decisions**: If declining an idea, add a brief note explaining why
+1. **Review Fresh Ideas Before Starting Work**: 
+   - Check this document for new ideas (🆕 **New** status) before beginning any task
+   - Look for ideas that align with or enhance the current work you're doing
+   - Consider whether any ideas should be incorporated into ongoing PRs
+
+2. **Evaluate and Update Status**: 
+   - Review new ideas and update their status from 🆕 **New** to 🔄 **Under Review**
+   - Evaluate ideas for feasibility, value, and alignment with roadmap goals
+   - Change status to ✅ **Approved** for ideas that should be implemented
+   - Change status to ❌ **Declined** for ideas that won't be pursued (with explanation)
+   - Use 🔮 **Future** for good ideas that aren't prioritized yet
+
+3. **Incorporate Approved Ideas into Roadmap**: 
+   - When an idea reaches ✅ **Approved** status, add it to [ROADMAP.md](ROADMAP.md)
+   - Assign it to the appropriate phase (1-6)
+   - Give it the next available PR number in that phase
+   - Include all relevant details: priority, effort, dependencies, description, files
+   - Update the idea's status in this document to 🚀 **Implemented**
+   - Add a note with the PR number for reference
+
+4. **Keep This Document Clean and Organized**:
+   - Move ideas with 🚀 **Implemented** status to the Archive section after 30 days
+   - Remove spam or duplicate ideas
+   - Consolidate similar ideas when appropriate
+   - Keep the "Current Ideas" section focused on active/pending ideas
+
+5. **Document Decisions Clearly**: 
+   - If declining an idea (❌ **Declined**), add a brief note explaining the reasoning
+   - If setting an idea to 🔮 **Future**, note why it's not prioritized now
+   - This helps maintain context and prevents re-evaluation of the same ideas
+
+6. **Encourage Continuous Improvement**:
+   - This document is a living resource for innovation
+   - New ideas can come from user feedback, platform changes, or emerging trends
+   - Regularly review ideas marked 🔮 **Future** to see if priorities have shifted
+
+By following these requirements, you ensure fresh ideas are continuously evaluated and the best ones are incorporated into the project roadmap.
 
 ---
 

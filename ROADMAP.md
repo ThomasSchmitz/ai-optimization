@@ -15,6 +15,48 @@ This roadmap outlines the strategic plan to transform the current single-page AI
 
 ---
 
+## AI Requirements for Document Maintenance
+
+**For AI agents working on this repository:**
+
+1. **Update PR Status**: When you complete work on any PR listed in this roadmap, update its status:
+   - 🔵 **Not Started** - No work has begun
+   - 🟡 **In Progress** - Work is currently underway
+   - ✅ **Completed** - PR has been merged and work is done
+   - 🔴 **Blocked** - Work is blocked by dependencies or issues
+   - ⏸️ **Paused** - Work has been temporarily paused
+
+2. **Review Fresh Ideas**: Before starting any new work, check [FRESH-IDEAS.md](FRESH-IDEAS.md) for:
+   - New ideas that should be incorporated into your work
+   - Ideas that align with the current PR you're working on
+   - Ideas that should be promoted to the roadmap
+
+3. **Incorporate Approved Ideas**: When an idea in FRESH-IDEAS.md has status ✅ **Approved**:
+   - Add it to the appropriate phase in this roadmap
+   - Assign it a PR number (following the existing numbering scheme)
+   - Include all relevant details (priority, effort, dependencies, description, files)
+   - Update the idea's status in FRESH-IDEAS.md to 🚀 **Implemented**
+
+4. **Keep Documents Synchronized**:
+   - When you add new PRs to this roadmap, ensure they don't conflict with existing PRs
+   - Update the "Implementation Priority Matrix" if priorities change
+   - Update the "Estimated Timeline" if the scope changes significantly
+   - Cross-reference related PRs in their descriptions
+
+5. **Document Your Work**: When completing a PR:
+   - Update the "Files Modified" or "Files Created" sections to reflect actual changes
+   - Add notes about implementation decisions or deviations from the original plan
+   - Update any affected documentation (README.md, PLANNING-INDEX.md, etc.)
+
+6. **Regular Maintenance**:
+   - Review and update platform-specific PRs as AI platforms evolve
+   - Mark PRs as 🔴 **Blocked** if dependencies aren't met
+   - Archive or consolidate PRs that are no longer relevant
+
+These requirements ensure this roadmap stays accurate, up-to-date, and serves as a reliable source of truth for the project's direction.
+
+---
+
 ## Phase 1: Core Infrastructure & Navigation (PRs 1-3)
 
 ### PR #1: Multi-page Navigation Infrastructure

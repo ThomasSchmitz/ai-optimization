@@ -289,6 +289,17 @@ These planning documents should be:
 - **Revised** based on user feedback and analytics
 - **Expanded** as new opportunities emerge
 
+### AI Requirements
+
+Both [ROADMAP.md](ROADMAP.md) and [FRESH-IDEAS.md](FRESH-IDEAS.md) contain **AI Requirements** sections that provide detailed instructions for AI agents working on this repository. These requirements ensure:
+
+- PR status in ROADMAP.md is kept up-to-date as work progresses
+- New ideas in FRESH-IDEAS.md are regularly reviewed and evaluated
+- Approved ideas are properly incorporated into the roadmap
+- Both documents remain synchronized and accurate
+
+**AI agents should review the AI Requirements sections in both documents before starting any work.**
+
 **Last Updated:** November 2025  
 **Status:** Planning Phase  
 **Next Review:** After Phase 1 completion
