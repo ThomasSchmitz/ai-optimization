@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive glossary of AI optimization and marketing terms - AI GEO">
+    <meta name="keywords" content="AI glossary, GEO terms, AI marketing definitions, SEO terms, generative AI">
+    <title>Glossary - AI & Marketing Terms | AI GEO</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .glossary-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .glossary-search {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .glossary-search input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        
+        .glossary-search input:focus {
+            outline: none;
+            border-color: #4A90E2;
+        }
+        
+        .alphabet-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .alphabet-nav a {
+            padding: 0.5rem 0.75rem;
+            text-decoration: none;
+            color: #4A90E2;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .alphabet-nav a:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .glossary-section {
+            margin-bottom: 3rem;
+        }
+        
+        .glossary-letter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #4A90E2;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #4A90E2;
+        }
+        
+        .glossary-term {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-left: 4px solid #4A90E2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
+        
+        .term-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .term-definition {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        
+        .term-example {
+            font-style: italic;
+            color: #888;
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #ddd;
+        }
+        
+        .term-related {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #4A90E2;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="/index.html">
+                        <h1>AI GEO</h1>
+                        <p class="tagline">Generative Engine Optimization</p>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/index.html#home">Home</a></li>
+                    <li><a href="/index.html#what-is-ai-geo">What is AI GEO?</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">AI Platforms <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/pages/platforms/chatgpt.html">ChatGPT</a></li>
+                            <li><a href="/pages/platforms/gemini.html">Google Gemini</a></li>
+                            <li><a href="/pages/platforms/copilot.html">Microsoft Copilot</a></li>
+                            <li><a href="/pages/platforms/grok.html">Grok (X/Twitter)</a></li>
+                            <li><a href="/pages/platforms/claude.html">Claude</a></li>
+                            <li><a href="/pages/platforms/perplexity.html">Perplexity AI</a></li>
+                            <li><a href="/pages/platforms/meta-ai.html">Meta AI</a></li>
+                            <li><a href="/pages/platforms/you-com.html">You.com</a></li>
+                            <li><a href="/pages/platforms/voice-search.html">Voice Search</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Guides <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/pages/guides/website-optimization.html">Website Optimization</a></li>
+                            <li><a href="/pages/guides/content-strategy.html">Content Strategy</a></li>
+                            <li><a href="/pages/guides/social-media-optimization.html">Social Media</a></li>
+                            <li><a href="/pages/guides/eeat-optimization.html">E-E-A-T & Authority</a></li>
+                            <li><a href="/pages/guides/analytics.html">Analytics & Tracking</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/index.html#best-practices">Best Practices</a></li>
+                    <li><a href="/index.html#resources">Resources</a></li>
+                    <li><a href="/pages/search.html">Search</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            </div>
+        </nav>
+        <nav class="breadcrumb-container show" aria-label="Breadcrumb">
+            <div class="container">
+                <ol class="breadcrumb" id="breadcrumb">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><span>Glossary</span></li>
+                </ol>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="glossary-intro">
+                    <h1>AI & Marketing Glossary</h1>
+                    <p>
+                        A comprehensive reference guide to terms and concepts in AI optimization, 
+                        generative engine optimization, and modern marketing practices.
+                    </p>
+                </div>
+                
+                <div class="glossary-search">
+                    <input type="text" id="glossary-filter" placeholder="Search for a term..." aria-label="Search glossary">
+                </div>
+                
+                <div class="alphabet-nav" role="navigation" aria-label="Jump to letter">
+                    <a href="#A">A</a>
+                    <a href="#B">B</a>
+                    <a href="#C">C</a>
+                    <a href="#D">D</a>
+                    <a href="#E">E</a>
+                    <a href="#F">F</a>
+                    <a href="#G">G</a>
+                    <a href="#I">I</a>
+                    <a href="#L">L</a>
+                    <a href="#M">M</a>
+                    <a href="#N">N</a>
+                    <a href="#O">O</a>
+                    <a href="#P">P</a>
+                    <a href="#R">R</a>
+                    <a href="#S">S</a>
+                    <a href="#T">T</a>
+                    <a href="#V">V</a>
+                    <a href="#W">W</a>
+                </div>
+
+                <div id="glossary-content">
+                    <!-- A Section -->
+                    <div class="glossary-section" id="A">
+                        <h2 class="glossary-letter">A</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">AI GEO (AI Generative Engine Optimization)</h3>
+                            <p class="term-definition">
+                                The practice of optimizing your online presence to be more visible and accurately 
+                                represented in AI-powered tools and search engines. Similar to SEO but focused on 
+                                AI platforms like ChatGPT, Gemini, and Copilot.
+                            </p>
+                            <p class="term-related">Related: GEO, SEO, AI Visibility</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">AI Overviews</h3>
+                            <p class="term-definition">
+                                Google's AI-generated summaries that appear at the top of search results, providing 
+                                direct answers to user queries by synthesizing information from multiple sources.
+                            </p>
+                            <p class="term-example">Example: When searching "best CRM for small business," Google may show an AI Overview comparing several options.</p>
+                            <p class="term-related">Related: Google Gemini, Featured Snippets, SERP</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Alt Text (Alternative Text)</h3>
+                            <p class="term-definition">
+                                Descriptive text added to images that helps search engines and AI tools understand 
+                                image content. Essential for accessibility and AI comprehension.
+                            </p>
+                            <p class="term-related">Related: Accessibility, Image SEO, Schema Markup</p>
+                        </div>
+                    </div>
+
+                    <!-- B Section -->
+                    <div class="glossary-section" id="B">
+                        <h2 class="glossary-letter">B</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Backlinks</h3>
+                            <p class="term-definition">
+                                Links from other websites pointing to your site. Quality backlinks from authoritative 
+                                sources signal credibility to both traditional search engines and AI models.
+                            </p>
+                            <p class="term-related">Related: Link Authority, Domain Authority, E-E-A-T</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Bing Chat</h3>
+                            <p class="term-definition">
+                                Microsoft's AI-powered chat feature integrated into the Bing search engine, now part 
+                                of the broader Copilot ecosystem. Uses GPT-4 technology to provide conversational search results.
+                            </p>
+                            <p class="term-related">Related: Microsoft Copilot, ChatGPT, Conversational Search</p>
+                        </div>
+                    </div>
+
+                    <!-- C Section -->
+                    <div class="glossary-section" id="C">
+                        <h2 class="glossary-letter">C</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">ChatGPT</h3>
+                            <p class="term-definition">
+                                OpenAI's conversational AI assistant that can browse the web, answer questions, 
+                                and provide recommendations. One of the most widely used AI platforms for information discovery.
+                            </p>
+                            <p class="term-related">Related: OpenAI, GPT-4, AI GEO</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Citation</h3>
+                            <p class="term-definition">
+                                When an AI platform references or links to your content as a source for its response. 
+                                Citations are crucial for driving traffic and establishing authority in AI platforms.
+                            </p>
+                            <p class="term-example">Example: ChatGPT citing your blog post when answering a query about your industry.</p>
+                            <p class="term-related">Related: Source Attribution, Link Authority</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Claude</h3>
+                            <p class="term-definition">
+                                Anthropic's AI assistant known for detailed reasoning and long-form content analysis. 
+                                Popular among professionals and researchers for complex tasks.
+                            </p>
+                            <p class="term-related">Related: Anthropic, AI Platforms, Conversational AI</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Conversational Search</h3>
+                            <p class="term-definition">
+                                Search queries phrased as natural language questions or statements, as opposed to 
+                                traditional keyword-based searches. The primary format for AI platform queries.
+                            </p>
+                            <p class="term-example">Example: "What's the best email marketing tool for e-commerce?" vs. "email marketing tool"</p>
+                            <p class="term-related">Related: Natural Language Processing, Voice Search</p>
+                        </div>
+                    </div>
+
+                    <!-- D Section -->
+                    <div class="glossary-section" id="D">
+                        <h2 class="glossary-letter">D</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Domain Authority</h3>
+                            <p class="term-definition">
+                                A measure of a website's credibility and trustworthiness based on factors like 
+                                backlinks, content quality, and age. Higher domain authority improves visibility 
+                                in both traditional search and AI platforms.
+                            </p>
+                            <p class="term-related">Related: Backlinks, E-E-A-T, Trust Signals</p>
+                        </div>
+                    </div>
+
+                    <!-- E Section -->
+                    <div class="glossary-section" id="E">
+                        <h2 class="glossary-letter">E</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">E-E-A-T</h3>
+                            <p class="term-definition">
+                                Experience, Expertise, Authoritativeness, and Trustworthiness. Google's quality 
+                                framework that's also critical for AI platforms when selecting sources to cite.
+                            </p>
+                            <p class="term-related">Related: Domain Authority, Content Quality, Trust Signals</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Embeddings</h3>
+                            <p class="term-definition">
+                                Mathematical representations of text that AI models use to understand meaning and 
+                                context. Properly structured content creates better embeddings for AI comprehension.
+                            </p>
+                            <p class="term-related">Related: Natural Language Processing, Semantic Search</p>
+                        </div>
+                    </div>
+
+                    <!-- F Section -->
+                    <div class="glossary-section" id="F">
+                        <h2 class="glossary-letter">F</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Featured Snippet</h3>
+                            <p class="term-definition">
+                                A highlighted answer box at the top of Google search results. Content optimized 
+                                for featured snippets often appears in AI Overviews and is more likely to be cited 
+                                by AI platforms.
+                            </p>
+                            <p class="term-related">Related: AI Overviews, SERP, Position Zero</p>
+                        </div>
+                    </div>
+
+                    <!-- G Section -->
+                    <div class="glossary-section" id="G">
+                        <h2 class="glossary-letter">G</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Gemini</h3>
+                            <p class="term-definition">
+                                Google's multimodal AI platform that integrates with Google Search, Workspace, 
+                                and other services. Powers AI Overviews in search results.
+                            </p>
+                            <p class="term-related">Related: Google, AI Overviews, Multimodal AI</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">GEO (Generative Engine Optimization)</h3>
+                            <p class="term-definition">
+                                Short for AI Generative Engine Optimization. The practice of optimizing for 
+                                AI-powered search and discovery platforms.
+                            </p>
+                            <p class="term-related">Related: AI GEO, SEO, AI Visibility</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Grok</h3>
+                            <p class="term-definition">
+                                X (Twitter)'s AI assistant with real-time access to platform data. Particularly 
+                                valuable for brands with strong social media presence.
+                            </p>
+                            <p class="term-related">Related: X, Twitter, Social Media AI</p>
+                        </div>
+                    </div>
+
+                    <!-- I Section -->
+                    <div class="glossary-section" id="I">
+                        <h2 class="glossary-letter">I</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Indexing</h3>
+                            <p class="term-definition">
+                                The process by which search engines and AI platforms discover, crawl, and store 
+                                your web content for retrieval in responses and search results.
+                            </p>
+                            <p class="term-related">Related: Crawling, Sitemap, Robots.txt</p>
+                        </div>
+                    </div>
+
+                    <!-- L Section -->
+                    <div class="glossary-section" id="L">
+                        <h2 class="glossary-letter">L</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">LLM (Large Language Model)</h3>
+                            <p class="term-definition">
+                                AI models trained on vast amounts of text data to understand and generate human-like 
+                                text. Examples include GPT-4, Claude, and Gemini. These models power most AI platforms.
+                            </p>
+                            <p class="term-related">Related: ChatGPT, Claude, Gemini, AI Platforms</p>
+                        </div>
+                    </div>
+
+                    <!-- M Section -->
+                    <div class="glossary-section" id="M">
+                        <h2 class="glossary-letter">M</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Meta AI</h3>
+                            <p class="term-definition">
+                                Meta's AI assistant integrated across Facebook, Instagram, WhatsApp, and Messenger. 
+                                Reaches billions of users in social contexts where product discovery happens.
+                            </p>
+                            <p class="term-related">Related: Facebook, Instagram, Social Media AI</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Meta Description</h3>
+                            <p class="term-definition">
+                                A brief summary of a webpage's content that appears in search results. While not 
+                                directly used for ranking, it helps AI understand page content and can influence 
+                                click-through rates.
+                            </p>
+                            <p class="term-related">Related: SEO, Meta Tags, SERP</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Microsoft Copilot</h3>
+                            <p class="term-definition">
+                                Microsoft's AI assistant integrated across Bing, Windows, and Office products. 
+                                Particularly important for enterprise and professional contexts.
+                            </p>
+                            <p class="term-related">Related: Bing Chat, Microsoft 365, Enterprise AI</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Multimodal AI</h3>
+                            <p class="term-definition">
+                                AI systems that can understand and generate multiple types of content (text, images, 
+                                video, audio). Important for comprehensive content optimization.
+                            </p>
+                            <p class="term-related">Related: Gemini, GPT-4, Content Optimization</p>
+                        </div>
+                    </div>
+
+                    <!-- N Section -->
+                    <div class="glossary-section" id="N">
+                        <h2 class="glossary-letter">N</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Natural Language Processing (NLP)</h3>
+                            <p class="term-definition">
+                                The technology that enables AI to understand, interpret, and generate human language. 
+                                The foundation of all conversational AI platforms.
+                            </p>
+                            <p class="term-related">Related: LLM, AI Platforms, Conversational Search</p>
+                        </div>
+                    </div>
+
+                    <!-- O Section -->
+                    <div class="glossary-section" id="O">
+                        <h2 class="glossary-letter">O</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">OpenAI</h3>
+                            <p class="term-definition">
+                                The company behind ChatGPT and GPT models. A leading AI research organization whose 
+                                technology powers many AI platforms.
+                            </p>
+                            <p class="term-related">Related: ChatGPT, GPT-4, LLM</p>
+                        </div>
+                    </div>
+
+                    <!-- P Section -->
+                    <div class="glossary-section" id="P">
+                        <h2 class="glossary-letter">P</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Perplexity AI</h3>
+                            <p class="term-definition">
+                                A search-focused AI platform that provides sourced answers with clear citations. 
+                                Particularly valuable for establishing thought leadership and authority.
+                            </p>
+                            <p class="term-related">Related: AI Search, Citations, Search Engines</p>
+                        </div>
+                    </div>
+
+                    <!-- R Section -->
+                    <div class="glossary-section" id="R">
+                        <h2 class="glossary-letter">R</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">RAG (Retrieval-Augmented Generation)</h3>
+                            <p class="term-definition">
+                                A technique where AI models retrieve relevant information from external sources 
+                                before generating responses. This is how most AI platforms access current web content.
+                            </p>
+                            <p class="term-related">Related: Web Browsing, Citations, AI Platforms</p>
+                        </div>
+                    </div>
+
+                    <!-- S Section -->
+                    <div class="glossary-section" id="S">
+                        <h2 class="glossary-letter">S</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Schema Markup</h3>
+                            <p class="term-definition">
+                                Structured data code (typically JSON-LD) added to web pages to help search engines 
+                                and AI platforms better understand content context, relationships, and meaning.
+                            </p>
+                            <p class="term-example">Example: Product schema, Review schema, FAQ schema</p>
+                            <p class="term-related">Related: Structured Data, SEO, AI Comprehension</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Semantic Search</h3>
+                            <p class="term-definition">
+                                Search technology that understands the intent and contextual meaning of queries 
+                                rather than just matching keywords. The foundation of AI-powered search.
+                            </p>
+                            <p class="term-related">Related: NLP, AI Search, Intent Matching</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">SEO (Search Engine Optimization)</h3>
+                            <p class="term-definition">
+                                The traditional practice of optimizing websites to rank higher in search engine 
+                                results. AI GEO builds upon SEO principles for AI platforms.
+                            </p>
+                            <p class="term-related">Related: AI GEO, GEO, Search Rankings</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">SERP (Search Engine Results Page)</h3>
+                            <p class="term-definition">
+                                The page displayed by a search engine in response to a query. Now often includes 
+                                AI Overviews and featured snippets alongside traditional results.
+                            </p>
+                            <p class="term-related">Related: AI Overviews, Featured Snippets, Google</p>
+                        </div>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Sitemap</h3>
+                            <p class="term-definition">
+                                An XML file that lists all important pages on your website, helping search engines 
+                                and AI platforms discover and index your content efficiently.
+                            </p>
+                            <p class="term-related">Related: Indexing, Crawling, SEO</p>
+                        </div>
+                    </div>
+
+                    <!-- T Section -->
+                    <div class="glossary-section" id="T">
+                        <h2 class="glossary-letter">T</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Trust Signals</h3>
+                            <p class="term-definition">
+                                Elements that indicate website credibility and reliability, such as SSL certificates, 
+                                contact information, privacy policies, customer reviews, and professional design. 
+                                Critical for both SEO and AI trust assessment.
+                            </p>
+                            <p class="term-related">Related: E-E-A-T, Domain Authority, Credibility</p>
+                        </div>
+                    </div>
+
+                    <!-- V Section -->
+                    <div class="glossary-section" id="V">
+                        <h2 class="glossary-letter">V</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Voice Search</h3>
+                            <p class="term-definition">
+                                Search queries performed via voice assistants like Siri, Alexa, or Google Assistant. 
+                                Typically more conversational and question-based than typed searches.
+                            </p>
+                            <p class="term-related">Related: Conversational Search, Alexa, Siri, Google Assistant</p>
+                        </div>
+                    </div>
+
+                    <!-- W Section -->
+                    <div class="glossary-section" id="W">
+                        <h2 class="glossary-letter">W</h2>
+                        
+                        <div class="glossary-term">
+                            <h3 class="term-title">Web Crawling</h3>
+                            <p class="term-definition">
+                                The process by which search engines and AI platforms systematically browse the web 
+                                to discover and index content. Also called "spidering."
+                            </p>
+                            <p class="term-related">Related: Indexing, Robots.txt, Sitemap</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="no-results" class="no-results" style="display: none;">
+                    <p>No terms found matching your search. Try a different keyword or <a href="#A">browse the glossary</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AI GEO</h3>
+                    <p>Empowering marketing professionals to optimize for the AI-powered future.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Platforms</h4>
+                    <ul>
+                        <li><a href="/pages/platforms/chatgpt.html">ChatGPT</a></li>
+                        <li><a href="/pages/platforms/gemini.html">Google Gemini</a></li>
+                        <li><a href="/pages/platforms/copilot.html">Microsoft Copilot</a></li>
+                        <li><a href="/pages/platforms/grok.html">Grok</a></li>
+                        <li><a href="/pages/platforms/perplexity.html">Perplexity AI</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Optimization Guides</h4>
+                    <ul>
+                        <li><a href="/pages/guides/website-optimization.html">Website Optimization</a></li>
+                        <li><a href="/pages/guides/content-strategy.html">Content Strategy</a></li>
+                        <li><a href="/pages/guides/social-media-optimization.html">Social Media</a></li>
+                        <li><a href="/pages/guides/eeat-optimization.html">E-E-A-T & Authority</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/index.html#what-is-ai-geo">What is AI GEO?</a></li>
+                        <li><a href="/index.html#best-practices">Best Practices</a></li>
+                        <li><a href="/pages/glossary.html">Glossary</a></li>
+                        <li><a href="/pages/search.html">Search</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI GEO. Educational resource for marketing professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script>
+        // Glossary search functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterInput = document.getElementById('glossary-filter');
+            const glossaryTerms = document.querySelectorAll('.glossary-term');
+            const glossarySections = document.querySelectorAll('.glossary-section');
+            const noResults = document.getElementById('no-results');
+            
+            filterInput.addEventListener('input', function() {
+                const filterValue = this.value.toLowerCase();
+                let visibleCount = 0;
+                
+                glossarySections.forEach(section => {
+                    let sectionHasVisible = false;
+                    const terms = section.querySelectorAll('.glossary-term');
+                    
+                    terms.forEach(term => {
+                        const title = term.querySelector('.term-title').textContent.toLowerCase();
+                        const definition = term.querySelector('.term-definition').textContent.toLowerCase();
+                        
+                        if (title.includes(filterValue) || definition.includes(filterValue)) {
+                            term.style.display = 'block';
+                            sectionHasVisible = true;
+                            visibleCount++;
+                        } else {
+                            term.style.display = 'none';
+                        }
+                    });
+                    
+                    // Show/hide section letter based on whether it has visible terms
+                    if (sectionHasVisible) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+                
+                // Show no results message if nothing matches
+                if (visibleCount === 0 && filterValue !== '') {
+                    noResults.style.display = 'block';
+                    document.getElementById('glossary-content').style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    document.getElementById('glossary-content').style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

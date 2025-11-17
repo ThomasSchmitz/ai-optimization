@@ -1,0 +1,228 @@
+{
+  "pages": [
+    {
+      "title": "AI GEO - Homepage",
+      "url": "/index.html",
+      "category": "resource",
+      "description": "Learn how to optimize your product sales websites and online presence for AI visibility in ChatGPT, Gemini, Copilot, and other AI platforms.",
+      "keywords": ["AI GEO", "generative engine optimization", "AI visibility", "AI optimization", "homepage"],
+      "content": "AI Generative Engine Optimization (AI GEO) is the practice of optimizing your online presence to be more visible and accurately represented in AI-powered tools and search engines. Master optimization for ChatGPT, Google Gemini, Microsoft Copilot, Grok, Claude, Perplexity, Meta AI, You.com, and Voice Search."
+    },
+    {
+      "title": "What is AI GEO?",
+      "url": "/index.html#what-is-ai-geo",
+      "category": "resource",
+      "description": "Introduction to AI Generative Engine Optimization and its importance for modern marketing.",
+      "keywords": ["AI GEO", "definition", "what is", "introduction", "visibility", "AI responses"],
+      "content": "AI GEO ensures your brand appears in AI-generated answers and recommendations, controls how AI tools describe your products, provides competitive advantage, and future-proofs your marketing strategy for AI-mediated information discovery."
+    },
+    {
+      "title": "AI Marketing Funnel",
+      "url": "/index.html#ai-marketing-funnel",
+      "category": "guide",
+      "description": "How consumers use AI throughout their purchasing journey from awareness to retention.",
+      "keywords": ["marketing funnel", "customer journey", "awareness", "consideration", "decision", "retention", "AI usage"],
+      "content": "Modern consumers rely on AI at every stage: Awareness (exploratory searches, problem identification), Consideration (comparisons, feature research), Decision (pricing, trust signals), and Retention (support, troubleshooting). Optimize your content for each funnel stage."
+    },
+    {
+      "title": "Key AI Tools to Optimize For",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "Overview of major AI platforms including ChatGPT, Gemini, Copilot, Grok, Claude, Perplexity, Meta AI, You.com, and Voice Search.",
+      "keywords": ["AI platforms", "ChatGPT", "Gemini", "Copilot", "Grok", "Claude", "Perplexity", "Meta AI", "You.com", "voice search", "AI tools"],
+      "content": "Understand and optimize for ChatGPT (OpenAI), Google Gemini, Microsoft Copilot, Grok (X/Twitter), Claude (Anthropic), Perplexity AI, Meta AI (Facebook, Instagram, WhatsApp), You.com, and Voice Search platforms like Alexa and Siri."
+    },
+    {
+      "title": "ChatGPT",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "The most widely used conversational AI with web browsing capabilities and real-time information access.",
+      "keywords": ["ChatGPT", "OpenAI", "GPT-4", "web browsing", "citations", "conversational AI"],
+      "content": "ChatGPT helps users find information, make decisions, and discover products. Features web browsing capabilities, real-time information access, and citation of sources."
+    },
+    {
+      "title": "Google Gemini",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "Google's multimodal AI integrating with search and powering AI Overviews.",
+      "keywords": ["Gemini", "Google", "AI Overviews", "multimodal", "search integration"],
+      "content": "Google's multimodal AI integrates deeply with Google Search and powers AI Overviews in search results. Critical for visibility in the Google ecosystem."
+    },
+    {
+      "title": "Microsoft Copilot",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "Microsoft's AI assistant integrated across Bing, Windows, and Office products.",
+      "keywords": ["Copilot", "Microsoft", "Bing", "Office", "enterprise AI"],
+      "content": "Integrated across Microsoft products and Bing, Copilot reaches enterprise users and consumers making purchase decisions. Important for B2B and professional contexts."
+    },
+    {
+      "title": "Grok (X/Twitter)",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "X's AI assistant with real-time access to platform conversations.",
+      "keywords": ["Grok", "X", "Twitter", "social media AI", "real-time"],
+      "content": "X's AI assistant with real-time access to platform conversations, ideal for brands with strong social media presence. Analyzes trending topics and social conversations."
+    },
+    {
+      "title": "Claude (Anthropic)",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "AI known for nuanced understanding and detailed responses.",
+      "keywords": ["Claude", "Anthropic", "detailed reasoning", "professional AI"],
+      "content": "Known for nuanced understanding and detailed responses, Claude is popular among professionals and researchers for long-form content analysis."
+    },
+    {
+      "title": "Perplexity AI",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "Search-focused AI that provides sourced answers with citations.",
+      "keywords": ["Perplexity", "AI search", "citations", "sources"],
+      "content": "A search-focused AI that provides sourced answers, making citation and authority crucial for visibility. Emphasizes real-time information with clear source attribution."
+    },
+    {
+      "title": "Meta AI",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "Meta's AI assistant integrated across Facebook, Instagram, WhatsApp, and Messenger.",
+      "keywords": ["Meta AI", "Facebook", "Instagram", "WhatsApp", "Messenger", "social AI"],
+      "content": "Meta's AI assistant reaches billions of users across Facebook, Instagram, WhatsApp, and Messenger in social contexts where product discovery happens."
+    },
+    {
+      "title": "You.com",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "AI-powered search engine with comprehensive answers and clear citations.",
+      "keywords": ["You.com", "AI search", "privacy", "citations", "search engine"],
+      "content": "AI-powered search engine providing comprehensive answers with clear source citations. Privacy-focused approach ideal for thought leadership content."
+    },
+    {
+      "title": "Voice Search (Alexa, Siri)",
+      "url": "/index.html#ai-tools",
+      "category": "platform",
+      "description": "Voice assistants from Amazon, Apple, and Google.",
+      "keywords": ["voice search", "Alexa", "Siri", "Google Assistant", "voice optimization", "local search"],
+      "content": "Voice assistants answer millions of queries daily, particularly for local businesses, product recommendations, and quick factual answers. Requires voice-optimized content and featured snippet optimization."
+    },
+    {
+      "title": "Website Optimization Guide",
+      "url": "/index.html#optimization-guides",
+      "category": "guide",
+      "description": "Comprehensive strategies for optimizing websites for AI visibility.",
+      "keywords": ["website optimization", "structured content", "schema markup", "technical SEO", "meta descriptions"],
+      "content": "Use semantic HTML with proper heading hierarchy, implement schema markup (JSON-LD) for products, reviews, and FAQs, create clear meta descriptions, optimize alt text, ensure fast page load speeds, implement HTTPS, create XML sitemaps, and use clean URL structures."
+    },
+    {
+      "title": "Social Media Optimization",
+      "url": "/index.html#optimization-guides",
+      "category": "guide",
+      "description": "Best practices for optimizing social media presence for AI platforms.",
+      "keywords": ["social media", "X", "Twitter", "Facebook", "Instagram", "hashtags", "engagement"],
+      "content": "Maintain consistent branding, complete profile information, use keywords in bios, post valuable content regularly, use relevant hashtags, engage authentically, share testimonials, and optimize for platform-specific AI like Grok."
+    },
+    {
+      "title": "Content Creation for AI",
+      "url": "/index.html#optimization-guides",
+      "category": "guide",
+      "description": "Writing and creating content that AI platforms can effectively cite and understand.",
+      "keywords": ["content creation", "writing", "authority building", "multimedia", "natural language"],
+      "content": "Use natural language, answer questions directly, include key information early, use bullet points, define technical terms, cite credible sources, include expert insights, share original data, create video with transcripts, and optimize multimedia content."
+    },
+    {
+      "title": "Reviews & Reputation Management",
+      "url": "/index.html#optimization-guides",
+      "category": "guide",
+      "description": "Managing reviews and building online reputation for AI visibility.",
+      "keywords": ["reviews", "reputation", "testimonials", "brand mentions", "user-generated content"],
+      "content": "Encourage customer reviews, respond professionally, display reviews prominently, use schema markup for review snippets, monitor brand mentions, engage positively, and build relationships with influencers."
+    },
+    {
+      "title": "Best Practices for AI Visibility",
+      "url": "/index.html#best-practices",
+      "category": "resource",
+      "description": "Essential practices for improving visibility in AI-powered search and tools.",
+      "keywords": ["best practices", "E-E-A-T", "structured data", "accuracy", "link authority", "monitoring"],
+      "content": "Focus on E-E-A-T, create comprehensive content, use structured data, maintain accuracy, build link authority, optimize for questions, monitor AI citations, and diversify content formats. Avoid keyword stuffing, duplicate content, thin content, misleading information, and hidden text."
+    },
+    {
+      "title": "Resources & Tools",
+      "url": "/index.html#resources",
+      "category": "resource",
+      "description": "Testing tools, learning resources, and implementation checklists.",
+      "keywords": ["resources", "tools", "testing", "checklist", "metrics", "tracking"],
+      "content": "Use AI search testing, Google Search Console, Bing Webmaster Tools, schema markup validators. Track citation frequency, positioning, accuracy, sentiment, traffic from AI, and conversion rates. Implement schema markup, create FAQs, optimize meta descriptions, and monitor brand mentions."
+    },
+    {
+      "title": "Glossary - AI & Marketing Terms",
+      "url": "/pages/glossary.html",
+      "category": "glossary",
+      "description": "Comprehensive glossary of AI optimization and marketing terminology.",
+      "keywords": ["glossary", "definitions", "terms", "AI terminology", "marketing terms", "dictionary"],
+      "content": "Complete reference guide including AI GEO, AI Overviews, Alt Text, Backlinks, Citations, Claude, ChatGPT, Conversational Search, E-E-A-T, Embeddings, Featured Snippets, Gemini, GEO, Grok, LLM, Meta AI, Multimodal AI, NLP, Perplexity AI, RAG, Schema Markup, Semantic Search, SEO, SERP, Sitemap, Trust Signals, Voice Search, and more."
+    },
+    {
+      "title": "E-E-A-T",
+      "url": "/pages/glossary.html#E",
+      "category": "glossary",
+      "description": "Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
+      "keywords": ["E-E-A-T", "experience", "expertise", "authoritativeness", "trustworthiness", "quality"],
+      "content": "Google's quality framework for Experience, Expertise, Authoritativeness, and Trustworthiness. Critical for both traditional SEO and AI platform source selection."
+    },
+    {
+      "title": "Schema Markup",
+      "url": "/pages/glossary.html#S",
+      "category": "glossary",
+      "description": "Structured data code that helps AI understand content context and meaning.",
+      "keywords": ["schema", "structured data", "JSON-LD", "markup", "microdata"],
+      "content": "Structured data code (typically JSON-LD) added to web pages to help search engines and AI platforms better understand content context, relationships, and meaning. Examples include Product schema, Review schema, and FAQ schema."
+    },
+    {
+      "title": "AI Overviews",
+      "url": "/pages/glossary.html#A",
+      "category": "glossary",
+      "description": "Google's AI-generated summaries in search results.",
+      "keywords": ["AI Overviews", "Google", "summaries", "search results", "SERP"],
+      "content": "Google's AI-generated summaries that appear at the top of search results, providing direct answers to user queries by synthesizing information from multiple sources."
+    },
+    {
+      "title": "Citations",
+      "url": "/pages/glossary.html#C",
+      "category": "glossary",
+      "description": "When AI platforms reference your content as a source.",
+      "keywords": ["citations", "sources", "references", "attribution", "links"],
+      "content": "When an AI platform references or links to your content as a source for its response. Citations are crucial for driving traffic and establishing authority in AI platforms."
+    },
+    {
+      "title": "LLM (Large Language Model)",
+      "url": "/pages/glossary.html#L",
+      "category": "glossary",
+      "description": "AI models trained on vast amounts of text data.",
+      "keywords": ["LLM", "language model", "GPT", "AI model", "neural network"],
+      "content": "AI models trained on vast amounts of text data to understand and generate human-like text. Examples include GPT-4, Claude, and Gemini. These models power most AI platforms."
+    },
+    {
+      "title": "RAG (Retrieval-Augmented Generation)",
+      "url": "/pages/glossary.html#R",
+      "category": "glossary",
+      "description": "Technique where AI retrieves information before generating responses.",
+      "keywords": ["RAG", "retrieval", "web browsing", "real-time data"],
+      "content": "A technique where AI models retrieve relevant information from external sources before generating responses. This is how most AI platforms access current web content and provide up-to-date information."
+    },
+    {
+      "title": "Semantic Search",
+      "url": "/pages/glossary.html#S",
+      "category": "glossary",
+      "description": "Search that understands intent and contextual meaning.",
+      "keywords": ["semantic search", "intent", "context", "meaning", "NLP"],
+      "content": "Search technology that understands the intent and contextual meaning of queries rather than just matching keywords. The foundation of AI-powered search and conversational interfaces."
+    },
+    {
+      "title": "Search",
+      "url": "/pages/search.html",
+      "category": "resource",
+      "description": "Search the AI GEO website for guides, platforms, and resources.",
+      "keywords": ["search", "find", "lookup", "query"],
+      "content": "Search AI GEO for information about AI platforms, optimization guides, glossary terms, and resources. Find what you need quickly with our client-side search functionality."
+    }
+  ]
+}
