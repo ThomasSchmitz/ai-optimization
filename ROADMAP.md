@@ -8,9 +8,10 @@ This roadmap outlines the strategic plan to transform the current single-page AI
 
 1. **Depth**: Provide comprehensive, detailed content for each AI platform and optimization strategy
 2. **Discoverability**: Improve navigation and content organization for better user experience
-3. **SEO**: Each dedicated page can rank for specific keywords and topics
-4. **Scalability**: Modular structure allows easy addition of new AI platforms and topics
-5. **Learning Paths**: Create guided learning experiences for different user needs
+3. **Credibility**: Cite and link to original sources
+4. **SEO**: Each dedicated page can rank for specific keywords and topics
+5. **Scalability**: Modular structure allows easy addition of new AI platforms and topics
+6. **Learning Paths**: Create guided learning experiences for different user needs
 
 ---
 
