@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Close mobile menu when clicking a link
-    const navLinkItems = document.querySelectorAll('.nav-links a');
+    // Close mobile menu when clicking a link (non-dropdown)
+    const navLinkItems = document.querySelectorAll('.nav-links a:not(.dropdown-toggle)');
     navLinkItems.forEach(link => {
         link.addEventListener('click', function() {
             navLinks.classList.remove('active');
@@ -24,13 +24,146 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.remove('active');
         }
     });
+    
+    // Initialize dropdowns
+    initializeDropdowns();
+    
+    // Initialize breadcrumbs
+    generateBreadcrumbs();
+    
+    // Set active navigation state
+    setActiveNavigation();
 });
+
+// Dropdown menu functionality
+function initializeDropdowns() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        
+        if (toggle) {
+            // Desktop: hover behavior
+            if (window.innerWidth > 768) {
+                dropdown.addEventListener('mouseenter', function() {
+                    this.classList.add('active');
+                });
+                
+                dropdown.addEventListener('mouseleave', function() {
+                    this.classList.remove('active');
+                });
+            }
+            
+            // Mobile and click behavior
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Close other dropdowns
+                dropdowns.forEach(other => {
+                    if (other !== dropdown) {
+                        other.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+            });
+        }
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+}
+
+// Generate breadcrumb navigation based on current page
+function generateBreadcrumbs() {
+    const breadcrumbContainer = document.querySelector('.breadcrumb-container');
+    const breadcrumb = document.getElementById('breadcrumb');
+    
+    if (!breadcrumb) return;
+    
+    const path = window.location.pathname;
+    const pathParts = path.split('/').filter(part => part && part !== 'index.html');
+    
+    // Only show breadcrumbs if not on home page
+    if (pathParts.length === 0) {
+        breadcrumbContainer.classList.remove('show');
+        return;
+    }
+    
+    breadcrumbContainer.classList.add('show');
+    
+    // Build breadcrumb items
+    let breadcrumbHTML = '<li><a href="/index.html">Home</a></li>';
+    let currentPath = '';
+    
+    pathParts.forEach((part, index) => {
+        currentPath += '/' + part;
+        
+        // Clean up the part name for display
+        let displayName = part.replace('.html', '').replace(/-/g, ' ');
+        displayName = displayName.charAt(0).toUpperCase() + displayName.slice(1);
+        
+        if (index === pathParts.length - 1) {
+            // Last item (current page)
+            breadcrumbHTML += `<li><span>${displayName}</span></li>`;
+        } else {
+            // Parent directories
+            breadcrumbHTML += `<li><a href="${currentPath}">${displayName}</a></li>`;
+        }
+    });
+    
+    breadcrumb.innerHTML = breadcrumbHTML;
+}
+
+// Set active navigation state based on current page
+function setActiveNavigation() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a, .dropdown-menu a');
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        
+        // Remove active class from all links
+        link.classList.remove('active');
+        
+        // Check if link matches current page
+        if (linkPath && linkPath !== '#') {
+            // Handle absolute paths and hash links
+            if (linkPath.startsWith('/') && currentPath === linkPath) {
+                link.classList.add('active');
+            } else if (linkPath.includes('#') && currentPath === '/index.html') {
+                // For hash links on index page
+                const hash = window.location.hash;
+                if (hash && linkPath.includes(hash)) {
+                    link.classList.add('active');
+                }
+            }
+        }
+    });
+}
+
+// Update active navigation on hash change (for single-page navigation)
+window.addEventListener('hashchange', setActiveNavigation);
 
 // Smooth scrolling for anchor links (additional support for older browsers)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Skip empty hash or just '#'
+        if (!href || href === '#') {
+            return;
+        }
+        
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
