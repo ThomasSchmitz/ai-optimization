@@ -84,6 +84,20 @@ This directory contains comprehensive planning documentation for transforming th
 
 ---
 
+### 6. [FRESH-IDEAS.md](FRESH-IDEAS.md)
+**Best for:** Brainstorming, Future Features, Community Contributions
+
+**Contents:**
+- Copy-and-paste template for adding new ideas
+- Status tracking for ideas (New → Review → Approved → Added to Roadmap)
+- Current ideas under consideration
+- Instructions for AI to incorporate ideas into roadmap
+- Archive of implemented ideas
+
+**Length:** ~6KB | **Reading Time:** 5 minutes
+
+---
+
 ## 🎯 Quick Start Guide
 
 ### If you want to...
@@ -102,6 +116,7 @@ This directory contains comprehensive planning documentation for transforming th
 1. Check [PR-LIST.md](PR-LIST.md) for available work
 2. Read relevant section in [ROADMAP.md](ROADMAP.md)
 3. Review success criteria before starting
+4. Add new ideas to [FRESH-IDEAS.md](FRESH-IDEAS.md)
 
 **Present to stakeholders:**
 1. Start with [EXECUTIVE-SUMMARY.md](EXECUTIVE-SUMMARY.md)
@@ -286,7 +301,8 @@ These planning documents should be:
 - [PR List](PR-LIST.md) - Quick reference table
 - [Visual Structure](STRUCTURE.md) - Diagrams and architecture
 - [Main README](README.md) - Project overview
+- [Fresh Ideas](FRESH-IDEAS.md) - New ideas and future features
 
 ---
 
-**Total Documentation:** ~73KB across 5 comprehensive documents
+**Total Documentation:** ~79KB across 6 comprehensive documents
