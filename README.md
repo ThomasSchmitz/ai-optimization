@@ -34,6 +34,7 @@ We are planning to transform this single-page resource into a comprehensive mult
 - **[ROADMAP.md](ROADMAP.md)** - Complete roadmap with detailed specifications (20-30 min read)
 - **[PR-LIST.md](PR-LIST.md)** - Quick reference list of all 30 planned pull requests (10-15 min read)
 - **[STRUCTURE.md](STRUCTURE.md)** - Visual diagrams and architecture (15-20 min read)
+- **[FRESH-IDEAS.md](FRESH-IDEAS.md)** - New ideas and future feature proposals (5 min read)
 
 The expansion will include:
 - Dedicated deep-dive pages for each AI platform
@@ -127,6 +128,38 @@ Built with:
 ## Contributing
 
 This is an educational resource. Contributions, suggestions, and improvements are welcome!
+
+## AI Requirements & Documentation Maintenance
+
+When working on this project, AI assistants should maintain the following documentation:
+
+### Required Documentation Updates
+
+1. **ROADMAP.md Status Tracking**:
+   - Update PR statuses as work progresses (📋 Planned → 🚧 In Progress → ✅ Completed)
+   - Keep the status current to reflect actual project state
+   - Add new PRs as needed with appropriate status indicators
+
+2. **FRESH-IDEAS.md Management**:
+   - Review fresh ideas regularly for potential inclusion in roadmap
+   - Update idea statuses as they are evaluated (💡 New Idea → 🔍 Under Review → ✅ Approved → 📋 Added to Roadmap)
+   - Incorporate approved ideas into ROADMAP.md with proper cross-references
+   - Archive implemented or obsolete ideas
+
+3. **Documentation Sync**:
+   - Keep ROADMAP.md, PR-LIST.md, and FRESH-IDEAS.md synchronized
+   - Ensure any roadmap changes are reflected in the PR list
+   - Link between related items across documents
+
+### Workflow for New Features
+
+1. Check FRESH-IDEAS.md for relevant approved ideas
+2. Update roadmap with new or modified PRs
+3. Update PR status indicators as work progresses
+4. Cross-reference between ROADMAP.md and FRESH-IDEAS.md
+5. Mark ideas as implemented when complete
+
+These requirements ensure the project documentation stays accurate and useful for all stakeholders.
 
 ## License
 
