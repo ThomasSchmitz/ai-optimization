@@ -1,0 +1,44 @@
+<!-- Platform Hero Component -->
+<!-- 
+  Reusable hero section for platform-specific pages.
+  
+  Usage: Include this file and customize the following:
+  - data-platform-name: Platform name (e.g., "ChatGPT", "Google Gemini")
+  - data-platform-description: Brief description of the platform
+  - data-platform-icon: Icon/emoji representing the platform
+  - data-key-features: Comma-separated list of key features
+-->
+<section class="platform-hero">
+    <div class="container">
+        <div class="platform-hero-content">
+            <div class="platform-icon" data-platform-icon="🤖">
+                <!-- Platform icon will be inserted here -->
+            </div>
+            <h1 class="platform-title" data-platform-name="Platform Name">
+                <!-- Platform name will be inserted here -->
+            </h1>
+            <p class="platform-description" data-platform-description="Platform description goes here.">
+                <!-- Platform description will be inserted here -->
+            </p>
+            <div class="platform-stats">
+                <!-- Key stats/features will be inserted here -->
+                <div class="stat-item">
+                    <span class="stat-value" data-stat-1-value="">-</span>
+                    <span class="stat-label" data-stat-1-label="">Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-stat-2-value="">-</span>
+                    <span class="stat-label" data-stat-2-label="">Feature</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" data-stat-3-value="">-</span>
+                    <span class="stat-label" data-stat-3-label="">Type</span>
+                </div>
+            </div>
+            <div class="hero-cta-buttons">
+                <a href="#optimization-guide" class="btn btn-primary">View Optimization Guide</a>
+                <a href="#checklist" class="btn btn-secondary">Download Checklist</a>
+            </div>
+        </div>
+    </div>
+</section>

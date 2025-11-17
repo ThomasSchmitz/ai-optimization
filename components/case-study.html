@@ -1,0 +1,75 @@
+<!-- Case Study Component -->
+<!-- 
+  Reusable case study component for success stories.
+  
+  Usage: Include this file and customize:
+  - data-company-name: Name of the company
+  - data-industry: Industry type
+  - data-challenge: The challenge they faced
+  - data-solution: How they solved it
+  - data-results: The results achieved
+-->
+<section class="case-study">
+    <div class="case-study-header">
+        <div class="case-study-company">
+            <h3 class="company-name" data-company-name="Company Name">
+                <!-- Company name will be inserted here -->
+            </h3>
+            <span class="company-industry" data-industry="Industry">
+                <!-- Industry will be inserted here -->
+            </span>
+        </div>
+    </div>
+    
+    <div class="case-study-content">
+        <div class="case-study-section challenge">
+            <h4>
+                <span class="section-icon">🎯</span>
+                Challenge
+            </h4>
+            <p data-challenge="The challenge description goes here.">
+                <!-- Challenge will be inserted here -->
+            </p>
+        </div>
+
+        <div class="case-study-section solution">
+            <h4>
+                <span class="section-icon">💡</span>
+                Solution
+            </h4>
+            <p data-solution="The solution description goes here.">
+                <!-- Solution will be inserted here -->
+            </p>
+        </div>
+
+        <div class="case-study-section results">
+            <h4>
+                <span class="section-icon">📈</span>
+                Results
+            </h4>
+            <div class="results-grid">
+                <div class="result-stat">
+                    <span class="stat-number" data-result-1-value="">-</span>
+                    <span class="stat-description" data-result-1-label="">Metric</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-number" data-result-2-value="">-</span>
+                    <span class="stat-description" data-result-2-label="">Metric</span>
+                </div>
+                <div class="result-stat">
+                    <span class="stat-number" data-result-3-value="">-</span>
+                    <span class="stat-description" data-result-3-label="">Metric</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="case-study-quote">
+            <blockquote data-quote="Customer quote goes here.">
+                <!-- Quote will be inserted here -->
+            </blockquote>
+            <cite data-quote-author="">
+                <!-- Author name and title -->
+            </cite>
+        </div>
+    </div>
+</section>

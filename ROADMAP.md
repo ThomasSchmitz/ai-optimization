@@ -13,6 +13,18 @@ This roadmap outlines the strategic plan to transform the current single-page AI
 5. **Scalability**: Modular structure allows easy addition of new AI platforms and topics
 6. **Learning Paths**: Create guided learning experiences for different user needs
 
+## Status Legend
+
+Each PR includes a status indicator to track progress:
+
+- **📋 Planned**: Not yet started, awaiting implementation
+- **🚧 In Progress**: Currently being worked on
+- **✅ Completed**: Finished and merged
+- **⏸️ Paused**: Temporarily on hold
+- **❌ Cancelled**: Not proceeding with this PR
+
+**Note**: The AI should update PR statuses in this roadmap as work progresses to keep stakeholders informed.
+
 ---
 
 ## AI Requirements for Document Maintenance
