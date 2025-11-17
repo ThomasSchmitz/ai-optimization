@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" width="900" height="700">
+  <style>
+    .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #333333; }
+    .section-title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #1a73e8; }
+    .box-title { font-family: Arial, sans-serif; font-size: 12px; font-weight: bold; fill: #333333; }
+    .box-text { font-family: Arial, sans-serif; font-size: 10px; fill: #555555; }
+    .arrow { stroke: #1a73e8; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .data-arrow { stroke: #34a853; stroke-width: 2; fill: none; marker-end: url(#data-arrowhead); }
+    .result-arrow { stroke: #ea4335; stroke-width: 2; fill: none; marker-end: url(#result-arrowhead); }
+    .gemini-box { fill: #1a73e8; stroke: #1967d2; stroke-width: 2; }
+    .search-box { fill: #34a853; stroke: #2d9548; stroke-width: 2; }
+    .knowledge-box { fill: #fbbc04; stroke: #f9ab00; stroke-width: 2; }
+    .result-box { fill: #ea4335; stroke: #d93025; stroke-width: 2; }
+    .content-box { fill: #f1f3f4; stroke: #dadce0; stroke-width: 1.5; }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#1a73e8" />
+    </marker>
+    <marker id="data-arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#34a853" />
+    </marker>
+    <marker id="result-arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ea4335" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" class="title">Google Gemini Integration with Search Ecosystem</text>
+  
+  <!-- User Query Box -->
+  <rect x="350" y="60" width="200" height="60" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+  <text x="450" y="80" text-anchor="middle" class="box-title">1. User Query</text>
+  <text x="450" y="98" text-anchor="middle" class="box-text">User searches Google for</text>
+  <text x="450" y="112" text-anchor="middle" class="box-text">"best AI optimization tools"</text>
+  
+  <!-- Arrow down to Gemini -->
+  <path d="M 450 120 L 450 150" class="arrow"/>
+  
+  <!-- Gemini AI Core -->
+  <rect x="350" y="150" width="200" height="80" rx="8" class="gemini-box"/>
+  <text x="450" y="172" text-anchor="middle" class="box-title" fill="white">Google Gemini AI</text>
+  <text x="450" y="190" text-anchor="middle" class="box-text" fill="white">Analyzes query intent,</text>
+  <text x="450" y="204" text-anchor="middle" class="box-text" fill="white">complexity, and determines</text>
+  <text x="450" y="218" text-anchor="middle" class="box-text" fill="white">if AI Overview needed</text>
+  
+  <!-- Three branches from Gemini -->
+  <!-- Left: Google Search Index -->
+  <path d="M 350 190 L 220 190" class="data-arrow"/>
+  <rect x="50" y="160" width="170" height="100" rx="8" class="search-box"/>
+  <text x="135" y="180" text-anchor="middle" class="box-title" fill="white">Google Search Index</text>
+  <text x="135" y="198" text-anchor="middle" class="box-text" fill="white">• Your page rankings</text>
+  <text x="135" y="212" text-anchor="middle" class="box-text" fill="white">• Domain authority</text>
+  <text x="135" y="226" text-anchor="middle" class="box-text" fill="white">• Backlink profile</text>
+  <text x="135" y="240" text-anchor="middle" class="box-text" fill="white">• Content freshness</text>
+  <text x="135" y="254" text-anchor="middle" class="box-text" fill="white">• Core Web Vitals</text>
+  
+  <!-- Right: Knowledge Graph -->
+  <path d="M 550 190 L 680 190" class="data-arrow"/>
+  <rect x="680" y="160" width="170" height="100" rx="8" class="knowledge-box"/>
+  <text x="765" y="180" text-anchor="middle" class="box-title">Knowledge Graph</text>
+  <text x="765" y="198" text-anchor="middle" class="box-text">• Entity data</text>
+  <text x="765" y="212" text-anchor="middle" class="box-text">• Relationships</text>
+  <text x="765" y="226" text-anchor="middle" class="box-text">• Verified facts</text>
+  <text x="765" y="240" text-anchor="middle" class="box-text">• Schema markup</text>
+  <text x="765" y="254" text-anchor="middle" class="box-text">• Structured data</text>
+  
+  <!-- Down: Real-time Web -->
+  <path d="M 450 230 L 450 280" class="data-arrow"/>
+  <rect x="350" y="280" width="200" height="80" rx="8" class="content-box"/>
+  <text x="450" y="300" text-anchor="middle" class="box-title">Real-time Web Content</text>
+  <text x="450" y="318" text-anchor="middle" class="box-text">• Fresh indexed pages</text>
+  <text x="450" y="332" text-anchor="middle" class="box-text">• News and updates</text>
+  <text x="450" y="346" text-anchor="middle" class="box-text">• User-generated content</text>
+  
+  <!-- Return arrows to Analysis -->
+  <path d="M 220 210 L 340 270" class="arrow"/>
+  <path d="M 680 210 L 560 270" class="arrow"/>
+  <path d="M 450 360 L 450 390" class="arrow"/>
+  
+  <!-- Content Analysis & Selection -->
+  <rect x="300" y="390" width="300" height="90" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+  <text x="450" y="410" text-anchor="middle" class="section-title">Content Analysis & Source Selection</text>
+  <text x="450" y="430" text-anchor="middle" class="box-text">Evaluates sources based on:</text>
+  <text x="450" y="446" text-anchor="middle" class="box-text">✓ Relevance to query  ✓ E-E-A-T signals  ✓ Content quality</text>
+  <text x="450" y="460" text-anchor="middle" class="box-text">✓ Structural clarity  ✓ Multimodal richness  ✓ Freshness</text>
+  <text x="450" y="474" text-anchor="middle" class="box-text">Selects 3-6 authoritative sources for citation</text>
+  
+  <!-- Arrow to AI Overview -->
+  <path d="M 450 480 L 450 520" class="result-arrow"/>
+  
+  <!-- AI Overview Result -->
+  <rect x="250" y="520" width="400" height="120" rx="8" class="result-box"/>
+  <text x="450" y="540" text-anchor="middle" class="box-title" fill="white">AI Overview (Position Zero)</text>
+  <text x="450" y="560" text-anchor="middle" class="box-text" fill="white">Comprehensive AI-generated summary with:</text>
+  <text x="450" y="576" text-anchor="middle" class="box-text" fill="white">• Synthesized answer addressing all query aspects</text>
+  <text x="450" y="590" text-anchor="middle" class="box-text" fill="white">• Inline citations [1], [2], [3] with clickable links</text>
+  <text x="450" y="604" text-anchor="middle" class="box-text" fill="white">• Source cards showing page titles and URLs</text>
+  <text x="450" y="618" text-anchor="middle" class="box-text" fill="white">• Follow-up question suggestions</text>
+  <text x="450" y="632" text-anchor="middle" class="box-text" fill="white">• Rich media (images, videos) where relevant</text>
+  
+  <!-- Your Content Optimization Box (Left) -->
+  <rect x="20" y="300" width="180" height="140" rx="5" fill="#fff" stroke="#34a853" stroke-width="2"/>
+  <text x="110" y="318" text-anchor="middle" class="box-title" style="fill: #34a853;">Your Content Optimization</text>
+  <text x="110" y="336" text-anchor="middle" class="box-text" style="font-weight: bold;">To appear in sources:</text>
+  <text x="110" y="352" text-anchor="middle" class="box-text">1. Rank well in Google Search</text>
+  <text x="110" y="366" text-anchor="middle" class="box-text">2. Implement schema markup</text>
+  <text x="110" y="380" text-anchor="middle" class="box-text">3. Build E-E-A-T signals</text>
+  <text x="110" y="394" text-anchor="middle" class="box-text">4. Create structured content</text>
+  <text x="110" y="408" text-anchor="middle" class="box-text">5. Optimize for snippets</text>
+  <text x="110" y="422" text-anchor="middle" class="box-text">6. Add multimodal content</text>
+  
+  <!-- Traditional Search Results (Right) -->
+  <rect x="700" y="300" width="180" height="120" rx="5" fill="#fff" stroke="#dadce0" stroke-width="2"/>
+  <text x="790" y="318" text-anchor="middle" class="box-title">Traditional Results</text>
+  <text x="790" y="336" text-anchor="middle" class="box-text">Below AI Overview:</text>
+  <text x="790" y="354" text-anchor="middle" class="box-text">1. Organic result</text>
+  <text x="790" y="368" text-anchor="middle" class="box-text">2. Organic result</text>
+  <text x="790" y="382" text-anchor="middle" class="box-text">3. Organic result</text>
+  <text x="790" y="396" text-anchor="middle" class="box-text">4. Organic result</text>
+  <text x="790" y="410" text-anchor="middle" class="box-text">...</text>
+  
+  <!-- Connection from AI Overview to traditional -->
+  <path d="M 650 580 L 700 370" stroke="#ea4335" stroke-width="1.5" stroke-dasharray="5,5" fill="none"/>
+  
+  <!-- Bottom Legend/Key Points -->
+  <rect x="50" y="660" width="800" height="35" rx="5" fill="#f8f9fa" stroke="#dadce0" stroke-width="1"/>
+  <text x="60" y="678" class="box-text" style="font-weight: bold;">Key Integration Points:</text>
+  <text x="60" y="690" class="box-text">• Traditional SEO directly impacts Gemini citations  • Featured snippets increase AI Overview chances  • Dual visibility opportunity (AI Overview + organic)</text>
+</svg>
