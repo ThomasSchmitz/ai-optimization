@@ -1,10 +1,23 @@
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
+    initializePageAfterIncludes();
+});
+
+// Listen for includes loaded event and re-initialize
+document.addEventListener('includesLoaded', function() {
+    initializePageAfterIncludes();
+});
+
+function initializePageAfterIncludes() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     
     if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', function() {
+        // Remove old listeners by cloning and replacing
+        const newToggle = mobileMenuToggle.cloneNode(true);
+        mobileMenuToggle.parentNode.replaceChild(newToggle, mobileMenuToggle);
+        
+        newToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
         });
     }
@@ -13,14 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinkItems = document.querySelectorAll('.nav-links a:not(.dropdown-toggle)');
     navLinkItems.forEach(link => {
         link.addEventListener('click', function() {
-            navLinks.classList.remove('active');
+            if (navLinks) {
+                navLinks.classList.remove('active');
+            }
         });
     });
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', function(event) {
         const isClickInside = event.target.closest('.navbar');
-        if (!isClickInside && navLinks.classList.contains('active')) {
+        if (!isClickInside && navLinks && navLinks.classList.contains('active')) {
             navLinks.classList.remove('active');
         }
     });
@@ -33,24 +48,35 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set active navigation state
     setActiveNavigation();
-});
+}
 
 // Dropdown menu functionality
 function initializeDropdowns() {
     const dropdowns = document.querySelectorAll('.dropdown');
+    let closeTimeout = null;
     
     dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
         
         if (toggle) {
-            // Desktop: hover behavior
+            // Desktop: hover behavior with delay to prevent premature closing
             if (window.innerWidth > 768) {
                 dropdown.addEventListener('mouseenter', function() {
+                    // Clear any pending close timeout
+                    if (closeTimeout) {
+                        clearTimeout(closeTimeout);
+                        closeTimeout = null;
+                    }
                     this.classList.add('active');
                 });
                 
                 dropdown.addEventListener('mouseleave', function() {
-                    this.classList.remove('active');
+                    // Add a delay before closing to allow users to move mouse to menu
+                    const self = this;
+                    closeTimeout = setTimeout(function() {
+                        self.classList.remove('active');
+                    }, 300); // 300ms delay
                 });
             }
             
