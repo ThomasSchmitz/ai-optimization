@@ -1,6 +1,6 @@
 # AI GEO - Generative Engine Optimization
 
-An educational website designed to help marketing professionals optimize their product sales websites, social media presence, and online content for AI visibility in tools like ChatGPT, Gemini, Bard, Copilot, Grok, and AI-powered search overviews.
+An educational website designed to help marketing professionals optimize their product sales websites, social media presence, and online content for AI visibility in tools like ChatGPT, Gemini, Copilot, Grok, Meta AI, You.com, Voice Search, and AI-powered search overviews.
 
 ## About
 
@@ -17,11 +17,39 @@ This website provides comprehensive guides, best practices, and resources for ma
 ## Features
 
 - 📚 Comprehensive guides for website, social media, and content optimization
-- 🤖 Coverage of major AI platforms (ChatGPT, Gemini, Copilot, Grok, Claude, Perplexity)
+- 🤖 Coverage of major AI platforms (ChatGPT, Gemini, Copilot, Grok, Claude, Perplexity, Meta AI, You.com, Voice Search)
 - ✅ Best practices for E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)
 - 🛠️ Practical resources and implementation checklists
 - 📊 Metrics and tracking strategies for AI visibility
 - 📱 Responsive design for mobile and desktop
+
+## Additional AI Platforms & Systems
+
+The following AI platforms and systems are being monitored for potential inclusion in future deep-dive content pages:
+
+### Enterprise & Specialized AI
+- **Amazon Q** - Enterprise AI assistant for AWS users and businesses
+- **Anthropic Claude for Business** - Enterprise deployments and API integrations
+- **Microsoft Azure OpenAI** - Enterprise AI solutions
+
+### Emerging Consumer AI Platforms
+- **Mistral AI** - European AI company with growing international presence
+- **DeepSeek** - Chinese AI model gaining traction globally
+- **Inflection AI (Pi)** - Personal AI assistant with conversational focus
+- **Character.AI** - High engagement platform, especially with younger demographics
+- **Poe (by Quora)** - Multi-model AI aggregation platform
+
+### Open Source & Developer Platforms
+- **Hugging Chat** - Open-source AI alternative with active developer community
+- **Ollama** - Local AI model deployment platform
+- **LM Studio** - Local AI model interface
+
+### Future/Planned Platforms
+- **SearchGPT (OpenAI)** - Upcoming standalone AI search product
+- **Apple Intelligence** - iOS and macOS integrated AI features
+- **Amazon Alexa AI enhancements** - Voice commerce and discovery features
+
+These platforms will be covered in detail as the website expands into dedicated pages for specific AI ecosystems, regional markets, and industry verticals.
 
 ## Getting Started
 
