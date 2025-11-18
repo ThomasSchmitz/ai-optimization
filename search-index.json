@@ -927,6 +927,66 @@
         "AI shopping assistants"
       ],
       "content": "Master e-commerce AI optimization strategies including product listing optimization for AI, shopping queries and recommendations, price and availability optimization, customer reviews and user-generated content, competitor comparison strategies, visual search optimization for multimodal AI, voice commerce preparation for Alexa and Siri, e-commerce-specific funnel journey mapping (discovery to loyalty), and platform-specific tactics for Meta AI, ChatGPT, Perplexity, and Google Gemini."
+    },
+    {
+      "title": "Social Media Optimization for AI",
+      "url": "/pages/guides/social-media-optimization.html",
+      "category": "guide",
+      "description": "Master platform-specific social media strategies for X, LinkedIn, Facebook, Instagram, and TikTok to maximize AI visibility and authority.",
+      "keywords": [
+        "social media optimization",
+        "Twitter X strategy",
+        "LinkedIn optimization",
+        "Facebook marketing",
+        "Instagram AI",
+        "TikTok strategy",
+        "social media SEO",
+        "engagement signals",
+        "authority building",
+        "influencer marketing",
+        "community building",
+        "hashtag strategy"
+      ],
+      "content": "Comprehensive social media optimization for AI visibility including platform-specific strategies (X, LinkedIn, Facebook, Instagram, TikTok), profile optimization, content formats, engagement signals, hashtags, social proof, community building, and influencer partnerships."
+    },
+    {
+      "title": "X (Twitter) Strategy for AI Visibility",
+      "url": "/pages/guides/twitter-x-strategy.html",
+      "category": "guide",
+      "description": "Complete X (Twitter) strategy guide for Grok AI visibility, real-time engagement, threading mastery, and thought leadership.",
+      "keywords": [
+        "Twitter strategy",
+        "X platform",
+        "Grok AI",
+        "Twitter optimization",
+        "X marketing",
+        "Twitter threads",
+        "real-time marketing",
+        "Twitter engagement",
+        "Community Notes",
+        "Twitter verification"
+      ],
+      "content": "Master X optimization for Grok AI including profile optimization, content strategy, threading techniques, real-time marketing, trending topics, Community Notes participation, and verification strategies for authority building."
+    },
+    {
+      "title": "LinkedIn Strategy for AI Visibility",
+      "url": "/pages/guides/linkedin-strategy.html",
+      "category": "guide",
+      "description": "Complete LinkedIn strategy for professional authority, B2B visibility, and thought leadership optimization for AI platforms.",
+      "keywords": [
+        "LinkedIn strategy",
+        "LinkedIn optimization",
+        "B2B marketing",
+        "professional networking",
+        "LinkedIn content",
+        "thought leadership",
+        "LinkedIn SEO",
+        "business development",
+        "LinkedIn articles",
+        "LinkedIn video"
+      ],
+      "content": "Comprehensive LinkedIn optimization including profile optimization, company pages, content strategy, article publishing, video content, networking, engagement, groups, and newsletters for professional authority and B2B visibility."
+    },
     }
   ]
 }
