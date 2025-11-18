@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI GEO support resources, troubleshooting guides, and links to official platform documentation">
+    <meta name="keywords" content="AI GEO support, AI optimization help, troubleshooting AI visibility, platform support">
+    <title>Support & Resources | AI GEO</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../includes.js"></script>
+    <style>
+        .support-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .support-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .support-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        
+        .support-card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .support-card h3 {
+            color: #4A90E2;
+            margin-bottom: 1rem;
+        }
+        
+        .support-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .support-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        
+        .support-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .support-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .support-card a {
+            color: #4A90E2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .support-card a:hover {
+            color: #357ABD;
+            text-decoration: underline;
+        }
+        
+        .platform-support-section {
+            margin: 4rem 0;
+        }
+        
+        .platform-support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .platform-box {
+            background: #f8f9fa;
+            border-left: 4px solid #4A90E2;
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+        
+        .platform-box h4 {
+            color: #333;
+            margin-bottom: 0.75rem;
+        }
+        
+        .platform-box p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .platform-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .platform-links a {
+            color: #4A90E2;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .platform-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .troubleshooting-section {
+            background: #f8f9fa;
+            padding: 3rem 0;
+            margin: 4rem 0;
+        }
+        
+        .troubleshooting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .troubleshooting-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .troubleshooting-item h4 {
+            color: #4A90E2;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .troubleshooting-item ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .troubleshooting-item li {
+            padding: 0.5rem 0;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .troubleshooting-item li:before {
+            content: "→";
+            color: #4A90E2;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .community-section {
+            margin: 4rem 0;
+        }
+        
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .community-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: white;
+            border-radius: 8px;
+            border: 2px solid #e0e0e0;
+            transition: border-color 0.3s;
+        }
+        
+        .community-item:hover {
+            border-color: #4A90E2;
+        }
+        
+        .community-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .community-item h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .community-item p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+        
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-box p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .contact-box .btn {
+            background: white;
+            color: #667eea;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .contact-box .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .support-grid,
+            .platform-support-grid,
+            .troubleshooting-grid,
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+    
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="support-intro">
+                    <h1>Support & Resources</h1>
+                    <p>Find help, troubleshooting guides, and official platform documentation to optimize your AI visibility.</p>
+                </div>
+                
+                <div class="support-grid">
+                    <div class="support-card">
+                        <div class="support-card-icon">📚</div>
+                        <h3>Documentation</h3>
+                        <p>Comprehensive guides for every aspect of AI GEO optimization.</p>
+                        <ul>
+                            <li><a href="/index.html#what-is-ai-geo">What is AI GEO?</a></li>
+                            <li><a href="/pages/guides/website-optimization.html">Website Optimization</a></li>
+                            <li><a href="/pages/guides/content-strategy.html">Content Strategy</a></li>
+                            <li><a href="/pages/guides/schema-markup.html">Schema Markup Guide</a></li>
+                            <li><a href="/pages/guides/technical-seo.html">Technical SEO</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="support-card">
+                        <div class="support-card-icon">❓</div>
+                        <h3>FAQs</h3>
+                        <p>Answers to frequently asked questions about AI optimization.</p>
+                        <ul>
+                            <li><a href="/pages/faq.html#general">General AI GEO</a></li>
+                            <li><a href="/pages/faq.html#platforms">Platform-Specific</a></li>
+                            <li><a href="/pages/faq.html#technical">Technical Implementation</a></li>
+                            <li><a href="/pages/faq.html#troubleshooting">Troubleshooting</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="support-card">
+                        <div class="support-card-icon">🛠️</div>
+                        <h3>Tools</h3>
+                        <p>Interactive tools to assess and improve your AI visibility.</p>
+                        <ul>
+                            <li><a href="/pages/tools/visibility-scorecard.html">AI Visibility Scorecard</a></li>
+                            <li><a href="/pages/tools/schema-validator.html">Schema Validator</a></li>
+                            <li><a href="/pages/tools/content-checker.html">Content Checker</a></li>
+                            <li><a href="/pages/tools/voice-search-analyzer.html">Voice Search Analyzer</a></li>
+                            <li><a href="/pages/tools/eeat-assessment.html">E-E-A-T Assessment</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="support-card">
+                        <div class="support-card-icon">📄</div>
+                        <h3>Templates</h3>
+                        <p>Ready-to-use templates and checklists for implementation.</p>
+                        <ul>
+                            <li><a href="/pages/resources/templates.html">All Templates</a></li>
+                            <li><a href="/downloads/ai-optimization-checklist.md">Optimization Checklist</a></li>
+                            <li><a href="/downloads/schema-templates.zip">Schema Templates</a></li>
+                            <li><a href="/downloads/content-brief-template.md">Content Brief</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="support-card">
+                        <div class="support-card-icon">🎓</div>
+                        <h3>Learning Paths</h3>
+                        <p>Structured courses to master AI optimization at your own pace.</p>
+                        <ul>
+                            <li><a href="/pages/learn/index.html">All Learning Paths</a></li>
+                            <li><a href="/pages/learn/beginner.html">Beginner Path (4 weeks)</a></li>
+                            <li><a href="/pages/learn/intermediate.html">Intermediate Path (6 weeks)</a></li>
+                            <li><a href="/pages/learn/advanced.html">Advanced Path (8 weeks)</a></li>
+                            <li><a href="/pages/learn/tracks.html">Industry Focus Tracks</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="support-card">
+                        <div class="support-card-icon">🔍</div>
+                        <h3>Search</h3>
+                        <p>Find specific topics, guides, and platform information quickly.</p>
+                        <ul>
+                            <li><a href="/pages/search.html">Site Search</a></li>
+                            <li><a href="/pages/glossary.html">Glossary of Terms</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Official Platform Support -->
+        <section class="platform-support-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Official Platform Support & Documentation</h2>
+                <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 2rem;">
+                    Links to official documentation, support, and help centers for all major AI platforms.
+                </p>
+                
+                <div class="platform-support-grid">
+                    <div class="platform-box">
+                        <h4>ChatGPT (OpenAI)</h4>
+                        <p>The most widely used conversational AI platform.</p>
+                        <div class="platform-links">
+                            <a href="https://help.openai.com/" target="_blank" rel="noopener">→ Help Center</a>
+                            <a href="https://platform.openai.com/docs" target="_blank" rel="noopener">→ API Documentation</a>
+                            <a href="https://openai.com/blog" target="_blank" rel="noopener">→ Official Blog</a>
+                            <a href="/pages/platforms/chatgpt.html">→ Our Optimization Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Google Gemini</h4>
+                        <p>Google's multimodal AI with search integration.</p>
+                        <div class="platform-links">
+                            <a href="https://support.google.com/gemini/" target="_blank" rel="noopener">→ Gemini Help</a>
+                            <a href="https://ai.google.dev/" target="_blank" rel="noopener">→ Developer Documentation</a>
+                            <a href="https://blog.google/technology/ai/" target="_blank" rel="noopener">→ Google AI Blog</a>
+                            <a href="/pages/platforms/gemini.html">→ Our Optimization Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Microsoft Copilot</h4>
+                        <p>AI assistant integrated with Bing and Office.</p>
+                        <div class="platform-links">
+                            <a href="https://support.microsoft.com/copilot" target="_blank" rel="noopener">→ Copilot Support</a>
+                            <a href="https://www.bing.com/webmasters" target="_blank" rel="noopener">→ Bing Webmaster Tools</a>
+                            <a href="https://blogs.microsoft.com/blog/" target="_blank" rel="noopener">→ Microsoft Blog</a>
+                            <a href="/pages/platforms/copilot.html">→ Our Optimization Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Grok (X/Twitter)</h4>
+                        <p>Real-time AI with X platform integration.</p>
+                        <div class="platform-links">
+                            <a href="https://x.ai/" target="_blank" rel="noopener">→ Official xAI Site</a>
+                            <a href="https://help.twitter.com/" target="_blank" rel="noopener">→ X Help Center</a>
+                            <a href="/pages/platforms/grok.html">→ Our Optimization Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Claude (Anthropic)</h4>
+                        <p>AI assistant known for nuanced understanding.</p>
+                        <div class="platform-links">
+                            <a href="https://support.anthropic.com/" target="_blank" rel="noopener">→ Claude Support</a>
+                            <a href="https://docs.anthropic.com/" target="_blank" rel="noopener">→ API Documentation</a>
+                            <a href="https://www.anthropic.com/news" target="_blank" rel="noopener">→ Anthropic News</a>
+                            <a href="/pages/platforms/claude.html">→ Our Optimization Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Perplexity AI</h4>
+                        <p>Search-focused AI with strong citations.</p>
+                        <div class="platform-links">
+                            <a href="https://www.perplexity.ai/hub/faq" target="_blank" rel="noopener">→ FAQ</a>
+                            <a href="https://blog.perplexity.ai/" target="_blank" rel="noopener">→ Perplexity Blog</a>
+                            <a href="/pages/platforms/perplexity.html">→ Our Optimization Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Meta AI</h4>
+                        <p>AI across Facebook, Instagram, WhatsApp, Messenger.</p>
+                        <div class="platform-links">
+                            <a href="https://www.facebook.com/business/help" target="_blank" rel="noopener">→ Meta Business Help</a>
+                            <a href="https://www.facebook.com/help/" target="_blank" rel="noopener">→ Facebook Help</a>
+                            <a href="https://help.instagram.com/" target="_blank" rel="noopener">→ Instagram Help</a>
+                            <a href="/pages/platforms/meta-ai.html">→ Our Optimization Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>You.com</h4>
+                        <p>Privacy-focused AI search engine.</p>
+                        <div class="platform-links">
+                            <a href="https://about.you.com/hc/" target="_blank" rel="noopener">→ Help Center</a>
+                            <a href="https://about.you.com/" target="_blank" rel="noopener">→ About You.com</a>
+                            <a href="/pages/platforms/you-com.html">→ Our Optimization Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Google Search</h4>
+                        <p>Essential for AI Overviews and general visibility.</p>
+                        <div class="platform-links">
+                            <a href="https://search.google.com/search-console" target="_blank" rel="noopener">→ Search Console</a>
+                            <a href="https://developers.google.com/search/docs" target="_blank" rel="noopener">→ Search Documentation</a>
+                            <a href="https://developers.google.com/search/blog" target="_blank" rel="noopener">→ Search Central Blog</a>
+                            <a href="/pages/platforms/google-ai-overviews.html">→ AI Overviews Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Voice Assistants</h4>
+                        <p>Alexa, Siri, and Google Assistant.</p>
+                        <div class="platform-links">
+                            <a href="https://developer.amazon.com/alexa" target="_blank" rel="noopener">→ Alexa Developer</a>
+                            <a href="https://developer.apple.com/siri/" target="_blank" rel="noopener">→ Siri Developer</a>
+                            <a href="https://developers.google.com/assistant" target="_blank" rel="noopener">→ Assistant Developer</a>
+                            <a href="/pages/platforms/voice-search.html">→ Voice Search Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Schema.org</h4>
+                        <p>Structured data vocabulary for all platforms.</p>
+                        <div class="platform-links">
+                            <a href="https://schema.org/" target="_blank" rel="noopener">→ Schema.org</a>
+                            <a href="https://validator.schema.org/" target="_blank" rel="noopener">→ Schema Validator</a>
+                            <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">→ Rich Results Test</a>
+                            <a href="/pages/guides/schema-markup.html">→ Schema Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="platform-box">
+                        <h4>Web Performance</h4>
+                        <p>Tools for speed and Core Web Vitals.</p>
+                        <div class="platform-links">
+                            <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">→ PageSpeed Insights</a>
+                            <a href="https://web.dev/" target="_blank" rel="noopener">→ web.dev</a>
+                            <a href="https://www.webpagetest.org/" target="_blank" rel="noopener">→ WebPageTest</a>
+                            <a href="/pages/guides/website-optimization.html">→ Performance Guide</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Troubleshooting Guides -->
+        <section class="troubleshooting-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Common Issues & Solutions</h2>
+                <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 2rem;">
+                    Quick fixes for the most common AI GEO challenges.
+                </p>
+                
+                <div class="troubleshooting-grid">
+                    <div class="troubleshooting-item">
+                        <h4>🚫 Not Getting Citations</h4>
+                        <ul>
+                            <li>Build backlinks from authoritative sites</li>
+                            <li>Create comprehensive, in-depth content</li>
+                            <li>Add schema markup to all pages</li>
+                            <li>Improve E-E-A-T signals</li>
+                            <li>Keep content fresh and updated</li>
+                        </ul>
+                        <a href="/pages/faq.html#troubleshooting" style="color: #4A90E2;">View detailed solutions →</a>
+                    </div>
+                    
+                    <div class="troubleshooting-item">
+                        <h4>⚡ Slow Page Speed</h4>
+                        <ul>
+                            <li>Compress and optimize images</li>
+                            <li>Enable browser and CDN caching</li>
+                            <li>Minify CSS and JavaScript</li>
+                            <li>Remove unused code</li>
+                            <li>Consider faster hosting</li>
+                        </ul>
+                        <a href="/pages/guides/website-optimization.html" style="color: #4A90E2;">Performance optimization guide →</a>
+                    </div>
+                    
+                    <div class="troubleshooting-item">
+                        <h4>❌ Schema Errors</h4>
+                        <ul>
+                            <li>Use Schema.org validator</li>
+                            <li>Check JSON syntax (commas, brackets)</li>
+                            <li>Include all required fields</li>
+                            <li>Use correct data types</li>
+                            <li>Test with Google Rich Results</li>
+                        </ul>
+                        <a href="/pages/guides/schema-markup.html" style="color: #4A90E2;">Schema implementation guide →</a>
+                    </div>
+                    
+                    <div class="troubleshooting-item">
+                        <h4>📉 Low Visibility</h4>
+                        <ul>
+                            <li>Audit content quality</li>
+                            <li>Check for crawl errors</li>
+                            <li>Verify indexing status</li>
+                            <li>Analyze competitor strategies</li>
+                            <li>Test queries across platforms</li>
+                        </ul>
+                        <a href="/pages/tools/visibility-scorecard.html" style="color: #4A90E2;">Check your visibility score →</a>
+                    </div>
+                    
+                    <div class="troubleshooting-item">
+                        <h4>🔄 Incorrect Information</h4>
+                        <ul>
+                            <li>Update official sources first</li>
+                            <li>Create authoritative content</li>
+                            <li>Build citations from trusted sites</li>
+                            <li>Submit feedback to platforms</li>
+                            <li>Monitor and maintain regularly</li>
+                        </ul>
+                        <a href="/pages/faq.html#troubleshooting" style="color: #4A90E2;">Detailed correction steps →</a>
+                    </div>
+                    
+                    <div class="troubleshooting-item">
+                        <h4>📱 Mobile Issues</h4>
+                        <ul>
+                            <li>Use responsive design</li>
+                            <li>Test with Mobile-Friendly Test</li>
+                            <li>Optimize for touch interactions</li>
+                            <li>Ensure readable font sizes</li>
+                            <li>Improve mobile page speed</li>
+                        </ul>
+                        <a href="/pages/guides/technical-seo.html" style="color: #4A90E2;">Technical SEO guide →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Community Resources -->
+        <section class="community-section">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Community & External Resources</h2>
+                <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 2rem;">
+                    Connect with other marketing professionals and access additional learning resources.
+                </p>
+                
+                <div class="community-grid">
+                    <div class="community-item">
+                        <div class="community-icon">💬</div>
+                        <h4>SEO Communities</h4>
+                        <p>Join discussions about AI optimization and search trends.</p>
+                        <a href="https://www.reddit.com/r/SEO/" target="_blank" rel="noopener">r/SEO on Reddit →</a>
+                    </div>
+                    
+                    <div class="community-item">
+                        <div class="community-icon">🐦</div>
+                        <h4>Follow on X/Twitter</h4>
+                        <p>Stay updated on AI platform changes and optimization news.</p>
+                        <a href="https://twitter.com/search?q=%23AIGEO" target="_blank" rel="noopener">Search #AIGEO →</a>
+                    </div>
+                    
+                    <div class="community-item">
+                        <div class="community-icon">📖</div>
+                        <h4>Industry Blogs</h4>
+                        <p>Read insights from SEO and AI marketing experts.</p>
+                        <a href="https://moz.com/blog" target="_blank" rel="noopener">Moz Blog →</a>
+                    </div>
+                    
+                    <div class="community-item">
+                        <div class="community-icon">🎥</div>
+                        <h4>Video Tutorials</h4>
+                        <p>Learn from video content about AI and SEO.</p>
+                        <a href="https://www.youtube.com/results?search_query=AI+SEO" target="_blank" rel="noopener">YouTube Tutorials →</a>
+                    </div>
+                    
+                    <div class="community-item">
+                        <div class="community-icon">📚</div>
+                        <h4>Official Documentation</h4>
+                        <p>Reference guides from Google, Microsoft, and more.</p>
+                        <a href="https://developers.google.com/search/docs" target="_blank" rel="noopener">Google Search Docs →</a>
+                    </div>
+                    
+                    <div class="community-item">
+                        <div class="community-icon">🎯</div>
+                        <h4>Webinars & Events</h4>
+                        <p>Attend virtual events on AI and digital marketing.</p>
+                        <a href="https://www.meetup.com/topics/seo/" target="_blank" rel="noopener">Find SEO Meetups →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact CTA -->
+        <section>
+            <div class="container">
+                <div class="contact-box">
+                    <h3>Need More Help?</h3>
+                    <p>Visit our contact page for additional support options and ways to get in touch.</p>
+                    <a href="/pages/contact.html" class="btn">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

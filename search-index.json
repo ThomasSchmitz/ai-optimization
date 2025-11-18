@@ -901,6 +901,62 @@
         "product schema"
       ],
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
+    },
+    {
+      "title": "FAQ - Frequently Asked Questions",
+      "url": "/pages/faq.html",
+      "category": "resource",
+      "description": "Comprehensive FAQ covering general AI GEO questions, platform-specific strategies, technical implementation, and troubleshooting.",
+      "keywords": [
+        "FAQ",
+        "frequently asked questions",
+        "AI GEO help",
+        "questions and answers",
+        "troubleshooting",
+        "platform FAQ",
+        "technical FAQ",
+        "AI optimization questions",
+        "support",
+        "help"
+      ],
+      "content": "Find answers to common questions about AI GEO, platform-specific optimization, technical implementation, troubleshooting visibility issues, schema markup, page speed, and more. Covers ChatGPT, Gemini, Perplexity, voice search, Meta AI, and all major platforms."
+    },
+    {
+      "title": "Support & Resources",
+      "url": "/pages/support.html",
+      "category": "resource",
+      "description": "Complete support resources including official platform documentation, troubleshooting guides, community resources, and help links.",
+      "keywords": [
+        "support",
+        "help",
+        "resources",
+        "troubleshooting",
+        "platform support",
+        "official documentation",
+        "community",
+        "guides",
+        "tools",
+        "learning resources"
+      ],
+      "content": "Access comprehensive support including official platform documentation, troubleshooting guides, community resources, learning paths, tools, templates, and links to Google Search Console, Bing Webmaster Tools, Schema.org, and all major AI platform help centers."
+    },
+    {
+      "title": "Contact Us",
+      "url": "/pages/contact.html",
+      "category": "resource",
+      "description": "Contact AI GEO for support, feedback, and questions about AI optimization strategies and implementation.",
+      "keywords": [
+        "contact",
+        "contact form",
+        "support",
+        "help",
+        "feedback",
+        "questions",
+        "get in touch",
+        "email",
+        "community support"
+      ],
+      "content": "Get in touch for questions about AI GEO optimization, platform-specific help, technical implementation, troubleshooting, or general feedback. Access quick links to FAQ, guides, tools, templates, and learning resources."
     }
   ]
 }
