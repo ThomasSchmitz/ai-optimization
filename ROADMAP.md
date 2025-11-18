@@ -267,7 +267,7 @@ These requirements ensure this roadmap stays accurate, up-to-date, and serves as
 **Files Created**:
 - `pages/platforms/gemini.html`
 - `pages/platforms/google-ai-overviews.html`
-- `assets/images/gemini-integration-diagram.svg`
+- `assets/images/gemini-diagram.svg`
 
 **Implementation Notes**:
 - ✅ Created comprehensive Google Gemini optimization guide (gemini.html)

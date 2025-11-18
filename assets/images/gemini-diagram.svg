@@ -81,7 +81,7 @@
   
   <!-- Content Analysis & Selection -->
   <rect x="300" y="390" width="300" height="90" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
-  <text x="450" y="410" text-anchor="middle" class="section-title">Content Analysis & Source Selection</text>
+  <text x="450" y="410" text-anchor="middle" class="section-title">Content Analysis &amp; Source Selection</text>
   <text x="450" y="430" text-anchor="middle" class="box-text">Evaluates sources based on:</text>
   <text x="450" y="446" text-anchor="middle" class="box-text">✓ Relevance to query  ✓ E-E-A-T signals  ✓ Content quality</text>
   <text x="450" y="460" text-anchor="middle" class="box-text">✓ Structural clarity  ✓ Multimodal richness  ✓ Freshness</text>
