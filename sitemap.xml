@@ -254,4 +254,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  
+  <!-- Industry-Specific Pages -->
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/industries/content-creators.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/industries/publishing.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

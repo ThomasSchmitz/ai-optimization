@@ -901,6 +901,50 @@
         "product schema"
       ],
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
+    },
+    {
+      "title": "Content Creators & Media AI Optimization",
+      "url": "/pages/industries/content-creators.html",
+      "category": "industry",
+      "description": "Comprehensive strategies for bloggers, podcasters, YouTubers, and digital content creators to optimize for AI platforms.",
+      "keywords": [
+        "content creator",
+        "blogger",
+        "podcaster",
+        "YouTuber",
+        "video optimization",
+        "podcast optimization",
+        "blog content",
+        "newsletter",
+        "syndication",
+        "attribution",
+        "social media",
+        "monetization",
+        "content creation"
+      ],
+      "content": "Optimize blog posts for AI citations, video and podcast content for discovery, newsletters and email content, attribution and citation protection, syndication strategies, social media integration, and monetization with AI-driven traffic."
+    },
+    {
+      "title": "Publishing & News Media AI Optimization",
+      "url": "/pages/industries/publishing.html",
+      "category": "industry",
+      "description": "AI optimization strategies for publishers, news organizations, and journalists to maximize visibility and protect attribution.",
+      "keywords": [
+        "news media",
+        "journalism",
+        "publisher",
+        "news optimization",
+        "breaking news",
+        "investigative journalism",
+        "attribution",
+        "syndication",
+        "paywall",
+        "editorial standards",
+        "E-E-A-T",
+        "NewsArticle schema",
+        "news citation"
+      ],
+      "content": "Optimize news articles for AI citations, breaking news for real-time discovery, investigative and long-form journalism, content syndication, paywall strategies, editorial standards, and E-E-A-T signals for news publishers."
     }
   ]
 }
