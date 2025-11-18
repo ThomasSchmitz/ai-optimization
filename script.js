@@ -1,6 +1,13 @@
+// Track document-level bindings so we only attach them once
+let mobileMenuDismissBound = false;
+let navLinkCloseBound = false;
+let dropdownDismissBound = false;
+let smoothScrollBound = false;
+
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
     initializePageAfterIncludes();
+    enableSmoothScroll();
 });
 
 // Listen for includes loaded event and re-initialize
@@ -11,7 +18,7 @@ document.addEventListener('includesLoaded', function() {
 function initializePageAfterIncludes() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (mobileMenuToggle) {
         // Remove old listeners by cloning and replacing
         const newToggle = mobileMenuToggle.cloneNode(true);
@@ -23,23 +30,8 @@ function initializePageAfterIncludes() {
     }
     
     // Close mobile menu when clicking a link (non-dropdown)
-    const navLinkItems = document.querySelectorAll('.nav-links a:not(.dropdown-toggle)');
-    navLinkItems.forEach(link => {
-        link.addEventListener('click', function() {
-            if (navLinks) {
-                navLinks.classList.remove('active');
-            }
-        });
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        const isClickInside = event.target.closest('.navbar');
-        if (!isClickInside && navLinks && navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-        }
-    });
-    
+    bindMobileMenuClosers();
+
     // Initialize dropdowns
     initializeDropdowns();
     
@@ -54,12 +46,16 @@ function initializePageAfterIncludes() {
 function initializeDropdowns() {
     const dropdowns = document.querySelectorAll('.dropdown');
     let closeTimeout = null;
-    
+
     dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector('.dropdown-toggle');
         const menu = dropdown.querySelector('.dropdown-menu');
-        
+
         if (toggle) {
+            if (toggle.dataset.dropdownBound === 'true') {
+                return;
+            }
+            toggle.dataset.dropdownBound = 'true';
             // Desktop: hover behavior with delay to prevent premature closing
             if (window.innerWidth > 768) {
                 dropdown.addEventListener('mouseenter', function() {
@@ -99,13 +95,16 @@ function initializeDropdowns() {
     });
     
     // Close dropdowns when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.dropdown')) {
-            dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
-        }
-    });
+    if (!dropdownDismissBound) {
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+        dropdownDismissBound = true;
+    }
 }
 
 // Generate breadcrumb navigation based on current page
@@ -179,25 +178,59 @@ function setActiveNavigation() {
 // Update active navigation on hash change (for single-page navigation)
 window.addEventListener('hashchange', setActiveNavigation);
 
-// Smooth scrolling for anchor links (additional support for older browsers)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        // Skip empty hash or just '#'
+function bindMobileMenuClosers() {
+    if (!navLinkCloseBound) {
+        document.addEventListener('click', function(event) {
+            const link = event.target.closest('.nav-links a:not(.dropdown-toggle)');
+            if (!link) return;
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) {
+                navLinks.classList.remove('active');
+            }
+        });
+        navLinkCloseBound = true;
+    }
+
+    if (!mobileMenuDismissBound) {
+        document.addEventListener('click', function(event) {
+            const navLinks = document.querySelector('.nav-links');
+            if (!navLinks) {
+                return;
+            }
+            const isClickInside = event.target.closest('.navbar');
+            if (!isClickInside && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+        mobileMenuDismissBound = true;
+    }
+}
+
+// Smooth scrolling for anchor links (delegated so late-loaded links are supported)
+function enableSmoothScroll() {
+    if (smoothScrollBound) return;
+
+    document.addEventListener('click', function(event) {
+        const anchor = event.target.closest('a[href^="#"]');
+        if (!anchor) return;
+
+        const href = anchor.getAttribute('href');
         if (!href || href === '#') {
             return;
         }
-        
-        e.preventDefault();
+
         const target = document.querySelector(href);
         if (target) {
+            event.preventDefault();
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
         }
     });
-});
+
+    smoothScrollBound = true;
+}
 
 // Add active state to navigation based on scroll position
 window.addEventListener('scroll', function() {
