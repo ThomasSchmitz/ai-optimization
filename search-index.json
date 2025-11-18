@@ -793,6 +793,57 @@
         "professional services"
       ],
       "content": "Specialized focus tracks tailored to specific industries. E-commerce Track (2-3 weeks): Product listing optimization, shopping queries, reviews & UGC, visual & voice commerce. B2B Track (2-3 weeks): Enterprise buyer journey, LinkedIn strategies, thought leadership, technical content, case studies. Local Business Track (2-3 weeks): Local SEO for AI, Google Business Profile, voice search for 'near me' queries, multi-location optimization, local reviews. Take tracks alongside or after core learning paths."
+    },
+    {
+      "title": "Website Technical Optimization for AI",
+      "url": "/pages/guides/website-optimization.html",
+      "category": "guide",
+      "description": "Comprehensive guide to optimizing your website's technical foundations for AI visibility.",
+      "keywords": [
+        "technical optimization",
+        "page speed",
+        "Core Web Vitals",
+        "mobile optimization",
+        "accessibility",
+        "site architecture",
+        "XML sitemaps",
+        "robots.txt"
+      ],
+      "content": "Master technical SEO, page speed optimization (LCP, INP, CLS), mobile-first design, accessibility best practices, and site architecture for AI visibility."
+    },
+    {
+      "title": "Schema Markup Implementation Guide",
+      "url": "/pages/guides/schema-markup.html",
+      "category": "guide",
+      "description": "Learn how to implement structured data using Schema.org vocabulary with JSON-LD examples.",
+      "keywords": [
+        "schema markup",
+        "structured data",
+        "JSON-LD",
+        "Schema.org",
+        "product schema",
+        "FAQ schema",
+        "article schema",
+        "review schema"
+      ],
+      "content": "Implement schema markup using JSON-LD format for products, reviews, FAQs, articles, breadcrumbs, and local businesses."
+    },
+    {
+      "title": "Technical SEO Deep-Dive for AI",
+      "url": "/pages/guides/technical-seo.html",
+      "category": "guide",
+      "description": "Advanced technical SEO including semantic HTML, XML sitemaps, robots.txt, and canonical URLs.",
+      "keywords": [
+        "technical SEO",
+        "semantic HTML",
+        "XML sitemaps",
+        "robots.txt",
+        "canonical URLs",
+        "site architecture",
+        "redirects",
+        "pagination"
+      ],
+      "content": "Master semantic HTML5, XML sitemap configuration, robots.txt setup, canonical tag implementation, and advanced site architecture strategies."
     }
   ]
 }

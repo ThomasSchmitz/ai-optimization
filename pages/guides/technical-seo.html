@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical SEO Deep-Dive for AI - Master semantic HTML, XML sitemaps, robots.txt, canonical URLs, and site architecture for optimal AI visibility.">
+    <meta name="keywords" content="technical SEO, semantic HTML, XML sitemaps, robots.txt, canonical URLs, site architecture, AI optimization, crawlability">
+    <title>Technical SEO Deep-Dive for AI | AI GEO</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/includes.js"></script>
+</head>
+<body>
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+
+    <main>
+        <!-- Guide Hero Section -->
+        <section class="guide-hero">
+            <div class="container">
+                <div class="guide-hero-content">
+                    <div class="guide-icon">
+                        🔍
+                    </div>
+                    <h1 class="guide-title">Technical SEO Deep-Dive for AI</h1>
+                    <p class="guide-description">
+                        Master the advanced technical SEO elements that help AI platforms discover, crawl, and 
+                        understand your content. This guide covers semantic HTML, XML sitemaps, robots.txt 
+                        configuration, canonical URLs, and site architecture best practices.
+                    </p>
+                    <div class="guide-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">⏱️</span>
+                            <span class="meta-text">20 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">📊</span>
+                            <span class="meta-text">Advanced</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🎯</span>
+                            <span class="meta-text">Technical SEOs, Developers</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta-buttons">
+                        <a href="#introduction" class="btn btn-primary">Start Reading</a>
+                        <a href="#checklist" class="btn btn-secondary">View Checklist</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="content-section">
+            <div class="container">
+                <div class="toc-container">
+                    <h2>Table of Contents</h2>
+                    <nav class="table-of-contents">
+                        <ul>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#semantic-html">Semantic HTML Best Practices</a></li>
+                            <li><a href="#xml-sitemaps">XML Sitemaps in Depth</a></li>
+                            <li><a href="#robots-txt">Robots.txt Configuration</a></li>
+                            <li><a href="#canonical-urls">Canonical URLs & Duplicate Content</a></li>
+                            <li><a href="#site-architecture">Site Architecture Strategies</a></li>
+                            <li><a href="#url-structure">URL Structure Optimization</a></li>
+                            <li><a href="#redirects">HTTP Redirects & Status Codes</a></li>
+                            <li><a href="#pagination">Pagination & Series Content</a></li>
+                            <li><a href="#checklist">Technical SEO Checklist</a></li>
+                            <li><a href="#resources">Google Search Central Resources</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="introduction" class="content-section alt-bg">
+            <div class="container">
+                <h2>Introduction</h2>
+                <p class="section-intro">
+                    Technical SEO provides the foundation for AI visibility. While our <a href="/pages/guides/website-optimization.html">Website Optimization Guide</a> covers the fundamentals, this deep-dive focuses on advanced technical elements that significantly impact how AI platforms discover and process your content.
+                </p>
+                
+                <div class="highlight-box">
+                    <h3>What You'll Learn</h3>
+                    <ul>
+                        <li>Advanced semantic HTML implementation for better AI comprehension</li>
+                        <li>XML sitemap strategies for large and complex sites</li>
+                        <li>Robots.txt configuration for optimal AI crawler access</li>
+                        <li>Canonical URL management to prevent duplicate content issues</li>
+                        <li>Site architecture best practices for logical content organization</li>
+                        <li>Official Google Search Central resources and documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Semantic HTML -->
+        <section id="semantic-html" class="content-section">
+            <div class="container">
+                <h2>Semantic HTML Best Practices</h2>
+                <p class="section-intro">
+                    Semantic HTML uses elements that convey meaning, not just presentation. This helps AI understand content structure, hierarchy, and relationships.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>📄 Document Structure</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+  &lt;/header&gt;
+  
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h1&gt;Main Heading&lt;/h1&gt;
+      &lt;section&gt;
+        &lt;h2&gt;Section 1&lt;/h2&gt;
+        &lt;p&gt;Content...&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/article&gt;
+    &lt;aside&gt;Sidebar content&lt;/aside&gt;
+  &lt;/main&gt;
+  
+  &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>🏷️ Content Elements</h3>
+                        <ul>
+                            <li><strong>&lt;article&gt;</strong>: Self-contained content (blog posts, news articles)</li>
+                            <li><strong>&lt;section&gt;</strong>: Thematic grouping of content</li>
+                            <li><strong>&lt;nav&gt;</strong>: Navigation links</li>
+                            <li><strong>&lt;aside&gt;</strong>: Tangentially related content</li>
+                            <li><strong>&lt;figure&gt; & &lt;figcaption&gt;</strong>: Images with captions</li>
+                            <li><strong>&lt;time&gt;</strong>: Dates and times</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>📊 Data Tables</h3>
+                        <div class="code-example">
+                            <pre><code>&lt;table&gt;
+  &lt;caption&gt;Monthly Sales Data&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Month&lt;/th&gt;
+      &lt;th scope="col"&gt;Revenue&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;January&lt;/th&gt;
+      &lt;td&gt;$50,000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- XML Sitemaps -->
+        <section id="xml-sitemaps" class="content-section alt-bg">
+            <div class="container">
+                <h2>XML Sitemaps in Depth</h2>
+                <p class="section-intro">
+                    XML sitemaps help AI crawlers discover all your important pages efficiently. Proper sitemap 
+                    configuration is crucial for large sites and frequently updated content.
+                </p>
+
+                <div class="concept-list">
+                    <div class="concept-item">
+                        <div class="concept-header">
+                            <span class="concept-number">1</span>
+                            <h3>Sitemap Structure</h3>
+                        </div>
+                        <div class="code-example">
+                            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://example.com/page&lt;/loc&gt;
+    &lt;lastmod&gt;2025-11-18&lt;/lastmod&gt;
+    &lt;changefreq&gt;weekly&lt;/changefreq&gt;
+    &lt;priority&gt;0.8&lt;/priority&gt;
+  &lt;/url&gt;
+&lt;/urlset&gt;</code></pre>
+                        </div>
+                        <h4>XML Sitemap Elements:</h4>
+                        <ul>
+                            <li><strong>&lt;loc&gt;</strong>: Page URL (required, max 2,048 characters)</li>
+                            <li><strong>&lt;lastmod&gt;</strong>: Last modification date (optional, ISO 8601 format)</li>
+                            <li><strong>&lt;changefreq&gt;</strong>: Update frequency hint (optional)</li>
+                            <li><strong>&lt;priority&gt;</strong>: Relative importance 0.0-1.0 (optional)</li>
+                        </ul>
+                    </div>
+
+                    <div class="concept-item">
+                        <div class="concept-header">
+                            <span class="concept-number">2</span>
+                            <h3>Sitemap Index Files</h3>
+                        </div>
+                        <p>For sites with > 50,000 URLs or > 50MB sitemaps:</p>
+                        <div class="code-example">
+                            <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;sitemap&gt;
+    &lt;loc&gt;https://example.com/sitemap-products.xml&lt;/loc&gt;
+    &lt;lastmod&gt;2025-11-18&lt;/lastmod&gt;
+  &lt;/sitemap&gt;
+  &lt;sitemap&gt;
+    &lt;loc&gt;https://example.com/sitemap-articles.xml&lt;/loc&gt;
+    &lt;lastmod&gt;2025-11-18&lt;/lastmod&gt;
+  &lt;/sitemap&gt;
+&lt;/sitemapindex&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="concept-item">
+                        <div class="concept-header">
+                            <span class="concept-number">3</span>
+                            <h3>Sitemap Best Practices</h3>
+                        </div>
+                        <ul>
+                            <li>Include only canonical URLs (no redirects, no duplicates)</li>
+                            <li>Submit to Google Search Console and Bing Webmaster Tools</li>
+                            <li>Reference in robots.txt: <code>Sitemap: https://example.com/sitemap.xml</code></li>
+                            <li>Keep under 50,000 URLs and 50MB uncompressed per sitemap</li>
+                            <li>Update lastmod dates when content changes</li>
+                            <li>Use absolute URLs, not relative paths</li>
+                            <li>Organize by content type (products, articles, pages)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Robots.txt -->
+        <section id="robots-txt" class="content-section">
+            <div class="container">
+                <h2>Robots.txt Configuration</h2>
+                <p class="section-intro">
+                    Robots.txt controls crawler access to your site. Proper configuration ensures AI crawlers focus 
+                    on your important content while respecting server resources.
+                </p>
+
+                <div class="feature-card">
+                    <h3>Robots.txt Syntax</h3>
+                    <div class="code-example">
+                        <pre><code># Allow all crawlers
+User-agent: *
+Allow: /
+
+# Block specific directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /temp/
+Disallow: /search?
+
+# Block specific crawler
+User-agent: BadBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://example.com/sitemap.xml
+Sitemap: https://example.com/sitemap-products.xml
+
+# Crawl delay (use sparingly)
+# Crawl-delay: 10</code></pre>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>⚠️ Important Robots.txt Notes</h3>
+                    <ul>
+                        <li>robots.txt is a <strong>directive, not a security measure</strong> - don't use it to hide sensitive content</li>
+                        <li>Disallowed pages may still be indexed if linked from other sites</li>
+                        <li>Don't block CSS, JavaScript, or images needed for page rendering</li>
+                        <li>Test changes with <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console robots.txt Tester</a></li>
+                        <li>Use meta robots tags for page-level control instead of robots.txt when possible</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Canonical URLs -->
+        <section id="canonical-urls" class="content-section alt-bg">
+            <div class="container">
+                <h2>Canonical URLs & Duplicate Content</h2>
+                <p class="section-intro">
+                    Canonical tags tell AI platforms which version of a page is the "master" when multiple URLs 
+                    serve similar or identical content.
+                </p>
+
+                <div class="code-example">
+                    <h3>Canonical Tag Implementation</h3>
+                    <pre><code>&lt;!-- In the &lt;head&gt; of duplicate pages --&gt;
+&lt;link rel="canonical" href="https://example.com/preferred-url"&gt;</code></pre>
+                </div>
+
+                <h3>Common Canonical Use Cases</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>1. Protocol Variations</h4>
+                        <ul>
+                            <li>HTTP vs HTTPS</li>
+                            <li>WWW vs non-WWW</li>
+                        </ul>
+                        <p>Set canonical to preferred version</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>2. URL Parameters</h4>
+                        <ul>
+                            <li>Tracking parameters: <code>?utm_source=...</code></li>
+                            <li>Sorting: <code>?sort=price</code></li>
+                            <li>Filtering: <code>?color=red</code></li>
+                        </ul>
+                        <p>Point to clean URL without parameters</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>3. Paginated Series</h4>
+                        <ul>
+                            <li>Page 1, 2, 3 of blog posts</li>
+                            <li>Product listing pages</li>
+                        </ul>
+                        <p>Option: Self-referencing canonical or "View All" page</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Site Architecture -->
+        <section id="site-architecture" class="content-section">
+            <div class="container">
+                <h2>Site Architecture Strategies</h2>
+                <p class="section-intro">
+                    Logical site architecture helps AI understand content relationships and topic authority.
+                </p>
+
+                <div class="best-practices-list">
+                    <div class="practice-item">
+                        <div class="practice-icon">🏗️</div>
+                        <div class="practice-content">
+                            <h3>Hub and Spoke Model</h3>
+                            <p>Create pillar pages on broad topics, linking to detailed subtopic pages:</p>
+                            <ul>
+                                <li><strong>Hub (Pillar):</strong> "Complete Guide to AI Optimization"</li>
+                                <li><strong>Spokes (Subtopics):</strong> Schema Markup, Technical SEO, Content Strategy</li>
+                                <li><strong>Linking:</strong> Hub links to all spokes; spokes link back to hub and related spokes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="practice-item">
+                        <div class="practice-icon">📊</div>
+                        <div class="practice-content">
+                            <h3>Shallow Site Depth</h3>
+                            <p>Important pages should be ≤3 clicks from homepage:</p>
+                            <ul>
+                                <li>Homepage → Category → Product (3 clicks)</li>
+                                <li>Use breadcrumbs to show hierarchy</li>
+                                <li>Link important pages from navigation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="practice-item">
+                        <div class="practice-icon">🔗</div>
+                        <div class="practice-content">
+                            <h3>Contextual Internal Linking</h3>
+                            <p>Link to related content within body text using descriptive anchor text:</p>
+                            <ul>
+                                <li>Use natural, descriptive anchor text</li>
+                                <li>Link to relevant, related content</li>
+                                <li>Don't overlink (2-5 internal links per 500 words)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- URL Structure -->
+        <section id="url-structure" class="content-section alt-bg">
+            <div class="container">
+                <h2>URL Structure Optimization</h2>
+                
+                <div class="code-example">
+                    <h3>Good vs Bad URLs</h3>
+                    <pre><code>✅ Good URLs:
+https://example.com/products/organic-coffee
+https://example.com/blog/2025/technical-seo-guide
+https://example.com/services/web-design
+
+❌ Bad URLs:
+https://example.com/p?id=12345
+https://example.com/article.php?cat=1&post=456
+https://example.com/index.html?page=about
+https://example.com/page_2025-11-18_final_FINAL_v2.html</code></pre>
+                </div>
+
+                <h3>URL Best Practices</h3>
+                <ul>
+                    <li>Use hyphens (-) to separate words, not underscores (_)</li>
+                    <li>Keep URLs short and descriptive (under 60 characters when possible)</li>
+                    <li>Include target keywords naturally</li>
+                    <li>Use lowercase letters consistently</li>
+                    <li>Avoid unnecessary parameters and session IDs</li>
+                    <li>Maintain consistent structure site-wide</li>
+                    <li>Use breadcrumb-style structure: <code>/category/subcategory/page</code></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Redirects -->
+        <section id="redirects" class="content-section">
+            <div class="container">
+                <h2>HTTP Redirects & Status Codes</h2>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>301 Permanent Redirect</h3>
+                        <p>Use for permanently moved content:</p>
+                        <ul>
+                            <li>Site migrations</li>
+                            <li>URL structure changes</li>
+                            <li>HTTP to HTTPS</li>
+                            <li>Consolidating duplicate pages</li>
+                        </ul>
+                        <p><strong>Passes ~90-99% of link equity</strong></p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>302 Temporary Redirect</h3>
+                        <p>Use for temporarily moved content:</p>
+                        <ul>
+                            <li>A/B testing</li>
+                            <li>Temporary maintenance pages</li>
+                            <li>Seasonal campaigns</li>
+                        </ul>
+                        <p><strong>Does not pass link equity</strong></p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Other Important Status Codes</h3>
+                        <ul>
+                            <li><strong>200 OK:</strong> Page loads successfully</li>
+                            <li><strong>404 Not Found:</strong> Page doesn't exist</li>
+                            <li><strong>410 Gone:</strong> Page permanently removed</li>
+                            <li><strong>503 Service Unavailable:</strong> Temporary server issue</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Redirect Best Practices</h3>
+                    <ul>
+                        <li>Use 301 redirects for permanent changes</li>
+                        <li>Avoid redirect chains (A → B → C)</li>
+                        <li>Redirect to most relevant page, not just homepage</li>
+                        <li>Monitor broken links and fix promptly</li>
+                        <li>Create custom 404 pages with helpful navigation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pagination -->
+        <section id="pagination" class="content-section alt-bg">
+            <div class="container">
+                <h2>Pagination & Series Content</h2>
+                <p class="section-intro">
+                    Properly handle paginated content (blog archives, product listings, multi-page articles) to 
+                    avoid duplicate content issues and help AI understand the series.
+                </p>
+
+                <div class="code-example">
+                    <h3>Rel Prev/Next Tags (Historical)</h3>
+                    <pre><code>&lt;!-- On page 2 of a series --&gt;
+&lt;link rel="prev" href="https://example.com/page/1"&gt;
+&lt;link rel="next" href="https://example.com/page/3"&gt;</code></pre>
+                    <p><em>Note: Google no longer uses rel prev/next, but other crawlers may.</em></p>
+                </div>
+
+                <h3>Modern Pagination Approaches</h3>
+                <div class="best-practices-list">
+                    <div class="practice-item">
+                        <div class="practice-icon">1️⃣</div>
+                        <div class="practice-content">
+                            <h4>Self-Referencing Canonical</h4>
+                            <p>Each page in series has canonical pointing to itself:</p>
+                            <div class="code-example">
+                                <pre><code>&lt;!-- On page 2 --&gt;
+&lt;link rel="canonical" href="https://example.com/blog/page/2"&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="practice-item">
+                        <div class="practice-icon">2️⃣</div>
+                        <div class="practice-content">
+                            <h4>"View All" Canonical</h4>
+                            <p>All paginated pages point to a comprehensive "view all" page:</p>
+                            <div class="code-example">
+                                <pre><code>&lt;!-- On pages 1, 2, 3, etc. --&gt;
+&lt;link rel="canonical" href="https://example.com/blog/all"&gt;</code></pre>
+                            </div>
+                            <p><strong>Only use if "view all" page performs well</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical SEO Checklist -->
+        <section id="checklist" class="optimization-checklist content-section">
+            <div class="container">
+                <div class="checklist-header">
+                    <h2>Technical SEO Checklist</h2>
+                    <p class="checklist-intro">
+                        Use this checklist to ensure all advanced technical SEO elements are properly implemented.
+                    </p>
+                </div>
+                
+                <div class="checklist-content">
+                    <div class="checklist-category">
+                        <h3 class="category-title">📄 Semantic HTML</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="html-1">
+                                <label for="html-1">Proper HTML5 document structure</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="html-2">
+                                <label for="html-2">Semantic elements used appropriately</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="html-3">
+                                <label for="html-3">Valid HTML (no errors)</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3 class="category-title">🗺️ XML Sitemaps</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="sitemap-1">
+                                <label for="sitemap-1">XML sitemap created and submitted</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="sitemap-2">
+                                <label for="sitemap-2">Only canonical URLs included</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="sitemap-3">
+                                <label for="sitemap-3">Sitemap referenced in robots.txt</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="sitemap-4">
+                                <label for="sitemap-4">Lastmod dates updated regularly</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3 class="category-title">🤖 Robots.txt</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="robots-1">
+                                <label for="robots-1">Robots.txt properly configured</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="robots-2">
+                                <label for="robots-2">No accidental blocking of important content</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="robots-3">
+                                <label for="robots-3">CSS/JS/images not blocked</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3 class="category-title">🔗 Canonical URLs</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="canonical-1">
+                                <label for="canonical-1">Canonical tags on all pages</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="canonical-2">
+                                <label for="canonical-2">Duplicate content handled properly</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="canonical-3">
+                                <label for="canonical-3">Pagination canonicalization strategy in place</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3 class="category-title">🏗️ Site Architecture</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="arch-1">
+                                <label for="arch-1">Logical, hierarchical structure</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="arch-2">
+                                <label for="arch-2">Important pages ≤3 clicks from homepage</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="arch-3">
+                                <label for="arch-3">Breadcrumb navigation implemented</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="arch-4">
+                                <label for="arch-4">Internal linking strategy in place</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3 class="category-title">🌐 URLs & Redirects</h3>
+                        <ul class="checklist-items">
+                            <li class="checklist-item">
+                                <input type="checkbox" id="url-1">
+                                <label for="url-1">Clean, descriptive URLs</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="url-2">
+                                <label for="url-2">301 redirects for moved content</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="url-3">
+                                <label for="url-3">No redirect chains</label>
+                            </li>
+                            <li class="checklist-item">
+                                <input type="checkbox" id="url-4">
+                                <label for="url-4">Custom 404 page created</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Search Central Resources -->
+        <section id="resources" class="content-section alt-bg">
+            <div class="container">
+                <h2>Google Search Central Resources</h2>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>📚 Official Google Documentation</h3>
+                        <ul>
+                            <li><a href="https://developers.google.com/search" target="_blank" rel="noopener">Google Search Central</a> - Main SEO resource hub</li>
+                            <li><a href="https://developers.google.com/search/docs/crawling-indexing" target="_blank" rel="noopener">Crawling & Indexing</a> - Technical crawling documentation</li>
+                            <li><a href="https://developers.google.com/search/docs/appearance" target="_blank" rel="noopener">Search Appearance</a> - Structured data and rich results</li>
+                            <li><a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a> - Monitoring and testing tools</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>🛠️ Testing Tools</h3>
+                        <ul>
+                            <li><a href="https://search.google.com/test/mobile-friendly" target="_blank" rel="noopener">Mobile-Friendly Test</a></li>
+                            <li><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insights</a></li>
+                            <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C HTML Validator</a></li>
+                            <li><a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Rich Results Test</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>🔗 Related AI GEO Guides</h3>
+                        <ul>
+                            <li><a href="/pages/guides/website-optimization.html">Website Technical Optimization</a></li>
+                            <li><a href="/pages/guides/schema-markup.html">Schema Markup Implementation</a></li>
+                            <li><a href="/pages/guides/content-strategy.html">Content Strategy for AI</a></li>
+                            <li><a href="/pages/platforms/google-ai-overviews.html">Google AI Overviews</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section class="content-section">
+            <div class="container">
+                <div class="next-steps-box">
+                    <h2>Master Technical SEO for AI</h2>
+                    <p>
+                        Implement these advanced technical SEO elements to maximize your AI visibility. Combined 
+                        with proper schema markup and content optimization, your site will be well-positioned for 
+                        AI platform citations.
+                    </p>
+                    <div class="next-steps-links">
+                        <a href="/pages/guides/website-optimization.html" class="next-step-link">
+                            <span class="link-icon">→</span>
+                            Website Optimization Fundamentals
+                        </a>
+                        <a href="/pages/guides/schema-markup.html" class="next-step-link">
+                            <span class="link-icon">→</span>
+                            Implement Schema Markup
+                        </a>
+                        <a href="/pages/guides/content-strategy.html" class="next-step-link">
+                            <span class="link-icon">→</span>
+                            Content Strategy for AI
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

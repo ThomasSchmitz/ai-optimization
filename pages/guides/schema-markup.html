@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schema Markup Implementation Guide for AI - Learn how to implement structured data for products, reviews, FAQs, articles, and more to improve AI visibility and citations.">
+    <meta name="keywords" content="schema markup, structured data, JSON-LD, Schema.org, product schema, review schema, FAQ schema, article schema, AI optimization">
+    <title>Schema Markup Implementation Guide | AI GEO</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/includes.js"></script>
+</head>
+<body>
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+
+    <main>
+        <!-- Guide Hero Section -->
+        <section class="guide-hero">
+            <div class="container">
+                <div class="guide-hero-content">
+                    <div class="guide-icon">
+                        🏷️
+                    </div>
+                    <h1 class="guide-title">Schema Markup Implementation Guide</h1>
+                    <p class="guide-description">
+                        Learn how to implement structured data using Schema.org vocabulary to help AI platforms 
+                        better understand and cite your content. This guide covers JSON-LD implementation for 
+                        products, reviews, FAQs, articles, and more.
+                    </p>
+                    <div class="guide-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">⏱️</span>
+                            <span class="meta-text">25 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">📊</span>
+                            <span class="meta-text">Intermediate</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🎯</span>
+                            <span class="meta-text">Developers, SEO Specialists</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta-buttons">
+                        <a href="#introduction" class="btn btn-primary">Start Reading</a>
+                        <a href="#examples" class="btn btn-secondary">View Examples</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="content-section">
+            <div class="container">
+                <div class="toc-container">
+                    <h2>Table of Contents</h2>
+                    <nav class="table-of-contents">
+                        <ul>
+                            <li><a href="#introduction">Introduction to Schema Markup</a></li>
+                            <li><a href="#why-schema">Why Schema Matters for AI</a></li>
+                            <li><a href="#json-ld-basics">JSON-LD Basics</a></li>
+                            <li><a href="#organization-schema">Organization & Website Schema</a></li>
+                            <li><a href="#product-schema">Product Schema</a></li>
+                            <li><a href="#review-schema">Review & Rating Schema</a></li>
+                            <li><a href="#faq-schema">FAQ Schema</a></li>
+                            <li><a href="#article-schema">Article Schema</a></li>
+                            <li><a href="#breadcrumb-schema">Breadcrumb Schema</a></li>
+                            <li><a href="#local-business-schema">Local Business Schema</a></li>
+                            <li><a href="#how-to-schema">HowTo Schema</a></li>
+                            <li><a href="#video-schema">Video Schema</a></li>
+                            <li><a href="#implementation">Implementation Guide</a></li>
+                            <li><a href="#validation">Testing & Validation</a></li>
+                            <li><a href="#best-practices">Best Practices</a></li>
+                            <li><a href="#resources">Schema.org Resources</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="introduction" class="content-section alt-bg">
+            <div class="container">
+                <h2>Introduction to Schema Markup</h2>
+                <p class="section-intro">
+                    Schema markup (structured data) is code that helps AI platforms understand the meaning and 
+                    relationships within your content. By explicitly defining entities and their properties, you 
+                    make it easier for AI to extract, cite, and present your information accurately.
+                </p>
+                
+                <div class="highlight-box">
+                    <h3>What You'll Learn</h3>
+                    <ul>
+                        <li>How schema markup helps AI platforms understand your content</li>
+                        <li>JSON-LD format and implementation best practices</li>
+                        <li>Common schema types for products, reviews, FAQs, and articles</li>
+                        <li>Organization, LocalBusiness, and other entity schemas</li>
+                        <li>How to test and validate your schema markup</li>
+                        <li>Official Schema.org documentation and resources</li>
+                    </ul>
+                </div>
+
+                <p>
+                    This guide focuses on JSON-LD (JavaScript Object Notation for Linked Data), the Google and 
+                    AI-recommended format for structured data. For general technical optimization, see our 
+                    <a href="/pages/guides/website-optimization.html">Website Technical Optimization Guide</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Why Schema Matters -->
+        <section id="why-schema" class="content-section">
+            <div class="container">
+                <h2>Why Schema Markup Matters for AI</h2>
+                <p class="section-intro">
+                    AI platforms use schema markup to understand content without ambiguity. While AI can infer 
+                    meaning from context, schema provides explicit, machine-readable structure that improves 
+                    accuracy and citation rates.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">3-5x</div>
+                        <div class="stat-description">Higher likelihood of rich results and AI citations with schema</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">30%</div>
+                        <div class="stat-description">Of websites use some form of structured data</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">JSON-LD</div>
+                        <div class="stat-description">Recommended format by Google and major AI platforms</div>
+                    </div>
+                </div>
+
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>🤖 AI Comprehension</h3>
+                        <p>Schema eliminates ambiguity by explicitly defining entities, properties, and relationships, 
+                        making it easier for AI to extract accurate information.</p>
+                    </div>
+                    <div class="content-card">
+                        <h3>📊 Rich Results</h3>
+                        <p>Structured data enables rich search results (star ratings, prices, availability) which 
+                        AI platforms often reference when citing your content.</p>
+                    </div>
+                    <div class="content-card">
+                        <h3>🔗 Entity Relationships</h3>
+                        <p>Schema helps AI understand how entities relate to each other (e.g., product → brand → 
+                        manufacturer → location), improving knowledge graph accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JSON-LD Basics -->
+        <section id="json-ld-basics" class="content-section alt-bg">
+            <div class="container">
+                <h2>JSON-LD Basics</h2>
+                <p class="section-intro">
+                    JSON-LD (JavaScript Object Notation for Linked Data) is the preferred format for schema markup. 
+                    It's placed in a <code>&lt;script type="application/ld+json"&gt;</code> tag, typically in the 
+                    <code>&lt;head&gt;</code> or near the relevant content.
+                </p>
+
+                <div class="concept-list">
+                    <div class="concept-item">
+                        <div class="concept-header">
+                            <span class="concept-number">1</span>
+                            <h3>Basic Structure</h3>
+                        </div>
+                        <p>Every JSON-LD object needs @context and @type:</p>
+                        <div class="code-example">
+                            <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Example Company",
+  "url": "https://example.com"
+}
+&lt;/script&gt;</code></pre>
+                        </div>
+                        <ul>
+                            <li><strong>@context</strong>: Defines the vocabulary (usually Schema.org)</li>
+                            <li><strong>@type</strong>: Specifies the entity type</li>
+                            <li><strong>Properties</strong>: Entity-specific attributes</li>
+                        </ul>
+                    </div>
+
+                    <div class="concept-item">
+                        <div class="concept-header">
+                            <span class="concept-number">2</span>
+                            <h3>Multiple Types</h3>
+                        </div>
+                        <p>You can include multiple schema objects on one page:</p>
+                        <div class="code-example">
+                            <pre><code>&lt;!-- Organization Schema --&gt;
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Example Co"
+}
+&lt;/script&gt;
+
+&lt;!-- Article Schema --&gt;
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Article Title"
+}
+&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="concept-item">
+                        <div class="concept-header">
+                            <span class="concept-number">3</span>
+                            <h3>Nested Objects</h3>
+                        </div>
+                        <p>Schema types can contain nested objects:</p>
+                        <div class="code-example">
+                            <pre><code>{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Product Name",
+  "brand": {
+    "@type": "Brand",
+    "name": "Brand Name"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "99.99",
+    "priceCurrency": "USD"
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Schema - Most important for e-commerce -->
+        <section id="product-schema" class="content-section">
+            <div class="container">
+                <h2>Product Schema</h2>
+                <p class="section-intro">
+                    Product schema is essential for e-commerce sites. It helps AI understand pricing, availability, 
+                    ratings, and other product details.
+                </p>
+
+                <div class="code-example">
+                    <h3>Complete Product Schema Example</h3>
+                    <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Premium Organic Coffee Beans",
+  "image": [
+    "https://example.com/photos/product-image.jpg",
+    "https://example.com/photos/product-image-2.jpg"
+  ],
+  "description": "100% Arabica beans, fair trade certified",
+  "sku": "ABC123",
+  "mpn": "925872",
+  "brand": {
+    "@type": "Brand",
+    "name": "Example Coffee Co"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://example.com/products/organic-coffee",
+    "priceCurrency": "USD",
+    "price": "24.99",
+    "priceValidUntil": "2025-12-31",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "Example Store"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127"
+  },
+  "review": [{
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Jane Doe"
+    },
+    "reviewBody": "Excellent coffee! Rich flavor and perfect aroma."
+  }]
+}
+&lt;/script&gt;</code></pre>
+                </div>
+
+                <h4>Required Properties:</h4>
+                <ul>
+                    <li><strong>name</strong>: Product name</li>
+                    <li><strong>image</strong>: Product images (array of URLs)</li>
+                    <li><strong>description</strong>: Product description</li>
+                    <li><strong>offers</strong>: Price, availability, currency</li>
+                </ul>
+
+                <h4>Recommended Properties:</h4>
+                <ul>
+                    <li><strong>brand</strong>: Product brand</li>
+                    <li><strong>aggregateRating</strong>: Overall ratings</li>
+                    <li><strong>review</strong>: Customer reviews</li>
+                    <li><strong>sku/mpn/gtin</strong>: Product identifiers</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FAQ Schema -->
+        <section id="faq-schema" class="content-section alt-bg">
+            <div class="container">
+                <h2>FAQ Schema</h2>
+                <p class="section-intro">
+                    FAQ schema helps AI understand question-answer pairs, making your content more likely to appear 
+                    in AI responses to user queries.
+                </p>
+
+                <div class="code-example">
+                    <h3>FAQ Schema Example</h3>
+                    <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is AI GEO?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AI GEO (Generative Engine Optimization) is the practice of optimizing content for AI platforms like ChatGPT, Google Gemini, and other AI-powered search tools."
+    }
+  },{
+    "@type": "Question",
+    "name": "Why is schema markup important for AI?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Schema markup provides explicit, machine-readable structure that helps AI platforms understand and accurately cite your content without ambiguity."
+    }
+  }]
+}
+&lt;/script&gt;</code></pre>
+                </div>
+
+                <p class="tip">💡 <strong>AI Benefit:</strong> FAQ schema directly answers common questions, making it highly valuable for AI platforms responding to user queries.</p>
+            </div>
+        </section>
+
+        <!-- Article Schema -->
+        <section id="article-schema" class="content-section">
+            <div class="container">
+                <h2>Article Schema</h2>
+                <p class="section-intro">
+                    Article schema helps AI identify and understand blog posts, news articles, and long-form content.
+                </p>
+
+                <div class="code-example">
+                    <h3>Article Schema Example</h3>
+                    <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Complete Guide to Website Technical Optimization",
+  "image": [
+    "https://example.com/article-image.jpg"
+  ],
+  "datePublished": "2025-11-18T08:00:00+00:00",
+  "dateModified": "2025-11-18T09:00:00+00:00",
+  "author": [{
+    "@type": "Person",
+    "name": "John Smith",
+    "url": "https://example.com/authors/john-smith"
+  }],
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI GEO",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.com/logo.png"
+    }
+  },
+  "description": "Learn how to optimize your website's technical foundations for AI visibility."
+}
+&lt;/script&gt;</code></pre>
+                </div>
+
+                <h4>Article Types:</h4>
+                <ul>
+                    <li><strong>Article</strong>: General articles</li>
+                    <li><strong>BlogPosting</strong>: Blog posts</li>
+                    <li><strong>NewsArticle</strong>: News content</li>
+                    <li><strong>TechArticle</strong>: Technical documentation</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Implementation Guide -->
+        <section id="implementation" class="content-section alt-bg">
+            <div class="container">
+                <h2>Implementation Guide</h2>
+                
+                <div class="strategy-phases">
+                    <div class="phase">
+                        <div class="phase-header">
+                            <h3><span class="phase-badge">Step 1</span> Identify Schema Types</h3>
+                        </div>
+                        <div class="phase-content">
+                            <p>Determine which schema types apply to your content:</p>
+                            <ul>
+                                <li>Organization/LocalBusiness for company info</li>
+                                <li>Product for e-commerce</li>
+                                <li>Article for blog content</li>
+                                <li>FAQPage for Q&A content</li>
+                                <li>Breadcrumb for navigation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="phase">
+                        <div class="phase-header">
+                            <h3><span class="phase-badge">Step 2</span> Add JSON-LD Code</h3>
+                        </div>
+                        <div class="phase-content">
+                            <p>Place schema markup in <code>&lt;head&gt;</code> or near relevant content:</p>
+                            <ul>
+                                <li>Use <code>&lt;script type="application/ld+json"&gt;</code></li>
+                                <li>Include required properties for each type</li>
+                                <li>Add recommended properties when available</li>
+                                <li>Nest related objects properly</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="phase">
+                        <div class="phase-header">
+                            <h3><span class="phase-badge">Step 3</span> Validate Schema</h3>
+                        </div>
+                        <div class="phase-content">
+                            <p>Test using official validation tools:</p>
+                            <ul>
+                                <li><a href="https://validator.schema.org/" target="_blank" rel="noopener">Schema.org Validator</a></li>
+                                <li><a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Google Rich Results Test</a></li>
+                                <li><a href="/pages/tools/schema-validator.html">Our Schema Validator Tool</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testing & Validation -->
+        <section id="validation" class="content-section">
+            <div class="container">
+                <h2>Testing & Validation</h2>
+                
+                <div class="best-practices-list">
+                    <div class="practice-item">
+                        <div class="practice-icon">✅</div>
+                        <div class="practice-content">
+                            <h3>Use Official Validators</h3>
+                            <ul>
+                                <li><a href="https://validator.schema.org/" target="_blank" rel="noopener">Schema.org Validator</a> - Checks syntax and structure</li>
+                                <li><a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Google Rich Results Test</a> - Tests Google eligibility</li>
+                                <li><a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a> - Monitor indexed structured data</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="practice-item">
+                        <div class="practice-icon">✅</div>
+                        <div class="practice-content">
+                            <h3>Common Validation Errors</h3>
+                            <ul>
+                                <li><strong>Missing required fields</strong>: Ensure all required properties are present</li>
+                                <li><strong>Invalid URLs</strong>: Use absolute URLs, not relative paths</li>
+                                <li><strong>Incorrect date formats</strong>: Use ISO 8601 format (YYYY-MM-DD)</li>
+                                <li><strong>Invalid property values</strong>: Check Schema.org docs for valid values</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section id="best-practices" class="content-section alt-bg">
+            <div class="container">
+                <h2>Schema Markup Best Practices</h2>
+                
+                <div class="best-practices-list">
+                    <div class="practice-item">
+                        <div class="practice-icon">✅</div>
+                        <div class="practice-content">
+                            <h3>Use Most Specific Type</h3>
+                            <p>Choose the most specific schema type that applies (e.g., LocalBusiness > Organization for local businesses).</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-item">
+                        <div class="practice-icon">✅</div>
+                        <div class="practice-content">
+                            <h3>Keep Schema Updated</h3>
+                            <p>Update schema markup when content changes (prices, availability, publish dates, etc.).</p>
+                        </div>
+                    </div>
+
+                    <div class="practice-item">
+                        <div class="practice-icon">✅</div>
+                        <div class="practice-content">
+                            <h3>Match Page Content</h3>
+                            <p>Schema markup must accurately reflect visible page content - don't markup content that isn't on the page.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schema.org Resources -->
+        <section id="resources" class="content-section">
+            <div class="container">
+                <h2>Schema.org Resources</h2>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>📚 Official Documentation</h3>
+                        <ul>
+                            <li><a href="https://schema.org/" target="_blank" rel="noopener">Schema.org Homepage</a> - Full vocabulary reference</li>
+                            <li><a href="https://schema.org/docs/schemas.html" target="_blank" rel="noopener">Schema Types</a> - All available schema types</li>
+                            <li><a href="https://developers.google.com/search/docs/appearance/structured-data" target="_blank" rel="noopener">Google Structured Data Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>🛠️ Tools</h3>
+                        <ul>
+                            <li><a href="https://validator.schema.org/" target="_blank" rel="noopener">Schema.org Validator</a></li>
+                            <li><a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Rich Results Test</a></li>
+                            <li><a href="/pages/tools/schema-validator.html">Our Schema Validator</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3>🔗 Related Guides</h3>
+                        <ul>
+                            <li><a href="/pages/guides/website-optimization.html">Website Technical Optimization</a></li>
+                            <li><a href="/pages/guides/technical-seo.html">Technical SEO Deep-Dive</a></li>
+                            <li><a href="/pages/guides/content-strategy.html">Content Strategy for AI</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <div class="next-steps-box">
+                    <h2>Ready to Implement Schema Markup?</h2>
+                    <p>
+                        Start with the most important schema types for your site, then expand to additional types 
+                        as needed. Use our validator tool to ensure proper implementation.
+                    </p>
+                    <div class="next-steps-links">
+                        <a href="/pages/tools/schema-validator.html" class="next-step-link">
+                            <span class="link-icon">→</span>
+                            Validate Your Schema
+                        </a>
+                        <a href="/pages/guides/website-optimization.html" class="next-step-link">
+                            <span class="link-icon">→</span>
+                            Technical Optimization Guide
+                        </a>
+                        <a href="/pages/guides/technical-seo.html" class="next-step-link">
+                            <span class="link-icon">→</span>
+                            Technical SEO Deep-Dive
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
