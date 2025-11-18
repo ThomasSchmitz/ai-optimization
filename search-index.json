@@ -844,6 +844,63 @@
         "pagination"
       ],
       "content": "Master semantic HTML5, XML sitemap configuration, robots.txt setup, canonical tag implementation, and advanced site architecture strategies."
+    },
+    {
+      "title": "Content Strategy for AI Visibility",
+      "url": "/pages/guides/content-strategy.html",
+      "category": "guide",
+      "description": "Comprehensive guide to creating and optimizing content for AI discovery including writing techniques, FAQ optimization, product descriptions, and multimedia content.",
+      "keywords": [
+        "content strategy",
+        "AI content",
+        "writing for AI",
+        "FAQ optimization",
+        "product descriptions",
+        "comparison content",
+        "reviews optimization",
+        "content freshness",
+        "multimedia optimization",
+        "long-form content",
+        "short-form content"
+      ],
+      "content": "Master writing for AI consumption, content structure and hierarchy, FAQ and Q&A optimization, product descriptions, comparison content, reviews and testimonials, content freshness strategies, and multimedia optimization for AI platforms."
+    },
+    {
+      "title": "Writing for AI Consumption",
+      "url": "/pages/guides/writing-for-ai.html",
+      "category": "guide",
+      "description": "Master the techniques for creating content that AI platforms understand, cite, and recommend including natural language optimization and question-based formatting.",
+      "keywords": [
+        "writing for AI",
+        "natural language",
+        "conversational content",
+        "question-based formatting",
+        "clarity",
+        "directness",
+        "AI citations",
+        "content writing",
+        "AI-optimized writing"
+      ],
+      "content": "Learn natural language optimization, question-based formatting, clarity and direct language principles, specificity and precision, sentence and paragraph structure, and tone optimization for AI citations."
+    },
+    {
+      "title": "Product Content Optimization for AI",
+      "url": "/pages/guides/product-content.html",
+      "category": "guide",
+      "description": "Complete guide to writing product descriptions, specifications, and e-commerce content that AI platforms cite and recommend.",
+      "keywords": [
+        "product content",
+        "product descriptions",
+        "e-commerce optimization",
+        "product SEO",
+        "AI shopping",
+        "product specifications",
+        "features and benefits",
+        "use cases",
+        "pricing optimization",
+        "product schema"
+      ],
+      "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
     }
   ]
 }
