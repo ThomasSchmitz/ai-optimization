@@ -185,142 +185,138 @@
       "keywords": [
         "voice search",
         "Alexa",
-        "Siri",
-        "Google Assistant",
-        "voice optimization",
-        "local search"
-      ],
-      "content": "Voice assistants answer millions of queries daily, particularly for local businesses, product recommendations, and quick factual answers. Requires voice-optimized content and featured snippet optimization."
-    },
-    {
-      "title": "Website Optimization Guide",
-      "url": "/index.html#optimization-guides",
-      "category": "guide",
-      "description": "Comprehensive strategies for optimizing websites for AI visibility.",
-      "keywords": [
-        "website optimization",
-        "structured content",
-        "schema markup",
-        "technical SEO",
-        "meta descriptions"
-      ],
-      "content": "Use semantic HTML with proper heading hierarchy, implement schema markup (JSON-LD) for products, reviews, and FAQs, create clear meta descriptions, optimize alt text, ensure fast page load speeds, implement HTTPS, create XML sitemaps, and use clean URL structures."
-    },
-    {
-      "title": "Social Media Optimization",
-      "url": "/index.html#optimization-guides",
-      "category": "guide",
-      "description": "Best practices for optimizing social media presence for AI platforms.",
-      "keywords": [
-        "social media",
-        "X",
-        "Twitter",
-        "Facebook",
-        "Instagram",
-        "hashtags",
-        "engagement"
-      ],
-      "content": "Maintain consistent branding, complete profile information, use keywords in bios, post valuable content regularly, use relevant hashtags, engage authentically, share testimonials, and optimize for platform-specific AI like Grok."
-    },
-    {
-      "title": "Content Creation for AI",
-      "url": "/index.html#optimization-guides",
-      "category": "guide",
-      "description": "Writing and creating content that AI platforms can effectively cite and understand.",
-      "keywords": [
-        "content creation",
-        "writing",
-        "authority building",
-        "multimedia",
-        "natural language"
-      ],
-      "content": "Use natural language, answer questions directly, include key information early, use bullet points, define technical terms, cite credible sources, include expert insights, share original data, create video with transcripts, and optimize multimedia content."
-    },
-    {
-      "title": "Reviews & Reputation Management",
-      "url": "/index.html#optimization-guides",
-      "category": "guide",
-      "description": "Managing reviews and building online reputation for AI visibility.",
-      "keywords": [
-        "reviews",
-        "reputation",
-        "testimonials",
-        "brand mentions",
-        "user-generated content"
-      ],
-      "content": "Encourage customer reviews, respond professionally, display reviews prominently, use schema markup for review snippets, monitor brand mentions, engage positively, and build relationships with influencers."
-    },
-    {
-      "title": "Best Practices for AI Visibility",
-      "url": "/index.html#best-practices",
-      "category": "resource",
-      "description": "Essential practices for improving visibility in AI-powered search and tools.",
-      "keywords": [
-        "best practices",
-        "E-E-A-T",
-        "structured data",
-        "accuracy",
-        "link authority",
-        "monitoring"
-      ],
-      "content": "Focus on E-E-A-T, create comprehensive content, use structured data, maintain accuracy, build link authority, optimize for questions, monitor AI citations, and diversify content formats. Avoid keyword stuffing, duplicate content, thin content, misleading information, and hidden text."
-    },
-    {
-      "title": "Resources & Tools",
-      "url": "/index.html#resources",
-      "category": "resource",
-      "description": "Testing tools, learning resources, and implementation checklists.",
-      "keywords": [
-        "resources",
-        "tools",
-        "testing",
-        "checklist",
-        "metrics",
-        "tracking"
-      ],
-      "content": "Use AI search testing, Google Search Console, Bing Webmaster Tools, schema markup validators. Track citation frequency, positioning, accuracy, sentiment, traffic from AI, and conversion rates. Implement schema markup, create FAQs, optimize meta descriptions, and monitor brand mentions."
-    },
-    {
-      "title": "Glossary - AI & Marketing Terms",
-      "url": "/pages/glossary.html",
-      "category": "glossary",
-      "description": "Comprehensive glossary of AI optimization and marketing terminology.",
-      "keywords": [
-        "glossary",
-        "definitions",
-        "terms",
-        "AI terminology",
-        "marketing terms",
-        "dictionary"
-      ],
-      "content": "Complete reference guide including AI GEO, AI Overviews, Alt Text, Backlinks, Citations, Claude, ChatGPT, Conversational Search, E-E-A-T, Embeddings, Featured Snippets, Gemini, GEO, Grok, LLM, Meta AI, Multimodal AI, NLP, Perplexity AI, RAG, Schema Markup, Semantic Search, SEO, SERP, Sitemap, Trust Signals, Voice Search, and more."
-    },
-    {
-      "title": "E-E-A-T",
-      "url": "/pages/glossary.html#E",
-      "category": "glossary",
-      "description": "Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
-      "keywords": [
-        "E-E-A-T",
-        "experience",
-        "expertise",
-        "authoritativeness",
-        "trustworthiness",
-        "quality"
-      ],
-      "content": "Google's quality framework for Experience, Expertise, Authoritativeness, and Trustworthiness. Critical for both traditional SEO and AI platform source selection."
-    },
-    {
-      "title": "Schema Markup",
-      "url": "/pages/glossary.html#S",
-      "category": "glossary",
-      "description": "Structured data code that helps AI understand content context and meaning.",
-      "keywords": [
-        "schema",
-        "structured data",
-        "JSON-LD",
-        "markup",
-        "microdata"
+        {
+          "title": "Website Technical Optimization for AI",
+          "url": "/pages/guides/website-optimization.html",
+          "category": "guide",
+          "description": "Comprehensive guide to optimizing your website's technical foundations for AI visibility.",
+          "keywords": [
+            "technical optimization",
+            "page speed",
+            "Core Web Vitals",
+            "mobile optimization",
+            "accessibility",
+            "site architecture",
+            "XML sitemaps",
+            "robots.txt"
+          ],
+          "content": "Master technical SEO, page speed optimization (LCP, INP, CLS), mobile-first design, accessibility best practices, and site architecture for AI visibility."
+        },
+        {
+          "title": "Analytics and Tracking for AI Visibility",
+          "url": "/pages/guides/analytics.html",
+          "category": "guide",
+          "description": "Comprehensive guide to measuring and monitoring your AI GEO performance, tracking citations, brand mentions, ROI, and competitive analysis.",
+          "keywords": [
+            "AI analytics",
+            "AI tracking",
+            "AI GEO KPIs",
+            "ROI measurement",
+            "citation tracking",
+            "brand monitoring",
+            "competitive analysis",
+            "AI visibility metrics",
+            "performance measurement",
+            "analytics dashboard",
+            "reporting"
+          ],
+          "content": "Master AI visibility analytics with KPIs for AI GEO, citation tracking, brand mention monitoring, ROI measurement, competitive analysis, dashboard setup, and stakeholder reporting. Learn to track visibility metrics, quality metrics, traffic and engagement, and content performance."
+        },
+        {
+          "title": "Testing Tools for AI Visibility",
+          "url": "/pages/guides/testing-tools.html",
+          "category": "guide",
+          "description": "Comprehensive guide to manual testing across AI platforms, automated monitoring tools, and systematic testing methodologies to verify your AI optimization efforts.",
+          "keywords": [
+            "AI testing",
+            "manual testing",
+            "automated monitoring",
+            "AI platform testing",
+            "visibility testing",
+            "ChatGPT testing",
+            "Gemini testing",
+            "AI verification",
+            "testing framework",
+            "quality verification"
+          ],
+          "content": "Learn manual testing across ChatGPT, Gemini, Copilot, Perplexity, Claude, Meta AI, and You.com. Master systematic testing frameworks, automated monitoring tools, query testing strategies, quality and accuracy verification, and troubleshooting common issues."
+        },
+        {
+          "title": "Monitoring Tools for AI Visibility",
+          "url": "/pages/resources/monitoring-tools.html",
+          "category": "resource",
+          "description": "Comprehensive directory of tools and platforms for tracking, measuring, and monitoring your brand's presence across AI platforms. Includes free and paid solutions.",
+          "keywords": [
+            "AI monitoring tools",
+            "visibility tracking",
+            "brand monitoring",
+            "AI analytics tools",
+            "automated monitoring",
+            "citation tracking tools",
+            "monitoring platforms",
+            "tracking solutions"
+          ],
+          "content": "Discover 30+ tools for AI visibility monitoring including AI platform access tools (ChatGPT, Gemini, Copilot, Perplexity, Claude), brand monitoring solutions (Brand24, Mention, Awario), SEO analytics (SEMrush, Ahrefs, Moz), web analytics (Google Analytics, Search Console), and automation tools (Zapier, Selenium)."
+        },
+        {
+          "title": "Social Media Optimization for AI",
+          "url": "/pages/guides/social-media-optimization.html",
+          "category": "guide",
+          "description": "Master platform-specific social media strategies for X, LinkedIn, Facebook, Instagram, and TikTok to maximize AI visibility and authority.",
+          "keywords": [
+            "social media optimization",
+            "Twitter X strategy",
+            "LinkedIn optimization",
+            "Facebook marketing",
+            "Instagram AI",
+            "TikTok strategy",
+            "social media SEO",
+            "engagement signals",
+            "authority building",
+            "influencer marketing",
+            "community building",
+            "hashtag strategy"
+          ],
+          "content": "Comprehensive social media optimization for AI visibility including platform-specific strategies (X, LinkedIn, Facebook, Instagram, TikTok), profile optimization, content formats, engagement signals, hashtags, social proof, community building, and influencer partnerships."
+        },
+        {
+          "title": "X (Twitter) Strategy for AI Visibility",
+          "url": "/pages/guides/twitter-x-strategy.html",
+          "category": "guide",
+          "description": "Complete X (Twitter) strategy guide for Grok AI visibility, real-time engagement, threading mastery, and thought leadership.",
+          "keywords": [
+            "Twitter strategy",
+            "X platform",
+            "Grok AI",
+            "Twitter optimization",
+            "X marketing",
+            "Twitter threads",
+            "real-time marketing",
+            "Twitter engagement",
+            "Community Notes",
+            "Twitter verification"
+          ],
+          "content": "Master X optimization for Grok AI including profile optimization, content strategy, threading techniques, real-time marketing, trending topics, Community Notes participation, and verification strategies for authority building."
+        },
+        {
+          "title": "LinkedIn Strategy for AI Visibility",
+          "url": "/pages/guides/linkedin-strategy.html",
+          "category": "guide",
+          "description": "Complete LinkedIn strategy for professional authority, B2B visibility, and thought leadership optimization for AI platforms.",
+          "keywords": [
+            "LinkedIn strategy",
+            "LinkedIn optimization",
+            "B2B marketing",
+            "professional networking",
+            "LinkedIn content",
+            "thought leadership",
+            "LinkedIn SEO",
+            "business development",
+            "LinkedIn articles",
+            "LinkedIn video"
+          ],
+          "content": "Comprehensive LinkedIn optimization including profile optimization, company pages, content strategy, article publishing, video content, networking, engagement, groups, and newsletters for professional authority and B2B visibility."
+        },
       ],
       "content": "Structured data code (typically JSON-LD) added to web pages to help search engines and AI platforms better understand content context, relationships, and meaning. Examples include Product schema, Review schema, and FAQ schema."
     },
@@ -903,6 +899,7 @@
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
     },
     {
+<<<<<<< HEAD
       "title": "Analytics and Tracking for AI Visibility",
       "url": "/pages/guides/analytics.html",
       "category": "guide",
@@ -958,6 +955,65 @@
         "tracking solutions"
       ],
       "content": "Discover 30+ tools for AI visibility monitoring including AI platform access tools (ChatGPT, Gemini, Copilot, Perplexity, Claude), brand monitoring solutions (Brand24, Mention, Awario), SEO analytics (SEMrush, Ahrefs, Moz), web analytics (Google Analytics, Search Console), and automation tools (Zapier, Selenium)."
+=======
+      "title": "Social Media Optimization for AI",
+      "url": "/pages/guides/social-media-optimization.html",
+      "category": "guide",
+      "description": "Master platform-specific social media strategies for X, LinkedIn, Facebook, Instagram, and TikTok to maximize AI visibility and authority.",
+      "keywords": [
+        "social media optimization",
+        "Twitter X strategy",
+        "LinkedIn optimization",
+        "Facebook marketing",
+        "Instagram AI",
+        "TikTok strategy",
+        "social media SEO",
+        "engagement signals",
+        "authority building",
+        "influencer marketing",
+        "community building",
+        "hashtag strategy"
+      ],
+      "content": "Comprehensive social media optimization for AI visibility including platform-specific strategies (X, LinkedIn, Facebook, Instagram, TikTok), profile optimization, content formats, engagement signals, hashtags, social proof, community building, and influencer partnerships."
+    },
+    {
+      "title": "X (Twitter) Strategy for AI Visibility",
+      "url": "/pages/guides/twitter-x-strategy.html",
+      "category": "guide",
+      "description": "Complete X (Twitter) strategy guide for Grok AI visibility, real-time engagement, threading mastery, and thought leadership.",
+      "keywords": [
+        "Twitter strategy",
+        "X platform",
+        "Grok AI",
+        "Twitter optimization",
+        "X marketing",
+        "Twitter threads",
+        "real-time marketing",
+        "Twitter engagement",
+        "Community Notes",
+        "Twitter verification"
+      ],
+      "content": "Master X optimization for Grok AI including profile optimization, content strategy, threading techniques, real-time marketing, trending topics, Community Notes participation, and verification strategies for authority building."
+    },
+    {
+      "title": "LinkedIn Strategy for AI Visibility",
+      "url": "/pages/guides/linkedin-strategy.html",
+      "category": "guide",
+      "description": "Complete LinkedIn strategy for professional authority, B2B visibility, and thought leadership optimization for AI platforms.",
+      "keywords": [
+        "LinkedIn strategy",
+        "LinkedIn optimization",
+        "B2B marketing",
+        "professional networking",
+        "LinkedIn content",
+        "thought leadership",
+        "LinkedIn SEO",
+        "business development",
+        "LinkedIn articles",
+        "LinkedIn video"
+      ],
+      "content": "Comprehensive LinkedIn optimization including profile optimization, company pages, content strategy, article publishing, video content, networking, engagement, groups, and newsletters for professional authority and B2B visibility."
+>>>>>>> origin/main
     }
   ]
 }
