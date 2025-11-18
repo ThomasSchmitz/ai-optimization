@@ -1,0 +1,153 @@
+# robots.txt for AI GEO - Generative Engine Optimization
+# Block traditional search engines, allow AI bots and development tools
+
+# =============================================================================
+# BLOCKED: Traditional Search Engines
+# =============================================================================
+
+# Google Search
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Googlebot-News
+Disallow: /
+
+User-agent: Googlebot-Video
+Disallow: /
+
+# Bing Search
+User-agent: bingbot
+Disallow: /
+
+User-agent: BingPreview
+Disallow: /
+
+User-agent: msnbot
+Disallow: /
+
+User-agent: msnbot-media
+Disallow: /
+
+# Yahoo Search
+User-agent: Slurp
+Disallow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Disallow: /
+
+# Baidu
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Baiduspider-image
+Disallow: /
+
+User-agent: Baiduspider-video
+Disallow: /
+
+# Yandex
+User-agent: YandexBot
+Disallow: /
+
+User-agent: YandexImages
+Disallow: /
+
+# Other Search Engines
+User-agent: Sogou
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+# =============================================================================
+# ALLOWED: AI Bots and Development Tools
+# =============================================================================
+
+# OpenAI / ChatGPT
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# GitHub
+User-agent: GitHub-Hookshot
+Allow: /
+
+User-agent: github-camo
+Allow: /
+
+# Microsoft Copilot and AI
+User-agent: Microsoft-Copilot
+Allow: /
+
+User-agent: Copilot
+Allow: /
+
+# Google AI (Bard/Gemini - separate from search)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl (research)
+User-agent: CCBot
+Allow: /
+
+# Internet Archive (archiving, not search)
+User-agent: ia_archiver
+Allow: /
+
+# You.com AI Search
+User-agent: YouBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Apple (Siri, AppleBot for AI)
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Amazon (Alexa)
+User-agent: Amazonbot
+Allow: /
+
+# Diffbot (AI web data extraction)
+User-agent: Diffbot
+Allow: /
+
+# =============================================================================
+# Sitemap
+# =============================================================================
+Sitemap: https://thomasschmitz.github.io/ai-optimization/sitemap.xml
