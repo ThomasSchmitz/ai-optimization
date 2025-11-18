@@ -1,23 +1,42 @@
 <!-- Case Study Component -->
 <!-- 
-  Reusable case study component for success stories.
+  ⚠️ IMPORTANT CONTENT QUALITY NOTICE ⚠️
   
-  Usage: Include this file and customize:
-  - data-company-name: Name of the company
+  This component should ONLY be used for REAL, VERIFIABLE case studies with:
+  - Links to original sources (company blog posts, press releases, published research)
+  - Real company names and verified results
+  - Proper attribution and publication dates
+  - Contact information or external validation
+  
+  DO NOT USE THIS COMPONENT FOR:
+  - Fictional or "illustrative" examples
+  - Hypothetical scenarios
+  - Made-up company names or results
+  - Unverifiable statistics
+  
+  Fictional case studies damage credibility and can be perceived as AI hallucinations.
+  If you cannot find real case studies, remove the case studies section from the page entirely.
+  
+  Usage for VERIFIED case studies only:
+  - data-company-name: REAL company name (with permission/public source)
   - data-industry: Industry type
-  - data-challenge: The challenge they faced
-  - data-solution: How they solved it
-  - data-results: The results achieved
+  - data-challenge: The verified challenge they faced
+  - data-solution: How they actually solved it  
+  - data-results: VERIFIED results with source links
+  - data-source-url: Link to original source/press release
 -->
 <section class="case-study">
     <div class="case-study-header">
         <div class="case-study-company">
             <h3 class="company-name" data-company-name="Company Name">
-                <!-- Company name will be inserted here -->
+                <!-- REAL company name with verification -->
             </h3>
             <span class="company-industry" data-industry="Industry">
-                <!-- Industry will be inserted here -->
+                <!-- Industry -->
             </span>
+            <a href="" class="source-link" data-source-url="" target="_blank" rel="noopener">
+                View Original Source →
+            </a>
         </div>
     </div>
     
