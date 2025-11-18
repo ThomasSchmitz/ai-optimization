@@ -899,7 +899,6 @@
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
     },
     {
-<<<<<<< HEAD
       "title": "Analytics and Tracking for AI Visibility",
       "url": "/pages/guides/analytics.html",
       "category": "guide",
@@ -955,7 +954,6 @@
         "tracking solutions"
       ],
       "content": "Discover 30+ tools for AI visibility monitoring including AI platform access tools (ChatGPT, Gemini, Copilot, Perplexity, Claude), brand monitoring solutions (Brand24, Mention, Awario), SEO analytics (SEMrush, Ahrefs, Moz), web analytics (Google Analytics, Search Console), and automation tools (Zapier, Selenium)."
-=======
       "title": "Social Media Optimization for AI",
       "url": "/pages/guides/social-media-optimization.html",
       "category": "guide",
@@ -1013,7 +1011,6 @@
         "LinkedIn video"
       ],
       "content": "Comprehensive LinkedIn optimization including profile optimization, company pages, content strategy, article publishing, video content, networking, engagement, groups, and newsletters for professional authority and B2B visibility."
->>>>>>> origin/main
     }
   ]
 }
