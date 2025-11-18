@@ -84,6 +84,13 @@ Use this template to add new ideas to this document:
    - New ideas can come from user feedback, platform changes, or emerging trends
    - Regularly review ideas marked 🔮 **Future** to see if priorities have shifted
 
+7. **Case Study Source Attribution**:
+   - When authoring case studies, always include verifiable sources or references
+   - Link to original sources such as company blogs, press releases, case study pages, or published reports
+   - If creating illustrative examples, clearly label them as "illustrative" or "hypothetical"
+   - For real case studies, include source links, publication dates, and relevant context
+   - This ensures credibility and allows readers to verify claims
+
 By following these requirements, you ensure fresh ideas are continuously evaluated and the best ones are incorporated into the project roadmap.
 
 ---

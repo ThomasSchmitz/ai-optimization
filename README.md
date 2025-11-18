@@ -151,6 +151,16 @@ When working on this project, AI assistants should maintain the following docume
    - Ensure any roadmap changes are reflected in the PR list
    - Link between related items across documents
 
+4. **Case Study Source Attribution**:
+   - When authoring case studies, always include verifiable sources or references
+   - Link to original sources such as company blogs, press releases, case study pages, or published reports
+   - If creating illustrative examples, clearly label them as "illustrative" or "hypothetical"
+   - For real case studies, include:
+     - Source link (e.g., "Source: [Company Name Case Study](URL)")
+     - Publication or announcement date when available
+     - Relevant context about where the data/results originated
+   - This ensures credibility and allows readers to verify claims
+
 ### Workflow for New Features
 
 1. Check FRESH-IDEAS.md for relevant approved ideas
