@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive directory of recommended tools and services for AI optimization, marketing automation, and generative engine optimization.">
+    <meta name="keywords" content="AI tools, marketing tools, SEO tools, optimization software, AI GEO tools, analytics">
+    <title>Tools Directory - AI GEO</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../includes.js"></script>
+    <style>
+        .tools-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .tools-hero h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tools-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        .category-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .category-btn {
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            border-color: #4A90E2;
+            color: #4A90E2;
+            background: #e3f2fd;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .tool-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tool-card:hover {
+            border-color: #4A90E2;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .tool-title h3 {
+            color: #333;
+            margin-bottom: 0.25rem;
+            font-size: 1.25rem;
+        }
+        
+        .tool-category {
+            color: #888;
+            font-size: 0.875rem;
+        }
+        
+        .tool-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            flex: 1;
+        }
+        
+        .tool-features {
+            margin: 1rem 0;
+        }
+        
+        .tool-features ul {
+            margin-left: 1.5rem;
+            color: #666;
+        }
+        
+        .tool-features li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .tool-tag {
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .tag-free {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .tag-freemium {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .tag-paid {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .tag-enterprise {
+            background: #f3e5f5;
+            color: #6a1b9a;
+        }
+        
+        .tool-pricing {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .tool-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .tool-link {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: #4A90E2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .tool-link:hover {
+            background: #357abd;
+        }
+        
+        .tool-link.secondary {
+            background: white;
+            color: #4A90E2;
+            border: 2px solid #4A90E2;
+        }
+        
+        .tool-link.secondary:hover {
+            background: #e3f2fd;
+        }
+        
+        .featured-badge {
+            display: inline-block;
+            background: #ffd700;
+            color: #333;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tools-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Header Component -->
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="tools-hero">
+            <div class="container">
+                <h1>🛠️ Tools & Services Directory</h1>
+                <p>
+                    Curated collection of recommended tools and services for AI optimization, 
+                    marketing automation, and generative engine optimization.
+                </p>
+            </div>
+        </section>
+
+        <!-- Category Navigation -->
+        <section class="content-section">
+            <div class="container">
+                <div class="category-nav">
+                    <a href="#ai-monitoring" class="category-btn">AI Monitoring</a>
+                    <a href="#seo-tools" class="category-btn">SEO & Analytics</a>
+                    <a href="#content-tools" class="category-btn">Content Creation</a>
+                    <a href="#schema-tools" class="category-btn">Schema & Markup</a>
+                    <a href="#social-tools" class="category-btn">Social Media</a>
+                    <a href="#automation" class="category-btn">Automation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Monitoring Tools Section -->
+        <section id="ai-monitoring" class="content-section">
+            <div class="container">
+                <h2>AI Monitoring & Visibility Tools</h2>
+                <p class="section-intro">
+                    Track and monitor your brand's visibility across AI platforms and search engines.
+                </p>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🔍</div>
+                            <div class="tool-title">
+                                <h3>AI Visibility Tracker<span class="featured-badge">Featured</span></h3>
+                                <div class="tool-category">AI Monitoring</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Monitor how your brand appears in ChatGPT, Gemini, Copilot, and other AI platforms. 
+                            Track mentions, citations, and sentiment across AI-generated responses.
+                        </div>
+                        <div class="tool-features">
+                            <strong>Key Features:</strong>
+                            <ul>
+                                <li>Multi-platform AI monitoring</li>
+                                <li>Citation tracking and analysis</li>
+                                <li>Competitive benchmarking</li>
+                                <li>Automated alerts for brand mentions</li>
+                            </ul>
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-freemium">Freemium</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free - $299/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="#" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Try Free →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📊</div>
+                            <div class="tool-title">
+                                <h3>GEO Analytics Platform</h3>
+                                <div class="tool-category">AI Analytics</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Comprehensive analytics platform for measuring AI GEO performance. Track visibility 
+                            trends, identify optimization opportunities, and measure ROI.
+                        </div>
+                        <div class="tool-features">
+                            <strong>Key Features:</strong>
+                            <ul>
+                                <li>AI visibility score tracking</li>
+                                <li>Performance benchmarking</li>
+                                <li>Custom reporting dashboards</li>
+                                <li>Integration with Google Analytics</li>
+                            </ul>
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-paid">Paid</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Starting at $199/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="#" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🎯</div>
+                            <div class="tool-title">
+                                <h3>ChatGPT Citation Checker</h3>
+                                <div class="tool-category">Citation Analysis</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Specialized tool for tracking your citations in ChatGPT responses. 
+                            Understand which content gets cited and why.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-free">Free</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free
+                        </div>
+                        <div class="tool-actions">
+                            <a href="#" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Use Tool →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO & Analytics Tools Section -->
+        <section id="seo-tools" class="content-section alt-bg">
+            <div class="container">
+                <h2>SEO & Analytics Tools</h2>
+                <p class="section-intro">
+                    Traditional SEO tools that remain essential for AI optimization success.
+                </p>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📈</div>
+                            <div class="tool-title">
+                                <h3>Ahrefs</h3>
+                                <div class="tool-category">SEO Suite</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Comprehensive SEO toolset for backlink analysis, keyword research, and competitor analysis. 
+                            Essential for understanding your authority signals that AI platforms evaluate.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-paid">Paid</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 $99 - $999/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://ahrefs.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Visit Ahrefs →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🔎</div>
+                            <div class="tool-title">
+                                <h3>SEMrush</h3>
+                                <div class="tool-category">SEO & Marketing</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            All-in-one marketing toolkit for SEO, content, and competitive research. 
+                            Track rankings, analyze competitors, and optimize content for both search engines and AI.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-freemium">Freemium</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free - $449/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://semrush.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Try SEMrush →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📊</div>
+                            <div class="tool-title">
+                                <h3>Google Search Console</h3>
+                                <div class="tool-category">Analytics</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Free tool from Google for monitoring your website's search performance. 
+                            Essential for understanding how Google (and by extension, Gemini) sees your content.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-free">Free</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://search.google.com/search-console" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Access Console →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Tools Section -->
+        <section id="content-tools" class="content-section">
+            <div class="container">
+                <h2>Content Creation & Optimization</h2>
+                <p class="section-intro">
+                    Tools for creating and optimizing content that AI platforms love to cite and reference.
+                </p>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">✍️</div>
+                            <div class="tool-title">
+                                <h3>Clearscope</h3>
+                                <div class="tool-category">Content Optimization</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            AI-powered content optimization platform that helps you create comprehensive, 
+                            authoritative content that ranks well and gets cited by AI platforms.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-paid">Paid</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Contact for pricing
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://clearscope.io" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📝</div>
+                            <div class="tool-title">
+                                <h3>Grammarly</h3>
+                                <div class="tool-category">Writing Assistant</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Writing enhancement tool ensuring your content is clear, error-free, and professional. 
+                            Quality writing is crucial for AI citation worthiness.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-freemium">Freemium</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free - $30/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://grammarly.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Try Grammarly →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🎨</div>
+                            <div class="tool-title">
+                                <h3>Canva</h3>
+                                <div class="tool-category">Visual Content</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Easy-to-use design platform for creating visual content that enhances your 
+                            articles and social media presence, boosting engagement signals.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-freemium">Freemium</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free - $119.99/year
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://canva.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Try Canva →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schema & Markup Tools Section -->
+        <section id="schema-tools" class="content-section alt-bg">
+            <div class="container">
+                <h2>Schema & Structured Data Tools</h2>
+                <p class="section-intro">
+                    Tools for implementing structured data that helps AI platforms understand your content.
+                </p>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🏗️</div>
+                            <div class="tool-title">
+                                <h3>Schema.org Generator</h3>
+                                <div class="tool-category">Schema Markup</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Generate valid Schema.org markup for your website. Helps AI platforms 
+                            understand and categorize your content more accurately.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-free">Free</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free
+                        </div>
+                        <div class="tool-actions">
+                            <a href="#" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Generate Schema →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">✅</div>
+                            <div class="tool-title">
+                                <h3>Google Rich Results Test</h3>
+                                <div class="tool-category">Validation</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Validate your structured data implementation and preview how it appears 
+                            in search results. Essential for ensuring AI platforms can parse your data.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-free">Free</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://search.google.com/test/rich-results" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Test Your Markup →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🔧</div>
+                            <div class="tool-title">
+                                <h3>Yoast SEO</h3>
+                                <div class="tool-category">WordPress Plugin</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Popular WordPress plugin that makes adding schema markup easy. 
+                            Includes built-in structured data support for common content types.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-freemium">Freemium</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free - $99/year
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://yoast.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Get Yoast →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Tools Section -->
+        <section id="social-tools" class="content-section">
+            <div class="container">
+                <h2>Social Media Management</h2>
+                <p class="section-intro">
+                    Manage and optimize your social media presence to boost authority signals.
+                </p>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📱</div>
+                            <div class="tool-title">
+                                <h3>Buffer</h3>
+                                <div class="tool-category">Social Scheduling</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Social media scheduling and management platform. Maintain consistent 
+                            social presence that contributes to your overall authority score.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-freemium">Freemium</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free - $120/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://buffer.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Try Buffer →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📊</div>
+                            <div class="tool-title">
+                                <h3>Hootsuite</h3>
+                                <div class="tool-category">Social Management</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Comprehensive social media management platform for scheduling, 
+                            monitoring, and analyzing your social media performance.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-freemium">Freemium</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free - $739/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://hootsuite.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Try Hootsuite →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🎯</div>
+                            <div class="tool-title">
+                                <h3>Sprout Social</h3>
+                                <div class="tool-category">Enterprise Social</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Enterprise social media management with advanced analytics and 
+                            collaboration features. Ideal for larger teams managing multiple brands.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-enterprise">Enterprise</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 $249 - $499/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://sproutsocial.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Learn More →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Automation Tools Section -->
+        <section id="automation" class="content-section alt-bg">
+            <div class="container">
+                <h2>Marketing Automation</h2>
+                <p class="section-intro">
+                    Automate your AI optimization workflows and monitoring processes.
+                </p>
+
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">⚡</div>
+                            <div class="tool-title">
+                                <h3>Zapier</h3>
+                                <div class="tool-category">Workflow Automation</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Connect and automate workflows between different tools. 
+                            Create automated monitoring and reporting for your AI visibility.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-freemium">Freemium</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free - $599/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://zapier.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Try Zapier →
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🔗</div>
+                            <div class="tool-title">
+                                <h3>Make (Integromat)</h3>
+                                <div class="tool-category">Automation Platform</div>
+                            </div>
+                        </div>
+                        <div class="tool-description">
+                            Visual automation platform for complex workflows. 
+                            Build sophisticated AI monitoring and optimization automations.
+                        </div>
+                        <div class="tool-tags">
+                            <span class="tool-tag tag-freemium">Freemium</span>
+                        </div>
+                        <div class="tool-pricing">
+                            💰 Free - $299/month
+                        </div>
+                        <div class="tool-actions">
+                            <a href="https://make.com" class="tool-link" target="_blank" rel="noopener noreferrer">
+                                Try Make →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submit Tool Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Suggest a Tool</h2>
+                <p class="section-intro">
+                    Know of a great tool that should be in this directory? We'd love to hear about it!
+                </p>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" class="btn btn-primary">Submit Tool Suggestion</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Resources Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>Related Resources</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">🤝</div>
+                        <h3>Join the Community</h3>
+                        <p>Connect with other professionals and discuss tool recommendations.</p>
+                        <a href="/pages/community.html" style="color: #4A90E2; text-decoration: none; font-weight: 600;">Join Community →</a>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="icon">📅</div>
+                        <h3>Events & Conferences</h3>
+                        <p>Learn about new tools at industry events and conferences.</p>
+                        <a href="/pages/events.html" style="color: #4A90E2; text-decoration: none; font-weight: 600;">View Events →</a>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="icon">📖</div>
+                        <h3>Learning Resources</h3>
+                        <p>Access guides on how to use these tools effectively.</p>
+                        <a href="/pages/learn/index.html" style="color: #4A90E2; text-decoration: none; font-weight: 600;">Start Learning →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Component -->
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

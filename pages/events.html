@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming AI and marketing events, conferences, and webinars focused on AI optimization and generative engine optimization.">
+    <meta name="keywords" content="AI events, marketing conferences, AI GEO events, webinars, workshops, AI optimization">
+    <title>Events & Conferences - AI GEO</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../includes.js"></script>
+    <style>
+        .events-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .events-hero h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .events-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .filter-tab {
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+        }
+        
+        .filter-tab:hover,
+        .filter-tab.active {
+            border-color: #4A90E2;
+            color: #4A90E2;
+            background: #e3f2fd;
+        }
+        
+        .event-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .event-card:hover {
+            border-color: #4A90E2;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+        
+        .event-title {
+            flex: 1;
+        }
+        
+        .event-title h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .event-date {
+            background: #4A90E2;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-align: center;
+            min-width: 100px;
+            flex-shrink: 0;
+        }
+        
+        .event-date .month {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .event-date .day {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .event-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .event-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .tag-virtual {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .tag-in-person {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .tag-hybrid {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        
+        .tag-free {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .event-details {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .event-info {
+            display: flex;
+            gap: 2rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+        }
+        
+        .info-icon {
+            color: #4A90E2;
+        }
+        
+        .event-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .event-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #4A90E2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .event-link:hover {
+            background: #357abd;
+        }
+        
+        .event-link.secondary {
+            background: white;
+            color: #4A90E2;
+            border: 2px solid #4A90E2;
+        }
+        
+        .event-link.secondary:hover {
+            background: #e3f2fd;
+        }
+        
+        .past-event {
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .event-header {
+                flex-direction: column;
+            }
+            
+            .event-date {
+                align-self: flex-start;
+            }
+            
+            .events-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .event-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include Header Component -->
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="events-hero">
+            <div class="container">
+                <h1>📅 Events & Conferences</h1>
+                <p>
+                    Stay current with the latest AI and marketing events. Network with industry professionals, 
+                    learn cutting-edge strategies, and discover new optimization techniques.
+                </p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="content-section">
+            <div class="container">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Events</button>
+                    <button class="filter-tab" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-tab" data-filter="virtual">Virtual</button>
+                    <button class="filter-tab" data-filter="in-person">In-Person</button>
+                    <button class="filter-tab" data-filter="free">Free</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Upcoming Events - November 2025</h2>
+                <p class="section-intro">
+                    Mark your calendar for these upcoming AI and marketing events featuring AI optimization content.
+                </p>
+
+                <div class="event-card">
+                    <div class="event-header">
+                        <div class="event-title">
+                            <h3>AI Marketing Summit 2025</h3>
+                        </div>
+                        <div class="event-date">
+                            <div class="month">Dec</div>
+                            <div class="day">5-7</div>
+                        </div>
+                    </div>
+                    <div class="event-tags">
+                        <span class="event-tag tag-hybrid">Hybrid</span>
+                        <span class="event-tag tag-virtual">Virtual Available</span>
+                    </div>
+                    <div class="event-details">
+                        <p>
+                            The premier event for AI marketing professionals. Three days of workshops, keynotes, and 
+                            networking focused on AI-powered marketing strategies, including dedicated tracks for AI GEO 
+                            and generative AI optimization.
+                        </p>
+                    </div>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>San Francisco, CA + Virtual</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💰</span>
+                            <span>$799 (Virtual) / $1,499 (In-Person)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">👥</span>
+                            <span>2,000+ Attendees</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="event-link" target="_blank" rel="noopener noreferrer">
+                            Register Now →
+                        </a>
+                        <a href="#" class="event-link secondary">
+                            View Schedule
+                        </a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-header">
+                        <div class="event-title">
+                            <h3>Generative AI for Business</h3>
+                        </div>
+                        <div class="event-date">
+                            <div class="month">Dec</div>
+                            <div class="day">12</div>
+                        </div>
+                    </div>
+                    <div class="event-tags">
+                        <span class="event-tag tag-virtual">Virtual</span>
+                        <span class="event-tag tag-free">Free</span>
+                    </div>
+                    <div class="event-details">
+                        <p>
+                            Free webinar series covering practical applications of generative AI in business. 
+                            Session on AI GEO strategies and optimizing for ChatGPT, Gemini, and other platforms.
+                        </p>
+                    </div>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>Online Webinar</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💰</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">⏰</span>
+                            <span>2:00 PM EST</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="event-link" target="_blank" rel="noopener noreferrer">
+                            Register Free →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-header">
+                        <div class="event-title">
+                            <h3>Content Marketing World</h3>
+                        </div>
+                        <div class="event-date">
+                            <div class="month">Dec</div>
+                            <div class="day">15-18</div>
+                        </div>
+                    </div>
+                    <div class="event-tags">
+                        <span class="event-tag tag-in-person">In-Person</span>
+                    </div>
+                    <div class="event-details">
+                        <p>
+                            The largest content marketing event featuring sessions on AI-powered content creation, 
+                            optimization for AI platforms, and future trends in content discovery through AI.
+                        </p>
+                    </div>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>Cleveland, OH</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💰</span>
+                            <span>$1,295</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">👥</span>
+                            <span>3,500+ Marketers</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="event-link" target="_blank" rel="noopener noreferrer">
+                            Learn More →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2026 Events Preview -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>Looking Ahead - 2026</h2>
+                <p class="section-intro">
+                    Plan ahead for these major 2026 events featuring AI optimization content.
+                </p>
+
+                <div class="event-card">
+                    <div class="event-header">
+                        <div class="event-title">
+                            <h3>Search Marketing Expo (SMX)</h3>
+                        </div>
+                        <div class="event-date">
+                            <div class="month">Mar</div>
+                            <div class="day">10-12</div>
+                        </div>
+                    </div>
+                    <div class="event-tags">
+                        <span class="event-tag tag-hybrid">Hybrid</span>
+                    </div>
+                    <div class="event-details">
+                        <p>
+                            Leading search marketing conference expanding coverage of AI-powered search and 
+                            generative engine optimization. Essential for SEO professionals transitioning to AI GEO.
+                        </p>
+                    </div>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>Munich, Germany + Virtual</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💰</span>
+                            <span>TBA</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="event-link secondary">
+                            Get Notified
+                        </a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-header">
+                        <div class="event-title">
+                            <h3>MarTech Conference</h3>
+                        </div>
+                        <div class="event-date">
+                            <div class="month">May</div>
+                            <div class="day">14-16</div>
+                        </div>
+                    </div>
+                    <div class="event-tags">
+                        <span class="event-tag tag-in-person">In-Person</span>
+                    </div>
+                    <div class="event-details">
+                        <p>
+                            Comprehensive marketing technology event with extensive AI track. Features hands-on 
+                            workshops for optimizing marketing stacks for AI visibility.
+                        </p>
+                    </div>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>Boston, MA</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💰</span>
+                            <span>TBA</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="event-link secondary">
+                            Get Notified
+                        </a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-header">
+                        <div class="event-title">
+                            <h3>AI GEO Summit (Inaugural)</h3>
+                        </div>
+                        <div class="event-date">
+                            <div class="month">Sep</div>
+                            <div class="day">22-24</div>
+                        </div>
+                    </div>
+                    <div class="event-tags">
+                        <span class="event-tag tag-hybrid">Hybrid</span>
+                        <span class="event-tag tag-virtual">Virtual Available</span>
+                    </div>
+                    <div class="event-details">
+                        <p>
+                            The first conference dedicated exclusively to AI Generative Engine Optimization. 
+                            Three days of intensive training, case studies, and networking with AI optimization experts.
+                        </p>
+                    </div>
+                    <div class="event-info">
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <span>Austin, TX + Virtual</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">💰</span>
+                            <span>Early Bird: $699</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">🎯</span>
+                            <span>500 Attendees Expected</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="event-link">
+                            Early Bird Registration →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recurring Events Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Recurring Events & Webinars</h2>
+                <p class="section-intro">
+                    Join these ongoing learning opportunities to stay current with AI optimization trends.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">📺</div>
+                        <h3>Monthly AI GEO Office Hours</h3>
+                        <p>Free monthly Q&A sessions with AI optimization experts. Bring your questions and get live answers.</p>
+                        <div style="margin-top: 1rem;">
+                            <strong>Schedule:</strong> First Thursday of each month, 2 PM EST
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="icon">🎓</div>
+                        <h3>Weekly Platform Updates</h3>
+                        <p>Stay informed about the latest changes to ChatGPT, Gemini, Copilot, and other AI platforms.</p>
+                        <div style="margin-top: 1rem;">
+                            <strong>Schedule:</strong> Every Wednesday, 12 PM EST
+                        </div>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="icon">💼</div>
+                        <h3>Quarterly AI Marketing Meetups</h3>
+                        <p>Local meetup groups in major cities for in-person networking and knowledge sharing.</p>
+                        <div style="margin-top: 1rem;">
+                            <strong>Cities:</strong> NYC, SF, LA, Chicago, Boston, Austin
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Submit Event Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>Submit an Event</h2>
+                <p class="section-intro">
+                    Know of an AI or marketing event that should be listed here? We'd love to hear about it!
+                </p>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" class="btn btn-primary">Submit Event</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Resources Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Related Resources</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">🤝</div>
+                        <h3>Join the Community</h3>
+                        <p>Connect with other AI optimization professionals in our online communities.</p>
+                        <a href="/pages/community.html" style="color: #4A90E2; text-decoration: none; font-weight: 600;">Join Community →</a>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="icon">🛠️</div>
+                        <h3>Tools Directory</h3>
+                        <p>Discover recommended tools and services for AI optimization.</p>
+                        <a href="/pages/tools-directory.html" style="color: #4A90E2; text-decoration: none; font-weight: 600;">Browse Tools →</a>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="icon">📖</div>
+                        <h3>Learning Paths</h3>
+                        <p>Structured courses and guides to master AI optimization.</p>
+                        <a href="/pages/learn/index.html" style="color: #4A90E2; text-decoration: none; font-weight: 600;">Start Learning →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Component -->
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
