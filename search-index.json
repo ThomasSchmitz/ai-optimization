@@ -249,6 +249,30 @@
       "content": "Master optimization for Claude's sophisticated professional and research-focused audience. Learn long-form content strategies, technical and professional content optimization, API integration considerations, and enterprise Claude optimization. Covers extended context capabilities, document analysis, compliance content, and case studies of successful Claude visibility in B2B and professional contexts."
     },
     {
+      "title": "Meta AI Platform Guide",
+      "url": "/pages/platforms/meta-ai.html",
+      "category": "platform",
+      "description": "Complete guide to optimizing for Meta AI across Facebook, Instagram, WhatsApp, and Messenger - reaching billions through AI-powered recommendations.",
+      "keywords": ["Meta AI", "Facebook AI", "Instagram AI", "WhatsApp AI", "Messenger AI", "social media optimization", "Meta Business Suite", "e-commerce", "social commerce", "engagement signals", "community building"],
+      "content": "Master optimization for Meta AI's massive ecosystem spanning Facebook, Instagram, WhatsApp, and Messenger. Learn cross-platform integration strategies, social media content optimization, community engagement tactics, Meta Business Suite integration, and e-commerce optimization. Covers AI-powered discovery, shopping features, local business strategies, and case studies of Meta AI success."
+    },
+    {
+      "title": "Facebook Optimization Guide",
+      "url": "/pages/platforms/facebook-optimization.html",
+      "category": "platform",
+      "description": "Comprehensive Facebook optimization guide for Meta AI visibility, engagement, and business growth across the world's largest social network.",
+      "keywords": ["Facebook optimization", "Facebook Page", "Facebook marketing", "Facebook algorithm", "Facebook Groups", "Facebook Marketplace", "Facebook Shops", "local business", "social proof", "community engagement"],
+      "content": "Master Facebook optimization to maximize Meta AI recommendations and business results. Learn Page setup and optimization, content strategy for AI visibility, engagement and community building, Facebook-specific features (Events, Shops, Messenger, Stories), local business tactics, Marketplace strategies, Groups development, and analytics tracking. Complete guide with actionable checklists."
+    },
+    {
+      "title": "Instagram Optimization Guide",
+      "url": "/pages/platforms/instagram-optimization.html",
+      "category": "platform",
+      "description": "Master Instagram optimization for Meta AI visibility, engagement, and e-commerce success through visual storytelling and shopping features.",
+      "keywords": ["Instagram optimization", "Instagram marketing", "Reels", "Instagram Stories", "Instagram Shop", "hashtag strategy", "Instagram SEO", "influencer marketing", "visual content", "social commerce", "product tagging"],
+      "content": "Complete Instagram optimization guide for Meta AI discovery and e-commerce. Learn profile optimization, content strategy for Reels and Stories, hashtag and SEO tactics, Instagram Shopping features, engagement and community building, creator tools, and analytics. Covers visual content best practices, product tagging, influencer partnerships, and data-driven optimization strategies."
+    },
+    {
       "title": "Search",
       "url": "/pages/search.html",
       "category": "resource",
