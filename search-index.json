@@ -901,6 +901,62 @@
         "product schema"
       ],
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
+    },
+    {
+      "title": "E-E-A-T Optimization for AI Visibility",
+      "url": "/pages/guides/eeat-optimization.html",
+      "category": "guide",
+      "description": "Master Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework for AI visibility. Build credibility signals that AI platforms recognize and cite.",
+      "keywords": [
+        "E-E-A-T",
+        "expertise",
+        "authoritativeness",
+        "trustworthiness",
+        "experience",
+        "credibility",
+        "author profiles",
+        "citations",
+        "credentials",
+        "trust signals"
+      ],
+      "content": "Build demonstrable experience in your field, establish expertise through credentials and publications, create authoritativeness through third-party validation, and develop trustworthiness through transparency and accuracy. Learn author bio optimization, citation best practices, and credential showcase strategies."
+    },
+    {
+      "title": "Authority Building for AI Visibility",
+      "url": "/pages/guides/authority-building.html",
+      "category": "guide",
+      "description": "Build industry recognition and establish yourself as a trusted authority that AI platforms prefer to cite. Earn third-party validation, build backlinks, and gain media coverage.",
+      "keywords": [
+        "authority building",
+        "thought leadership",
+        "backlinks",
+        "media coverage",
+        "industry recognition",
+        "third-party mentions",
+        "press coverage",
+        "expert positioning",
+        "speaking",
+        "conferences"
+      ],
+      "content": "Strategies for earning high-quality backlinks from .edu and .gov sites, building media relationships and press coverage, establishing thought leadership through content and speaking, participating in industry events and organizations, and building social media authority."
+    },
+    {
+      "title": "Reputation Management for AI Visibility",
+      "url": "/pages/guides/reputation-management.html",
+      "category": "guide",
+      "description": "Monitor, protect, and enhance your online reputation to maintain credibility with AI platforms. Learn review management, crisis response, and brand monitoring strategies.",
+      "keywords": [
+        "reputation management",
+        "review management",
+        "crisis management",
+        "brand monitoring",
+        "online reputation",
+        "review response",
+        "negative content",
+        "social listening",
+        "reputation monitoring"
+      ],
+      "content": "Set up comprehensive brand monitoring across reviews and social media, manage reviews professionally with effective response strategies, prepare for and respond to reputation crises, address negative content strategically, and build positive reputation proactively through transparency and social proof."
     }
   ]
 }
