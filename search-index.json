@@ -901,6 +901,32 @@
         "product schema"
       ],
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
+    },
+    {
+      "title": "E-commerce & Retail AI Optimization",
+      "url": "/pages/industries/ecommerce.html",
+      "category": "guide",
+      "description": "Complete e-commerce AI optimization guide covering product listings, shopping queries, pricing strategies, customer reviews, competitor comparisons, visual search, voice commerce, and platform-specific e-commerce strategies.",
+      "keywords": [
+        "e-commerce AI",
+        "retail optimization",
+        "product listing optimization",
+        "shopping queries",
+        "AI recommendations",
+        "price optimization",
+        "customer reviews",
+        "UGC",
+        "competitor comparisons",
+        "visual search",
+        "voice commerce",
+        "Meta AI shopping",
+        "ChatGPT shopping",
+        "Perplexity shopping",
+        "e-commerce funnel",
+        "online retail",
+        "AI shopping assistants"
+      ],
+      "content": "Master e-commerce AI optimization strategies including product listing optimization for AI, shopping queries and recommendations, price and availability optimization, customer reviews and user-generated content, competitor comparison strategies, visual search optimization for multimodal AI, voice commerce preparation for Alexa and Siri, e-commerce-specific funnel journey mapping (discovery to loyalty), and platform-specific tactics for Meta AI, ChatGPT, Perplexity, and Google Gemini."
     }
   ]
 }
