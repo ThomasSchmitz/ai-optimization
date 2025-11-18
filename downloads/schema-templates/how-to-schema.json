@@ -1,0 +1,178 @@
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "HOW TO TITLE (e.g., How to Optimize Your Website for AI)",
+  "description": "Brief overview of what this guide teaches and what readers will accomplish",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://www.yourwebsite.com/how-to-guide-image.jpg",
+    "height": 406,
+    "width": 305
+  },
+  "totalTime": "PT30M",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "0"
+  },
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "Computer or laptop"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Website access"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Text editor or CMS"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Google Search Console"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Schema validator"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Step 1 Title",
+      "text": "Detailed instructions for the first step. Be clear and specific about what to do.",
+      "url": "https://www.yourwebsite.com/guide#step1",
+      "image": "https://www.yourwebsite.com/step1-image.jpg"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Step 2 Title",
+      "text": "Instructions for the second step. Include any important details or warnings.",
+      "url": "https://www.yourwebsite.com/guide#step2",
+      "image": "https://www.yourwebsite.com/step2-image.jpg"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Step 3 Title",
+      "text": "Third step instructions. Break complex tasks into manageable sub-steps.",
+      "url": "https://www.yourwebsite.com/guide#step3",
+      "image": "https://www.yourwebsite.com/step3-image.jpg"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Step 4 Title",
+      "text": "Final step instructions. Explain what success looks like and next steps.",
+      "url": "https://www.yourwebsite.com/guide#step4",
+      "image": "https://www.yourwebsite.com/step4-image.jpg"
+    }
+  ],
+  "yield": "One fully optimized website"
+}
+
+<!-- 
+INSTRUCTIONS:
+1. Include minimum 2 steps (no maximum)
+2. Each step should be on your page in the same order
+3. Use ISO 8601 duration format for totalTime (see examples below)
+4. Include images for steps when possible (improves rich results)
+5. URLs in steps can link to anchors on the same page
+
+REQUIRED FIELDS:
+- @context, @type, name, step (array with at least 2 steps)
+- Each step needs: name, text
+
+RECOMMENDED FIELDS:
+- description, image, totalTime, supply, tool
+
+OPTIONAL BUT VALUABLE:
+- estimatedCost, yield
+
+TIME DURATION FORMAT (ISO 8601):
+- PT30M = 30 minutes
+- PT1H = 1 hour
+- PT2H30M = 2 hours 30 minutes
+- PT45S = 45 seconds
+- P1D = 1 day
+- P2DT3H = 2 days 3 hours
+
+STEP VARIATIONS:
+
+Simple step (minimum required):
+{
+  "@type": "HowToStep",
+  "name": "Step name",
+  "text": "Step instructions"
+}
+
+Step with sub-steps (HowToSection):
+{
+  "@type": "HowToSection",
+  "name": "Major section title",
+  "itemListElement": [
+    {
+      "@type": "HowToStep",
+      "name": "Sub-step 1",
+      "text": "Instructions"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Sub-step 2",
+      "text": "Instructions"
+    }
+  ]
+}
+
+Step with direction (HowToDirection):
+Can include more detailed directions within a step:
+{
+  "@type": "HowToStep",
+  "name": "Configure settings",
+  "itemListElement": [
+    {
+      "@type": "HowToDirection",
+      "text": "Click the Settings menu"
+    },
+    {
+      "@type": "HowToDirection",
+      "text": "Select Advanced Options"
+    }
+  ]
+}
+
+ESTIMATED COST EXAMPLES:
+
+Free:
+"estimatedCost": {
+  "@type": "MonetaryAmount",
+  "currency": "USD",
+  "value": "0"
+}
+
+Range:
+"estimatedCost": {
+  "@type": "MonetaryAmount",
+  "currency": "USD",
+  "value": "50",
+  "maxValue": "100",
+  "minValue": "25"
+}
+
+BEST PRACTICES:
+- Keep steps in logical order
+- Use action verbs to start each step
+- Include images or videos when possible
+- Be specific about measurements and quantities
+- Warn about common mistakes
+- Explain why each step matters
+- Test your instructions yourself
+
+RICH RESULTS:
+HowTo schema can appear as:
+- Carousel in search results
+- Voice assistant instructions
+- AI platform step-by-step guides
+- Featured snippets with images
+-->

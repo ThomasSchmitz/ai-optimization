@@ -1,0 +1,90 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Product",
+    "name": "PRODUCT_OR_SERVICE_NAME",
+    "image": "https://www.yourwebsite.com/product-image.jpg",
+    "brand": {
+      "@type": "Brand",
+      "name": "BRAND_NAME"
+    }
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "4.5",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "REVIEWER_NAME"
+  },
+  "reviewBody": "Detailed review text goes here. Explain what you liked, what could be improved, and your overall experience with the product or service.",
+  "datePublished": "YYYY-MM-DD",
+  "publisher": {
+    "@type": "Organization",
+    "name": "YOUR_WEBSITE_NAME",
+    "sameAs": "https://www.yourwebsite.com"
+  }
+}
+
+<!-- 
+INSTRUCTIONS:
+1. Replace placeholder values with actual review information
+2. Only include reviews that actually appear on your page
+3. Rating must be a number (e.g., 4.5, not "4.5 stars")
+4. Best rating is typically 5, worst is typically 1
+5. Include the actual review text in reviewBody
+6. Use the date the review was published
+
+REQUIRED FIELDS:
+- @context, @type, itemReviewed, reviewRating, author
+
+RECOMMENDED FIELDS:
+- reviewBody, datePublished
+
+ITEM REVIEWED TYPES:
+Instead of "Product", you can review:
+- Service
+- LocalBusiness
+- Organization
+- Book
+- Movie
+- Restaurant
+- SoftwareApplication
+- CreativeWork
+
+RATING EXAMPLES:
+- "ratingValue": "5" (perfect score)
+- "ratingValue": "4.5" (excellent)
+- "ratingValue": "3" (average)
+- "ratingValue": "1" (poor)
+
+FOR MULTIPLE REVIEWS:
+Wrap individual reviews in an array:
+
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    ... first review ...
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    ... second review ...
+  }
+]
+
+AGGREGATE RATING:
+For overall ratings across multiple reviews, use the aggregateRating in Product schema instead.
+
+BEST PRACTICES:
+- Only include genuine reviews
+- Reviews must be visible on the page
+- Include both positive and negative reviews
+- Respond to reviews when appropriate
+- Update ratings as new reviews come in
+- Never fake or incentivize positive reviews
+-->

@@ -686,6 +686,27 @@
         "China market"
       ],
       "content": "Navigate the global AI landscape with regional platforms like DeepSeek and Baidu in China, Naver in Korea, LINE in Japan, Mistral in Europe, and more. Learn international optimization strategies, regulatory compliance (GDPR, ICP), localization best practices, and cross-border AI strategies for global markets."
+    },
+    {
+      "title": "Templates and Checklists",
+      "url": "/pages/resources/templates.html",
+      "category": "resource",
+      "description": "Download free AI optimization templates, checklists, and implementation guides. Includes schema markup templates, content briefs, social media audits, and E-E-A-T improvement plans.",
+      "keywords": [
+        "templates",
+        "checklists",
+        "downloads",
+        "resources",
+        "AI optimization checklist",
+        "schema markup templates",
+        "content brief template",
+        "social media audit",
+        "E-E-A-T improvement plan",
+        "implementation guides",
+        "free resources",
+        "downloadable templates"
+      ],
+      "content": "Free downloadable resources for AI optimization including: AI Optimization Checklist (printable PDF with 150+ items), Schema Markup Templates (10 JSON-LD templates for Product, Article, FAQ, Review, Organization, LocalBusiness, HowTo, Video, Breadcrumb, and Person schema), Content Brief Template (comprehensive DOCX template for AI-optimized content planning), Social Media Audit Template (Excel spreadsheet for auditing X/Twitter, LinkedIn, Facebook, Instagram, YouTube, TikTok), and E-E-A-T Improvement Plan Template (90-day strategic plan for building Experience, Expertise, Authoritativeness, and Trustworthiness). All templates are free, no signup required, and ready to use for personal and commercial purposes."
     }
   ]
 }

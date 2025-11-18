@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "PRODUCT_NAME",
+  "description": "Detailed description of the product, highlighting key features and benefits",
+  "image": [
+    "https://www.yourwebsite.com/product-image-1.jpg",
+    "https://www.yourwebsite.com/product-image-2.jpg",
+    "https://www.yourwebsite.com/product-image-3.jpg"
+  ],
+  "brand": {
+    "@type": "Brand",
+    "name": "BRAND_NAME"
+  },
+  "sku": "PRODUCT_SKU_123",
+  "mpn": "MANUFACTURER_PART_NUMBER",
+  "gtin": "GTIN_OR_UPC_CODE",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.yourwebsite.com/product-page",
+    "priceCurrency": "USD",
+    "price": "99.99",
+    "priceValidUntil": "YYYY-MM-DD",
+    "itemCondition": "https://schema.org/NewCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "YOUR_COMPANY_NAME"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 1,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 3,
+          "maxValue": 5,
+          "unitCode": "DAY"
+        }
+      }
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "89",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Customer Name"
+      },
+      "datePublished": "YYYY-MM-DD",
+      "reviewBody": "Great product! Exceeded my expectations.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+  ]
+}
+
+<!-- 
+INSTRUCTIONS:
+1. Replace all placeholder values with actual product information
+2. Include multiple images in the "image" array (minimum 1, recommended 3+)
+3. Update availability status as needed (InStock, OutOfStock, PreOrder, etc.)
+4. Include real customer reviews if available
+5. Only include aggregateRating if you have actual reviews
+
+REQUIRED FIELDS:
+- @context, @type, name, image, offers (with price and priceCurrency)
+
+RECOMMENDED FIELDS:
+- description, brand, sku, aggregateRating, review
+
+OPTIONAL BUT VALUABLE:
+- mpn, gtin, itemCondition, shippingDetails
+
+AVAILABILITY OPTIONS:
+- https://schema.org/InStock
+- https://schema.org/OutOfStock
+- https://schema.org/PreOrder
+- https://schema.org/Discontinued
+- https://schema.org/LimitedAvailability
+
+CONDITION OPTIONS:
+- https://schema.org/NewCondition
+- https://schema.org/UsedCondition
+- https://schema.org/RefurbishedCondition
+- https://schema.org/DamagedCondition
+-->

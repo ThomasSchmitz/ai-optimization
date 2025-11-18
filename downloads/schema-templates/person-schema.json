@@ -1,0 +1,227 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "FULL_NAME",
+  "alternateName": "NICKNAME_OR_ALIAS",
+  "description": "Brief professional bio describing expertise, role, and background",
+  "image": "https://www.yourwebsite.com/person-photo.jpg",
+  "url": "https://www.yourwebsite.com/author/author-name",
+  "jobTitle": "Job Title / Role",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "COMPANY_NAME",
+    "url": "https://www.company.com"
+  },
+  "sameAs": [
+    "https://twitter.com/username",
+    "https://www.linkedin.com/in/username",
+    "https://www.facebook.com/username",
+    "https://github.com/username",
+    "https://medium.com/@username"
+  ],
+  "knowsAbout": [
+    "AI Optimization",
+    "Search Engine Optimization",
+    "Content Marketing",
+    "Digital Strategy"
+  ],
+  "email": "email@example.com",
+  "telephone": "+1-XXX-XXX-XXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "City Name",
+    "addressRegion": "ST",
+    "addressCountry": "US"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "University Name"
+  },
+  "award": [
+    "Award or Recognition 1",
+    "Award or Recognition 2"
+  ],
+  "publishingPrinciples": "https://www.yourwebsite.com/editorial-guidelines"
+}
+
+<!-- 
+INSTRUCTIONS:
+1. Replace all placeholder values with actual person information
+2. Use high-quality professional photo (400x400 minimum)
+3. Include all relevant social media profiles in sameAs
+4. List expertise areas in knowsAbout array
+5. Only include information that's publicly available
+6. Remove optional fields if not applicable
+
+REQUIRED FIELDS:
+- @context, @type, name
+
+RECOMMENDED FIELDS:
+- image, url, jobTitle, sameAs, knowsAbout
+
+OPTIONAL BUT VALUABLE:
+- description, worksFor, email, alumniOf, award, publishingPrinciples
+
+USE CASES:
+
+Author Profile:
+Use on author bio pages, bylines, and contributor pages to establish expertise and authority.
+
+Expert/Consultant:
+Showcase credentials, specializations, and professional background for E-E-A-T signals.
+
+Team Member:
+Display on team/about pages to highlight employee expertise and qualifications.
+
+Speaker/Influencer:
+Build authority for thought leaders, speakers, and industry experts.
+
+EXPERTISE AREAS (knowsAbout):
+
+Add 3-10 specific topics the person has expertise in:
+"knowsAbout": [
+  "Artificial Intelligence",
+  "Machine Learning",
+  "Natural Language Processing",
+  "AI Ethics",
+  "Technical Writing"
+]
+
+CREDENTIALS & QUALIFICATIONS:
+
+Include professional credentials:
+"hasCredential": [
+  {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "certification",
+    "name": "Certified AI Professional"
+  }
+]
+
+EDUCATIONAL BACKGROUND:
+
+Include multiple degrees:
+"alumniOf": [
+  {
+    "@type": "EducationalOrganization",
+    "name": "MIT",
+    "sameAs": "https://www.mit.edu"
+  },
+  {
+    "@type": "EducationalOrganization",
+    "name": "Stanford University",
+    "sameAs": "https://www.stanford.edu"
+  }
+]
+
+ADDITIONAL PROPERTIES:
+
+Birth date (if relevant):
+"birthDate": "YYYY-MM-DD"
+
+Gender (if relevant):
+"gender": "Male/Female/Other"
+
+Nationality:
+"nationality": {
+  "@type": "Country",
+  "name": "United States"
+}
+
+Languages spoken:
+"knowsLanguage": ["English", "Spanish", "French"]
+
+Honorific prefix/suffix:
+"honorificPrefix": "Dr.",
+"honorificSuffix": "PhD"
+
+Publications:
+"creator": [
+  {
+    "@type": "Book",
+    "name": "Book Title",
+    "isbn": "978-X-XXXX-XXXX-X"
+  }
+]
+
+SOCIAL PROFILES (sameAs):
+
+Include all professional social media profiles:
+- LinkedIn (professional network)
+- Twitter/X (thought leadership)
+- GitHub (developers/technical)
+- Medium (writers)
+- YouTube (video creators)
+- Instagram (visual/lifestyle)
+- Facebook (personal brand)
+- Personal website/blog
+
+EMPLOYMENT HISTORY:
+
+Current position:
+"worksFor": {
+  "@type": "Organization",
+  "name": "Current Employer",
+  "url": "https://employer.com"
+}
+
+Previous positions:
+"alumniOf": [
+  {
+    "@type": "Organization",
+    "name": "Previous Employer 1"
+  }
+]
+
+PUBLISHING PRINCIPLES:
+
+Link to editorial guidelines:
+"publishingPrinciples": "https://www.yourwebsite.com/editorial-policy"
+
+This helps establish trust and transparency for content creators.
+
+E-E-A-T BENEFITS:
+
+Person schema is critical for:
+- Author attribution in AI responses
+- Expert credibility signals
+- Knowledge panel eligibility
+- Rich snippet author information
+- Voice search answers from experts
+- Building topical authority
+
+BEST PRACTICES:
+- Keep information accurate and up-to-date
+- Use consistent naming across platforms
+- Link to verified social profiles only
+- Showcase genuine expertise and credentials
+- Include real, professional photo
+- Update when achievements change
+- Be transparent about affiliations
+- Focus on professional, not personal, details
+
+PRIVACY CONSIDERATIONS:
+- Only include publicly available information
+- Don't expose personal contact details unnecessarily
+- Consider professional vs. personal profile separation
+- Respect individual privacy preferences
+- Follow GDPR/privacy regulations
+
+AI PLATFORM IMPACT:
+Person schema helps AI platforms:
+- Attribute content to qualified experts
+- Cite authors with relevant credentials
+- Build trust through expert identification
+- Verify information sources
+- Recommend content from authorities
+
+INTEGRATION WITH ARTICLES:
+
+When using in articles, link to Person schema:
+"author": {
+  "@type": "Person",
+  "@id": "https://www.yourwebsite.com/author/john-smith"
+}
+
+Then define full Person schema on the author page with matching @id.
+-->

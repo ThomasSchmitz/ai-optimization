@@ -1,0 +1,96 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is your question here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is the answer to the question. Keep it clear and concise. You can include <strong>HTML formatting</strong> if needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does your product/service work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Detailed answer explaining how the product or service works. Include specific details and examples."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your pricing options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Explanation of pricing, including different tiers or options available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer customer support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Details about customer support availability, channels, and response times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is your refund policy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clear explanation of refund or return policy, including timeframes and conditions."
+      }
+    }
+  ]
+}
+
+<!-- 
+INSTRUCTIONS:
+1. Add as many question-answer pairs as needed (minimum 2 recommended)
+2. Questions should match exactly what appears on your page
+3. Answers should be visible on the page (not hidden content)
+4. Keep answers focused and under 300 words each
+5. You can use basic HTML in the answer text
+6. Each question must have exactly one accepted answer
+
+REQUIRED FIELDS:
+- @context, @type, mainEntity (array of Question objects)
+- Each Question needs: name, acceptedAnswer
+- Each Answer needs: text
+
+BEST PRACTICES:
+- Use natural, conversational questions
+- Include questions your customers actually ask
+- Provide complete, helpful answers
+- Keep questions and answers visible on the page
+- Update as new common questions emerge
+
+FAQ SCHEMA BENEFITS:
+- Rich snippets in Google search results
+- Featured in "People Also Ask" sections
+- Improved AI platform understanding
+- Better voice search results
+- Enhanced user experience
+
+IMPORTANT NOTES:
+- Do NOT add questions that aren't on the page
+- Do NOT use for promotional content
+- Answers must be genuinely helpful
+- Each question should have ONE clear answer
+- Questions should be phrased as users would ask them
+
+ADDING MORE QUESTIONS:
+Simply copy this block and add to the mainEntity array:
+
+    {
+      "@type": "Question",
+      "name": "Your question here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your answer here."
+      }
+    }
+
+Remember to add a comma after each question block except the last one.
+-->

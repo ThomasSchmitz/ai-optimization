@@ -1,0 +1,158 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.yourwebsite.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Category Name",
+      "item": "https://www.yourwebsite.com/category"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Subcategory Name",
+      "item": "https://www.yourwebsite.com/category/subcategory"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Current Page Title",
+      "item": "https://www.yourwebsite.com/category/subcategory/current-page"
+    }
+  ]
+}
+
+<!-- 
+INSTRUCTIONS:
+1. List breadcrumb items in order from home to current page
+2. Position numbers must be sequential (1, 2, 3, 4...)
+3. Each "item" should be the full URL to that page
+4. The last item is typically the current page
+5. Match the breadcrumb trail visible on your page
+
+REQUIRED FIELDS:
+- @context, @type, itemListElement (array)
+- Each ListItem needs: position, name, item (except optionally the last one)
+
+SIMPLE EXAMPLE (2 levels):
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.yourwebsite.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Products",
+      "item": "https://www.yourwebsite.com/products"
+    }
+  ]
+}
+
+DEEP HIERARCHY EXAMPLE:
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.yourwebsite.com"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Electronics",
+      "item": "https://www.yourwebsite.com/electronics"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Computers",
+      "item": "https://www.yourwebsite.com/electronics/computers"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Laptops",
+      "item": "https://www.yourwebsite.com/electronics/computers/laptops"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Gaming Laptops",
+      "item": "https://www.yourwebsite.com/electronics/computers/laptops/gaming"
+    }
+  ]
+}
+
+CURRENT PAGE (LAST ITEM):
+The last breadcrumb item (current page) can optionally omit the "item" URL:
+
+{
+  "@type": "ListItem",
+  "position": 4,
+  "name": "Current Page Title"
+}
+
+However, including the item URL is recommended for consistency.
+
+BEST PRACTICES:
+- Keep breadcrumb names short and clear
+- Use the same names that appear in your visible breadcrumbs
+- Don't skip levels in the hierarchy
+- Ensure URLs are absolute (include https://)
+- Match your site's actual navigation structure
+- Update when you change site structure
+- Include breadcrumbs on every page except homepage
+
+COMMON PATTERNS:
+
+E-commerce:
+Home > Category > Subcategory > Product
+
+Blog:
+Home > Blog > Category > Post Title
+
+Service site:
+Home > Services > Service Type > Specific Service
+
+Knowledge base:
+Home > Help Center > Category > Article
+
+BENEFITS:
+- Breadcrumb trails in search results
+- Better search result appearance
+- Improved site navigation understanding
+- Enhanced AI platform comprehension
+- Better user experience signals
+
+MOBILE OPTIMIZATION:
+Breadcrumbs are especially valuable for mobile search results where they help users understand page hierarchy at a glance.
+
+VOICE SEARCH:
+Helps voice assistants understand your site structure and provide better navigational guidance.
+
+IMPORTANT NOTES:
+- Do not include breadcrumbs in schema if they're not visible on the page
+- Position must start at 1 and increment by 1
+- Names should be user-friendly, not technical URLs
+- All URLs should be canonical versions
+- Test with Google Rich Results Test
+
+DYNAMIC BREADCRUMBS:
+For sites with dynamic breadcrumbs, generate this schema server-side or with JavaScript to match the actual page hierarchy.
+-->

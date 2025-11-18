@@ -1,0 +1,127 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "YOUR_BUSINESS_NAME",
+  "image": "https://www.yourwebsite.com/business-photo.jpg",
+  "priceRange": "$$",
+  "telephone": "+1-XXX-XXX-XXXX",
+  "email": "info@yourbusiness.com",
+  "url": "https://www.yourwebsite.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main Street",
+    "addressLocality": "City Name",
+    "addressRegion": "ST",
+    "postalCode": "12345",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.7128,
+    "longitude": -74.0060
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:00",
+      "closes": "14:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/yourbusiness",
+    "https://www.instagram.com/yourbusiness",
+    "https://www.yelp.com/biz/yourbusiness"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "paymentAccepted": "Cash, Credit Card, Debit Card",
+  "currenciesAccepted": "USD",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    },
+    "geoRadius": "50 miles"
+  }
+}
+
+<!-- 
+INSTRUCTIONS:
+1. Replace all placeholder values with your actual business information
+2. Get accurate coordinates from Google Maps (right-click location > "What's here?")
+3. Use 24-hour time format for opening hours (09:00, not 9am)
+4. Include all days you're open in openingHoursSpecification
+5. Price range: $ (inexpensive), $$ (moderate), $$$ (expensive), $$$$ (very expensive)
+
+REQUIRED FIELDS:
+- @context, @type, name, address
+
+RECOMMENDED FIELDS:
+- telephone, url, openingHoursSpecification, geo
+
+OPTIONAL BUT VALUABLE:
+- image, priceRange, email, sameAs, aggregateRating, paymentAccepted
+
+LOCAL BUSINESS SUBTYPES:
+Instead of "LocalBusiness", use more specific types:
+- Restaurant
+- Store
+- Hotel
+- Attorney
+- Dentist
+- HomeAndConstructionBusiness
+- ProfessionalService
+- HealthAndBeautyBusiness
+- LodgingBusiness
+- FoodEstablishment
+- MedicalOrganization
+
+See full list: https://schema.org/LocalBusiness
+
+OPENING HOURS EXAMPLES:
+
+24/7 Business:
+"openingHoursSpecification": {
+  "@type": "OpeningHoursSpecification",
+  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+  "opens": "00:00",
+  "closes": "23:59"
+}
+
+Closed on Sundays:
+Just don't include Sunday in the dayOfWeek array
+
+Multiple Time Blocks:
+{
+  "@type": "OpeningHoursSpecification",
+  "dayOfWeek": "Saturday",
+  "opens": "09:00",
+  "closes": "12:00"
+},
+{
+  "@type": "OpeningHoursSpecification",
+  "dayOfWeek": "Saturday",
+  "opens": "14:00",
+  "closes": "18:00"
+}
+
+PAYMENT OPTIONS:
+Common values: "Cash", "Credit Card", "Debit Card", "Check", "Invoice", "PayPal", "Venmo", "Cryptocurrency"
+
+VOICE SEARCH TIP:
+LocalBusiness schema is critical for "near me" searches and voice queries like "find a [business type] near me"
+-->

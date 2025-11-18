@@ -1,0 +1,144 @@
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "VIDEO_TITLE",
+  "description": "Detailed description of what the video is about and what viewers will learn",
+  "thumbnailUrl": "https://www.yourwebsite.com/video-thumbnail.jpg",
+  "uploadDate": "YYYY-MM-DDTHH:MM:SS+00:00",
+  "duration": "PT5M30S",
+  "contentUrl": "https://www.yourwebsite.com/video.mp4",
+  "embedUrl": "https://www.youtube.com/embed/VIDEO_ID",
+  "publisher": {
+    "@type": "Organization",
+    "name": "YOUR_CHANNEL_OR_COMPANY_NAME",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.yourwebsite.com/logo.png",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "interactionStatistic": {
+    "@type": "InteractionCounter",
+    "interactionType": { "@type": "WatchAction" },
+    "userInteractionCount": 1234
+  },
+  "expires": "YYYY-MM-DDTHH:MM:SS+00:00"
+}
+
+<!-- 
+INSTRUCTIONS:
+1. Replace all placeholder values with actual video information
+2. Thumbnail should be high-quality (minimum 160x90, recommended 1920x1080)
+3. Use ISO 8601 format for dates and duration
+4. Include either contentUrl (direct video file) or embedUrl (embed player)
+5. Duration must match the actual video length
+
+REQUIRED FIELDS:
+- @context, @type, name, description, thumbnailUrl, uploadDate
+
+RECOMMENDED FIELDS:
+- duration, contentUrl OR embedUrl, publisher
+
+OPTIONAL BUT VALUABLE:
+- interactionStatistic (views), expires (for time-sensitive content)
+
+DURATION FORMAT (ISO 8601):
+- PT5M30S = 5 minutes 30 seconds
+- PT1H = 1 hour
+- PT45S = 45 seconds
+- PT2H15M30S = 2 hours 15 minutes 30 seconds
+
+Format: PT[hours]H[minutes]M[seconds]S
+
+PLATFORM-SPECIFIC EMBED URLS:
+
+YouTube:
+"embedUrl": "https://www.youtube.com/embed/VIDEO_ID"
+
+Vimeo:
+"embedUrl": "https://player.vimeo.com/video/VIDEO_ID"
+
+Self-hosted:
+"contentUrl": "https://www.yourwebsite.com/videos/video.mp4"
+
+THUMBNAIL REQUIREMENTS:
+- Minimum size: 160x90 pixels
+- Maximum size: 1920x1080 pixels
+- Recommended: 1280x720 or 1920x1080
+- Formats: JPG, PNG, or WebP
+- Use clear, high-quality images
+
+ADDITIONAL PROPERTIES:
+
+For live broadcasts:
+"publication": {
+  "@type": "BroadcastEvent",
+  "isLiveBroadcast": true,
+  "startDate": "YYYY-MM-DDTHH:MM:SS+00:00",
+  "endDate": "YYYY-MM-DDTHH:MM:SS+00:00"
+}
+
+For video series/episodes:
+"partOfSeries": {
+  "@type": "VideoObjectSeries",
+  "name": "Series Name"
+},
+"episodeNumber": 1,
+"seasonNumber": 1
+
+For educational videos:
+"educationalUse": "Learning about AI optimization",
+"learningResourceType": "Tutorial"
+
+For videos requiring subscription:
+"requiresSubscription": true,
+"isAccessibleForFree": false
+
+INTERACTION STATISTICS:
+
+View count:
+"interactionStatistic": {
+  "@type": "InteractionCounter",
+  "interactionType": { "@type": "WatchAction" },
+  "userInteractionCount": 5000
+}
+
+Likes:
+"interactionStatistic": {
+  "@type": "InteractionCounter",
+  "interactionType": { "@type": "LikeAction" },
+  "userInteractionCount": 450
+}
+
+Can include multiple interaction statistics in an array.
+
+REGIONS/COUNTRIES:
+
+Specify where video is available:
+"regionsAllowed": "US,CA,GB,AU"
+
+VIDEO QUALITY:
+
+Include quality information:
+"videoQuality": "HD",
+"videoFrameSize": "1920x1080"
+
+BEST PRACTICES:
+- Always include accurate duration
+- Use high-quality thumbnails
+- Write descriptive titles and descriptions
+- Include keywords naturally
+- Upload to YouTube/Vimeo for wider reach
+- Test embed codes before publishing
+- Update view counts periodically
+- Add captions/transcripts when possible
+
+RICH RESULTS:
+Video schema can appear as:
+- Video carousels in search results
+- Video previews with thumbnails
+- AI platform video recommendations
+- Voice search video suggestions
+- Featured video snippets
+-->
