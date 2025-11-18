@@ -1,0 +1,50 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "YOUR_COMPANY_NAME",
+  "alternateName": "YOUR_BRAND_NAME_OR_DBA",
+  "url": "https://www.yourwebsite.com",
+  "logo": "https://www.yourwebsite.com/logo.png",
+  "description": "Brief description of your organization and what you do",
+  "foundingDate": "YYYY-MM-DD",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-XXX-XXX-XXXX",
+    "contactType": "customer service",
+    "areaServed": "US",
+    "availableLanguage": ["en", "es"]
+  },
+  "sameAs": [
+    "https://www.facebook.com/yourpage",
+    "https://twitter.com/yourhandle",
+    "https://www.linkedin.com/company/yourcompany",
+    "https://www.instagram.com/yourhandle",
+    "https://www.youtube.com/c/yourchannel"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Main Street",
+    "addressLocality": "City Name",
+    "addressRegion": "ST",
+    "postalCode": "12345",
+    "addressCountry": "US"
+  }
+}
+
+<!-- 
+INSTRUCTIONS:
+1. Replace all placeholder values with your actual information
+2. Remove any fields that don't apply to your organization
+3. The "sameAs" array should include all your social media profile URLs
+4. Use absolute URLs (include https://)
+5. Validate at https://search.google.com/test/rich-results
+
+REQUIRED FIELDS:
+- @context, @type, name, url, logo
+
+RECOMMENDED FIELDS:
+- sameAs (social profiles), contactPoint, address
+
+OPTIONAL BUT VALUABLE:
+- alternateName, description, foundingDate
+-->
