@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amazon Alexa Optimization Guide - Learn how to optimize your content for Alexa, develop Alexa Skills, and maximize visibility on the world's most popular smart speaker platform.">
+    <meta name="keywords" content="Alexa optimization, Amazon Alexa, Alexa Skills, smart speakers, voice commerce, Amazon Echo">
+    <title>Amazon Alexa Optimization Guide | AI GEO</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../includes.js"></script>
+</head>
+<body>
+    <div id="header-placeholder" data-include="../../components/header.html"></div>
+
+    <main>
+        <!-- Platform Hero Section -->
+        <section class="platform-hero">
+            <div class="container">
+                <div class="platform-hero-content">
+                    <div class="platform-icon">
+                        🎯
+                    </div>
+                    <h1 class="platform-title">Amazon Alexa Optimization Guide</h1>
+                    <p class="platform-description">
+                        Master optimization for the world's most popular smart speaker ecosystem. Learn how to appear 
+                        in Alexa's answers, develop Alexa Skills, and leverage Amazon's voice commerce platform.
+                    </p>
+                    <div class="platform-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">500M+</span>
+                            <span class="stat-label">Alexa Devices Worldwide</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">70%</span>
+                            <span class="stat-label">Smart Speaker Market Share</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">100K+</span>
+                            <span class="stat-label">Available Alexa Skills</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta-buttons">
+                        <a href="#optimization-guide" class="btn btn-primary">View Optimization Guide</a>
+                        <a href="#checklist" class="btn btn-secondary">Download Checklist</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="content-section">
+            <div class="container">
+                <div class="toc-container">
+                    <h2>Table of Contents</h2>
+                    <nav class="table-of-contents">
+                        <ul>
+                            <li><a href="#overview">Alexa Overview</a></li>
+                            <li><a href="#how-it-works">How Alexa Retrieves Information</a></li>
+                            <li><a href="#organic-optimization">Organic Answer Optimization</a></li>
+                            <li><a href="#skills-development">Alexa Skills Development</a></li>
+                            <li><a href="#voice-commerce">Amazon Voice Commerce</a></li>
+                            <li><a href="#smart-home">Smart Home Integration</a></li>
+                            <li><a href="#flash-briefing">Flash Briefing & Notifications</a></li>
+                            <li><a href="#implementation">Implementation Guide</a></li>
+                            <li><a href="#checklist">Optimization Checklist</a></li>
+                            <li><a href="#resources">Resources & Tools</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Overview Section -->
+        <section id="overview" class="content-section alt-bg">
+            <div class="container">
+                <h2>What is Amazon Alexa?</h2>
+                <p class="section-intro">
+                    Amazon Alexa is the world's leading voice assistant with over 500 million devices worldwide 
+                    and 70% smart speaker market share. It powers Echo devices, Fire TV, third-party speakers, 
+                    cars, and more—making it essential for voice search optimization.
+                </p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">📊</div>
+                        <h3>Market Dominance</h3>
+                        <p>
+                            Alexa dominates the smart speaker market with 70%+ share in the US. Over 500 million 
+                            Alexa-enabled devices are in use globally, from Echo speakers to cars and appliances.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🛒</div>
+                        <h3>Commerce Focus</h3>
+                        <p>
+                            Deeply integrated with Amazon's e-commerce platform. Users can order products, track 
+                            shipments, and reorder items using voice—making it crucial for e-commerce optimization.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🏠</div>
+                        <h3>Smart Home Leader</h3>
+                        <p>
+                            Alexa controls the largest smart home ecosystem with 100,000+ compatible devices. 
+                            Voice control for lights, thermostats, locks, cameras, and more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="content-section">
+            <div class="container">
+                <h2>How Alexa Retrieves Information</h2>
+                <p class="section-intro">
+                    Understanding Alexa's information sources and prioritization helps optimize your content 
+                    for maximum visibility in voice search results.
+                </p>
+
+                <div class="info-boxes">
+                    <div class="info-box">
+                        <h3>🔍 Information Sources</h3>
+                        <p>
+                            Alexa pulls information from multiple sources: Wikipedia, Bing search, Amazon product data, 
+                            Alexa Skills, and curated knowledge bases. It prioritizes authoritative, structured data.
+                        </p>
+                    </div>
+                    <div class="info-box">
+                        <h3>📱 Alexa Skills Priority</h3>
+                        <p>
+                            When users invoke a Skill ("Alexa, ask [Skill name]"), that Skill gets priority. 
+                            For general queries, Alexa uses its built-in knowledge base before suggesting Skills.
+                        </p>
+                    </div>
+                    <div class="info-box">
+                        <h3>🛍️ Amazon Product Integration</h3>
+                        <p>
+                            For shopping queries, Alexa prioritizes Amazon product catalog data, Amazon Choice 
+                            products, and items with strong reviews and Prime eligibility.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>Alexa Answer Flow</h3>
+                    <ol>
+                        <li><strong>User Query:</strong> User asks Alexa a question</li>
+                        <li><strong>Intent Recognition:</strong> Alexa identifies query type (factual, shopping, skill-specific)</li>
+                        <li><strong>Source Selection:</strong> Chooses appropriate data source (Skills, Amazon catalog, web)</li>
+                        <li><strong>Answer Formulation:</strong> Constructs concise verbal response</li>
+                        <li><strong>Response Delivery:</strong> Speaks answer, may show visual on Echo Show</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Organic Optimization Section -->
+        <section id="organic-optimization" class="content-section alt-bg">
+            <div class="container">
+                <h2>Organic Answer Optimization</h2>
+                <p class="section-intro">
+                    While Alexa Skills provide the most control, optimizing your web content can help you 
+                    appear in Alexa's organic answers for relevant queries.
+                </p>
+
+                <div class="content-block">
+                    <h3>Strategies for Organic Visibility</h3>
+
+                    <h4>1. Wikipedia Optimization</h4>
+                    <ul class="checkmark-list">
+                        <li><strong>Wikipedia Priority:</strong> Alexa frequently sources answers from Wikipedia</li>
+                        <li><strong>Create/Update Wikipedia Entries:</strong> If notable, ensure accurate Wikipedia presence</li>
+                        <li><strong>Monitor Accuracy:</strong> Watch for inaccuracies in your Wikipedia entries</li>
+                        <li><strong>Citations:</strong> Link to authoritative sources in Wikipedia articles</li>
+                    </ul>
+
+                    <h4>2. Bing Search Optimization</h4>
+                    <ul class="checkmark-list">
+                        <li><strong>Bing Integration:</strong> Alexa uses Bing for web search queries</li>
+                        <li><strong>Featured Snippets:</strong> Optimize for Bing featured snippets</li>
+                        <li><strong>Bing Webmaster Tools:</strong> Submit sitemap and monitor Bing performance</li>
+                        <li><strong>Bing Places:</strong> Complete Bing Places for Business profile</li>
+                    </ul>
+
+                    <h4>3. Structured Data</h4>
+                    <ul class="checkmark-list">
+                        <li><strong>Schema Markup:</strong> Implement FAQ, HowTo, LocalBusiness schemas</li>
+                        <li><strong>Clear Answers:</strong> Provide 40-60 word concise answers</li>
+                        <li><strong>Question Format:</strong> Use question headers matching natural speech</li>
+                        <li><strong>List Format:</strong> Structure how-to content as ordered lists</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Development Section -->
+        <section id="skills-development" class="content-section">
+            <div class="container">
+                <h2>Alexa Skills Development</h2>
+                <p class="section-intro">
+                    Alexa Skills are custom voice apps that provide the most control over your Alexa presence. 
+                    They enable branded experiences, voice commerce, and deep engagement.
+                </p>
+
+                <div class="content-block">
+                    <h3>Types of Alexa Skills</h3>
+
+                    <div class="skill-types">
+                        <div class="skill-type-card">
+                            <h4>🎮 Custom Skills</h4>
+                            <p>
+                                <strong>Use Cases:</strong> Games, trivia, interactive experiences, brand engagement<br>
+                                <strong>User Invocation:</strong> "Alexa, open [Skill Name]"<br>
+                                <strong>Complexity:</strong> Most flexible, requires more development
+                            </p>
+                        </div>
+
+                        <div class="skill-type-card">
+                            <h4>🏠 Smart Home Skills</h4>
+                            <p>
+                                <strong>Use Cases:</strong> Control IoT devices, home automation<br>
+                                <strong>User Invocation:</strong> "Alexa, turn on the lights"<br>
+                                <strong>Complexity:</strong> Specialized for device control
+                            </p>
+                        </div>
+
+                        <div class="skill-type-card">
+                            <h4>📰 Flash Briefing Skills</h4>
+                            <p>
+                                <strong>Use Cases:</strong> News, updates, daily content<br>
+                                <strong>User Invocation:</strong> "Alexa, what's my Flash Briefing?"<br>
+                                <strong>Complexity:</strong> Simple RSS feed-based skills
+                            </p>
+                        </div>
+
+                        <div class="skill-type-card">
+                            <h4>🎵 Music & Audio Skills</h4>
+                            <p>
+                                <strong>Use Cases:</strong> Podcasts, streaming audio, meditation<br>
+                                <strong>User Invocation:</strong> "Alexa, play [content]"<br>
+                                <strong>Complexity:</strong> Audio streaming focused
+                            </p>
+                        </div>
+
+                        <div class="skill-type-card">
+                            <h4>📺 Video Skills</h4>
+                            <p>
+                                <strong>Use Cases:</strong> Video streaming on Echo Show, Fire TV<br>
+                                <strong>User Invocation:</strong> "Alexa, watch [content]"<br>
+                                <strong>Complexity:</strong> Visual + audio, requires device support
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h3>Building an Alexa Skill: Key Steps</h3>
+                    <ol>
+                        <li><strong>Define Use Case:</strong> Identify what value your Skill provides users</li>
+                        <li><strong>Design Conversation:</strong> Map out conversation flows and intents</li>
+                        <li><strong>Create Invocation Name:</strong> Choose clear, brandable Skill name</li>
+                        <li><strong>Build Interaction Model:</strong> Define intents, slots, utterances</li>
+                        <li><strong>Develop Backend:</strong> Code Skill logic (AWS Lambda or custom endpoint)</li>
+                        <li><strong>Test Thoroughly:</strong> Use Alexa Developer Console testing tools</li>
+                        <li><strong>Submit for Certification:</strong> Amazon reviews for quality and compliance</li>
+                        <li><strong>Launch & Market:</strong> Promote your Skill to drive discovery</li>
+                        <li><strong>Monitor & Iterate:</strong> Analyze usage data, improve based on feedback</li>
+                    </ol>
+                </div>
+
+                <div class="content-block">
+                    <h3>Skill Optimization Best Practices</h3>
+                    <ul class="checkmark-list">
+                        <li><strong>Clear Invocation Name:</strong> Easy to say and remember (2-3 words)</li>
+                        <li><strong>Comprehensive Keywords:</strong> Include relevant keywords in Skill description</li>
+                        <li><strong>Compelling Description:</strong> Clearly explain what your Skill does</li>
+                        <li><strong>Professional Icon:</strong> 512x512px icon representing your brand</li>
+                        <li><strong>Sample Utterances:</strong> Include diverse examples of how to use the Skill</li>
+                        <li><strong>Regular Updates:</strong> Keep Skill current with new features and content</li>
+                        <li><strong>Collect Reviews:</strong> Encourage users to rate and review your Skill</li>
+                        <li><strong>In-Skill Purchases:</strong> Offer premium features for monetization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Commerce Section -->
+        <section id="voice-commerce" class="content-section alt-bg">
+            <div class="container">
+                <h2>Amazon Voice Commerce Optimization</h2>
+                <p class="section-intro">
+                    Alexa's deep integration with Amazon's shopping platform makes it a powerful voice commerce 
+                    channel. Optimize your Amazon presence for voice ordering and discovery.
+                </p>
+
+                <div class="content-block">
+                    <h3>Voice Shopping Optimization</h3>
+
+                    <h4>1. Amazon Product Listing Optimization</h4>
+                    <ul class="checkmark-list">
+                        <li><strong>Voice-Friendly Titles:</strong> Use natural product names users would say aloud</li>
+                        <li><strong>Amazon Choice Badge:</strong> Aim for Amazon's Choice designation for voice priority</li>
+                        <li><strong>Prime Eligibility:</strong> Essential for voice shopping convenience</li>
+                        <li><strong>High Star Rating:</strong> 4.5+ stars improve voice recommendation likelihood</li>
+                        <li><strong>Review Volume:</strong> More reviews = stronger voice search signals</li>
+                        <li><strong>Clear Variations:</strong> Specify sizes, colors clearly for voice selection</li>
+                    </ul>
+
+                    <h4>2. Brand Recognition</h4>
+                    <ul class="checkmark-list">
+                        <li><strong>Brand Registry:</strong> Enroll in Amazon Brand Registry for brand protection</li>
+                        <li><strong>Consistent Branding:</strong> Use brand name in product titles</li>
+                        <li><strong>Sponsored Brands:</strong> Amazon ads can increase brand voice searches</li>
+                        <li><strong>Voice Shopping Education:</strong> Tell customers they can reorder via Alexa</li>
+                    </ul>
+
+                    <h4>3. Alexa Shopping Features</h4>
+                    <ul class="checkmark-list">
+                        <li><strong>Reordering:</strong> Optimize for "Alexa, reorder [product]"</li>
+                        <li><strong>Deal Discovery:</strong> Participate in Alexa Deal notifications</li>
+                        <li><strong>Shopping List:</strong> Ensure products appear in "Add to shopping list" feature</li>
+                        <li><strong>Voice-Exclusive Deals:</strong> Consider Alexa-only promotions</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h3>Voice Commerce User Journey</h3>
+                    <ol>
+                        <li><strong>Discovery:</strong> "Alexa, find laundry detergent"</li>
+                        <li><strong>Recommendation:</strong> Alexa suggests Amazon Choice or previous purchases</li>
+                        <li><strong>Selection:</strong> User confirms product</li>
+                        <li><strong>Purchase:</strong> "Alexa, buy it" (voice purchasing enabled)</li>
+                        <li><strong>Confirmation:</strong> Order confirmation via voice and app</li>
+                        <li><strong>Reorder:</strong> "Alexa, reorder laundry detergent"</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Home Section -->
+        <section id="smart-home" class="content-section">
+            <div class="container">
+                <h2>Smart Home Integration</h2>
+                <p class="section-intro">
+                    If you manufacture or sell smart home devices, Alexa compatibility is essential. 
+                    Over 100,000 smart home devices work with Alexa.
+                </p>
+
+                <div class="content-block">
+                    <h3>Smart Home Skill Development</h3>
+                    <ul class="checkmark-list">
+                        <li><strong>Smart Home Skill API:</strong> Use Amazon's Smart Home Skill API for standardized device control</li>
+                        <li><strong>Device Discovery:</strong> Enable "Alexa, discover devices" functionality</li>
+                        <li><strong>Standard Commands:</strong> Support common commands (on/off, dim, set temperature)</li>
+                        <li><strong>Proactive Mode:</strong> Enable proactive state reporting for real-time updates</li>
+                        <li><strong>Routines Integration:</strong> Ensure devices work in Alexa Routines</li>
+                        <li><strong>Works with Alexa Badge:</strong> Get certified to display "Works with Alexa" badge</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h3>Smart Home Optimization</h3>
+                    <ul class="checkmark-list">
+                        <li><strong>Clear Device Names:</strong> Use simple, speakable device names</li>
+                        <li><strong>Room Assignment:</strong> Enable users to assign devices to rooms</li>
+                        <li><strong>Groups:</strong> Support device grouping for simultaneous control</li>
+                        <li><strong>Scenes:</strong> Enable scene creation for multi-device commands</li>
+                        <li><strong>Voice-Friendly Setup:</strong> Minimize app-based setup complexity</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Briefing Section -->
+        <section id="flash-briefing" class="content-section alt-bg">
+            <div class="container">
+                <h2>Flash Briefing & Notifications</h2>
+                <p class="section-intro">
+                    Flash Briefing Skills allow you to deliver daily content updates to users. Notifications 
+                    enable proactive engagement for time-sensitive information.
+                </p>
+
+                <div class="content-block">
+                    <h3>Flash Briefing Skills</h3>
+                    <p>
+                        Flash Briefing Skills are the simplest Alexa Skills to create, perfect for news, 
+                        updates, and daily content delivery.
+                    </p>
+
+                    <h4>Flash Briefing Requirements</h4>
+                    <ul class="checkmark-list">
+                        <li><strong>RSS/JSON Feed:</strong> Provide either RSS or JSON feed with content</li>
+                        <li><strong>Daily Updates:</strong> Update content at least once daily</li>
+                        <li><strong>Audio or Text:</strong> Can be audio files or text-to-speech</li>
+                        <li><strong>2-10 Minutes:</strong> Each item should be 2-10 minutes long</li>
+                        <li><strong>Unique Content:</strong> Provide value beyond simple announcements</li>
+                    </ul>
+
+                    <h4>Use Cases for Flash Briefing</h4>
+                    <ul>
+                        <li>Daily news and industry updates</li>
+                        <li>Weather and traffic reports</li>
+                        <li>Stock market updates</li>
+                        <li>Sports scores and recaps</li>
+                        <li>Podcast episode releases</li>
+                        <li>Daily tips and advice</li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <h3>Alexa Notifications</h3>
+                    <p>
+                        Notifications allow Skills to proactively alert users about time-sensitive events.
+                    </p>
+
+                    <h4>Notification Best Practices</h4>
+                    <ul class="checkmark-list">
+                        <li><strong>Get Permission:</strong> Users must opt-in to notifications</li>
+                        <li><strong>Relevant Content:</strong> Only send truly valuable, timely notifications</li>
+                        <li><strong>Frequency Limits:</strong> Don't over-notify or risk users disabling</li>
+                        <li><strong>Clear CTA:</strong> Tell users what to do with the notification</li>
+                        <li><strong>Respect Quiet Hours:</strong> Avoid notifications late night/early morning</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Guide Section -->
+        <section id="implementation" class="content-section">
+            <div class="container">
+                <h2>Alexa Optimization Implementation Guide</h2>
+
+                <div class="implementation-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Assess Your Strategy</h3>
+                            <ul>
+                                <li>Determine if Skill development makes sense for your brand</li>
+                                <li>Identify if you sell products on Amazon (voice commerce opportunity)</li>
+                                <li>Evaluate smart home device compatibility needs</li>
+                                <li>Consider Flash Briefing for content distribution</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Organic Optimization</h3>
+                            <ul>
+                                <li>Optimize for Bing search and featured snippets</li>
+                                <li>Complete Bing Places for Business profile</li>
+                                <li>Ensure accurate Wikipedia presence if applicable</li>
+                                <li>Implement structured data (FAQ, HowTo schemas)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Amazon Commerce Setup</h3>
+                            <ul>
+                                <li>Optimize product listings for voice discovery</li>
+                                <li>Aim for Amazon's Choice designation</li>
+                                <li>Ensure Prime eligibility for all products</li>
+                                <li>Collect and maintain high product ratings</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Skill Development (Optional)</h3>
+                            <ul>
+                                <li>Design conversation flow and user experience</li>
+                                <li>Build and test using Alexa Skills Kit</li>
+                                <li>Submit for certification</li>
+                                <li>Market your Skill to drive adoption</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Testing & Optimization</h3>
+                            <ul>
+                                <li>Test key queries on Alexa devices</li>
+                                <li>Monitor Skill analytics if applicable</li>
+                                <li>Track Amazon product voice orders</li>
+                                <li>Gather user feedback and iterate</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklist Section -->
+        <section id="checklist" class="content-section alt-bg">
+            <div class="container">
+                <h2>Alexa Optimization Checklist</h2>
+
+                <div class="checklist-container">
+                    <div class="checklist-category">
+                        <h3>📝 Organic Optimization</h3>
+                        <ul class="checklist">
+                            <li>✓ Optimized for Bing search engine</li>
+                            <li>✓ Completed Bing Places for Business</li>
+                            <li>✓ Implemented FAQ and HowTo schema</li>
+                            <li>✓ Created/updated Wikipedia presence</li>
+                            <li>✓ Optimized for featured snippets</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3>🛒 Voice Commerce</h3>
+                        <ul class="checklist">
+                            <li>✓ Amazon product listings optimized</li>
+                            <li>✓ Pursuing Amazon's Choice designation</li>
+                            <li>✓ All products Prime-eligible</li>
+                            <li>✓ Maintaining 4.5+ star ratings</li>
+                            <li>✓ Voice-friendly product titles</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3>🎯 Alexa Skills</h3>
+                        <ul class="checklist">
+                            <li>✓ Identified Skill opportunity</li>
+                            <li>✓ Designed conversation flow</li>
+                            <li>✓ Built and tested Skill</li>
+                            <li>✓ Submitted for certification</li>
+                            <li>✓ Marketing plan in place</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist-category">
+                        <h3>🏠 Smart Home</h3>
+                        <ul class="checklist">
+                            <li>✓ Devices compatible with Alexa</li>
+                            <li>✓ Smart Home Skill developed</li>
+                            <li>✓ "Works with Alexa" certified</li>
+                            <li>✓ Device discovery enabled</li>
+                            <li>✓ Routines integration working</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section id="resources" class="content-section">
+            <div class="container">
+                <h2>Resources & Tools</h2>
+                
+                <div class="resources-grid">
+                    <div class="resource-category">
+                        <h3>Official Resources</h3>
+                        <ul>
+                            <li><a href="https://developer.amazon.com/alexa" target="_blank" rel="noopener">Alexa Developer Portal</a></li>
+                            <li><a href="https://developer.amazon.com/alexa/alexa-skills-kit" target="_blank" rel="noopener">Alexa Skills Kit</a></li>
+                            <li><a href="https://developer.amazon.com/blogs/alexa" target="_blank" rel="noopener">Alexa Developer Blog</a></li>
+                            <li><a href="https://www.amazon.com/b?node=13727921011" target="_blank" rel="noopener">Works with Alexa Devices</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-category">
+                        <h3>Development Tools</h3>
+                        <ul>
+                            <li><strong>Alexa Skills Kit CLI:</strong> Command-line tool for Skill management</li>
+                            <li><strong>Alexa Developer Console:</strong> Web-based Skill builder</li>
+                            <li><strong>AWS Lambda:</strong> Serverless backend for Skills</li>
+                            <li><strong>Voiceflow:</strong> No-code Alexa Skill builder</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-category">
+                        <h3>Related Guides</h3>
+                        <ul>
+                            <li><a href="voice-search.html">Voice Search Optimization Overview →</a></li>
+                            <li><a href="google-assistant.html">Google Assistant Guide →</a></li>
+                            <li><a href="siri.html">Apple Siri Guide →</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder" data-include="../../components/footer.html"></div>
+</body>
+</html>
