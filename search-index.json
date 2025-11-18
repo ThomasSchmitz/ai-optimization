@@ -901,6 +901,48 @@
         "product schema"
       ],
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
+    },
+    {
+      "title": "Healthcare AI Optimization",
+      "url": "/pages/industries/healthcare.html",
+      "category": "industry",
+      "description": "Comprehensive guide for optimizing medical, health, and wellness content for AI visibility while maintaining YMYL compliance, medical accuracy, and regulatory requirements.",
+      "keywords": [
+        "healthcare AI optimization",
+        "medical content AI",
+        "YMYL health",
+        "health information optimization",
+        "medical AI GEO",
+        "healthcare compliance",
+        "medical disclaimers",
+        "health credentials",
+        "FDA regulations",
+        "HIPAA compliance",
+        "medical accuracy",
+        "evidence-based content"
+      ],
+      "content": "Master AI optimization for medical and health content while maintaining accuracy, compliance, and patient safety. Covers YMYL requirements, medical credentials, regulatory compliance (FDA, FTC, HIPAA), patient privacy, evidence-based content, medical disclaimers, and platform-specific healthcare strategies."
+    },
+    {
+      "title": "Regulated Industries AI Optimization",
+      "url": "/pages/industries/regulated.html",
+      "category": "industry",
+      "description": "Comprehensive guide for optimizing content in regulated sectors including finance, legal, insurance, and other YMYL industries while maintaining compliance and professional standards.",
+      "keywords": [
+        "regulated industries AI",
+        "financial services optimization",
+        "legal AI optimization",
+        "YMYL content",
+        "compliance AI GEO",
+        "financial marketing",
+        "legal marketing",
+        "insurance optimization",
+        "SEC compliance",
+        "FINRA regulations",
+        "bar association rules",
+        "professional credentials"
+      ],
+      "content": "Navigate AI optimization for regulated industries including financial services, legal, insurance sectors. Covers regulatory frameworks (SEC, FINRA, FTC, Bar Associations), legal disclaimers, credential verification, E-E-A-T for YMYL content, and platform-specific strategies for regulated content."
     }
   ]
 }
