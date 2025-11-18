@@ -708,6 +708,61 @@ These requirements ensure this roadmap stays accurate, up-to-date, and serves as
 
 ---
 
+### PR #16.1: Header & Footer Navigation Audit Improvements
+**Priority**: High  
+**Estimated Effort**: Small  
+**Dependencies**: PR #16  
+**Status**: 🔵 Not Started
+
+**Description**: Fix missing navigation links identified in November 2025 audit
+
+**Issues Identified**:
+1. **Header - Guides dropdown missing**:
+   - `analytics.html` link exists but file doesn't exist (remove or create)
+   - Authority Building guide exists but not linked
+   - Technical SEO guide exists but not linked
+   - Schema Markup guide exists but not linked
+   - Writing for AI guide exists but not linked
+   - Reputation Management guide exists but not linked
+   - Product Content guide exists but not linked
+   - LinkedIn Strategy guide exists but not linked
+   - Twitter/X Strategy guide exists but not linked
+
+2. **Header - Platforms dropdown missing**:
+   - Google AI Overviews
+   - Bing Chat
+   - Alexa, Siri, Google Assistant (voice platforms)
+   - Emerging AI platforms
+   - International AI platforms
+   - Facebook Optimization
+   - Instagram Optimization
+
+3. **Footer - AI Platforms section missing**:
+   - Claude, You.com, voice platforms, emerging/international AI
+
+4. **Footer - Guides section missing**:
+   - Technical SEO, Schema Markup, Writing for AI, Authority Building, Reputation Management, Product Content, LinkedIn/Twitter strategies
+
+5. **Footer - Resources section missing**:
+   - Learning Paths, Templates & Checklists, Tools (Visibility Scorecard, Schema Validator, etc.)
+
+6. **Navigation - Industries section**:
+   - E-commerce page exists but no Industries navigation
+
+**Changes Required**:
+- Update `components/header.html` to include all existing guide and platform pages
+- Reorganize Guides dropdown into logical subcategories if needed
+- Update `components/footer.html` with complete link coverage
+- Add Industries section to header navigation
+- Remove broken analytics.html link or create page
+- Ensure all links use correct paths
+
+**Files Modified**:
+- `components/header.html`
+- `components/footer.html`
+
+---
+
 ### PR #17: Analytics and Tracking
 **Priority**: Medium  
 **Estimated Effort**: Medium  
@@ -1199,15 +1254,16 @@ ai-optimization/
 14. ✅ PR #13: Website Technical Optimization (November 18, 2025)
 15. ✅ PR #14: Content Strategy for AI Visibility (November 18, 2025)
 16. ✅ PR #15: Social Media Optimization for AI
-17. ✅ PR #18: E-commerce & Retail AI Optimization
-18. ✅ PR #24: Interactive Tools and Calculators
-19. ✅ PR #25: Templates and Checklists (5 free downloadable resources)
-20. ✅ PR #26: Learning Paths and Courses
-21. ✅ November 2025 Comprehensive Site Audit (all pages updated)
+17. ✅ PR #16: E-E-A-T and Authority Building
+18. ✅ PR #18: E-commerce & Retail AI Optimization
+19. ✅ PR #24: Interactive Tools and Calculators
+20. ✅ PR #25: Templates and Checklists (5 free downloadable resources)
+21. ✅ PR #26: Learning Paths and Courses
+22. ✅ November 2025 Comprehensive Site Audit (all pages updated)
 
 ### High Priority (Next Phase - Remaining Strategy Guides)
-22. PR #16: E-E-A-T and Authority
-23. PR #17: Analytics and Tracking
+23. PR #16.1: Header & Footer Navigation Audit Improvements
+24. PR #17: Analytics and Tracking
 
 ### Medium Priority (Industry Guides & Resources)
 24. PR #19: Local Business Optimization
