@@ -901,6 +901,46 @@
         "product schema"
       ],
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
+    },
+    {
+      "title": "B2B AI Optimization Guide",
+      "url": "/pages/industries/b2b.html",
+      "category": "industry",
+      "description": "Comprehensive B2B AI optimization strategies for enterprise buyer journeys, LinkedIn, thought leadership, and complex sales cycles.",
+      "keywords": [
+        "B2B AI optimization",
+        "enterprise marketing",
+        "LinkedIn optimization",
+        "thought leadership",
+        "B2B sales cycle",
+        "enterprise buyer journey",
+        "B2B content marketing",
+        "white papers",
+        "professional networks",
+        "B2B funnel",
+        "long sales cycle"
+      ],
+      "content": "Master B2B AI optimization for enterprise buyer journey, LinkedIn and professional network strategies, thought leadership for AI visibility, white papers and technical content, industry-specific optimization, long sales cycle considerations, and B2B funnel mapping (awareness, evaluation, decision, expansion) for complex buying cycles."
+    },
+    {
+      "title": "Professional Services AI Optimization",
+      "url": "/pages/industries/professional-services.html",
+      "category": "industry",
+      "description": "AI optimization strategies for consultancies, agencies, law firms, accounting practices, and professional service businesses.",
+      "keywords": [
+        "professional services AI",
+        "consulting optimization",
+        "agency marketing",
+        "law firm SEO",
+        "accounting firm marketing",
+        "expertise signals",
+        "professional credibility",
+        "case studies",
+        "professional networks",
+        "local professional services",
+        "personal branding"
+      ],
+      "content": "Learn client journey mapping, expertise and credibility signals, personal branding for professionals, case studies and portfolio optimization, professional network visibility, thought leadership content, service-specific strategies for legal, consulting, creative, financial advisory, and local professional services optimization."
     }
   ]
 }
