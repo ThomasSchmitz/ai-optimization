@@ -241,6 +241,14 @@
       "content": "Master optimization for Grok's unique real-time X/Twitter integration. Learn strategies for trending topic participation, Community Notes credibility, thread optimization for AI citations, brand monitoring on X, and building authority through authentic social engagement. Covers real-time data access, X/Twitter optimization, credibility signals, and case studies of successful Grok visibility."
     },
     {
+      "title": "Claude (Anthropic) Optimization Guide",
+      "url": "/pages/platforms/claude.html",
+      "category": "platform",
+      "description": "Comprehensive guide to optimizing for Claude's professional and research-focused user base, long-form content, and enterprise applications.",
+      "keywords": ["Claude", "Anthropic", "professional AI", "research AI", "long-form content", "technical documentation", "enterprise AI", "API integration", "B2B optimization", "whitepapers"],
+      "content": "Master optimization for Claude's sophisticated professional and research-focused audience. Learn long-form content strategies, technical and professional content optimization, API integration considerations, and enterprise Claude optimization. Covers extended context capabilities, document analysis, compliance content, and case studies of successful Claude visibility in B2B and professional contexts."
+    },
+    {
       "title": "Search",
       "url": "/pages/search.html",
       "category": "resource",
