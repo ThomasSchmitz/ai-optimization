@@ -65,6 +65,13 @@ Each PR includes a status indicator to track progress:
    - Mark PRs as 🔴 **Blocked** if dependencies aren't met
    - Archive or consolidate PRs that are no longer relevant
 
+7. **Case Study Source Attribution**:
+   - When authoring case studies, always include verifiable sources or references
+   - Link to original sources such as company blogs, press releases, case study pages, or published reports
+   - If creating illustrative examples, clearly label them as "illustrative" or "hypothetical"
+   - For real case studies, include source links, publication dates, and relevant context
+   - This ensures credibility and allows readers to verify claims
+
 These requirements ensure this roadmap stays accurate, up-to-date, and serves as a reliable source of truth for the project's direction.
 
 ---
