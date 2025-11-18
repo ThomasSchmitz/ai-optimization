@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-E-A-T Assessment Tool - Evaluate your content's Experience, Expertise, Authoritativeness, and Trustworthiness for AI platform optimization.">
+    <meta name="keywords" content="E-E-A-T assessment, expertise evaluation, trust signals, authority checker, Google EEAT">
+    <title>E-E-A-T Assessment Tool | AI GEO</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/includes.js"></script>
+    <script src="/scripts/tools.js"></script>
+</head>
+<body>
+    <!-- Include Header Component -->
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+
+    <main>
+        <!-- Tool Hero Section -->
+        <section class="guide-hero">
+            <div class="container">
+                <div class="guide-hero-content">
+                    <div class="guide-icon">
+                        🏆
+                    </div>
+                    <h1 class="guide-title">E-E-A-T Assessment Tool</h1>
+                    <p class="guide-description">
+                        Evaluate your content and website for Experience, Expertise, Authoritativeness, and 
+                        Trustworthiness (E-E-A-T) - critical factors that AI platforms use to determine content quality.
+                    </p>
+                    <div class="guide-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">✅</span>
+                            <span class="meta-text">4 Key Factors</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">📊</span>
+                            <span class="meta-text">Detailed Analysis</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🎯</span>
+                            <span class="meta-text">Improvement Plan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>About E-E-A-T</h2>
+                <p class="section-intro">
+                    E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness) is a framework 
+                    originally from Google's Search Quality Guidelines, but it's increasingly important for 
+                    all AI platforms when evaluating content quality and citation-worthiness.
+                </p>
+                
+                <div class="eeat-grid">
+                    <div class="eeat-card">
+                        <div class="eeat-icon">💼</div>
+                        <h3>Experience</h3>
+                        <p>First-hand, practical experience with the topic. Real-world knowledge demonstrated through specific examples and insights.</p>
+                    </div>
+                    <div class="eeat-card">
+                        <div class="eeat-icon">🎓</div>
+                        <h3>Expertise</h3>
+                        <p>Deep knowledge and qualifications in the subject matter. Demonstrated through credentials, detailed analysis, and technical accuracy.</p>
+                    </div>
+                    <div class="eeat-card">
+                        <div class="eeat-icon">🏅</div>
+                        <h3>Authoritativeness</h3>
+                        <p>Recognition as a go-to source in your field. Built through backlinks, mentions, awards, and industry recognition.</p>
+                    </div>
+                    <div class="eeat-card">
+                        <div class="eeat-icon">🔒</div>
+                        <h3>Trustworthiness</h3>
+                        <p>Accuracy, transparency, and reliability. Demonstrated through citations, fact-checking, clear policies, and security measures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Form -->
+        <section id="assessment" class="content-section">
+            <div class="container">
+                <h2>E-E-A-T Assessment</h2>
+                
+                <form id="eeat-form" class="tool-form">
+                    
+                    <!-- Experience Assessment -->
+                    <div class="form-section">
+                        <h3>Experience</h3>
+                        <p class="section-description">First-hand, practical experience with the topic</p>
+                        
+                        <div class="form-question">
+                            <label>Does the content demonstrate real-world experience?</label>
+                            <select name="exp-demonstrated" required>
+                                <option value="">Select...</option>
+                                <option value="4">Extensive first-hand experience clearly shown</option>
+                                <option value="3">Good real-world examples provided</option>
+                                <option value="2">Some practical experience mentioned</option>
+                                <option value="1">Mostly theoretical, limited experience</option>
+                                <option value="0">No practical experience evident</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Are specific examples, case studies, or results included?</label>
+                            <select name="exp-examples" required>
+                                <option value="">Select...</option>
+                                <option value="4">Multiple detailed examples with outcomes</option>
+                                <option value="3">Several good examples provided</option>
+                                <option value="2">Some examples included</option>
+                                <option value="1">Few or generic examples</option>
+                                <option value="0">No specific examples</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Does the author share personal insights or lessons learned?</label>
+                            <select name="exp-insights" required>
+                                <option value="">Select...</option>
+                                <option value="4">Rich personal insights throughout</option>
+                                <option value="3">Good personal perspective included</option>
+                                <option value="2">Some original insights</option>
+                                <option value="1">Minimal personal perspective</option>
+                                <option value="0">No unique insights shared</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Assessment -->
+                    <div class="form-section">
+                        <h3>Expertise</h3>
+                        <p class="section-description">Deep knowledge and qualifications in the subject</p>
+                        
+                        <div class="form-question">
+                            <label>Are author credentials and qualifications displayed?</label>
+                            <select name="exp-credentials" required>
+                                <option value="">Select...</option>
+                                <option value="4">Detailed credentials with verification</option>
+                                <option value="3">Clear credentials shown</option>
+                                <option value="2">Basic author info provided</option>
+                                <option value="1">Minimal author information</option>
+                                <option value="0">No author credentials</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>How technically accurate and detailed is the content?</label>
+                            <select name="exp-accuracy" required>
+                                <option value="">Select...</option>
+                                <option value="4">Highly detailed and technically accurate</option>
+                                <option value="3">Good technical depth</option>
+                                <option value="2">Adequate accuracy and detail</option>
+                                <option value="1">Surface-level treatment</option>
+                                <option value="0">Inaccuracies or oversimplification</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Does the content cover nuances and complexities?</label>
+                            <select name="exp-depth" required>
+                                <option value="">Select...</option>
+                                <option value="4">Comprehensive coverage with nuances</option>
+                                <option value="3">Good depth with some complexities</option>
+                                <option value="2">Adequate but not comprehensive</option>
+                                <option value="1">Basic coverage only</option>
+                                <option value="0">Oversimplified</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Authoritativeness Assessment -->
+                    <div class="form-section">
+                        <h3>Authoritativeness</h3>
+                        <p class="section-description">Recognition as a go-to source in your field</p>
+                        
+                        <div class="form-question">
+                            <label>Does your site have quality backlinks from authoritative sources?</label>
+                            <select name="auth-backlinks" required>
+                                <option value="">Select...</option>
+                                <option value="4">Many backlinks from top-tier sites</option>
+                                <option value="3">Good number of quality backlinks</option>
+                                <option value="2">Some relevant backlinks</option>
+                                <option value="1">Few backlinks</option>
+                                <option value="0">No significant backlinks</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Are you cited or mentioned by industry experts/publications?</label>
+                            <select name="auth-mentions" required>
+                                <option value="">Select...</option>
+                                <option value="4">Frequently cited by major publications</option>
+                                <option value="3">Regular industry mentions</option>
+                                <option value="2">Occasional mentions</option>
+                                <option value="1">Rarely mentioned</option>
+                                <option value="0">No external mentions</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Do you have industry awards, certifications, or recognition?</label>
+                            <select name="auth-recognition" required>
+                                <option value="">Select...</option>
+                                <option value="4">Multiple prestigious awards/certifications</option>
+                                <option value="3">Some notable recognition</option>
+                                <option value="2">Basic certifications</option>
+                                <option value="1">Minimal recognition</option>
+                                <option value="0">No formal recognition</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Trustworthiness Assessment -->
+                    <div class="form-section">
+                        <h3>Trustworthiness</h3>
+                        <p class="section-description">Accuracy, transparency, and reliability</p>
+                        
+                        <div class="form-question">
+                            <label>Does your content cite authoritative sources?</label>
+                            <select name="trust-citations" required>
+                                <option value="">Select...</option>
+                                <option value="4">Extensive citations to primary sources</option>
+                                <option value="3">Good citations throughout</option>
+                                <option value="2">Some citations included</option>
+                                <option value="1">Few citations</option>
+                                <option value="0">No citations</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Is your website secure (HTTPS) with privacy policy?</label>
+                            <select name="trust-security" required>
+                                <option value="">Select...</option>
+                                <option value="4">HTTPS, comprehensive policies, security badges</option>
+                                <option value="3">HTTPS with basic policies</option>
+                                <option value="2">HTTPS only</option>
+                                <option value="1">Partial security measures</option>
+                                <option value="0">No HTTPS or policies</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Do you display contact information and customer reviews?</label>
+                            <select name="trust-transparency" required>
+                                <option value="">Select...</option>
+                                <option value="4">Full contact details, verified reviews</option>
+                                <option value="3">Contact info and some reviews</option>
+                                <option value="2">Basic contact information</option>
+                                <option value="1">Limited contact options</option>
+                                <option value="0">No contact info or reviews</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Is content regularly updated and dated?</label>
+                            <select name="trust-freshness" required>
+                                <option value="">Select...</option>
+                                <option value="4">Regular updates with clear dates</option>
+                                <option value="3">Periodic updates shown</option>
+                                <option value="2">Some date information</option>
+                                <option value="1">Rarely updated</option>
+                                <option value="0">No dates or updates</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Assess E-E-A-T Score</button>
+                </form>
+
+                <!-- Results Section -->
+                <div id="eeat-results" class="tool-results" style="display: none;">
+                    <div class="results-header">
+                        <h2>Your E-E-A-T Assessment Results</h2>
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span class="score-value" id="eeat-score">0</span>
+                                <span class="score-max">/ 100</span>
+                            </div>
+                            <p class="score-rating" id="eeat-rating"></p>
+                        </div>
+                    </div>
+
+                    <!-- Category Breakdown -->
+                    <div class="score-breakdown">
+                        <h3>E-E-A-T Component Scores</h3>
+                        <div id="eeat-breakdown"></div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations">
+                        <h3>Improvement Recommendations</h3>
+                        <div id="eeat-recommendations"></div>
+                    </div>
+
+                    <!-- Action Plan -->
+                    <div class="next-steps">
+                        <h3>Build Your E-E-A-T</h3>
+                        <div class="cta-buttons">
+                            <a href="/pages/guides/eeat-optimization.html" class="btn btn-primary">E-E-A-T Guide</a>
+                            <a href="/pages/resources/templates.html" class="btn btn-secondary">E-E-A-T Plan Template</a>
+                            <a href="/pages/guides/content-strategy.html" class="btn btn-secondary">Content Strategy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why E-E-A-T Matters for AI -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>Why E-E-A-T Matters for AI Platforms</h2>
+                <p class="section-intro">
+                    AI platforms prioritize high-quality, trustworthy content when generating responses. 
+                    Strong E-E-A-T signals increase your likelihood of being cited and recommended.
+                </p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Citation Quality</h3>
+                        <p>AI platforms prefer citing authoritative, expert sources. High E-E-A-T makes your content more citation-worthy.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Training Data Selection</h3>
+                        <p>When AI models are trained or updated, they prioritize high-quality sources with strong trust signals.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Recommendation Confidence</h3>
+                        <p>AI assistants are more confident recommending content from established, trustworthy sources.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Competitive Advantage</h3>
+                        <p>As AI becomes more sophisticated, E-E-A-T signals will increasingly determine content visibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Component -->
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Voice Search Optimization Analyzer - Test your content for voice search readiness. Optimize for Alexa, Google Assistant, Siri, and voice-enabled AI platforms.">
+    <meta name="keywords" content="voice search optimization, voice SEO analyzer, Alexa optimization, Google Assistant, Siri optimization">
+    <title>Voice Search Optimization Analyzer | AI GEO</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/includes.js"></script>
+    <script src="/scripts/tools.js"></script>
+</head>
+<body>
+    <!-- Include Header Component -->
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+
+    <main>
+        <!-- Tool Hero Section -->
+        <section class="guide-hero">
+            <div class="container">
+                <div class="guide-hero-content">
+                    <div class="guide-icon">
+                        🎤
+                    </div>
+                    <h1 class="guide-title">Voice Search Optimization Analyzer</h1>
+                    <p class="guide-description">
+                        Evaluate your content for voice search optimization across Alexa, Google Assistant, Siri, 
+                        and other voice-enabled AI platforms. Get actionable feedback to improve discoverability.
+                    </p>
+                    <div class="guide-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">🎯</span>
+                            <span class="meta-text">Multi-Platform</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">📊</span>
+                            <span class="meta-text">Detailed Analysis</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">💡</span>
+                            <span class="meta-text">Optimization Tips</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>About This Tool</h2>
+                <p class="section-intro">
+                    Voice search queries differ significantly from typed searches. They're longer, more conversational, 
+                    and often phrased as questions. This analyzer evaluates how well your content is optimized for 
+                    these natural language queries.
+                </p>
+                
+                <div class="highlight-box">
+                    <h3>What We Analyze</h3>
+                    <ul>
+                        <li><strong>Question Format:</strong> Does content answer specific questions?</li>
+                        <li><strong>Conversational Language:</strong> Natural, spoken-word style</li>
+                        <li><strong>Local Optimization:</strong> Location-based query readiness</li>
+                        <li><strong>Featured Snippet Potential:</strong> Concise, direct answers</li>
+                        <li><strong>Long-tail Keywords:</strong> Conversational phrase usage</li>
+                        <li><strong>Mobile Optimization:</strong> Voice search happens primarily on mobile</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Search Analyzer Form -->
+        <section id="analyzer" class="content-section">
+            <div class="container">
+                <h2>Analyze Your Content for Voice Search</h2>
+                
+                <form id="voice-search-form" class="tool-form">
+                    
+                    <!-- Content Input -->
+                    <div class="form-section">
+                        <h3>Content Analysis</h3>
+                        <label for="voice-content">Paste your content or webpage text:</label>
+                        <textarea 
+                            id="voice-content" 
+                            class="content-textarea" 
+                            rows="10" 
+                            placeholder="Paste your content here..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <!-- Page Details -->
+                    <div class="form-section">
+                        <h3>Page Details</h3>
+                        
+                        <div class="form-question">
+                            <label for="page-title">Page Title:</label>
+                            <input type="text" id="page-title" placeholder="e.g., How to Optimize for Voice Search">
+                        </div>
+
+                        <div class="form-question">
+                            <label for="meta-description">Meta Description:</label>
+                            <textarea id="meta-description" rows="2" placeholder="Your meta description..."></textarea>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Is this content local business-related?</label>
+                            <select id="is-local" name="is-local">
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                        </div>
+
+                        <div id="local-details" style="display: none;">
+                            <div class="form-question">
+                                <label for="business-type">Business Type:</label>
+                                <select id="business-type">
+                                    <option value="">Select...</option>
+                                    <option value="restaurant">Restaurant</option>
+                                    <option value="retail">Retail Store</option>
+                                    <option value="service">Service Business</option>
+                                    <option value="professional">Professional Services</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voice Search Optimization Checklist -->
+                    <div class="form-section">
+                        <h3>Voice Search Elements</h3>
+                        <p class="section-description">Check which elements are present on your page:</p>
+                        
+                        <div class="form-question checkbox-group">
+                            <label>
+                                <input type="checkbox" name="elements" value="faq">
+                                FAQ section with questions and answers
+                            </label>
+                        </div>
+
+                        <div class="form-question checkbox-group">
+                            <label>
+                                <input type="checkbox" name="elements" value="how-to">
+                                How-to or step-by-step content
+                            </label>
+                        </div>
+
+                        <div class="form-question checkbox-group">
+                            <label>
+                                <input type="checkbox" name="elements" value="local-info">
+                                Local information (address, hours, phone)
+                            </label>
+                        </div>
+
+                        <div class="form-question checkbox-group">
+                            <label>
+                                <input type="checkbox" name="elements" value="schema">
+                                Schema markup (FAQPage, HowTo, LocalBusiness)
+                            </label>
+                        </div>
+
+                        <div class="form-question checkbox-group">
+                            <label>
+                                <input type="checkbox" name="elements" value="mobile">
+                                Mobile-optimized and fast loading
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Analyze for Voice Search</button>
+                </form>
+
+                <!-- Results Section -->
+                <div id="voice-results" class="tool-results" style="display: none;">
+                    <div class="results-header">
+                        <h2>Voice Search Optimization Score</h2>
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span class="score-value" id="voice-score">0</span>
+                                <span class="score-max">/ 100</span>
+                            </div>
+                            <p class="score-rating" id="voice-rating"></p>
+                        </div>
+                    </div>
+
+                    <!-- Analysis Breakdown -->
+                    <div class="score-breakdown">
+                        <h3>Analysis Breakdown</h3>
+                        <div id="voice-breakdown"></div>
+                    </div>
+
+                    <!-- Question Detection -->
+                    <div id="questions-found" style="display: none;">
+                        <h3>Questions Detected</h3>
+                        <div id="questions-list"></div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations">
+                        <h3>Voice Search Optimization Recommendations</h3>
+                        <div id="voice-recommendations"></div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="next-steps">
+                        <h3>Improve Your Voice Search Presence</h3>
+                        <div class="cta-buttons">
+                            <a href="/pages/platforms/voice-search.html" class="btn btn-primary">Voice Search Guide</a>
+                            <a href="/pages/tools/schema-validator.html" class="btn btn-secondary">Validate Schema</a>
+                            <a href="/pages/tools/content-checker.html" class="btn btn-secondary">Check Content</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Search Best Practices -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>Voice Search Optimization Best Practices</h2>
+                <p class="section-intro">
+                    Optimize your content for voice search with these proven strategies:
+                </p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Use Question Format</h3>
+                        <p>Structure content around common questions. Use Who, What, When, Where, Why, and How.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Write Conversationally</h3>
+                        <p>Use natural language as people speak. Avoid overly formal or technical jargon.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Target Long-Tail Keywords</h3>
+                        <p>Voice searches are typically 3-5 words longer than typed searches. Optimize for phrases.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Optimize for Local</h3>
+                        <p>Include "near me" content, local keywords, and complete business information.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Create FAQ Pages</h3>
+                        <p>Dedicated FAQ sections with clear Q&A format perform well in voice search.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Improve Page Speed</h3>
+                        <p>Voice search results favor fast-loading pages. Optimize for mobile performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Search Query Types -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Common Voice Search Query Types</h2>
+                
+                <div class="query-types">
+                    <div class="query-type-card">
+                        <h3>🔍 Informational</h3>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>"What is AI optimization?"</li>
+                            <li>"How does voice search work?"</li>
+                            <li>"Why is schema markup important?"</li>
+                        </ul>
+                        <p><strong>Optimization:</strong> Create comprehensive how-to guides and explanatory content.</p>
+                    </div>
+                    
+                    <div class="query-type-card">
+                        <h3>📍 Local</h3>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>"Coffee shop near me"</li>
+                            <li>"Best Italian restaurant in Seattle"</li>
+                            <li>"Dentist open now"</li>
+                        </ul>
+                        <p><strong>Optimization:</strong> Include location data, business hours, and local schema markup.</p>
+                    </div>
+                    
+                    <div class="query-type-card">
+                        <h3>🛍️ Commercial</h3>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>"Best AI optimization tools"</li>
+                            <li>"Compare ChatGPT and Gemini"</li>
+                            <li>"Where to buy schema templates"</li>
+                        </ul>
+                        <p><strong>Optimization:</strong> Create comparison guides and product reviews with clear recommendations.</p>
+                    </div>
+                    
+                    <div class="query-type-card">
+                        <h3>🎯 Navigational</h3>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>"Go to AI GEO website"</li>
+                            <li>"Open Schema validator tool"</li>
+                            <li>"Show me the content checklist"</li>
+                        </ul>
+                        <p><strong>Optimization:</strong> Optimize site structure and implement clear navigation schema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Component -->
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

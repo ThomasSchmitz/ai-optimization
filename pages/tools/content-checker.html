@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Content AI-Readiness Checker - Analyze your content for AI platform optimization. Get scoring on readability, structure, expertise signals, and citation-worthiness.">
+    <meta name="keywords" content="AI content checker, content readiness, AI optimization analyzer, content quality assessment">
+    <title>Content AI-Readiness Checker | AI GEO</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/includes.js"></script>
+    <script src="/scripts/tools.js"></script>
+</head>
+<body>
+    <!-- Include Header Component -->
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+
+    <main>
+        <!-- Tool Hero Section -->
+        <section class="guide-hero">
+            <div class="container">
+                <div class="guide-hero-content">
+                    <div class="guide-icon">
+                        📝
+                    </div>
+                    <h1 class="guide-title">Content AI-Readiness Checker</h1>
+                    <p class="guide-description">
+                        Analyze your content to determine how well it's optimized for AI platforms. 
+                        Get detailed feedback on readability, structure, expertise signals, and citation-worthiness.
+                    </p>
+                    <div class="guide-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">📊</span>
+                            <span class="meta-text">Comprehensive Analysis</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">⚡</span>
+                            <span class="meta-text">Instant Feedback</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🎯</span>
+                            <span class="meta-text">Actionable Tips</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>About This Tool</h2>
+                <p class="section-intro">
+                    AI platforms favor content that is clear, authoritative, well-structured, and useful. 
+                    This tool analyzes your content against key criteria that AI models use to determine 
+                    citation-worthiness and recommendation quality.
+                </p>
+                
+                <div class="highlight-box">
+                    <h3>Analysis Criteria</h3>
+                    <ul>
+                        <li><strong>Readability:</strong> Flesch reading score, sentence complexity, vocabulary</li>
+                        <li><strong>Structure:</strong> Headings, paragraphs, lists, formatting</li>
+                        <li><strong>Expertise Signals:</strong> Technical depth, specificity, original insights</li>
+                        <li><strong>Authority Indicators:</strong> Citations, data, credentials</li>
+                        <li><strong>Conversational Elements:</strong> Natural language, Q&A format</li>
+                        <li><strong>Optimization Elements:</strong> Keywords, topics, semantic richness</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Analyzer Tool -->
+        <section id="analyzer" class="content-section">
+            <div class="container">
+                <h2>Analyze Your Content</h2>
+                
+                <div class="tool-form">
+                    <div class="form-section">
+                        <label for="content-input">Paste your content (minimum 100 words):</label>
+                        <textarea 
+                            id="content-input" 
+                            class="content-textarea" 
+                            rows="12" 
+                            placeholder="Paste your article, blog post, or web page content here..."
+                        ></textarea>
+                        
+                        <div class="form-question">
+                            <label for="content-url">Content URL (optional):</label>
+                            <input type="url" id="content-url" placeholder="https://example.com/your-article">
+                            <small>We'll analyze metadata if provided</small>
+                        </div>
+                        
+                        <div class="button-group">
+                            <button id="analyze-btn" class="btn btn-primary">Analyze Content</button>
+                            <button id="clear-content-btn" class="btn btn-secondary">Clear</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div id="content-results" class="tool-results" style="display: none;">
+                    <div class="results-header">
+                        <h2>Content Analysis Results</h2>
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span class="score-value" id="content-score">0</span>
+                                <span class="score-max">/ 100</span>
+                            </div>
+                            <p class="score-rating" id="content-rating"></p>
+                        </div>
+                    </div>
+
+                    <!-- Content Stats -->
+                    <div class="content-stats">
+                        <h3>Content Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <span class="stat-label">Word Count</span>
+                                <span class="stat-value" id="word-count">0</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">Reading Time</span>
+                                <span class="stat-value" id="reading-time">0 min</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">Readability Score</span>
+                                <span class="stat-value" id="readability-score">0</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">Avg. Sentence Length</span>
+                                <span class="stat-value" id="avg-sentence">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Analysis -->
+                    <div class="analysis-categories">
+                        <h3>Detailed Analysis</h3>
+                        <div id="analysis-breakdown"></div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations">
+                        <h3>Improvement Recommendations</h3>
+                        <div id="content-recommendations"></div>
+                    </div>
+
+                    <!-- Next Steps -->
+                    <div class="next-steps">
+                        <h3>Optimize Further</h3>
+                        <div class="cta-buttons">
+                            <a href="/pages/guides/content-strategy.html" class="btn btn-primary">Content Strategy Guide</a>
+                            <a href="/pages/tools/eeat-assessment.html" class="btn btn-secondary">E-E-A-T Assessment</a>
+                            <a href="/pages/resources/templates.html" class="btn btn-secondary">Content Templates</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>AI-Ready Content Best Practices</h2>
+                <p class="section-intro">
+                    Follow these guidelines to create content that AI platforms are more likely to cite and recommend:
+                </p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Clear Structure</h3>
+                        <p>Use descriptive headings (H2, H3), short paragraphs, bullet points, and clear topic organization.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Conversational Tone</h3>
+                        <p>Write naturally, address questions directly, and use language your audience would use when asking questions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Demonstrate Expertise</h3>
+                        <p>Include specific examples, data, case studies, and unique insights that show deep knowledge.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Cite Sources</h3>
+                        <p>Link to authoritative external sources. AI platforms value well-researched content with citations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Answer Questions</h3>
+                        <p>Structure content around common questions. Include FAQ sections and direct question-answer formats.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Be Comprehensive</h3>
+                        <p>Cover topics thoroughly. Longer, in-depth content (1500+ words) performs better in AI citations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Optimization Checklist -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Content Optimization Checklist</h2>
+                
+                <div class="checklist-container">
+                    <div class="checklist-column">
+                        <h3>✅ Must-Have Elements</h3>
+                        <ul class="checklist">
+                            <li>Clear, descriptive title (H1)</li>
+                            <li>Well-organized with H2/H3 headings</li>
+                            <li>Minimum 500-1000 words</li>
+                            <li>Introduction that previews content</li>
+                            <li>Conclusion or summary section</li>
+                            <li>Natural keyword usage</li>
+                            <li>Readable sentences (under 25 words average)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="checklist-column">
+                        <h3>⭐ Recommended Elements</h3>
+                        <ul class="checklist">
+                            <li>Author bio with credentials</li>
+                            <li>Published and updated dates</li>
+                            <li>External citations and sources</li>
+                            <li>FAQ section</li>
+                            <li>Related content links</li>
+                            <li>Visual elements (images, charts)</li>
+                            <li>Examples and case studies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Component -->
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

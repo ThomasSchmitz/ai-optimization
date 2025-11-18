@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Schema Markup Validator - Test and validate your JSON-LD schema markup for AI optimization. Ensure proper implementation for ChatGPT, Gemini, and other AI platforms.">
+    <meta name="keywords" content="schema markup validator, JSON-LD validator, structured data validator, AI schema testing">
+    <title>Schema Markup Validator | AI GEO</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/includes.js"></script>
+    <script src="/scripts/tools.js"></script>
+</head>
+<body>
+    <!-- Include Header Component -->
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+
+    <main>
+        <!-- Tool Hero Section -->
+        <section class="guide-hero">
+            <div class="container">
+                <div class="guide-hero-content">
+                    <div class="guide-icon">
+                        🔍
+                    </div>
+                    <h1 class="guide-title">Schema Markup Validator</h1>
+                    <p class="guide-description">
+                        Validate your JSON-LD schema markup to ensure it's properly formatted and optimized 
+                        for AI platforms. Get instant feedback on syntax errors and best practice recommendations.
+                    </p>
+                    <div class="guide-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">⚡</span>
+                            <span class="meta-text">Instant Validation</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">✅</span>
+                            <span class="meta-text">Syntax Checking</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🎯</span>
+                            <span class="meta-text">AI-Optimized</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>About This Tool</h2>
+                <p class="section-intro">
+                    Schema markup (structured data) helps AI platforms understand your content better. 
+                    This validator checks your JSON-LD markup for syntax errors and provides recommendations 
+                    for AI optimization.
+                </p>
+                
+                <div class="highlight-box">
+                    <h3>What We Validate</h3>
+                    <ul>
+                        <li><strong>JSON Syntax:</strong> Proper formatting and structure</li>
+                        <li><strong>Schema.org Types:</strong> Correct type usage and properties</li>
+                        <li><strong>Required Properties:</strong> Essential fields for AI platforms</li>
+                        <li><strong>Best Practices:</strong> Recommendations for optimal implementation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Validator Tool -->
+        <section id="validator" class="content-section">
+            <div class="container">
+                <h2>Validate Your Schema Markup</h2>
+                
+                <div class="tool-form">
+                    <div class="form-section">
+                        <label for="schema-input">Paste your JSON-LD schema markup:</label>
+                        <textarea 
+                            id="schema-input" 
+                            class="code-textarea" 
+                            rows="15" 
+                            placeholder='Paste your JSON-LD here, e.g.:
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Your Company",
+  "url": "https://example.com"
+}'
+                        ></textarea>
+                        
+                        <div class="button-group">
+                            <button id="validate-btn" class="btn btn-primary">Validate Schema</button>
+                            <button id="clear-btn" class="btn btn-secondary">Clear</button>
+                            <button id="example-btn" class="btn btn-secondary">Load Example</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div id="validation-results" class="tool-results" style="display: none;">
+                    <div class="results-header">
+                        <h3 id="validation-status"></h3>
+                    </div>
+                    
+                    <div id="validation-messages"></div>
+                    
+                    <div id="schema-details" style="display: none;">
+                        <h4>Schema Details</h4>
+                        <div id="schema-info"></div>
+                    </div>
+                    
+                    <div id="recommendations" style="display: none;">
+                        <h4>AI Optimization Recommendations</h4>
+                        <div id="recommendations-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Schema Types -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>Common Schema Types for AI Optimization</h2>
+                <p class="section-intro">
+                    Different schema types serve different purposes. Here are the most important for AI visibility:
+                </p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Organization</h3>
+                        <p>Essential for establishing your business identity. Include name, logo, contact info, and social profiles.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Product</h3>
+                        <p>Critical for e-commerce. Include detailed descriptions, prices, reviews, and availability.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Article / BlogPosting</h3>
+                        <p>For content pages. Include author, publish date, and comprehensive article information.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>FAQPage</h3>
+                        <p>Optimizes for voice search and AI queries. Structure questions and answers clearly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>LocalBusiness</h3>
+                        <p>For local visibility. Include address, hours, service areas, and contact details.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>HowTo</h3>
+                        <p>Step-by-step content optimization. AI platforms love structured instructions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schema Resources -->
+        <section class="content-section">
+            <div class="container">
+                <h2>Schema Markup Resources</h2>
+                
+                <div class="resource-list">
+                    <div class="resource-item">
+                        <h3>📚 Official Documentation</h3>
+                        <p>Visit <a href="https://schema.org" target="_blank" rel="noopener">Schema.org</a> for complete documentation of all schema types and properties.</p>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>📋 Download Templates</h3>
+                        <p>Get our <a href="/pages/resources/templates.html">pre-built schema templates</a> for common use cases.</p>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>🔧 Google's Testing Tool</h3>
+                        <p>Use <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Google's Rich Results Test</a> for additional validation.</p>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>📖 Implementation Guides</h3>
+                        <p>Read our <a href="/pages/guides/website-optimization.html">technical optimization guide</a> for detailed implementation instructions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Component -->
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

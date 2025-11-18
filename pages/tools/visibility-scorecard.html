@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Visibility Scorecard - Assess your website's AI optimization readiness across ChatGPT, Gemini, and other AI platforms. Get actionable recommendations.">
+    <meta name="keywords" content="AI visibility scorecard, AI readiness assessment, AI GEO audit, AI optimization score">
+    <title>AI Visibility Scorecard | AI GEO</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/includes.js"></script>
+    <script src="/scripts/tools.js"></script>
+</head>
+<body>
+    <!-- Include Header Component -->
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+
+    <main>
+        <!-- Tool Hero Section -->
+        <section class="guide-hero">
+            <div class="container">
+                <div class="guide-hero-content">
+                    <div class="guide-icon">
+                        📊
+                    </div>
+                    <h1 class="guide-title">AI Visibility Scorecard</h1>
+                    <p class="guide-description">
+                        Evaluate your website's AI optimization readiness across multiple platforms and get 
+                        personalized recommendations to improve your visibility in AI-powered search and recommendations.
+                    </p>
+                    <div class="guide-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">⏱️</span>
+                            <span class="meta-text">5-10 minutes</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">📈</span>
+                            <span class="meta-text">Instant Results</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🎯</span>
+                            <span class="meta-text">Actionable Insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>About This Tool</h2>
+                <p class="section-intro">
+                    This scorecard evaluates your website across 8 key dimensions of AI optimization. 
+                    Answer honestly to get the most accurate assessment and useful recommendations.
+                </p>
+                
+                <div class="highlight-box">
+                    <h3>What We Assess</h3>
+                    <ul>
+                        <li><strong>Technical Foundation:</strong> Schema markup, site structure, metadata</li>
+                        <li><strong>Content Quality:</strong> Depth, expertise, originality</li>
+                        <li><strong>Authority Signals:</strong> Backlinks, mentions, citations</li>
+                        <li><strong>E-E-A-T Indicators:</strong> Author credentials, trust signals</li>
+                        <li><strong>Voice Search Readiness:</strong> Natural language, FAQ structure</li>
+                        <li><strong>Platform-Specific Optimization:</strong> ChatGPT, Gemini, etc.</li>
+                        <li><strong>Social Presence:</strong> Cross-platform visibility</li>
+                        <li><strong>Analytics & Tracking:</strong> Measurement capabilities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Form -->
+        <section id="assessment" class="content-section">
+            <div class="container">
+                <h2>AI Visibility Assessment</h2>
+                
+                <form id="visibility-scorecard-form" class="tool-form">
+                    
+                    <!-- Section 1: Technical Foundation -->
+                    <div class="form-section">
+                        <h3>1. Technical Foundation</h3>
+                        <p class="section-description">Technical infrastructure for AI discoverability</p>
+                        
+                        <div class="form-question">
+                            <label>Does your website use Schema.org structured data?</label>
+                            <select name="schema" required>
+                                <option value="">Select...</option>
+                                <option value="3">Yes, extensively (multiple types)</option>
+                                <option value="2">Yes, basic implementation</option>
+                                <option value="1">Partially implemented</option>
+                                <option value="0">No schema markup</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>How is your site's mobile responsiveness?</label>
+                            <select name="mobile" required>
+                                <option value="">Select...</option>
+                                <option value="3">Fully responsive, fast loading</option>
+                                <option value="2">Responsive but could be faster</option>
+                                <option value="1">Basic mobile support</option>
+                                <option value="0">Not mobile optimized</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Do you have an XML sitemap and robots.txt?</label>
+                            <select name="sitemap" required>
+                                <option value="">Select...</option>
+                                <option value="3">Yes, both properly configured</option>
+                                <option value="2">Yes, basic implementation</option>
+                                <option value="1">Only one is present</option>
+                                <option value="0">Neither is implemented</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Content Quality -->
+                    <div class="form-section">
+                        <h3>2. Content Quality</h3>
+                        <p class="section-description">Depth and value of your content</p>
+                        
+                        <div class="form-question">
+                            <label>How comprehensive is your content?</label>
+                            <select name="content-depth" required>
+                                <option value="">Select...</option>
+                                <option value="3">In-depth, original research and analysis</option>
+                                <option value="2">Detailed but not original</option>
+                                <option value="1">Basic information coverage</option>
+                                <option value="0">Thin or duplicate content</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>How frequently do you update content?</label>
+                            <select name="content-freshness" required>
+                                <option value="">Select...</option>
+                                <option value="3">Weekly or more often</option>
+                                <option value="2">Monthly</option>
+                                <option value="1">Quarterly</option>
+                                <option value="0">Rarely or never</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Do you include citations and external sources?</label>
+                            <select name="citations" required>
+                                <option value="">Select...</option>
+                                <option value="3">Yes, extensively with authoritative sources</option>
+                                <option value="2">Yes, moderately</option>
+                                <option value="1">Occasionally</option>
+                                <option value="0">No external citations</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Authority & Trust -->
+                    <div class="form-section">
+                        <h3>3. Authority & Trust Signals</h3>
+                        <p class="section-description">External validation and credibility indicators</p>
+                        
+                        <div class="form-question">
+                            <label>How strong is your backlink profile?</label>
+                            <select name="backlinks" required>
+                                <option value="">Select...</option>
+                                <option value="3">100+ quality backlinks from authoritative sites</option>
+                                <option value="2">20-100 quality backlinks</option>
+                                <option value="1">Less than 20 backlinks</option>
+                                <option value="0">Few or no backlinks</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Do you have author bios and credentials displayed?</label>
+                            <select name="author-bios" required>
+                                <option value="">Select...</option>
+                                <option value="3">Yes, detailed credentials for all authors</option>
+                                <option value="2">Yes, for some content</option>
+                                <option value="1">Basic author names only</option>
+                                <option value="0">No author information</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Do you display trust indicators (reviews, testimonials, certifications)?</label>
+                            <select name="trust-signals" required>
+                                <option value="">Select...</option>
+                                <option value="3">Multiple trust signals throughout site</option>
+                                <option value="2">Some trust indicators present</option>
+                                <option value="1">Minimal trust signals</option>
+                                <option value="0">No visible trust indicators</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Voice Search Optimization -->
+                    <div class="form-section">
+                        <h3>4. Voice Search Readiness</h3>
+                        <p class="section-description">Natural language and conversational content</p>
+                        
+                        <div class="form-question">
+                            <label>Do you have FAQ pages with conversational questions?</label>
+                            <select name="faq" required>
+                                <option value="">Select...</option>
+                                <option value="3">Comprehensive FAQ with question format</option>
+                                <option value="2">Basic FAQ section</option>
+                                <option value="1">Few FAQ-style questions</option>
+                                <option value="0">No FAQ content</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Does your content use natural, conversational language?</label>
+                            <select name="natural-language" required>
+                                <option value="">Select...</option>
+                                <option value="3">Highly conversational and accessible</option>
+                                <option value="2">Moderately conversational</option>
+                                <option value="1">Formal but readable</option>
+                                <option value="0">Very technical or stiff</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Social Presence -->
+                    <div class="form-section">
+                        <h3>5. Social Media Integration</h3>
+                        <p class="section-description">Cross-platform visibility and engagement</p>
+                        
+                        <div class="form-question">
+                            <label>How active is your social media presence?</label>
+                            <select name="social-activity" required>
+                                <option value="">Select...</option>
+                                <option value="3">Very active on multiple platforms</option>
+                                <option value="2">Active on 1-2 platforms</option>
+                                <option value="1">Minimal activity</option>
+                                <option value="0">No social media presence</option>
+                            </select>
+                        </div>
+
+                        <div class="form-question">
+                            <label>Do you have Open Graph and Twitter Card tags?</label>
+                            <select name="social-tags" required>
+                                <option value="">Select...</option>
+                                <option value="3">Yes, comprehensive implementation</option>
+                                <option value="2">Yes, basic tags</option>
+                                <option value="1">Partially implemented</option>
+                                <option value="0">No social meta tags</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Calculate My Score</button>
+                </form>
+
+                <!-- Results Section (Hidden Initially) -->
+                <div id="scorecard-results" class="tool-results" style="display: none;">
+                    <div class="results-header">
+                        <h2>Your AI Visibility Score</h2>
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span class="score-value" id="total-score">0</span>
+                                <span class="score-max">/ 100</span>
+                            </div>
+                            <p class="score-rating" id="score-rating"></p>
+                        </div>
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h3>Score Breakdown</h3>
+                        <div id="category-scores"></div>
+                    </div>
+
+                    <div class="recommendations">
+                        <h3>Recommendations</h3>
+                        <div id="recommendations-list"></div>
+                    </div>
+
+                    <div class="next-steps">
+                        <h3>Next Steps</h3>
+                        <div class="cta-buttons">
+                            <a href="/pages/tools/schema-validator.html" class="btn btn-primary">Validate Schema Markup</a>
+                            <a href="/pages/tools/content-checker.html" class="btn btn-secondary">Check Content Readiness</a>
+                            <a href="/pages/resources/templates.html" class="btn btn-secondary">Download Templates</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About the Scoring Section -->
+        <section class="content-section alt-bg">
+            <div class="container">
+                <h2>How Scoring Works</h2>
+                <p class="section-intro">
+                    Your score is calculated based on weighted responses across five key categories. 
+                    Each category represents critical elements of AI optimization.
+                </p>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>90-100: Excellent</h3>
+                        <p>You're well-positioned for AI visibility. Focus on maintaining and minor optimizations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>70-89: Good</h3>
+                        <p>Solid foundation with room for improvement. Implement priority recommendations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>50-69: Fair</h3>
+                        <p>Basic presence but significant gaps. Follow recommendations systematically.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Below 50: Needs Work</h3>
+                        <p>Start with technical foundation and content quality improvements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Include Footer Component -->
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
