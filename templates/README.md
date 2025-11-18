@@ -66,7 +66,7 @@ Interactive checklist component with 4 default categories:
 
 ## Styling
 
-All templates and components use the existing design system defined in `/styles.css`.
+All templates and components use the existing design system defined in `/assets/css/styles.css`.
 
 All components are fully responsive and follow the existing color scheme and spacing patterns.
 
@@ -143,7 +143,7 @@ To add new sections to a template:
 To use reusable components:
 1. Include component HTML in your page
 2. Customize data attributes or replace placeholder text
-3. Ensure the component CSS is loaded from `/styles.css`
+3. Ensure the component CSS is loaded from `/assets/css/styles.css`
 
 ## Best Practices
 

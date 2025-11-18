@@ -6,7 +6,7 @@
     // Load search index
     async function loadSearchIndex() {
         try {
-            const response = await fetch('/search-index.json');
+            const response = await fetch('/assets/data/search-index.json');
             const data = await response.json();
             searchIndex = data.pages || [];
         } catch (error) {

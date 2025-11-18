@@ -67,7 +67,7 @@ foreach ($branch in $prBranches) {
             
             # Auto-resolve by accepting both changes for known files
             foreach ($file in $conflicts) {
-                if ($file -eq "search-index.json" -or $file -eq "sitemap.xml") {
+                if ($file -eq "assets/data/search-index.json" -or $file -eq "sitemap.xml") {
                     Write-Host "  - Auto-merging $file (keeping both changes)" -ForegroundColor Yellow
                     # For these files, we'll use a strategy to keep both sides
                     git checkout --ours $file

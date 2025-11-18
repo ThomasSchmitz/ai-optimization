@@ -27,14 +27,14 @@ This website provides comprehensive guides, best practices, and resources for ma
 
 We are planning to transform this single-page resource into a comprehensive multi-page learning platform. 
 
-**📑 [PLANNING-INDEX.md](PLANNING-INDEX.md)** - Start here for complete planning documentation overview
+**📑 [PLANNING-INDEX.md](docs/project/PLANNING-INDEX.md)** - Start here for complete planning documentation overview
 
 **Quick Links:**
-- **[EXECUTIVE-SUMMARY.md](EXECUTIVE-SUMMARY.md)** - Overview for stakeholders (5-10 min read)
-- **[ROADMAP.md](ROADMAP.md)** - Complete roadmap with detailed specifications (20-30 min read)
-- **[PR-LIST.md](PR-LIST.md)** - Quick reference list of all 30 planned pull requests (10-15 min read)
-- **[STRUCTURE.md](STRUCTURE.md)** - Visual diagrams and architecture (15-20 min read)
-- **[FRESH-IDEAS.md](FRESH-IDEAS.md)** - New ideas and future feature proposals (5 min read)
+- **[EXECUTIVE-SUMMARY.md](docs/project/EXECUTIVE-SUMMARY.md)** - Overview for stakeholders (5-10 min read)
+- **[ROADMAP.md](docs/project/ROADMAP.md)** - Complete roadmap with detailed specifications (20-30 min read)
+- **[PR-LIST.md](docs/project/PR-LIST.md)** - Quick reference list of all 30 planned pull requests (10-15 min read)
+- **[STRUCTURE.md](docs/project/STRUCTURE.md)** - Visual diagrams and architecture (15-20 min read)
+- **[FRESH-IDEAS.md](docs/project/FRESH-IDEAS.md)** - New ideas and future feature proposals (5 min read)
 
 The expansion will include:
 - Dedicated deep-dive pages for each AI platform
@@ -106,8 +106,8 @@ npx http-server
 ## Website Structure
 
 - **index.html** - Main website with all content sections
-- **styles.css** - Responsive styling and design
-- **script.js** - Interactive features and navigation
+- **assets/css/styles.css** - Responsive styling and design
+- **assets/js/script.js** - Interactive features and navigation
 
 ## Sections
 
