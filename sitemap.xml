@@ -254,4 +254,54 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Industry-Specific Guides -->
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/industries/healthcare.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/industries/regulated.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  
+  <!-- Industry Pages -->
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/industries/technology.html</loc>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/industries/local-business.html</loc>
+  <!-- Industry-Specific Guides -->
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/industries/ecommerce.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/industries/saas.html</loc>
+  <!-- Additional Guides -->
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/guides/local-seo-ai.html</loc>
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/guides/social-media-optimization.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/guides/twitter-x-strategy.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://thomasschmitz.github.io/ai-optimization/pages/guides/linkedin-strategy.html</loc>
+    <lastmod>2025-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
