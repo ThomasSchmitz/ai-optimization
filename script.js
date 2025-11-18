@@ -25,7 +25,8 @@ function initializePageAfterIncludes() {
         mobileMenuToggle.parentNode.replaceChild(newToggle, mobileMenuToggle);
         
         newToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
+            const isExpanded = navLinks.classList.toggle('active');
+            newToggle.setAttribute('aria-expanded', isExpanded);
         });
     }
     
@@ -191,8 +192,10 @@ function bindMobileMenuClosers() {
             const link = event.target.closest('.nav-links a:not(.dropdown-toggle)');
             if (!link) return;
             const navLinks = document.querySelector('.nav-links');
+            const toggle = document.querySelector('.mobile-menu-toggle');
             if (navLinks) {
                 navLinks.classList.remove('active');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
             }
         });
         navLinkCloseBound = true;
@@ -201,12 +204,14 @@ function bindMobileMenuClosers() {
     if (!mobileMenuDismissBound) {
         document.addEventListener('click', function(event) {
             const navLinks = document.querySelector('.nav-links');
+            const toggle = document.querySelector('.mobile-menu-toggle');
             if (!navLinks) {
                 return;
             }
             const isClickInside = event.target.closest('.navbar');
             if (!isClickInside && navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
+                if (toggle) toggle.setAttribute('aria-expanded', 'false');
             }
         });
         mobileMenuDismissBound = true;

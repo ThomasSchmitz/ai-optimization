@@ -1057,11 +1057,11 @@ These requirements ensure this roadmap stays accurate, up-to-date, and serves as
 
 **Files Created**:
 - `pages/resources/templates.html`
-- `downloads/ai-optimization-checklist.pdf` (markdown source)
-- `downloads/schema-templates.zip` (10 JSON-LD templates + README)
-- `downloads/content-brief-template.docx` (markdown source)
-- `downloads/social-media-audit-template.xlsx` (markdown source)
-- `downloads/eeat-improvement-plan-template.docx` (markdown source)
+- `downloads/ai-optimization-checklist.md` (markdown format)
+- `downloads/schema-templates-collection.md` (10 JSON-LD templates collection)
+- `downloads/content-brief-template.md` (markdown format)
+- `downloads/social-media-audit-template.md` (markdown format)
+- `downloads/eeat-improvement-plan-template.md` (markdown format)
 
 **Implementation Notes**:
 - ✅ Created comprehensive templates page with detailed resource descriptions

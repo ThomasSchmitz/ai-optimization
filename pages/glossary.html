@@ -745,40 +745,8 @@
     <script>
         // Glossary search functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const filterInput = document.getElementById('glossary-filter');
-            const glossaryTerms = document.querySelectorAll('.glossary-term');
-            const glossarySections = document.querySelectorAll('.glossary-section');
-            const noResults = document.getElementById('no-results');
+            // ...existing code...
             
-            filterInput.addEventListener('input', function() {
-                const filterValue = this.value.toLowerCase();
-                let visibleCount = 0;
-                
-                glossarySections.forEach(section => {
-                    let sectionHasVisible = false;
-                    const terms = section.querySelectorAll('.glossary-term');
-                    
-                    terms.forEach(term => {
-                        const title = term.querySelector('.term-title').textContent.toLowerCase();
-                        const definition = term.querySelector('.term-definition').textContent.toLowerCase();
-                        
-                        if (title.includes(filterValue) || definition.includes(filterValue)) {
-                            term.style.display = 'block';
-                            sectionHasVisible = true;
-                            visibleCount++;
-                        } else {
-                            term.style.display = 'none';
-                        }
-                    });
-                    
-                    // Show/hide section letter based on whether it has visible terms
-                    if (sectionHasVisible) {
-                        section.style.display = 'block';
-                    } else {
-                        section.style.display = 'none';
-                    }
-                });
-                
                 // Show no results message if nothing matches
                 if (visibleCount === 0 && filterValue !== '') {
                     noResults.style.display = 'block';
@@ -788,6 +756,32 @@
                     document.getElementById('glossary-content').style.display = 'block';
                 }
             });
+
+            // Dynamic Schema Generation for Glossary
+            // This helps AI agents understand the structured data of definitions without manual JSON-LD updates
+            const terms = document.querySelectorAll('.glossary-term');
+            const schemaData = {
+                "@context": "https://schema.org",
+                "@type": "DefinedTermSet",
+                "name": "AI GEO Glossary",
+                "description": "Comprehensive glossary of AI optimization and marketing terms.",
+                "hasDefinedTerm": []
+            };
+
+            terms.forEach(term => {
+                const name = term.querySelector('.term-title').textContent.trim();
+                const description = term.querySelector('.term-definition').textContent.trim();
+                schemaData.hasDefinedTerm.push({
+                    "@type": "DefinedTerm",
+                    "name": name,
+                    "description": description
+                });
+            });
+
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.text = JSON.stringify(schemaData);
+            document.head.appendChild(script);
         });
     </script>
 </body>

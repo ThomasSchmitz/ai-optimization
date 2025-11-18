@@ -567,6 +567,45 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="strategy-section">
+                    <h3>5. Carousel & List Schema (ItemList)</h3>
+                    <div class="strategy-content">
+                        <p>
+                            For product carousels, "Related Products" sections, or category pages, use the <code>ItemList</code> 
+                            schema. This tells AI agents that these items are part of a curated collection, not just random elements.
+                        </p>
+
+                        <h4>Why it matters:</h4>
+                        <ul>
+                            <li><strong>Structure:</strong> Defines the relationship and order of products.</li>
+                            <li><strong>Context:</strong> Helps AI understand "Top Rated" or "New Arrivals" collections.</li>
+                            <li><strong>Google Support:</strong> Explicitly supported for carousel rich results.</li>
+                        </ul>
+
+                        <div class="code-example">
+                            <h5>ItemList Schema Example:</h5>
+                            <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://example.com/product-1"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://example.com/product-2"
+    }
+  ]
+}
+&lt;/script&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
