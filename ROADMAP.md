@@ -1293,6 +1293,23 @@ ai-optimization/
 11. ✅ PR #10: Perplexity & You.com Guides
 12. ✅ PR #11: Voice Search Optimization Guide
 13. ✅ PR #12: Emerging & International AI Platforms
+14. ✅ PR #25: Templates and Checklists (5 free downloadable resources)
+15. ✅ PR #13: Website Technical Optimization (November 18, 2025)
+16. ✅ PR #14: Content Strategy for AI Visibility (November 18, 2025)
+17. ✅ PR #26: Learning Paths and Courses (November 18, 2025)
+18. ✅ November 2025 Comprehensive Site Audit (all pages updated)
+
+### High Priority (Next Phase - Strategy Guides)
+19. PR #15: Social Media Optimization
+20. PR #16: E-E-A-T and Authority
+21. PR #17: Analytics and Tracking
+
+### Medium Priority (Industry Guides & Resources)
+22. PR #18: E-commerce Optimization
+23. PR #19: Local Business Optimization
+24. PR #20: B2B and Professional Services
+25. PR #21: SaaS and Technology Products
+26. PR #24: Interactive Tools
 14. ✅ PR #13: Website Technical Optimization (November 18, 2025)
 15. ✅ PR #14: Content Strategy for AI Visibility (November 18, 2025)
 16. ✅ PR #15: Social Media Optimization for AI
