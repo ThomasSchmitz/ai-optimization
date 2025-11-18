@@ -273,6 +273,22 @@
       "content": "Complete Instagram optimization guide for Meta AI discovery and e-commerce. Learn profile optimization, content strategy for Reels and Stories, hashtag and SEO tactics, Instagram Shopping features, engagement and community building, creator tools, and analytics. Covers visual content best practices, product tagging, influencer partnerships, and data-driven optimization strategies."
     },
     {
+      "title": "Perplexity AI Optimization Guide",
+      "url": "/pages/platforms/perplexity.html",
+      "category": "platform",
+      "description": "Master Perplexity's citation-focused AI search platform with source authority, real-time optimization, and academic content strategies.",
+      "keywords": ["Perplexity AI", "citation optimization", "source authority", "real-time search", "academic content", "research optimization", "AI search", "credibility", "fact-checking"],
+      "content": "Complete guide to optimizing for Perplexity's citation-focused AI search engine. Learn source authority building, real-time information optimization, academic and research content strategies, citation ranking factors, and how to become a trusted source. Covers E-E-A-T signals, original research, data optimization, and case studies of successful Perplexity citations."
+    },
+    {
+      "title": "You.com Optimization Guide",
+      "url": "/pages/platforms/you-com.html",
+      "category": "platform",
+      "description": "Optimize for You.com's privacy-focused AI search engine with personalized results, specialized apps, and strong citation requirements.",
+      "keywords": ["You.com", "privacy-focused search", "YouChat", "YouCode", "privacy optimization", "AI search", "personalization", "developer tools", "research mode", "privacy-first"],
+      "content": "Master You.com's privacy-focused AI search platform. Learn privacy-respecting optimization strategies, citation techniques, specialized search app optimization (YouChat, YouCode, Research Mode), real-time information strategies, and privacy-focused content approaches. Covers technical implementation, developer documentation, academic content, and case studies for privacy-conscious audiences."
+    },
+    {
       "title": "Search",
       "url": "/pages/search.html",
       "category": "resource",
