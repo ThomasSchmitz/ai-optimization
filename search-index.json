@@ -643,6 +643,49 @@
         "Google Business Profile"
       ],
       "content": "Optimize for Google's AI-powered assistant with 800M+ monthly active users, now enhanced with Gemini. Learn about organic optimization, Google Actions development, Shopping Actions, smart home integration, and local search dominance through Google Business Profile."
+    },
+    {
+      "title": "Emerging AI Platforms Overview",
+      "url": "/pages/platforms/emerging-ai.html",
+      "category": "platform",
+      "description": "Coverage of emerging AI platforms including Mistral AI, Character.AI, Poe by Quora, Inflection AI (Pi), HuggingChat, Apple Intelligence, and Amazon Q.",
+      "keywords": [
+        "Mistral AI",
+        "Character.AI",
+        "Poe",
+        "Quora",
+        "Inflection AI",
+        "Pi",
+        "HuggingChat",
+        "Apple Intelligence",
+        "Amazon Q",
+        "emerging AI",
+        "future platforms",
+        "open source AI"
+      ],
+      "content": "Explore emerging AI platforms serving specific markets and demographics. Learn about Mistral AI for European markets, Character.AI for younger users, Poe's multi-model aggregation, Pi's empathetic AI, HuggingChat's open source approach, and prepare for Apple Intelligence and Amazon Q. Strategic planning for future AI platforms."
+    },
+    {
+      "title": "International AI Platforms Guide",
+      "url": "/pages/platforms/international-ai.html",
+      "category": "platform",
+      "description": "Global AI platform optimization including DeepSeek, Baidu Ernie Bot, regional platforms, and international market strategies.",
+      "keywords": [
+        "DeepSeek",
+        "Baidu",
+        "Ernie Bot",
+        "Chinese AI",
+        "international AI",
+        "Naver",
+        "LINE",
+        "Kakao",
+        "Yandex",
+        "regional AI",
+        "global optimization",
+        "GDPR",
+        "China market"
+      ],
+      "content": "Navigate the global AI landscape with regional platforms like DeepSeek and Baidu in China, Naver in Korea, LINE in Japan, Mistral in Europe, and more. Learn international optimization strategies, regulatory compliance (GDPR, ICP), localization best practices, and cross-border AI strategies for global markets."
     }
   ]
 }
