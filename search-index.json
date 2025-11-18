@@ -903,60 +903,63 @@
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
     },
     {
-      "title": "E-E-A-T Optimization for AI Visibility",
-      "url": "/pages/guides/eeat-optimization.html",
+      "title": "Social Media Optimization for AI",
+      "url": "/pages/guides/social-media-optimization.html",
       "category": "guide",
-      "description": "Master Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework for AI visibility. Build credibility signals that AI platforms recognize and cite.",
+      "description": "Master platform-specific social media strategies for X, LinkedIn, Facebook, Instagram, and TikTok to maximize AI visibility and authority.",
       "keywords": [
-        "E-E-A-T",
-        "expertise",
-        "authoritativeness",
-        "trustworthiness",
-        "experience",
-        "credibility",
-        "author profiles",
-        "citations",
-        "credentials",
-        "trust signals"
-      ],
-      "content": "Build demonstrable experience in your field, establish expertise through credentials and publications, create authoritativeness through third-party validation, and develop trustworthiness through transparency and accuracy. Learn author bio optimization, citation best practices, and credential showcase strategies."
-    },
-    {
-      "title": "Authority Building for AI Visibility",
-      "url": "/pages/guides/authority-building.html",
-      "category": "guide",
-      "description": "Build industry recognition and establish yourself as a trusted authority that AI platforms prefer to cite. Earn third-party validation, build backlinks, and gain media coverage.",
-      "keywords": [
+        "social media optimization",
+        "Twitter X strategy",
+        "LinkedIn optimization",
+        "Facebook marketing",
+        "Instagram AI",
+        "TikTok strategy",
+        "social media SEO",
+        "engagement signals",
         "authority building",
-        "thought leadership",
-        "backlinks",
-        "media coverage",
-        "industry recognition",
-        "third-party mentions",
-        "press coverage",
-        "expert positioning",
-        "speaking",
-        "conferences"
+        "influencer marketing",
+        "community building",
+        "hashtag strategy"
       ],
-      "content": "Strategies for earning high-quality backlinks from .edu and .gov sites, building media relationships and press coverage, establishing thought leadership through content and speaking, participating in industry events and organizations, and building social media authority."
+      "content": "Comprehensive social media optimization for AI visibility including platform-specific strategies (X, LinkedIn, Facebook, Instagram, TikTok), profile optimization, content formats, engagement signals, hashtags, social proof, community building, and influencer partnerships."
     },
     {
-      "title": "Reputation Management for AI Visibility",
-      "url": "/pages/guides/reputation-management.html",
+      "title": "X (Twitter) Strategy for AI Visibility",
+      "url": "/pages/guides/twitter-x-strategy.html",
       "category": "guide",
-      "description": "Monitor, protect, and enhance your online reputation to maintain credibility with AI platforms. Learn review management, crisis response, and brand monitoring strategies.",
+      "description": "Complete X (Twitter) strategy guide for Grok AI visibility, real-time engagement, threading mastery, and thought leadership.",
       "keywords": [
-        "reputation management",
-        "review management",
-        "crisis management",
-        "brand monitoring",
-        "online reputation",
-        "review response",
-        "negative content",
-        "social listening",
-        "reputation monitoring"
+        "Twitter strategy",
+        "X platform",
+        "Grok AI",
+        "Twitter optimization",
+        "X marketing",
+        "Twitter threads",
+        "real-time marketing",
+        "Twitter engagement",
+        "Community Notes",
+        "Twitter verification"
       ],
-      "content": "Set up comprehensive brand monitoring across reviews and social media, manage reviews professionally with effective response strategies, prepare for and respond to reputation crises, address negative content strategically, and build positive reputation proactively through transparency and social proof."
+      "content": "Master X optimization for Grok AI including profile optimization, content strategy, threading techniques, real-time marketing, trending topics, Community Notes participation, and verification strategies for authority building."
+    },
+    {
+      "title": "LinkedIn Strategy for AI Visibility",
+      "url": "/pages/guides/linkedin-strategy.html",
+      "category": "guide",
+      "description": "Complete LinkedIn strategy for professional authority, B2B visibility, and thought leadership optimization for AI platforms.",
+      "keywords": [
+        "LinkedIn strategy",
+        "LinkedIn optimization",
+        "B2B marketing",
+        "professional networking",
+        "LinkedIn content",
+        "thought leadership",
+        "LinkedIn SEO",
+        "business development",
+        "LinkedIn articles",
+        "LinkedIn video"
+      ],
+      "content": "Comprehensive LinkedIn optimization including profile optimization, company pages, content strategy, article publishing, video content, networking, engagement, groups, and newsletters for professional authority and B2B visibility."
     }
   ]
 }
