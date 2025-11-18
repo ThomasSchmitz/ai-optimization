@@ -45,9 +45,9 @@ function initializePageAfterIncludes() {
 // Dropdown menu functionality
 function initializeDropdowns() {
     const dropdowns = document.querySelectorAll('.dropdown');
-    let closeTimeout = null;
 
     dropdowns.forEach(dropdown => {
+        let closeTimeout = null;
         const toggle = dropdown.querySelector('.dropdown-toggle');
         const menu = dropdown.querySelector('.dropdown-menu');
 
@@ -59,6 +59,13 @@ function initializeDropdowns() {
             // Desktop: hover behavior with delay to prevent premature closing
             if (window.innerWidth > 768) {
                 dropdown.addEventListener('mouseenter', function() {
+                    // Close other dropdowns immediately to prevent overlap
+                    dropdowns.forEach(other => {
+                        if (other !== dropdown) {
+                            other.classList.remove('active');
+                        }
+                    });
+
                     // Clear any pending close timeout
                     if (closeTimeout) {
                         clearTimeout(closeTimeout);
