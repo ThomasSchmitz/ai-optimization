@@ -15,7 +15,6 @@ Template for creating individual AI platform optimization guides (e.g., ChatGPT,
 - Optimization strategies
 - Step-by-step implementation guide
 - Interactive optimization checklist
-- Case studies section
 - Best practices (do's and don'ts)
 - Resources and tools
 - Related platforms navigation
@@ -26,7 +25,6 @@ Template for creating individual AI platform optimization guides (e.g., ChatGPT,
 3. Replace `[STAT_VALUE_X]` and `[STAT_LABEL_X]` with platform-specific statistics
 4. Fill in content sections with platform-specific information
 5. Customize the checklist categories as needed
-6. Add platform-specific case studies
 
 ### 2. `guide-page-template.html`
 Template for creating optimization strategy guides (e.g., Website Optimization, Content Strategy, E-E-A-T).
@@ -41,7 +39,6 @@ Template for creating optimization strategy guides (e.g., Website Optimization, 
 - Best practices list
 - Common mistakes to avoid with solutions
 - Action checklist
-- Case studies
 - Tools and resources
 - Next steps with related content
 
@@ -51,7 +48,7 @@ Template for creating optimization strategy guides (e.g., Website Optimization, 
 3. Set `[READING_TIME]`, `[DIFFICULTY_LEVEL]`, and `[TARGET_AUDIENCE]` values
 4. Fill in all content sections
 5. Customize the implementation phases
-6. Add relevant statistics, case studies, and resources
+6. Add relevant statistics and resources
 
 ## Reusable Components
 
@@ -67,21 +64,42 @@ Interactive checklist component with 4 default categories:
 - Authority & Trust
 - Testing & Monitoring
 
-### `case-study.html`
-Case study structure with challenge/solution/results format and results metrics grid.
-
 ## Styling
 
-All templates and components use the existing design system defined in `/styles.css`. New styles have been added for:
-- Platform and guide hero sections
-- Checklist components
-- Case study cards
-- Strategy and implementation layouts
-- Best practices and mistakes lists
-- Resources grids
-- And more...
+All templates and components use the existing design system defined in `/styles.css`.
 
 All components are fully responsive and follow the existing color scheme and spacing patterns.
+
+## Content Quality Guidelines
+
+**IMPORTANT: All content on this website must be verifiable and supported by authoritative sources.**
+
+### Do NOT Include:
+- **Fake or fictional case studies** - Even if marked as "illustrative examples," these can be perceived as AI hallucinations and damage credibility
+- Unverifiable statistics or metrics
+- Made-up company names or scenarios
+- Hypothetical results presented as real outcomes
+
+### DO Include:
+- **Real, verifiable case studies** with links to original sources (company blogs, press releases, published research)
+- Published research studies with proper citations
+- Industry statistics from authoritative sources (Gartner, Forrester, official company reports)
+- Documented best practices with references
+- Original research conducted with transparent methodology
+
+### If You Cannot Find Real Case Studies:
+- Remove the case studies section entirely
+- Focus on optimization strategies and best practices instead
+- Link to external resources that contain verified case studies
+- Consider conducting original research or partnering with companies for real case studies
+
+### Verifying Sources:
+Before adding any case study or statistic:
+1. Verify the source exists and is accessible
+2. Link directly to the original source
+3. Include publication date
+4. Cite the author or organization
+5. Ensure the source is authoritative in the field
 
 ## Customization Guide
 
@@ -134,8 +152,9 @@ To use reusable components:
 3. **Accessibility:** Maintain semantic HTML structure and ARIA labels
 4. **Performance:** Optimize images and keep page weight reasonable
 5. **Mobile-First:** Test on mobile devices as all components are responsive
-6. **Content Quality:** Provide actionable, well-researched content in all sections
+6. **Content Quality:** Provide actionable, well-researched content in all sections - **all claims must be verifiable with credible sources**
 7. **Internal Linking:** Link to related pages and maintain the site navigation structure
+8. **Source Attribution:** Always cite and link to original sources for statistics, research, and case studies
 
 ## Example Implementation
 
