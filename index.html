@@ -452,7 +452,7 @@
         <!-- Best Practices Section -->
         <section id="best-practices" class="content-section alt-bg">
             <div class="container">
-                <h2>8 Essential Best Practices for AI Visibility</h2>
+                <h2>10 Essential Best Practices for AI Visibility</h2>
                 <p class="section-intro">
                     These proven principles form the foundation of successful AI optimization. Companies implementing 
                     these practices consistently see improved citations, better brand positioning, and increased traffic 
@@ -507,28 +507,51 @@
                     
                     <div class="practice-card">
                         <div class="practice-number">6</div>
-                        <h3>Optimize for Questions</h3>
+                        <h3>Ensure Bot-Accessible Design</h3>
                         <p>
-                            Structure content to answer common questions. Many AI queries are 
-                            conversational and question-based.
+                            AI crawlers need clean, accessible HTML. Keep navigation links in the light DOM (not hidden in JavaScript), 
+                            use semantic HTML tables for data, avoid heavy JavaScript dependencies for core content, and ensure 
+                            text is in actual HTML (not rendered in canvas). Progressive enhancement beats JavaScript-only sites.
                         </p>
                     </div>
                     
                     <div class="practice-card">
                         <div class="practice-number">7</div>
-                        <h3>Monitor AI Citations</h3>
+                        <h3>Optimize for Questions</h3>
                         <p>
-                            Regularly check if and how your brand is mentioned in AI responses. 
-                            Adjust your strategy based on findings.
+                            Structure content to answer common questions directly and concisely. Many AI queries are 
+                            conversational and question-based. Use FAQ schema markup and natural language headings that 
+                            match how people actually ask questions.
                         </p>
                     </div>
                     
                     <div class="practice-card">
                         <div class="practice-number">8</div>
+                        <h3>Monitor AI Citations</h3>
+                        <p>
+                            Regularly test how your brand appears in AI responses by querying major platforms. 
+                            Track citation frequency, accuracy, and context. Adjust your strategy based on what's working 
+                            and what needs improvement.
+                        </p>
+                    </div>
+                    
+                    <div class="practice-card">
+                        <div class="practice-number">9</div>
                         <h3>Diversify Content Formats</h3>
                         <p>
-                            Create content in multiple formats (text, video, images, audio) to 
-                            maximize visibility across different AI capabilities.
+                            Create content in multiple formats (text, video, images, audio, infographics) to 
+                            maximize visibility across different AI capabilities. Multimodal AI models like Gemini 
+                            can understand and cite from various content types.
+                        </p>
+                    </div>
+                    
+                    <div class="practice-card">
+                        <div class="practice-number">10</div>
+                        <h3>Cite Original Sources</h3>
+                        <p>
+                            Link to authoritative, original sources when making claims or sharing data. AI models 
+                            prioritize content that demonstrates research rigor and transparency. Your credibility increases 
+                            when you cite reputable sources, and you build reciprocal authority networks.
                         </p>
                     </div>
                 </div>
@@ -536,12 +559,16 @@
                 <div class="callout-box">
                     <h3>⚠️ What to Avoid</h3>
                     <ul>
-                        <li><strong>Keyword Stuffing:</strong> AI models detect and penalize unnatural keyword usage</li>
-                        <li><strong>Duplicate Content:</strong> Original content is valued much more highly</li>
-                        <li><strong>Thin Content:</strong> Short, superficial pages are less likely to be cited</li>
-                        <li><strong>Misleading Information:</strong> Accuracy is critical for AI trust signals</li>
-                        <li><strong>Hidden Text:</strong> All optimization should be user-facing and transparent</li>
-                        <li><strong>Ignoring Mobile:</strong> Mobile-friendly content is essential for AI accessibility</li>
+                        <li><strong>JavaScript-Only Content:</strong> AI crawlers struggle with content that requires JavaScript execution. Keep critical content in HTML</li>
+                        <li><strong>Shadow DOM Navigation:</strong> Links and navigation hidden in web components may not be crawlable. Use standard HTML elements</li>
+                        <li><strong>Keyword Stuffing:</strong> AI models detect and penalize unnatural keyword usage. Write for humans first</li>
+                        <li><strong>Duplicate Content:</strong> Original content is valued much more highly. Syndication without proper canonicalization hurts visibility</li>
+                        <li><strong>Thin Content:</strong> Short, superficial pages are less likely to be cited. Provide comprehensive, valuable information</li>
+                        <li><strong>Misleading Information:</strong> Accuracy is critical for AI trust signals. False claims damage long-term credibility</li>
+                        <li><strong>Hidden Text or Cloaking:</strong> All optimization should be user-facing and transparent. What bots see should match what users see</li>
+                        <li><strong>Poor Mobile Experience:</strong> Mobile-friendly, responsive design is essential for AI accessibility and ranking</li>
+                        <li><strong>Broken Links & 404s:</strong> AI models penalize sites with poor maintenance. Regularly audit and fix broken links</li>
+                        <li><strong>No Source Attribution:</strong> Making claims without citations reduces authority. Always link to credible sources</li>
                     </ul>
                 </div>
             </div>
