@@ -929,6 +929,62 @@
       "content": "Master e-commerce AI optimization strategies including product listing optimization for AI, shopping queries and recommendations, price and availability optimization, customer reviews and user-generated content, competitor comparison strategies, visual search optimization for multimodal AI, voice commerce preparation for Alexa and Siri, e-commerce-specific funnel journey mapping (discovery to loyalty), and platform-specific tactics for Meta AI, ChatGPT, Perplexity, and Google Gemini."
     },
     {
+      "title": "Analytics and Tracking for AI Visibility",
+      "url": "/pages/guides/analytics.html",
+      "category": "guide",
+      "description": "Comprehensive guide to measuring and monitoring your AI GEO performance, tracking citations, brand mentions, ROI, and competitive analysis.",
+      "keywords": [
+        "AI analytics",
+        "AI tracking",
+        "AI GEO KPIs",
+        "ROI measurement",
+        "citation tracking",
+        "brand monitoring",
+        "competitive analysis",
+        "AI visibility metrics",
+        "performance measurement",
+        "analytics dashboard",
+        "reporting"
+      ],
+      "content": "Master AI visibility analytics with KPIs for AI GEO, citation tracking, brand mention monitoring, ROI measurement, competitive analysis, dashboard setup, and stakeholder reporting. Learn to track visibility metrics, quality metrics, traffic and engagement, and content performance."
+    },
+    {
+      "title": "Testing Tools for AI Visibility",
+      "url": "/pages/guides/testing-tools.html",
+      "category": "guide",
+      "description": "Comprehensive guide to manual testing across AI platforms, automated monitoring tools, and systematic testing methodologies to verify your AI optimization efforts.",
+      "keywords": [
+        "AI testing",
+        "manual testing",
+        "automated monitoring",
+        "AI platform testing",
+        "visibility testing",
+        "ChatGPT testing",
+        "Gemini testing",
+        "AI verification",
+        "testing framework",
+        "quality verification"
+      ],
+      "content": "Learn manual testing across ChatGPT, Gemini, Copilot, Perplexity, Claude, Meta AI, and You.com. Master systematic testing frameworks, automated monitoring tools, query testing strategies, quality and accuracy verification, and troubleshooting common issues."
+    },
+    {
+      "title": "Monitoring Tools for AI Visibility",
+      "url": "/pages/resources/monitoring-tools.html",
+      "category": "resource",
+      "description": "Comprehensive directory of tools and platforms for tracking, measuring, and monitoring your brand's presence across AI platforms. Includes free and paid solutions.",
+      "keywords": [
+        "AI monitoring tools",
+        "visibility tracking",
+        "brand monitoring",
+        "AI analytics tools",
+        "automated monitoring",
+        "citation tracking tools",
+        "monitoring platforms",
+        "tracking solutions"
+      ],
+      "content": "Discover 30+ tools for AI visibility monitoring including AI platform access tools (ChatGPT, Gemini, Copilot, Perplexity, Claude), brand monitoring solutions (Brand24, Mention, Awario), SEO analytics (SEMrush, Ahrefs, Moz), web analytics (Google Analytics, Search Console), and automation tools (Zapier, Selenium)."
+    },
+    {
       "title": "Social Media Optimization for AI",
       "url": "/pages/guides/social-media-optimization.html",
       "category": "guide",
@@ -986,7 +1042,6 @@
         "LinkedIn video"
       ],
       "content": "Comprehensive LinkedIn optimization including profile optimization, company pages, content strategy, article publishing, video content, networking, engagement, groups, and newsletters for professional authority and B2B visibility."
-    },
     }
   ]
 }
