@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about AI GEO optimization, platform-specific strategies, and technical implementation">
+    <meta name="keywords" content="AI GEO FAQ, AI optimization questions, ChatGPT optimization FAQ, Gemini FAQ, AI visibility questions">
+    <title>FAQ - Frequently Asked Questions | AI GEO</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../includes.js"></script>
+    <style>
+        .faq-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .faq-search {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .faq-search input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+        
+        .faq-search input:focus {
+            outline: none;
+            border-color: #4A90E2;
+        }
+        
+        .faq-categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .faq-categories a {
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            color: #4A90E2;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-categories a:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .faq-section {
+            margin-bottom: 3rem;
+        }
+        
+        .faq-section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #4A90E2;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #4A90E2;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #333;
+            background: #f8f9fa;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .faq-question-text {
+            flex: 1;
+        }
+        
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: #4A90E2;
+            transition: transform 0.3s;
+            user-select: none;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.25rem;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding: 1.25rem;
+        }
+        
+        .faq-answer p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+        
+        .faq-answer ul, .faq-answer ol {
+            margin-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #666;
+        }
+        
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .faq-answer a {
+            color: #4A90E2;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .faq-answer a:hover {
+            border-bottom-color: #4A90E2;
+        }
+        
+        .faq-answer code {
+            background: #f5f5f5;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+        
+        .help-box {
+            background: #e3f2fd;
+            border-left: 4px solid #4A90E2;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        
+        .help-box h3 {
+            margin-top: 0;
+            color: #4A90E2;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-question {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+            
+            .faq-answer {
+                padding: 0 1rem;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder" data-include="/components/header.html"></div>
+    
+    <main>
+        <section class="content-section">
+            <div class="container">
+                <div class="faq-intro">
+                    <h1>Frequently Asked Questions</h1>
+                    <p>Find answers to common questions about AI GEO optimization, platform-specific strategies, and technical implementation.</p>
+                </div>
+                
+                <div class="faq-search">
+                    <input type="text" id="faq-search" placeholder="Search FAQs..." aria-label="Search FAQs">
+                </div>
+                
+                <div class="faq-categories">
+                    <a href="#general">General AI GEO</a>
+                    <a href="#platforms">Platform-Specific</a>
+                    <a href="#technical">Technical Implementation</a>
+                    <a href="#troubleshooting">Troubleshooting</a>
+                </div>
+                
+                <div id="faq-content">
+                    <!-- General AI GEO FAQs -->
+                    <div class="faq-section" id="general">
+                        <h2 class="faq-section-title">General AI GEO FAQs</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">What is AI GEO?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>AI GEO (AI Generative Engine Optimization) is the practice of optimizing your digital presence to appear in AI-generated responses, recommendations, and search results. As AI tools like ChatGPT, Gemini, and Perplexity become primary research tools, AI GEO ensures your brand is mentioned, cited, and recommended when these platforms answer questions about your industry, products, or services.</p>
+                                <p>Unlike traditional SEO that focuses on ranking in search engine results pages, AI GEO optimizes for being cited and recommended within AI-generated content itself.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">How is AI GEO different from traditional SEO?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>While traditional SEO optimizes for ranking in search engine results, AI GEO focuses on:</p>
+                                <ul>
+                                    <li><strong>Direct Citations:</strong> Being mentioned within AI-generated answers rather than just ranking in link lists</li>
+                                    <li><strong>Content Quality:</strong> AI models prioritize authoritative, comprehensive content over keyword optimization</li>
+                                    <li><strong>Structured Data:</strong> Schema markup helps AI understand context and relationships</li>
+                                    <li><strong>Natural Language:</strong> Conversational, question-based content performs better</li>
+                                    <li><strong>E-E-A-T Signals:</strong> Experience, Expertise, Authoritativeness, and Trustworthiness are critical</li>
+                                </ul>
+                                <p>Many SEO best practices still apply, but AI GEO requires additional optimization specifically for how AI models consume and cite information.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">Which AI platforms should I optimize for?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Priority depends on your audience and industry, but we recommend starting with:</p>
+                                <ol>
+                                    <li><strong>ChatGPT:</strong> Most widely used conversational AI with SearchGPT integration</li>
+                                    <li><strong>Google Gemini:</strong> Deep integration with Google Search and AI Overviews</li>
+                                    <li><strong>Microsoft Copilot:</strong> Bing integration and enterprise reach</li>
+                                    <li><strong>Perplexity AI:</strong> Search-focused with strong citation emphasis</li>
+                                    <li><strong>Voice Search:</strong> Alexa, Siri, and Google Assistant for local and voice queries</li>
+                                </ol>
+                                <p>See our <a href="/pages/platforms/chatgpt.html">platform-specific guides</a> for detailed optimization strategies for each.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">How long does it take to see results from AI GEO?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>AI GEO results can vary based on several factors:</p>
+                                <ul>
+                                    <li><strong>Quick wins (1-2 weeks):</strong> Schema markup, FAQ optimization, and content structure improvements</li>
+                                    <li><strong>Medium-term (1-3 months):</strong> Building authority through quality content, backlinks, and social signals</li>
+                                    <li><strong>Long-term (3-6+ months):</strong> Establishing domain authority and consistent citations across platforms</li>
+                                </ul>
+                                <p>AI models update their training data periodically, so continuous optimization and fresh content are important for sustained visibility.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">Do I need technical skills to implement AI GEO?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No, but it depends on the depth of optimization:</p>
+                                <ul>
+                                    <li><strong>No technical skills needed:</strong> Content optimization, social media presence, review management</li>
+                                    <li><strong>Basic HTML knowledge:</strong> Adding schema markup, improving semantic HTML</li>
+                                    <li><strong>Web development skills:</strong> Advanced technical SEO, site architecture, performance optimization</li>
+                                </ul>
+                                <p>We provide templates and tools to help non-technical users implement many optimizations. See our <a href="/pages/resources/templates.html">Templates & Checklists</a> for ready-to-use resources.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">Can AI GEO hurt my traditional SEO performance?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No, AI GEO and traditional SEO are complementary. AI GEO best practices include:</p>
+                                <ul>
+                                    <li>High-quality, comprehensive content (good for SEO)</li>
+                                    <li>Structured data and schema markup (helps SEO)</li>
+                                    <li>Fast page speeds and mobile optimization (SEO ranking factors)</li>
+                                    <li>Building authority and backlinks (critical for SEO)</li>
+                                    <li>Natural, user-focused language (what Google recommends)</li>
+                                </ul>
+                                <p>In fact, many AI GEO practices improve traditional SEO performance because both prioritize user value and content quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Platform-Specific FAQs -->
+                    <div class="faq-section" id="platforms">
+                        <h2 class="faq-section-title">Platform-Specific FAQs</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">How do I get ChatGPT to cite my website?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>ChatGPT with SearchGPT integration can cite websites directly. To improve your chances:</p>
+                                <ol>
+                                    <li><strong>Create authoritative content:</strong> Comprehensive, well-researched articles with proper citations</li>
+                                    <li><strong>Optimize for questions:</strong> Structure content around common questions in your industry</li>
+                                    <li><strong>Use schema markup:</strong> Help AI understand your content context with Article, FAQ, and Product schemas</li>
+                                    <li><strong>Build backlinks:</strong> Authority signals from reputable sites increase citation likelihood</li>
+                                    <li><strong>Keep content current:</strong> Regular updates show freshness and relevance</li>
+                                </ol>
+                                <p>See our complete <a href="/pages/platforms/chatgpt.html">ChatGPT Optimization Guide</a> for detailed strategies.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">How do Google AI Overviews choose which sites to feature?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Google AI Overviews prioritize content based on:</p>
+                                <ul>
+                                    <li><strong>E-E-A-T signals:</strong> Experience, Expertise, Authoritativeness, Trustworthiness</li>
+                                    <li><strong>Content quality:</strong> Comprehensive answers that fully address user queries</li>
+                                    <li><strong>Featured snippets:</strong> Content already ranking for featured snippets has higher likelihood</li>
+                                    <li><strong>Schema markup:</strong> Structured data helps AI understand and extract information</li>
+                                    <li><strong>Traditional SEO factors:</strong> Page authority, backlinks, and ranking signals still matter</li>
+                                </ul>
+                                <p>Learn more in our <a href="/pages/platforms/google-ai-overviews.html">Google AI Overviews Guide</a>.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">What's the best way to optimize for voice search?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Voice search optimization requires special attention to:</p>
+                                <ul>
+                                    <li><strong>Natural language:</strong> Use conversational phrases and complete sentences</li>
+                                    <li><strong>Question formats:</strong> Structure content as Q&A with who, what, where, when, why, how</li>
+                                    <li><strong>Featured snippets:</strong> Aim for position zero in search results</li>
+                                    <li><strong>Local SEO:</strong> Optimize Google Business Profile for "near me" queries</li>
+                                    <li><strong>Page speed:</strong> Fast loading is critical for mobile voice searches</li>
+                                    <li><strong>FAQ schema:</strong> Helps voice assistants extract direct answers</li>
+                                </ul>
+                                <p>Read our comprehensive <a href="/pages/platforms/voice-search.html">Voice Search Optimization Guide</a>.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">Should I optimize differently for Perplexity vs. ChatGPT?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, there are some key differences:</p>
+                                <p><strong>Perplexity AI:</strong></p>
+                                <ul>
+                                    <li>Heavy emphasis on source citations and attribution</li>
+                                    <li>Prioritizes academic and authoritative sources</li>
+                                    <li>Real-time web search integration</li>
+                                    <li>Focus on recency and current information</li>
+                                </ul>
+                                <p><strong>ChatGPT:</strong></p>
+                                <ul>
+                                    <li>Broader conversational use cases beyond search</li>
+                                    <li>SearchGPT integration for web results</li>
+                                    <li>May reference training data or recent web sources</li>
+                                    <li>Values comprehensive, helpful content</li>
+                                </ul>
+                                <p>See our platform-specific guides for <a href="/pages/platforms/perplexity.html">Perplexity</a> and <a href="/pages/platforms/chatgpt.html">ChatGPT</a>.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">How does Meta AI use my social media content?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Meta AI, integrated across Facebook, Instagram, WhatsApp, and Messenger, can reference:</p>
+                                <ul>
+                                    <li>Public posts and pages on Facebook and Instagram</li>
+                                    <li>Business information from your Meta Business Profile</li>
+                                    <li>Product catalogs and shop information</li>
+                                    <li>User reviews and ratings</li>
+                                    <li>Public comments and engagement</li>
+                                </ul>
+                                <p>To optimize:</p>
+                                <ul>
+                                    <li>Complete all business profile information</li>
+                                    <li>Post regular, valuable content about your products/services</li>
+                                    <li>Engage authentically with your community</li>
+                                    <li>Use appropriate hashtags and keywords</li>
+                                    <li>Encourage and respond to reviews</li>
+                                </ul>
+                                <p>Learn more in our <a href="/pages/platforms/meta-ai.html">Meta AI Optimization Guide</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Technical Implementation FAQs -->
+                    <div class="faq-section" id="technical">
+                        <h2 class="faq-section-title">Technical Implementation FAQs</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">What is schema markup and do I really need it?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Schema markup is structured data that helps AI models (and search engines) understand the context, relationships, and meaning of your content. It's highly recommended because:</p>
+                                <ul>
+                                    <li><strong>Improves AI comprehension:</strong> Makes it easier for AI to extract and cite accurate information</li>
+                                    <li><strong>Enhanced search features:</strong> Enables rich snippets, knowledge panels, and featured snippets</li>
+                                    <li><strong>Better categorization:</strong> Helps AI classify your content correctly</li>
+                                    <li><strong>Competitive advantage:</strong> Many competitors don't implement schema properly</li>
+                                </ul>
+                                <p>Priority schema types for AI GEO:</p>
+                                <ul>
+                                    <li><code>Product</code> - For e-commerce and product pages</li>
+                                    <li><code>Article</code> - For blog posts and content</li>
+                                    <li><code>FAQPage</code> - For FAQ sections</li>
+                                    <li><code>Organization</code> - For business information</li>
+                                    <li><code>LocalBusiness</code> - For local businesses</li>
+                                </ul>
+                                <p>See our <a href="/pages/guides/schema-markup.html">Schema Markup Guide</a> for implementation examples.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">How do I add schema markup to my website?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>There are several ways to implement schema markup:</p>
+                                <ol>
+                                    <li><strong>JSON-LD (Recommended):</strong> Add a script tag with JSON data to your page head or body</li>
+                                    <li><strong>CMS plugins:</strong> Use WordPress plugins like Yoast, RankMath, or Schema Pro</li>
+                                    <li><strong>Google Tag Manager:</strong> Deploy schema through GTM for easier management</li>
+                                    <li><strong>Manual HTML attributes:</strong> Add microdata directly to HTML elements</li>
+                                </ol>
+                                <p>Example JSON-LD for an FAQ:</p>
+                                <pre><code>&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is AI GEO?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "AI GEO is..."
+    }
+  }]
+}
+&lt;/script&gt;</code></pre>
+                                <p>Download our <a href="/pages/resources/templates.html">schema markup templates</a> for ready-to-use examples.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">What's the difference between robots.txt and meta robots tags?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>robots.txt (site-level):</strong></p>
+                                <ul>
+                                    <li>Controls crawler access to entire directories or files</li>
+                                    <li>Located at your domain root (example.com/robots.txt)</li>
+                                    <li>Prevents crawlers from accessing specific URLs</li>
+                                    <li>Does NOT prevent indexing if other sites link to blocked pages</li>
+                                </ul>
+                                <p><strong>Meta robots tags (page-level):</strong></p>
+                                <ul>
+                                    <li>Controls indexing and following links on specific pages</li>
+                                    <li>Added to HTML <code>&lt;head&gt;</code> section</li>
+                                    <li>Options: <code>noindex</code>, <code>nofollow</code>, <code>noarchive</code>, etc.</li>
+                                    <li>More precise control over individual page behavior</li>
+                                </ul>
+                                <p>For AI GEO, you generally want AI crawlers to access and index your content. Use <code>noindex</code> only for pages like thank-you pages, duplicate content, or internal search results.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">How important is page speed for AI visibility?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Page speed is very important for AI GEO because:</p>
+                                <ul>
+                                    <li><strong>Crawl efficiency:</strong> Faster pages allow AI crawlers to access more content</li>
+                                    <li><strong>User experience:</strong> AI platforms prefer citing sites with good UX</li>
+                                    <li><strong>Mobile performance:</strong> Critical for voice search and mobile queries</li>
+                                    <li><strong>SEO ranking factor:</strong> Affects traditional search rankings, which influence AI citations</li>
+                                </ul>
+                                <p>Target metrics (Core Web Vitals):</p>
+                                <ul>
+                                    <li><strong>LCP (Largest Contentful Paint):</strong> &lt; 2.5 seconds</li>
+                                    <li><strong>INP (Interaction to Next Paint):</strong> &lt; 200ms</li>
+                                    <li><strong>CLS (Cumulative Layout Shift):</strong> &lt; 0.1</li>
+                                </ul>
+                                <p>Use tools like <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insights</a> to measure and improve performance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">Can AI crawlers access JavaScript-rendered content?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>It depends on the crawler, but many AI crawlers have limited JavaScript execution:</p>
+                                <ul>
+                                    <li><strong>Google's crawlers:</strong> Can execute JavaScript but with limitations</li>
+                                    <li><strong>Other AI crawlers:</strong> Many read only the initial HTML without JavaScript execution</li>
+                                    <li><strong>Performance impact:</strong> JS-heavy sites may not be fully crawled due to resource limits</li>
+                                </ul>
+                                <p>Best practices:</p>
+                                <ul>
+                                    <li>Use server-side rendering (SSR) or static site generation (SSG) when possible</li>
+                                    <li>Keep critical content in the initial HTML</li>
+                                    <li>Progressive enhancement: content works without JavaScript</li>
+                                    <li>Avoid hiding navigation or important content in Shadow DOM</li>
+                                    <li>Test with "View Page Source" to see what crawlers see</li>
+                                </ul>
+                                <p>Read more in our <a href="/pages/guides/website-optimization.html">Website Optimization Guide</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Troubleshooting FAQs -->
+                    <div class="faq-section" id="troubleshooting">
+                        <h2 class="faq-section-title">Troubleshooting</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">Why isn't my content showing up in AI responses?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Common reasons and solutions:</p>
+                                <ol>
+                                    <li><strong>Insufficient authority:</strong>
+                                        <ul>
+                                            <li>Build backlinks from reputable sources</li>
+                                            <li>Increase E-E-A-T signals</li>
+                                            <li>Create more comprehensive, authoritative content</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Content not indexed:</strong>
+                                        <ul>
+                                            <li>Check robots.txt isn't blocking crawlers</li>
+                                            <li>Submit sitemap to Google Search Console</li>
+                                            <li>Ensure no noindex meta tags</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Poor content quality:</strong>
+                                        <ul>
+                                            <li>Expand thin content with more depth</li>
+                                            <li>Add unique insights and original research</li>
+                                            <li>Improve readability and structure</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Technical issues:</strong>
+                                        <ul>
+                                            <li>Fix crawl errors in Search Console</li>
+                                            <li>Improve page speed</li>
+                                            <li>Ensure mobile-friendly design</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Training data lag:</strong>
+                                        <ul>
+                                            <li>Some AI models use older training data</li>
+                                            <li>Focus on platforms with real-time search (ChatGPT SearchGPT, Perplexity, Gemini)</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">My schema markup isn't validating. What should I do?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Follow these steps to fix schema validation errors:</p>
+                                <ol>
+                                    <li><strong>Use official validators:</strong>
+                                        <ul>
+                                            <li><a href="https://validator.schema.org/" target="_blank" rel="noopener">Schema.org Validator</a></li>
+                                            <li><a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Google Rich Results Test</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Common errors and fixes:</strong>
+                                        <ul>
+                                            <li><strong>Missing required fields:</strong> Add all required properties for your schema type</li>
+                                            <li><strong>Invalid JSON syntax:</strong> Check for missing commas, brackets, or quotes</li>
+                                            <li><strong>Wrong data types:</strong> Ensure URLs are URLs, dates are in ISO format, etc.</li>
+                                            <li><strong>Nested objects:</strong> Make sure nested properties follow proper structure</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Use schema generators:</strong>
+                                        <ul>
+                                            <li>Start with our <a href="/pages/resources/templates.html">schema templates</a></li>
+                                            <li>Use online schema generators for complex types</li>
+                                            <li>Validate before deploying to production</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">AI is citing incorrect information about my brand. How do I fix this?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Correcting misinformation in AI responses requires a multi-pronged approach:</p>
+                                <ol>
+                                    <li><strong>Update your official sources:</strong>
+                                        <ul>
+                                            <li>Ensure your website has current, accurate information</li>
+                                            <li>Update Wikipedia if your brand has a page</li>
+                                            <li>Correct information on social media profiles</li>
+                                            <li>Update Google Business Profile and other directories</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Create authoritative content:</strong>
+                                        <ul>
+                                            <li>Publish official statements or press releases</li>
+                                            <li>Create comprehensive "About" pages with correct information</li>
+                                            <li>Use structured data to define key facts</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Build authority signals:</strong>
+                                        <ul>
+                                            <li>Get coverage from reputable news sources with correct information</li>
+                                            <li>Build backlinks to your authoritative content</li>
+                                            <li>Encourage reviews and testimonials that reflect accurate information</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Report to platforms:</strong>
+                                        <ul>
+                                            <li>Use platform-specific feedback mechanisms</li>
+                                            <li>ChatGPT: Use the feedback thumbs down button</li>
+                                            <li>Google: Submit feedback through Search Console</li>
+                                            <li>Contact platform support for persistent issues</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Monitor and maintain:</strong>
+                                        <ul>
+                                            <li>Regularly test brand queries across AI platforms</li>
+                                            <li>Keep information fresh and up-to-date</li>
+                                            <li>Document the correct information prominently</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">How do I track my AI visibility progress?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Tracking AI GEO performance requires a combination of manual testing and automated monitoring:</p>
+                                <p><strong>Manual Testing:</strong></p>
+                                <ul>
+                                    <li>Test key queries weekly across major AI platforms</li>
+                                    <li>Document: which platforms cite you, position in responses, accuracy of information</li>
+                                    <li>Track competitors' citations for comparison</li>
+                                </ul>
+                                <p><strong>Metrics to Track:</strong></p>
+                                <ul>
+                                    <li><strong>Citation frequency:</strong> How often you're mentioned</li>
+                                    <li><strong>Citation context:</strong> Are mentions positive and accurate?</li>
+                                    <li><strong>Ranking position:</strong> Where you appear in AI-generated lists</li>
+                                    <li><strong>Referral traffic:</strong> Traffic from AI platforms (via analytics)</li>
+                                    <li><strong>Featured snippets:</strong> Traditional SEO metric that correlates with AI citations</li>
+                                </ul>
+                                <p><strong>Tools and Resources:</strong></p>
+                                <ul>
+                                    <li>Use our <a href="/pages/tools/visibility-scorecard.html">AI Visibility Scorecard</a></li>
+                                    <li>Monitor Search Console for AI Overview appearances</li>
+                                    <li>Track social mentions and brand sentiment</li>
+                                    <li>Set up Google Alerts for brand mentions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span class="faq-question-text">My site is slow. What are the quickest wins?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Quick performance improvements for AI crawlability and user experience:</p>
+                                <ol>
+                                    <li><strong>Image optimization (immediate impact):</strong>
+                                        <ul>
+                                            <li>Compress images using tools like TinyPNG or ImageOptim</li>
+                                            <li>Use modern formats (WebP, AVIF) with fallbacks</li>
+                                            <li>Implement lazy loading for below-the-fold images</li>
+                                            <li>Set proper width and height attributes to prevent layout shift</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Enable caching (easy win):</strong>
+                                        <ul>
+                                            <li>Browser caching for static assets</li>
+                                            <li>CDN for global content delivery</li>
+                                            <li>Server-side caching if using a CMS</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Minimize CSS and JavaScript:</strong>
+                                        <ul>
+                                            <li>Remove unused CSS and JavaScript</li>
+                                            <li>Minify and combine files</li>
+                                            <li>Defer non-critical JavaScript</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Upgrade hosting if needed:</strong>
+                                        <ul>
+                                            <li>Shared hosting can be slow; consider VPS or dedicated hosting</li>
+                                            <li>Enable HTTP/2 or HTTP/3</li>
+                                            <li>Use a performance-optimized server stack</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                                <p>Test with <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener">PageSpeed Insights</a> and implement top recommendations first.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="no-results" id="no-results">
+                    <h3>No results found</h3>
+                    <p>Try different keywords or browse by category above.</p>
+                </div>
+                
+                <div class="help-box">
+                    <h3>Can't find your answer?</h3>
+                    <p>Visit our <a href="/pages/support.html">Support page</a> for additional resources, troubleshooting guides, and contact options. You can also explore our comprehensive <a href="/index.html#what-is-ai-geo">platform guides</a> and <a href="/pages/guides/website-optimization.html">optimization guides</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+    
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ accordion functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    // Toggle active class
+                    const wasActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    
+                    // If this item wasn't active, open it
+                    if (!wasActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+            
+            // Search functionality
+            const searchInput = document.getElementById('faq-search');
+            const noResults = document.getElementById('no-results');
+            
+            searchInput.addEventListener('input', function(e) {
+                const filterValue = e.target.value.toLowerCase();
+                const sections = document.querySelectorAll('.faq-section');
+                let visibleCount = 0;
+                
+                sections.forEach(section => {
+                    const items = section.querySelectorAll('.faq-item');
+                    let sectionHasVisible = false;
+                    
+                    items.forEach(item => {
+                        const questionText = item.querySelector('.faq-question-text').textContent.toLowerCase();
+                        const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+                        
+                        if (questionText.includes(filterValue) || answerText.includes(filterValue)) {
+                            item.style.display = 'block';
+                            sectionHasVisible = true;
+                            visibleCount++;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Show/hide section based on whether it has visible items
+                    if (sectionHasVisible) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+                
+                // Show no results message if nothing matches
+                if (visibleCount === 0 && filterValue !== '') {
+                    noResults.style.display = 'block';
+                    document.getElementById('faq-content').style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    document.getElementById('faq-content').style.display = 'block';
+                }
+            });
+            
+            // Smooth scroll for category links
+            document.querySelectorAll('.faq-categories a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
