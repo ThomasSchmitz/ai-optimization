@@ -901,6 +901,44 @@
         "product schema"
       ],
       "content": "Optimize product names and titles, product descriptions, specifications and attributes, features vs benefits, use cases and target customers, pricing and availability, and product schema markup for AI shopping assistants."
+    },
+    {
+      "title": "Local Business AI Optimization",
+      "url": "/pages/industries/local-business.html",
+      "category": "industry",
+      "description": "Comprehensive strategies for local businesses and multi-location brands to optimize for AI visibility, Google Business Profile, local schema, and voice search.",
+      "keywords": [
+        "local business",
+        "Google Business Profile",
+        "local SEO",
+        "NAP consistency",
+        "local schema markup",
+        "voice search local",
+        "multi-location optimization",
+        "local reviews",
+        "maps optimization",
+        "local citations"
+      ],
+      "content": "Learn strategies for Google Business Profile optimization, implementing local schema markup, maintaining NAP consistency, optimizing local reviews, voice search for local queries, multi-location management, and maps and directions optimization."
+    },
+    {
+      "title": "Local SEO for AI Platforms",
+      "url": "/pages/guides/local-seo-ai.html",
+      "category": "guide",
+      "description": "Master local search engine optimization strategies specifically designed for AI platforms, voice assistants, and location-based queries.",
+      "keywords": [
+        "local SEO",
+        "AI optimization",
+        "local search",
+        "proximity ranking",
+        "local content",
+        "citation building",
+        "local backlinks",
+        "mobile local",
+        "local analytics",
+        "neighborhood targeting"
+      ],
+      "content": "Advanced techniques for local AI ranking factors, proximity and relevance optimization, local content strategy, citation building and management, local link building, mobile optimization for on-the-go searches, and tracking local AI performance."
     }
   ]
 }
