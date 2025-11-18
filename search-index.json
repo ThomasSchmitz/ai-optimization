@@ -707,6 +707,92 @@
         "downloadable templates"
       ],
       "content": "Free downloadable resources for AI optimization including: AI Optimization Checklist (printable PDF with 150+ items), Schema Markup Templates (10 JSON-LD templates for Product, Article, FAQ, Review, Organization, LocalBusiness, HowTo, Video, Breadcrumb, and Person schema), Content Brief Template (comprehensive DOCX template for AI-optimized content planning), Social Media Audit Template (Excel spreadsheet for auditing X/Twitter, LinkedIn, Facebook, Instagram, YouTube, TikTok), and E-E-A-T Improvement Plan Template (90-day strategic plan for building Experience, Expertise, Authoritativeness, and Trustworthiness). All templates are free, no signup required, and ready to use for personal and commercial purposes."
+    },
+    {
+      "title": "Learning Paths Overview",
+      "url": "/pages/learn/index.html",
+      "category": "resource",
+      "description": "Structured learning paths for AI GEO mastery. Choose from beginner, intermediate, or advanced tracks, plus specialized courses for e-commerce, B2B, and local businesses.",
+      "keywords": [
+        "learning paths",
+        "AI GEO courses",
+        "AI optimization training",
+        "beginner AI GEO",
+        "intermediate AI GEO",
+        "advanced AI optimization",
+        "structured learning",
+        "AI GEO education",
+        "self-paced learning"
+      ],
+      "content": "Master AI optimization with structured learning paths designed for your experience level. Choose from three core paths: Beginner (4 weeks, AI GEO fundamentals), Intermediate (6 weeks, platform-specific optimization), Advanced (8 weeks, industry-specific strategies). Plus specialized focus tracks for e-commerce, B2B, and local businesses. All paths are self-paced, free, and include practical exercises, checklists, and implementation guides."
+    },
+    {
+      "title": "Beginner Path: AI GEO Fundamentals",
+      "url": "/pages/learn/beginner.html",
+      "category": "resource",
+      "description": "4-week beginner program covering AI GEO fundamentals, content optimization, technical foundations, and measurement basics.",
+      "keywords": [
+        "beginner",
+        "AI GEO basics",
+        "fundamentals",
+        "learn AI GEO",
+        "AI marketing basics",
+        "4 weeks",
+        "starter course",
+        "introduction to AI GEO"
+      ],
+      "content": "Build a strong foundation in AI optimization with this 4-week beginner program. Week 1: Understanding AI GEO fundamentals and major platforms. Week 2: Content optimization basics including writing for AI, FAQ content, and product descriptions. Week 3: Technical foundations with schema markup and site structure. Week 4: Measurement, testing AI visibility, and building your roadmap. Includes weekly checklists and practical exercises."
+    },
+    {
+      "title": "Intermediate Path: Platform-Specific Optimization",
+      "url": "/pages/learn/intermediate.html",
+      "category": "resource",
+      "description": "6-week intermediate program mastering platform-specific strategies for ChatGPT, Gemini, Perplexity, voice search, and more.",
+      "keywords": [
+        "intermediate",
+        "platform optimization",
+        "ChatGPT optimization",
+        "Gemini optimization",
+        "voice search",
+        "Perplexity",
+        "6 weeks",
+        "platform-specific strategies"
+      ],
+      "content": "Master platform-specific AI optimization with this 6-week intermediate program. Week 1: ChatGPT & SearchGPT. Week 2: Google Gemini & AI Overviews. Week 3: Voice Search (Alexa, Siri, Google Assistant). Week 4: Perplexity & citation-focused platforms. Week 5: Social AI platforms (Grok, Meta AI). Week 6: Advanced schema & cross-platform strategy. Prerequisite: Beginner path or equivalent knowledge."
+    },
+    {
+      "title": "Advanced Path: Industry-Specific Strategies",
+      "url": "/pages/learn/advanced.html",
+      "category": "resource",
+      "description": "8-week advanced program covering industry-specific frameworks, enterprise implementation, competitive positioning, and ROI maximization.",
+      "keywords": [
+        "advanced AI GEO",
+        "industry-specific",
+        "enterprise AI optimization",
+        "competitive positioning",
+        "AI ROI",
+        "8 weeks",
+        "advanced strategies",
+        "enterprise implementation"
+      ],
+      "content": "Master advanced AI optimization with this 8-week program for experienced practitioners. Week 1: Industry analysis & framework selection. Week 2: Advanced E-E-A-T & authority building. Week 3: Content strategy & syndication. Week 4: Enterprise implementation & scaling. Week 5: Advanced analytics & attribution. Week 6: Competitive intelligence & positioning. Week 7: Optimization at scale. Week 8: Future-proofing & continuous optimization. Includes enterprise-level strategies and team implementation frameworks."
+    },
+    {
+      "title": "Specialized Focus Tracks",
+      "url": "/pages/learn/tracks.html",
+      "category": "resource",
+      "description": "Industry-specific AI optimization tracks for e-commerce, B2B, and local businesses. 2-3 week supplemental courses tailored to your business type.",
+      "keywords": [
+        "e-commerce AI",
+        "B2B AI optimization",
+        "local business AI",
+        "focus tracks",
+        "industry-specific",
+        "shopping optimization",
+        "local SEO AI",
+        "professional services"
+      ],
+      "content": "Specialized focus tracks tailored to specific industries. E-commerce Track (2-3 weeks): Product listing optimization, shopping queries, reviews & UGC, visual & voice commerce. B2B Track (2-3 weeks): Enterprise buyer journey, LinkedIn strategies, thought leadership, technical content, case studies. Local Business Track (2-3 weeks): Local SEO for AI, Google Business Profile, voice search for 'near me' queries, multi-location optimization, local reviews. Take tracks alongside or after core learning paths."
     }
   ]
 }
