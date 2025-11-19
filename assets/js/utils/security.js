@@ -26,7 +26,7 @@
          * @param {Array} allowedTags - Array of allowed HTML tags
          * @returns {string} Sanitized HTML with allowed tags
          */
-        sanitizeHTMLWithTags(html, allowedTags = ['b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'ol', 'li', 'span']) {
+        sanitizeHTMLWithTags(html, allowedTags = ['b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'ol', 'li', 'span', 'header', 'nav', 'div', 'button', 'input', 'label', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'footer', 'section', 'article']) {
             if (!html) return '';
             
             const temp = document.createElement('div');
