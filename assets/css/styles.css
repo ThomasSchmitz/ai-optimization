@@ -194,6 +194,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Establish positioning context for mega menus */
 }
 
 .logo .logo-name {
@@ -416,8 +417,17 @@ header {
 }
 
 /* Mega Menu Styles */
+.has-mega-menu {
+    position: static; /* Allow dropdown to position relative to container */
+}
+
 .dropdown-menu.mega-menu {
-    width: 750px;
+    width: 100%;
+    max-width: 1160px; /* Match container width minus padding */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 0; /* Reset margin */
     display: none;
     /* Hidden by default */
     grid-template-columns: repeat(3, 1fr);
@@ -425,6 +435,7 @@ header {
     gap: 2rem;
     background: var(--card-bg);
     border: 1px solid var(--border-color);
+    border-top: 3px solid var(--primary-color); /* Visual anchor */
 }
 
 .dropdown.active .dropdown-menu.mega-menu {
@@ -433,7 +444,7 @@ header {
 
 @media (max-width: 992px) {
     .dropdown-menu.mega-menu {
-        width: 600px;
+        width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
 }
