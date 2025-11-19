@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Development Basics for Marketing Teams - A structured guide that helps marketers partner with engineering teams to advocate for AI-ready, geo-optimized websites.">
+    <meta name="keywords" content="website development basics, marketing guide, AI geo optimization, CMS, frameworks, AI crawlers, QA, business case">
+    <title>Website Development Basics for AI Advocacy | AI GEO</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="/assets/js/includes.js"></script>
+</head>
+<body>
+    <div id="header-placeholder" data-include="/components/header.html">
+        <noscript>
+            <div class="noscript-nav" role="navigation" aria-label="Primary navigation">
+                <a class="noscript-logo" href="/index.html">AI GEO</a>
+                <ul>
+                    <li><a href="/pages/guides/website-development-basics.html">Guides</a></li>
+                    <li><a href="/pages/industries/local-business.html">Industries</a></li>
+                    <li><a href="/pages/resources/templates.html">Resources</a></li>
+                    <li><a href="/pages/support.html">Support</a></li>
+                    <li><a href="/pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </noscript>
+    </div>
+
+    <main>
+        <section class="guide-hero">
+            <div class="container">
+                <div class="guide-hero-content">
+                    <div class="guide-icon">📚</div>
+                    <h1 class="guide-title">Website Development Basics for Marketing Leaders</h1>
+                    <p class="guide-description">
+                        Empower your marketing, production, and engineering partners with a shared language for AI-ready
+                        websites. This guide demystifies core web technologies, shows how AI crawlers interpret content,
+                        and outlines the collaboration, QA, and advocacy steps needed to champion geo-optimization.
+                    </p>
+                    <div class="guide-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon">⏱️</span>
+                            <span class="meta-text">20 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🎯</span>
+                            <span class="meta-text">Marketing strategists & partner managers</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon">🤝</span>
+                            <span class="meta-text">Cross-functional collaboration focus</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta-buttons">
+                        <a href="#part1" class="btn btn-primary">Start Learning</a>
+                        <a href="#part5" class="btn btn-secondary">Jump to Advocacy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="toc-container">
+                    <h2>Table of Contents</h2>
+                    <nav class="table-of-contents">
+                        <ul>
+                            <li><a href="#part1">Part 1: Understanding Web Technologies</a></li>
+                            <li><a href="#part2">Part 2: How AI Crawlers Work</a></li>
+                            <li><a href="#part3">Part 3: Planning for AI Optimization</a></li>
+                            <li><a href="#part4">Part 4: Testing &amp; QA for AI Visibility</a></li>
+                            <li><a href="#part5">Part 5: Advocacy Tools</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section id="part1" class="content-section alt-bg">
+            <div class="container">
+                <h2>Part 1: Understanding Web Technologies</h2>
+                <p class="section-intro">
+                    Marketers do not need to be developers, but understanding the building blocks of modern sites makes it
+                    easier to brief engineering partners, prioritize enhancements, and anticipate AI crawl barriers.
+                </p>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>CMSs &amp; Headless Systems</h3>
+                        <ul>
+                            <li><strong>Traditional CMS:</strong> WordPress, Drupal, or Shopify combine content editing and
+                                presentation. Templates and plugins determine structure and metadata.</li>
+                            <li><strong>Headless CMS:</strong> Content is stored centrally and delivered via APIs to any
+                                channel. Requires close coordination with front-end teams to ensure metadata and schema
+                                are rendered in the final HTML.</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3>Frameworks &amp; Rendering Patterns</h3>
+                        <ul>
+                            <li><strong>Server-side Rendering (SSR):</strong> HTML is generated on the server. Reliable for
+                                crawlers and faster first contentful paint.</li>
+                            <li><strong>Client-side Rendering (CSR):</strong> JavaScript builds the page in the browser.
+                                Works for major search engines but can confuse lighter-weight crawlers, AI assistants, or
+                                accessibility tools that block scripts.</li>
+                            <li><strong>Static Site Generation &amp; Hybrid models:</strong> Pre-built HTML supplemented with
+                                dynamic components. Often best for predictable geo pages.</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3>Templates, Components &amp; Design Systems</h3>
+                        <p>Templates define entire page layouts; components handle repeatable blocks (hero, tabs,
+                            product cards). Ask engineering teams which components inject structured data, canonical
+                            tags, or localization logic so you can scope updates efficiently.</p>
+                        <ul>
+                            <li>Create an inventory of critical components used on geo or campaign pages.</li>
+                            <li>Track dependencies: one template change can impact hundreds of URLs.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <h3>Conversation Starters</h3>
+                    <ul>
+                        <li>"Which pages are server-rendered versus heavily dependent on JavaScript?"</li>
+                        <li>"How do we manage component updates without breaking localization logic?"</li>
+                        <li>"What monitoring exists for template or CMS plugin regressions?"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="part2" class="content-section">
+            <div class="container">
+                <h2>Part 2: How AI Crawlers Work</h2>
+                <p class="section-intro">
+                    AI systems ingest your content differently than traditional search bots. They prioritize structured,
+                    accessible, and easily retrievable information to power answers, summaries, and geo-intent models.
+                </p>
+                <div class="content-grid two-column">
+                    <div class="content-card">
+                        <h3>JavaScript Execution Reality</h3>
+                        <ul>
+                            <li>Major search engines execute most JavaScript but often with delays. New or niche AI
+                                crawlers may skip complex bundles entirely.</li>
+                            <li>Critical elements (copy, schema, hreflang, canonical tags) should exist in the initial
+                                HTML payload whenever possible.</li>
+                            <li>Set up feature detection fallbacks so content remains readable if scripts fail.</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3>Shadow DOM &amp; Hidden Interfaces</h3>
+                        <p>Many design systems use the Shadow DOM to encapsulate widgets. Some crawlers cannot pierce
+                            these boundaries, leaving important text or links invisible.</p>
+                        <ul>
+                            <li>Request a list of Shadow DOM components and ask if their text is duplicated in standard
+                                DOM nodes.</li>
+                            <li>Favor progressive enhancement: render essential messaging outside encapsulated widgets.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-grid two-column">
+                    <div class="content-card">
+                        <h3>Accessibility Signals</h3>
+                        <ul>
+                            <li>ARIA labels, alt text, heading hierarchy, and keyboard focus indicators help AI systems
+                                understand relationships between elements.</li>
+                            <li>Captioning and transcript support improves multimodal crawler coverage for video or
+                                podcast assets.</li>
+                            <li>Accessible design often aligns with compliance requirements, strengthening internal cases
+                                for investment.</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3>Structured Context for AI</h3>
+                        <p>Schema markup, internal linking, and consistent geo signals (NAP data, regional copy) give AI
+                            crawlers the context they need to recommend your business in location-aware scenarios.</p>
+                        <ul>
+                            <li>Use JSON-LD that is rendered server-side or injected early in the DOM.</li>
+                            <li>Pair schema with human-readable copy; AI systems cross-check both.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="part3" class="content-section alt-bg">
+            <div class="container">
+                <h2>Part 3: Planning for AI Optimization</h2>
+                <p class="section-intro">A shared roadmap keeps marketing, engineering, and production aligned on the
+                    milestones that influence AI visibility.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>1. Establish Joint Goals</h3>
+                        <p>Define metrics such as AI answer share, geo-intent coverage, or reduction in render-blocking
+                            scripts. Align with existing OKRs so engineering can prioritize accordingly.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>2. Audit Current Experience</h3>
+                        <p>Document CMS limitations, rendering patterns, component usage, and localization workflows.
+                            Identify gaps between desired AI signals and current implementation.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>3. Create a Component-Level Backlog</h3>
+                        <p>Translate marketing requirements into discrete tickets: "Add server-side schema injection to
+                            LocationCard component" or "Expose canonical tag controls in CMS."</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>4. Embed Feedback Loops</h3>
+                        <p>Schedule recurring QA touchpoints before every release. Share AI performance dashboards so
+                            engineers see the impact of their work.</p>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <h3>Collaboration Checklist</h3>
+                    <ul>
+                        <li>✅ Document owners for CMS, front-end framework, and analytics.</li>
+                        <li>✅ Shared glossary for technical terms to reduce miscommunication.</li>
+                        <li>✅ Template-by-template matrix that maps AI-critical elements.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="part4" class="content-section">
+            <div class="container">
+                <h2>Part 4: Testing &amp; QA for AI Visibility</h2>
+                <p class="section-intro">Testing must extend beyond typical browser QA to include how AI systems parse the
+                    site. The following workflow helps marketing teams participate confidently.</p>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Rendering &amp; Crawl Tests</h3>
+                        <ul>
+                            <li>Use lightweight fetch-and-render tools (Fetch as Google, Screaming Frog JS rendering,
+                                Playwright scripts) to compare raw HTML and post-JavaScript DOM.</li>
+                            <li>Capture screenshots and HTML snapshots for key templates and geo pages.</li>
+                            <li>Log blocked resources or hydration errors that may prevent AI crawlers from executing
+                                scripts.</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3>Structured Data &amp; Accessibility QA</h3>
+                        <ul>
+                            <li>Validate schema using Rich Results Test plus manual inspection to ensure it exists without
+                                JS execution.</li>
+                            <li>Run accessibility scanners (axe, Lighthouse) and include human review for meaningful
+                                alt text, headings, and tab order.</li>
+                            <li>Track issues in the same backlog as engineering tasks to speed resolution.</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3>AI Assistant Spot Checks</h3>
+                        <p>Test in actual AI interfaces (Perplexity, Bing Copilot, Gemini, ChatGPT browsing) to see if
+                            they summarize your content correctly, cite the right URLs, and respect geo qualifiers.</p>
+                        <ul>
+                            <li>Document prompts, answers, and any missing information.</li>
+                            <li>Share insights with engineering so they can trace underlying rendering or schema gaps.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <h3>QA Cadence</h3>
+                    <p>Pair every major release with a crawl snapshot and AI assistant survey. Maintain a regression
+                        board to catch issues like blocked scripts, missing canonical tags, or template rollbacks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="part5" class="content-section alt-bg">
+            <div class="container">
+                <h2>Part 5: Advocacy Tools</h2>
+                <p class="section-intro">The strongest business cases connect AI visibility to revenue, reputation, and
+                    operational efficiency.</p>
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Value Narratives</h3>
+                        <ul>
+                            <li><strong>Revenue:</strong> Quantify incremental leads or bookings when AI assistants cite
+                                your geo pages.</li>
+                            <li><strong>Cost Savings:</strong> Highlight fewer manual content workarounds once templates
+                                expose the needed metadata.</li>
+                            <li><strong>Risk Mitigation:</strong> Emphasize accessibility compliance and consistent local
+                                data across channels.</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3>Stakeholder Kits</h3>
+                        <ul>
+                            <li>Executive summary deck with before/after AI citations, load times, and schema coverage.</li>
+                            <li>One-page FAQ addressing concerns about dev effort, platform limits, and measurement.</li>
+                            <li>Scorecard that grades templates on AI readiness (rendering, schema, localization).</li>
+                        </ul>
+                    </div>
+                    <div class="content-card">
+                        <h3>Roadmap Integration</h3>
+                        <p>Embed AI optimization milestones in existing planning rituals (quarterly PI planning, sprint
+                            reviews). Pair each initiative with clear owners, dependencies, and success metrics.</p>
+                        <ul>
+                            <li>Link optimization work to broader digital transformation or personalization projects.</li>
+                            <li>Celebrate quick wins publicly to build momentum for deeper investments.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <h3>Key Takeaways</h3>
+                    <ul>
+                        <li>Marketing leaders can steer AI readiness by speaking the language of CMSs, rendering, and
+                            QA without being developers.</li>
+                        <li>Consistent collaboration with engineering ensures AI crawlers receive complete, accurate
+                            signals.</li>
+                        <li>Data-backed advocacy aligns AI geo-optimization with enterprise growth goals.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder" data-include="/components/footer.html"></div>
+</body>
+</html>
