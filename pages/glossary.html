@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,12 @@
             max-width: 800px;
             margin: 0 auto 3rem;
         }
-        
+
         .glossary-search {
             max-width: 600px;
             margin: 0 auto 2rem;
         }
-        
+
         .glossary-search input {
             width: 100%;
             padding: 1rem;
@@ -27,12 +28,12 @@
             border-radius: 8px;
             transition: border-color 0.3s;
         }
-        
+
         .glossary-search input:focus {
             outline: none;
             border-color: #4A90E2;
         }
-        
+
         .alphabet-nav {
             display: flex;
             flex-wrap: wrap;
@@ -43,7 +44,7 @@
             background: #f8f9fa;
             border-radius: 8px;
         }
-        
+
         .alphabet-nav a {
             padding: 0.5rem 0.75rem;
             text-decoration: none;
@@ -52,15 +53,15 @@
             border-radius: 4px;
             transition: background-color 0.3s;
         }
-        
+
         .alphabet-nav a:hover {
             background-color: #e3f2fd;
         }
-        
+
         .glossary-section {
             margin-bottom: 3rem;
         }
-        
+
         .glossary-letter {
             font-size: 2.5rem;
             font-weight: 700;
@@ -69,29 +70,29 @@
             padding-bottom: 0.5rem;
             border-bottom: 3px solid #4A90E2;
         }
-        
+
         .glossary-term {
             margin-bottom: 2rem;
             padding: 1.5rem;
             background: white;
             border-left: 4px solid #4A90E2;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             border-radius: 4px;
         }
-        
+
         .term-title {
             font-size: 1.5rem;
             font-weight: 600;
             color: #333;
             margin-bottom: 0.5rem;
         }
-        
+
         .term-definition {
             color: #666;
             line-height: 1.6;
             margin-bottom: 0.5rem;
         }
-        
+
         .term-example {
             font-style: italic;
             color: #888;
@@ -99,22 +100,23 @@
             padding-left: 1rem;
             border-left: 2px solid #ddd;
         }
-        
+
         .term-related {
             margin-top: 0.5rem;
             font-size: 0.9rem;
             color: #4A90E2;
         }
-        
+
         .no-results {
             text-align: center;
             padding: 3rem;
             color: #666;
         }
     </style>
-<script src="../assets/js/includes.js"></script>
+    <script src="../assets/js/includes.js"></script>
 
 </head>
+
 <body>
     <div id="header-placeholder" data-include="../components/header.html">
 
@@ -150,15 +152,16 @@
                 <div class="glossary-intro">
                     <h1>AI & Marketing Glossary</h1>
                     <p>
-                        A comprehensive reference guide to terms and concepts in AI optimization, 
+                        A comprehensive reference guide to terms and concepts in AI optimization,
                         generative engine optimization, and modern marketing practices.
                     </p>
                 </div>
-                
+
                 <div class="glossary-search">
-                    <input type="text" id="glossary-filter" placeholder="Search for a term..." aria-label="Search glossary">
+                    <input type="text" id="glossary-filter" placeholder="Search for a term..."
+                        aria-label="Search glossary">
                 </div>
-                
+
                 <div class="alphabet-nav" role="navigation" aria-label="Jump to letter">
                     <a href="#A">A</a>
                     <a href="#B">B</a>
@@ -185,59 +188,62 @@
                     <!-- A Section -->
                     <div class="glossary-section" id="A">
                         <h2 class="glossary-letter">A</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Alexa</h3>
                             <p class="term-definition">
-                                Amazon's voice assistant integrated into Echo devices, Fire TV, and other Amazon products. 
-                                One of the most popular smart home voice assistants, important for voice search optimization.
+                                Amazon's voice assistant integrated into Echo devices, Fire TV, and other Amazon
+                                products.
+                                One of the most popular smart home voice assistants, important for voice search
+                                optimization.
                             </p>
                             <p class="term-related">Related: Voice Search, Amazon, Smart Speakers</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Agentic AI</h3>
                             <p class="term-definition">
-                                The third stage of Generative AI evolution (after Prompts and RAG). Agentic AI systems 
-                                are autonomous agents that can perceive, reason, plan, and execute actions to achieve 
+                                The third stage of Generative AI evolution (after Prompts and RAG). Agentic AI systems
+                                are autonomous agents that can perceive, reason, plan, and execute actions to achieve
                                 goals with minimal human intervention. They move beyond "words" to "actions."
                             </p>
                             <p class="term-related">Related: Autonomous Agents, Planning, Tool Use</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">AI GEO (AI Generative Engine Optimization)</h3>
                             <p class="term-definition">
-                                The practice of optimizing your online presence to be more visible and accurately 
-                                represented in AI-powered tools and search engines. Similar to SEO but focused on 
+                                The practice of optimizing your online presence to be more visible and accurately
+                                represented in AI-powered tools and search engines. Similar to SEO but focused on
                                 AI platforms like ChatGPT, Gemini, and Copilot.
                             </p>
                             <p class="term-related">Related: GEO, SEO, AI Visibility</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">AI Overviews</h3>
                             <p class="term-definition">
-                                Google's AI-generated summaries that appear at the top of search results, providing 
+                                Google's AI-generated summaries that appear at the top of search results, providing
                                 direct answers to user queries by synthesizing information from multiple sources.
                             </p>
-                            <p class="term-example">Example: When searching "best CRM for small business," Google may show an AI Overview comparing several options.</p>
+                            <p class="term-example">Example: When searching "best CRM for small business," Google may
+                                show an AI Overview comparing several options.</p>
                             <p class="term-related">Related: Google Gemini, Featured Snippets, SERP</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Alt Text (Alternative Text)</h3>
                             <p class="term-definition">
-                                Descriptive text added to images that helps search engines and AI tools understand 
+                                Descriptive text added to images that helps search engines and AI tools understand
                                 image content. Essential for accessibility and AI comprehension.
                             </p>
                             <p class="term-related">Related: Accessibility, Image SEO, Schema Markup</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Apple Intelligence</h3>
                             <p class="term-definition">
-                                Apple's AI system that powers Siri and integrates across iOS, iPadOS, and macOS. 
+                                Apple's AI system that powers Siri and integrates across iOS, iPadOS, and macOS.
                                 Emphasizes on-device processing and privacy-first AI capabilities launched with iOS 18.
                             </p>
                             <p class="term-related">Related: Siri, Apple, Privacy-First AI</p>
@@ -245,8 +251,9 @@
                         <div class="glossary-term">
                             <h3 class="term-title">Autonomy (AI)</h3>
                             <p class="term-definition">
-                                The ability of an AI agent to initiate and execute tasks without direct human intervention. 
-                                A key characteristic of Agentic AI, allowing systems to operate independently to achieve 
+                                The ability of an AI agent to initiate and execute tasks without direct human
+                                intervention.
+                                A key characteristic of Agentic AI, allowing systems to operate independently to achieve
                                 high-level goals.
                             </p>
                             <p class="term-related">Related: Agentic AI, Planning</p>
@@ -256,21 +263,22 @@
                     <!-- B Section -->
                     <div class="glossary-section" id="B">
                         <h2 class="glossary-letter">B</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Backlinks</h3>
                             <p class="term-definition">
-                                Links from other websites pointing to your site. Quality backlinks from authoritative 
+                                Links from other websites pointing to your site. Quality backlinks from authoritative
                                 sources signal credibility to both traditional search engines and AI models.
                             </p>
                             <p class="term-related">Related: Link Authority, Domain Authority, E-E-A-T</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Bing (Microsoft Bing)</h3>
                             <p class="term-definition">
-                                Microsoft's search engine that integrates AI-powered features through Copilot. 
-                                Uses GPT-4 technology and provides conversational search capabilities alongside traditional results.
+                                Microsoft's search engine that integrates AI-powered features through Copilot.
+                                Uses GPT-4 technology and provides conversational search capabilities alongside
+                                traditional results.
                             </p>
                             <p class="term-related">Related: Microsoft Copilot, AI Search, Conversational Search</p>
                         </div>
@@ -279,44 +287,59 @@
                     <!-- C Section -->
                     <div class="glossary-section" id="C">
                         <h2 class="glossary-letter">C</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">ChatGPT</h3>
                             <p class="term-definition">
-                                OpenAI's conversational AI assistant that can browse the web, answer questions, 
-                                and provide recommendations. Features SearchGPT for web search integration. One of the most 
+                                OpenAI's conversational AI assistant that can browse the web, answer questions,
+                                and provide recommendations. Features SearchGPT for web search integration. One of the
+                                most
                                 widely used AI platforms for information discovery, with hundreds of millions of users.
                             </p>
                             <p class="term-related">Related: OpenAI, GPT-4o, SearchGPT, AI GEO</p>
                         </div>
-                        
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Context Window</h3>
+                            <p class="term-definition">
+                                The amount of text (measured in tokens) an AI model can process at one time.
+                                Larger context windows allow models to "remember" more of the conversation or analyze
+                                larger documents.
+                            </p>
+                            <p class="term-related">Related: Tokens, Memory, LLM</p>
+                        </div>
+
                         <div class="glossary-term">
                             <h3 class="term-title">Citation</h3>
                             <p class="term-definition">
-                                When an AI platform references or links to your content as a source for its response. 
+                                When an AI platform references or links to your content as a source for its response.
                                 Citations are crucial for driving traffic and establishing authority in AI platforms.
                             </p>
-                            <p class="term-example">Example: ChatGPT citing your blog post when answering a query about your industry.</p>
+                            <p class="term-example">Example: ChatGPT citing your blog post when answering a query about
+                                your industry.</p>
                             <p class="term-related">Related: Source Attribution, Link Authority</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Claude</h3>
                             <p class="term-definition">
-                                Anthropic's AI assistant (Claude 3.5 Sonnet and Haiku models) known for detailed reasoning, 
-                                long-form content analysis, and extended context windows (200K tokens). Popular among professionals 
+                                Anthropic's AI assistant (Claude 3.5 Sonnet and Haiku models) known for detailed
+                                reasoning,
+                                long-form content analysis, and extended context windows (200K tokens). Popular among
+                                professionals
                                 and researchers for complex tasks.
                             </p>
                             <p class="term-related">Related: Anthropic, AI Platforms, Conversational AI</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Conversational Search</h3>
                             <p class="term-definition">
-                                Search queries phrased as natural language questions or statements, as opposed to 
+                                Search queries phrased as natural language questions or statements, as opposed to
                                 traditional keyword-based searches. The primary format for AI platform queries.
                             </p>
-                            <p class="term-example">Example: "What's the best email marketing tool for e-commerce?" vs. "email marketing tool"</p>
+                            <p class="term-example">Example: "What's the best email marketing tool for e-commerce?" vs.
+                                "email marketing tool"</p>
                             <p class="term-related">Related: Natural Language Processing, Voice Search</p>
                         </div>
                     </div>
@@ -324,12 +347,12 @@
                     <!-- D Section -->
                     <div class="glossary-section" id="D">
                         <h2 class="glossary-letter">D</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Domain Authority</h3>
                             <p class="term-definition">
-                                A measure of a website's credibility and trustworthiness based on factors like 
-                                backlinks, content quality, and age. Higher domain authority improves visibility 
+                                A measure of a website's credibility and trustworthiness based on factors like
+                                backlinks, content quality, and age. Higher domain authority improves visibility
                                 in both traditional search and AI platforms.
                             </p>
                             <p class="term-related">Related: Backlinks, E-E-A-T, Trust Signals</p>
@@ -339,20 +362,20 @@
                     <!-- E Section -->
                     <div class="glossary-section" id="E">
                         <h2 class="glossary-letter">E</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">E-E-A-T</h3>
                             <p class="term-definition">
-                                Experience, Expertise, Authoritativeness, and Trustworthiness. Google's quality 
+                                Experience, Expertise, Authoritativeness, and Trustworthiness. Google's quality
                                 framework that's also critical for AI platforms when selecting sources to cite.
                             </p>
                             <p class="term-related">Related: Domain Authority, Content Quality, Trust Signals</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Embeddings</h3>
                             <p class="term-definition">
-                                Mathematical representations of text that AI models use to understand meaning and 
+                                Mathematical representations of text that AI models use to understand meaning and
                                 context. Properly structured content creates better embeddings for AI comprehension.
                             </p>
                             <p class="term-related">Related: Natural Language Processing, Semantic Search</p>
@@ -362,12 +385,12 @@
                     <!-- F Section -->
                     <div class="glossary-section" id="F">
                         <h2 class="glossary-letter">F</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Featured Snippet</h3>
                             <p class="term-definition">
-                                A highlighted answer box at the top of Google search results. Content optimized 
-                                for featured snippets often appears in AI Overviews and is more likely to be cited 
+                                A highlighted answer box at the top of Google search results. Content optimized
+                                for featured snippets often appears in AI Overviews and is more likely to be cited
                                 by AI platforms.
                             </p>
                             <p class="term-related">Related: AI Overviews, SERP, Position Zero</p>
@@ -377,43 +400,52 @@
                     <!-- G Section -->
                     <div class="glossary-section" id="G">
                         <h2 class="glossary-letter">G</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Gemini</h3>
                             <p class="term-definition">
-                                Google's multimodal AI platform that integrates with Google Search, Workspace, 
+                                Google's multimodal AI platform that integrates with Google Search, Workspace,
                                 and other services. Powers AI Overviews in search results.
                             </p>
                             <p class="term-related">Related: Google, AI Overviews, Multimodal AI</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">GEO (Generative Engine Optimization)</h3>
                             <p class="term-definition">
-                                Short for AI Generative Engine Optimization. The practice of optimizing for 
+                                Short for AI Generative Engine Optimization. The practice of optimizing for
                                 AI-powered search and discovery platforms.
                             </p>
                             <p class="term-related">Related: AI GEO, SEO, AI Visibility</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Grok</h3>
                             <p class="term-definition">
-                                X (Twitter)'s AI assistant with real-time access to platform data. Particularly 
+                                X (Twitter)'s AI assistant with real-time access to platform data. Particularly
                                 valuable for brands with strong social media presence.
                             </p>
                             <p class="term-related">Related: X, Twitter, Social Media AI</p>
+                        </div>
+                        <div class="glossary-term">
+                            <h3 class="term-title">Hallucination</h3>
+                            <p class="term-definition">
+                                When an AI model generates incorrect or nonsensical information but presents it
+                                confidently as fact.
+                                A common issue with Reasoning Engines that RAG architectures aim to solve.
+                            </p>
+                            <p class="term-related">Related: Reasoning Engine, RAG, Accuracy</p>
                         </div>
                     </div>
 
                     <!-- I Section -->
                     <div class="glossary-section" id="I">
                         <h2 class="glossary-letter">I</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Indexing</h3>
                             <p class="term-definition">
-                                The process by which search engines and AI platforms discover, crawl, and store 
+                                The process by which search engines and AI platforms discover, crawl, and store
                                 your web content for retrieval in responses and search results.
                             </p>
                             <p class="term-related">Related: Crawling, Sitemap, Robots.txt</p>
@@ -423,12 +455,13 @@
                     <!-- L Section -->
                     <div class="glossary-section" id="L">
                         <h2 class="glossary-letter">L</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">LLM (Large Language Model)</h3>
                             <p class="term-definition">
-                                AI models trained on vast amounts of text data to understand and generate human-like 
-                                text. Examples include GPT-4o, o1, Claude 3.5 Sonnet, Gemini 2.0, and Llama. These models 
+                                AI models trained on vast amounts of text data to understand and generate human-like
+                                text. Examples include GPT-4o, o1, Claude 3.5 Sonnet, Gemini 2.0, and Llama. These
+                                models
                                 power most AI platforms and conversational search experiences.
                             </p>
                             <p class="term-related">Related: ChatGPT, Claude, Gemini, AI Platforms</p>
@@ -438,12 +471,12 @@
                     <!-- M Section -->
                     <div class="glossary-section" id="M">
                         <h2 class="glossary-letter">M</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Memory (AI)</h3>
                             <p class="term-definition">
-                                The ability of an AI agent to store and retrieve information over time. This includes 
-                                short-term memory (context window) and long-term memory (databases, vector stores), 
+                                The ability of an AI agent to store and retrieve information over time. This includes
+                                short-term memory (context window) and long-term memory (databases, vector stores),
                                 enabling agents to learn from past interactions and maintain state.
                             </p>
                             <p class="term-related">Related: Agentic AI, RAG, Context Window</p>
@@ -452,36 +485,38 @@
                         <div class="glossary-term">
                             <h3 class="term-title">Meta AI</h3>
                             <p class="term-definition">
-                                Meta's AI assistant integrated across Facebook, Instagram, WhatsApp, and Messenger. 
+                                Meta's AI assistant integrated across Facebook, Instagram, WhatsApp, and Messenger.
                                 Reaches billions of users in social contexts where product discovery happens.
                             </p>
                             <p class="term-related">Related: Facebook, Instagram, Social Media AI</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Meta Description</h3>
                             <p class="term-definition">
-                                A brief summary of a webpage's content that appears in search results. While not 
-                                directly used for ranking, it helps AI understand page content and can influence 
+                                A brief summary of a webpage's content that appears in search results. While not
+                                directly used for ranking, it helps AI understand page content and can influence
                                 click-through rates.
                             </p>
                             <p class="term-related">Related: SEO, Meta Tags, SERP</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Microsoft Copilot</h3>
                             <p class="term-definition">
-                                Microsoft's AI assistant integrated across Bing, Windows, and Office products. 
+                                Microsoft's AI assistant integrated across Bing, Windows, and Office products.
                                 Particularly important for enterprise and professional contexts.
                             </p>
                             <p class="term-related">Related: Bing Chat, Microsoft 365, Enterprise AI</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Multiagent Collaboration</h3>
                             <p class="term-definition">
-                                A design pattern where multiple specialized AI agents work together to solve complex problems. 
-                                Includes task allocation, communication protocols, and role specialization (e.g., a "Researcher" 
+                                A design pattern where multiple specialized AI agents work together to solve complex
+                                problems.
+                                Includes task allocation, communication protocols, and role specialization (e.g., a
+                                "Researcher"
                                 agent passing data to a "Writer" agent).
                             </p>
                             <p class="term-related">Related: Agentic AI, Swarm Intelligence</p>
@@ -490,7 +525,7 @@
                         <div class="glossary-term">
                             <h3 class="term-title">Multimodal AI</h3>
                             <p class="term-definition">
-                                AI systems that can understand and generate multiple types of content (text, images, 
+                                AI systems that can understand and generate multiple types of content (text, images,
                                 video, audio). Important for comprehensive content optimization.
                             </p>
                             <p class="term-related">Related: Gemini, GPT-4, Content Optimization</p>
@@ -500,25 +535,34 @@
                     <!-- N Section -->
                     <div class="glossary-section" id="N">
                         <h2 class="glossary-letter">N</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Natural Language Processing (NLP)</h3>
                             <p class="term-definition">
-                                The technology that enables AI to understand, interpret, and generate human language. 
+                                The technology that enables AI to understand, interpret, and generate human language.
                                 The foundation of all conversational AI platforms.
                             </p>
                             <p class="term-related">Related: LLM, AI Platforms, Conversational Search</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Newsjacking</h3>
+                            <p class="term-definition">
+                                The practice of injecting your brand into breaking news stories to gain visibility.
+                                Critical for optimization on real-time AI platforms like Grok.
+                            </p>
+                            <p class="term-related">Related: Grok, Real-Time AI, Social Media Optimization</p>
                         </div>
                     </div>
 
                     <!-- O Section -->
                     <div class="glossary-section" id="O">
                         <h2 class="glossary-letter">O</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">OpenAI</h3>
                             <p class="term-definition">
-                                The company behind ChatGPT and GPT models. A leading AI research organization whose 
+                                The company behind ChatGPT and GPT models. A leading AI research organization whose
                                 technology powers many AI platforms.
                             </p>
                             <p class="term-related">Related: ChatGPT, GPT-4, LLM</p>
@@ -528,12 +572,23 @@
                     <!-- P Section -->
                     <div class="glossary-section" id="P">
                         <h2 class="glossary-letter">P</h2>
-                        
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Parametric Memory</h3>
+                            <p class="term-definition">
+                                The knowledge an AI model has "learned" during its training phase and stored in its
+                                neural weights.
+                                Unlike RAG, this information is static and can become outdated.
+                            </p>
+                            <p class="term-related">Related: LLM, Training Data, RAG</p>
+                        </div>
+
                         <div class="glossary-term">
                             <h3 class="term-title">Perplexity AI</h3>
                             <p class="term-definition">
-                                A search-focused AI platform that provides sourced answers with clear citations. 
-                                Particularly valuable for establishing thought leadership and authority. Features Pro Search 
+                                A search-focused AI platform that provides sourced answers with clear citations.
+                                Particularly valuable for establishing thought leadership and authority. Features Pro
+                                Search
                                 for deep research with multiple AI models.
                             </p>
                             <p class="term-related">Related: AI Search, Citations, Search Engines</p>
@@ -542,16 +597,18 @@
                         <div class="glossary-term">
                             <h3 class="term-title">Planning (AI)</h3>
                             <p class="term-definition">
-                                The cognitive process where an AI agent breaks down a complex goal into a sequence of 
-                                smaller, executable steps. A critical capability for Agentic AI to handle non-trivial tasks.
+                                The cognitive process where an AI agent breaks down a complex goal into a sequence of
+                                smaller, executable steps. A critical capability for Agentic AI to handle non-trivial
+                                tasks.
                             </p>
                             <p class="term-related">Related: Agentic AI, Chain of Thought, Reasoning</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Prompt Engineering</h3>
                             <p class="term-definition">
-                                The practice of crafting effective inputs (prompts) to get desired outputs from AI models. 
+                                The practice of crafting effective inputs (prompts) to get desired outputs from AI
+                                models.
                                 Understanding prompt patterns helps optimize content for how users query AI platforms.
                             </p>
                             <p class="term-related">Related: LLM, ChatGPT, AI Optimization</p>
@@ -561,11 +618,22 @@
                     <!-- R Section -->
                     <div class="glossary-section" id="R">
                         <h2 class="glossary-letter">R</h2>
-                        
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Reasoning Engine</h3>
+                            <p class="term-definition">
+                                An AI model (like standard ChatGPT) that relies on internal logic and training data to
+                                generate answers.
+                                Contrasts with a Retrieval Engine.
+                            </p>
+                            <p class="term-related">Related: ChatGPT, Parametric Memory, Retrieval Engine</p>
+                        </div>
+
                         <div class="glossary-term">
                             <h3 class="term-title">Reflection (AI)</h3>
                             <p class="term-definition">
-                                A design pattern where an AI agent critiques its own outputs or plans to improve accuracy 
+                                A design pattern where an AI agent critiques its own outputs or plans to improve
+                                accuracy
                                 and quality. Involves self-correction loops before finalizing an action or response.
                             </p>
                             <p class="term-related">Related: Agentic AI, Self-Correction, Iterative Refinement</p>
@@ -574,68 +642,88 @@
                         <div class="glossary-term">
                             <h3 class="term-title">RAG (Retrieval-Augmented Generation)</h3>
                             <p class="term-definition">
-                                A technique where AI models retrieve relevant information from external sources 
+                                A technique where AI models retrieve relevant information from external sources
                                 before generating responses. This is how most AI platforms access current web content.
                             </p>
                             <p class="term-related">Related: Web Browsing, Citations, AI Platforms</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Retrieval Engine</h3>
+                            <p class="term-definition">
+                                An AI system (like Perplexity) designed primarily to search for and fetch external
+                                information
+                                rather than relying solely on internal training data.
+                            </p>
+                            <p class="term-related">Related: Perplexity, RAG, Reasoning Engine</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Reverse Prompting</h3>
+                            <p class="term-definition">
+                                A content optimization strategy where you write content to answer the specific prompt
+                                a user would give to an AI. "Answering the prompt before it's asked."
+                            </p>
+                            <p class="term-related">Related: AI GEO, Intent Optimization, Perplexity</p>
                         </div>
                     </div>
 
                     <!-- S Section -->
                     <div class="glossary-section" id="S">
                         <h2 class="glossary-letter">S</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Schema Markup</h3>
                             <p class="term-definition">
-                                Structured data code (typically JSON-LD) added to web pages to help search engines 
+                                Structured data code (typically JSON-LD) added to web pages to help search engines
                                 and AI platforms better understand content context, relationships, and meaning.
                             </p>
                             <p class="term-example">Example: Product schema, Review schema, FAQ schema</p>
                             <p class="term-related">Related: Structured Data, SEO, AI Comprehension</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">SearchGPT</h3>
                             <p class="term-definition">
-                                OpenAI's web search feature integrated into ChatGPT, providing real-time web search 
-                                capabilities with AI-generated summaries and source citations. Combines conversational AI 
+                                OpenAI's web search feature integrated into ChatGPT, providing real-time web search
+                                capabilities with AI-generated summaries and source citations. Combines conversational
+                                AI
                                 with current web information.
                             </p>
                             <p class="term-related">Related: ChatGPT, OpenAI, AI Search, Web Browsing</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Semantic Search</h3>
                             <p class="term-definition">
-                                Search technology that understands the intent and contextual meaning of queries 
+                                Search technology that understands the intent and contextual meaning of queries
                                 rather than just matching keywords. The foundation of AI-powered search.
                             </p>
                             <p class="term-related">Related: NLP, AI Search, Intent Matching</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">SEO (Search Engine Optimization)</h3>
                             <p class="term-definition">
-                                The traditional practice of optimizing websites to rank higher in search engine 
+                                The traditional practice of optimizing websites to rank higher in search engine
                                 results. AI GEO builds upon SEO principles for AI platforms.
                             </p>
                             <p class="term-related">Related: AI GEO, GEO, Search Rankings</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">SERP (Search Engine Results Page)</h3>
                             <p class="term-definition">
-                                The page displayed by a search engine in response to a query. Now often includes 
+                                The page displayed by a search engine in response to a query. Now often includes
                                 AI Overviews and featured snippets alongside traditional results.
                             </p>
                             <p class="term-related">Related: AI Overviews, Featured Snippets, Google</p>
                         </div>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Sitemap</h3>
                             <p class="term-definition">
-                                An XML file that lists all important pages on your website, helping search engines 
+                                An XML file that lists all important pages on your website, helping search engines
                                 and AI platforms discover and index your content efficiently.
                             </p>
                             <p class="term-related">Related: Indexing, Crawling, SEO</p>
@@ -645,12 +733,12 @@
                     <!-- T Section -->
                     <div class="glossary-section" id="T">
                         <h2 class="glossary-letter">T</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Tool Use (AI)</h3>
                             <p class="term-definition">
-                                The capability of an AI agent to utilize external software, APIs, or data sources to 
-                                perform actions (e.g., using a calculator, searching the web, querying a database). 
+                                The capability of an AI agent to utilize external software, APIs, or data sources to
+                                perform actions (e.g., using a calculator, searching the web, querying a database).
                                 Also known as "Function Calling."
                             </p>
                             <p class="term-related">Related: Agentic AI, Function Calling, APIs</p>
@@ -659,8 +747,8 @@
                         <div class="glossary-term">
                             <h3 class="term-title">Trust Signals</h3>
                             <p class="term-definition">
-                                Elements that indicate website credibility and reliability, such as SSL certificates, 
-                                contact information, privacy policies, customer reviews, and professional design. 
+                                Elements that indicate website credibility and reliability, such as SSL certificates,
+                                contact information, privacy policies, customer reviews, and professional design.
                                 Critical for both SEO and AI trust assessment.
                             </p>
                             <p class="term-related">Related: E-E-A-T, Domain Authority, Credibility</p>
@@ -670,11 +758,11 @@
                     <!-- V Section -->
                     <div class="glossary-section" id="V">
                         <h2 class="glossary-letter">V</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Voice Search</h3>
                             <p class="term-definition">
-                                Search queries performed via voice assistants like Siri, Alexa, or Google Assistant. 
+                                Search queries performed via voice assistants like Siri, Alexa, or Google Assistant.
                                 Typically more conversational and question-based than typed searches.
                             </p>
                             <p class="term-related">Related: Conversational Search, Alexa, Siri, Google Assistant</p>
@@ -684,11 +772,11 @@
                     <!-- W Section -->
                     <div class="glossary-section" id="W">
                         <h2 class="glossary-letter">W</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Web Crawling</h3>
                             <p class="term-definition">
-                                The process by which search engines and AI platforms systematically browse the web 
+                                The process by which search engines and AI platforms systematically browse the web
                                 to discover and index content. Also called "spidering."
                             </p>
                             <p class="term-related">Related: Indexing, Robots.txt, Sitemap</p>
@@ -698,21 +786,23 @@
                     <!-- Z Section -->
                     <div class="glossary-section" id="Z">
                         <h2 class="glossary-letter">Z</h2>
-                        
+
                         <div class="glossary-term">
                             <h3 class="term-title">Zero-Click Search</h3>
                             <p class="term-definition">
-                                Search results where users get their answer directly on the search results page without 
-                                clicking through to any website. AI Overviews and featured snippets are examples. Understanding 
+                                Search results where users get their answer directly on the search results page without
+                                clicking through to any website. AI Overviews and featured snippets are examples.
+                                Understanding
                                 zero-click results is crucial for modern AI GEO strategy.
                             </p>
                             <p class="term-related">Related: AI Overviews, Featured Snippets, SERP</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div id="no-results" class="no-results" style="display: none;">
-                    <p>No terms found matching your search. Try a different keyword or <a href="#A">browse the glossary</a>.</p>
+                    <p>No terms found matching your search. Try a different keyword or <a href="#A">browse the
+                            glossary</a>.</p>
                 </div>
             </div>
         </section>
@@ -730,7 +820,8 @@
                 <p><strong>AI GEO</strong> · Generative Engine Optimization</p>
 
 
-                <p><a href="/pages/contact.html">Contact</a> · <a href="/pages/support.html">Support</a> · <a href="/pages/resources/templates.html">Resources</a></p>
+                <p><a href="/pages/contact.html">Contact</a> · <a href="/pages/support.html">Support</a> · <a
+                        href="/pages/resources/templates.html">Resources</a></p>
 
 
             </div>
@@ -744,45 +835,46 @@
     <script src="../assets/js/script.js"></script>
     <script>
         // Glossary search functionality
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // ...existing code...
-            
-                // Show no results message if nothing matches
-                if (visibleCount === 0 && filterValue !== '') {
-                    noResults.style.display = 'block';
-                    document.getElementById('glossary-content').style.display = 'none';
-                } else {
-                    noResults.style.display = 'none';
-                    document.getElementById('glossary-content').style.display = 'block';
-                }
-            });
 
-            // Dynamic Schema Generation for Glossary
-            // This helps AI agents understand the structured data of definitions without manual JSON-LD updates
-            const terms = document.querySelectorAll('.glossary-term');
-            const schemaData = {
-                "@context": "https://schema.org",
-                "@type": "DefinedTermSet",
-                "name": "AI GEO Glossary",
-                "description": "Comprehensive glossary of AI optimization and marketing terms.",
-                "hasDefinedTerm": []
-            };
-
-            terms.forEach(term => {
-                const name = term.querySelector('.term-title').textContent.trim();
-                const description = term.querySelector('.term-definition').textContent.trim();
-                schemaData.hasDefinedTerm.push({
-                    "@type": "DefinedTerm",
-                    "name": name,
-                    "description": description
-                });
-            });
-
-            const script = document.createElement('script');
-            script.type = 'application/ld+json';
-            script.text = JSON.stringify(schemaData);
-            document.head.appendChild(script);
+            // Show no results message if nothing matches
+            if (visibleCount === 0 && filterValue !== '') {
+                noResults.style.display = 'block';
+                document.getElementById('glossary-content').style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+                document.getElementById('glossary-content').style.display = 'block';
+            }
         });
+
+        // Dynamic Schema Generation for Glossary
+        // This helps AI agents understand the structured data of definitions without manual JSON-LD updates
+        const terms = document.querySelectorAll('.glossary-term');
+        const schemaData = {
+            "@context": "https://schema.org",
+            "@type": "DefinedTermSet",
+            "name": "AI GEO Glossary",
+            "description": "Comprehensive glossary of AI optimization and marketing terms.",
+            "hasDefinedTerm": []
+        };
+
+        terms.forEach(term => {
+            const name = term.querySelector('.term-title').textContent.trim();
+            const description = term.querySelector('.term-definition').textContent.trim();
+            schemaData.hasDefinedTerm.push({
+                "@type": "DefinedTerm",
+                "name": name,
+                "description": description
+            });
+        });
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(schemaData);
+        document.head.appendChild(script);
+
     </script>
 </body>
+
 </html>
