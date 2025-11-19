@@ -115,6 +115,15 @@
                             <li>Track dependencies: one template change can impact hundreds of URLs.</li>
                         </ul>
                     </div>
+                    <div class="content-card">
+                        <h3>Authored Content vs. Dynamic Data</h3>
+                        <p>Authored content is the copy, headings, and media your team writes and manages directly in the CMS. Dynamic content is injected at runtime from back-end systems or APIs, such as live pricing, inventory, or personalized offers.</p>
+                        <ul>
+                            <li>Make sure core messages (who you serve, what you offer, where you operate) live in authored content so they are always present in the raw HTML.</li>
+                            <li>Use dynamic content for volatile data like prices or availability, but confirm that at least one stable, crawlable version exists (for example, base price ranges or example packages in the page body) if API data fails or is blocked.</li>
+                            <li>When scoping features, ask: "What lives in the CMS versus what comes from an API?" so you can predict how AI crawlers will see the experience.</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="highlight-box">
                     <h3>Conversation Starters</h3>
@@ -313,5 +322,6 @@
     </main>
 
     <div id="footer-placeholder" data-include="/components/footer.html"></div>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

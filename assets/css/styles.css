@@ -1631,8 +1631,15 @@ footer {
 .guide-title {
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    font-weight: 700;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    text-shadow: 0 0 24px rgba(0, 0, 0, 0.55);
+}
+
+.light-mode .guide-title {
+    color: #0f172a;
+    text-shadow: 0 0 10px rgba(148, 163, 184, 0.6);
 }
 
 .guide-description {
