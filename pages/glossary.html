@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive glossary of AI optimization and marketing terms - AI GEO">
-    <meta name="keywords" content="AI glossary, GEO terms, AI marketing definitions, SEO terms, generative AI">
+    <meta name="description" content="Comprehensive glossary of AI optimization, SEO, and web accessibility terms for marketing professionals">
+    <meta name="keywords" content="AI glossary, GEO terms, AI marketing definitions, SEO terms, generative AI, web accessibility, WCAG">
     <title>Glossary - AI & Marketing Terms | AI GEO</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
     <style>
@@ -24,14 +24,16 @@
             width: 100%;
             padding: 1rem;
             font-size: 1rem;
-            border: 2px solid #ddd;
+            border: 2px solid var(--border-color);
             border-radius: 8px;
             transition: border-color 0.3s;
+            background-color: var(--card-bg);
+            color: var(--text-color);
         }
 
         .glossary-search input:focus {
             outline: none;
-            border-color: #4A90E2;
+            border-color: var(--primary-color);
         }
 
         .alphabet-nav {
@@ -41,21 +43,23 @@
             gap: 0.5rem;
             margin: 2rem 0;
             padding: 1rem;
-            background: #f8f9fa;
+            background: var(--bg-alt);
             border-radius: 8px;
+            border: 1px solid var(--border-color);
         }
 
         .alphabet-nav a {
             padding: 0.5rem 0.75rem;
             text-decoration: none;
-            color: #4A90E2;
+            color: var(--primary-color);
             font-weight: 600;
             border-radius: 4px;
             transition: background-color 0.3s;
         }
 
         .alphabet-nav a:hover {
-            background-color: #e3f2fd;
+            background-color: rgba(255, 34, 34, 0.1);
+            text-shadow: var(--glow-text);
         }
 
         .glossary-section {
@@ -65,52 +69,55 @@
         .glossary-letter {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #4A90E2;
+            color: var(--primary-color);
             margin-bottom: 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 3px solid #4A90E2;
+            border-bottom: 3px solid var(--primary-color);
+            text-shadow: var(--glow-text);
         }
 
         .glossary-term {
             margin-bottom: 2rem;
             padding: 1.5rem;
-            background: white;
-            border-left: 4px solid #4A90E2;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: var(--card-bg);
+            border-left: 4px solid var(--primary-color);
+            box-shadow: var(--shadow);
             border-radius: 4px;
+            border: 1px solid var(--border-color);
         }
 
         .term-title {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #333;
+            color: var(--text-color);
             margin-bottom: 0.5rem;
         }
 
         .term-definition {
-            color: #666;
+            color: var(--text-light);
             line-height: 1.6;
             margin-bottom: 0.5rem;
         }
 
         .term-example {
             font-style: italic;
-            color: #888;
+            color: var(--text-light);
+            opacity: 0.8;
             margin-top: 0.5rem;
             padding-left: 1rem;
-            border-left: 2px solid #ddd;
+            border-left: 2px solid var(--border-color);
         }
 
         .term-related {
             margin-top: 0.5rem;
             font-size: 0.9rem;
-            color: #4A90E2;
+            color: var(--primary-color);
         }
 
         .no-results {
             text-align: center;
             padding: 3rem;
-            color: #666;
+            color: var(--text-light);
         }
     </style>
     <script src="../assets/js/includes.js"></script>
@@ -170,7 +177,9 @@
                     <a href="#E">E</a>
                     <a href="#F">F</a>
                     <a href="#G">G</a>
+                    <a href="#H">H</a>
                     <a href="#I">I</a>
+                    <a href="#K">K</a>
                     <a href="#L">L</a>
                     <a href="#M">M</a>
                     <a href="#N">N</a>
@@ -179,6 +188,7 @@
                     <a href="#R">R</a>
                     <a href="#S">S</a>
                     <a href="#T">T</a>
+                    <a href="#U">U</a>
                     <a href="#V">V</a>
                     <a href="#W">W</a>
                     <a href="#Z">Z</a>
@@ -188,6 +198,20 @@
                     <!-- A Section -->
                     <div class="glossary-section" id="A">
                         <h2 class="glossary-letter">A</h2>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Accessibility (Web Accessibility)</h3>
+                            <p class="term-definition">
+                                The practice of designing websites and digital content that can be used by everyone, including
+                                people with disabilities (visual, auditory, motor, or cognitive impairments). Accessible websites
+                                use proper heading structure, alt text for images, keyboard navigation, sufficient color contrast,
+                                and semantic HTML. Accessibility benefits both users and SEO, as search engines and AI platforms
+                                rely on many of the same structural elements.
+                            </p>
+                            <p class="term-example">Example: Providing alt text for images helps screen readers describe visuals
+                                to blind users while also helping AI understand image content.</p>
+                            <p class="term-related">Related: Alt Text, ARIA Labels, Semantic HTML, User Experience, WCAG</p>
+                        </div>
 
                         <div class="glossary-term">
                             <h3 class="term-title">Alexa</h3>
@@ -208,6 +232,19 @@
                                 goals with minimal human intervention. They move beyond "words" to "actions."
                             </p>
                             <p class="term-related">Related: Autonomous Agents, Planning, Tool Use</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">AI Agents</h3>
+                            <p class="term-definition">
+                                Autonomous AI systems that can independently plan, make decisions, and take actions to accomplish
+                                specific goals without constant human oversight. Unlike traditional chatbots that simply respond to
+                                prompts, AI agents can use tools, access data sources, break down complex tasks into steps, and
+                                execute multi-step workflows. They represent the evolution from reactive AI to proactive AI assistants.
+                            </p>
+                            <p class="term-example">Example: An AI agent that researches competitors, analyzes data, writes a report,
+                                and schedules it for review—all from a single high-level instruction.</p>
+                            <p class="term-related">Related: Agentic AI, Autonomous Agents, Tool Use, Planning, Memory (AI)</p>
                         </div>
 
                         <div class="glossary-term">
@@ -238,6 +275,52 @@
                                 image content. Essential for accessibility and AI comprehension.
                             </p>
                             <p class="term-related">Related: Accessibility, Image SEO, Schema Markup</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">ARIA Labels (Accessible Rich Internet Applications)</h3>
+                            <p class="term-definition">
+                                HTML attributes that provide additional context and semantic meaning to web elements for
+                                assistive technologies like screen readers. ARIA labels help make dynamic content and interactive
+                                elements accessible to users with disabilities. While primarily for accessibility, clear ARIA
+                                implementation also helps search engines better understand page structure and functionality.
+                            </p>
+                            <p class="term-example">Example: aria-label="Search" on a button with only a magnifying glass icon.</p>
+                            <p class="term-related">Related: Accessibility, Semantic HTML, User Experience, WCAG</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Anchor Text</h3>
+                            <p class="term-definition">
+                                The clickable text in a hyperlink that appears to users. Anchor text provides context to both
+                                users and search engines about what the linked page contains. Well-crafted anchor text improves
+                                SEO and helps AI platforms understand content relationships.
+                            </p>
+                            <p class="term-example">Example: Instead of "click here," use descriptive anchor text like
+                                "learn about AI optimization strategies."</p>
+                            <p class="term-related">Related: Backlinks, Internal Links, Link Building, SEO</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Answer Box</h3>
+                            <p class="term-definition">
+                                A featured search result that provides a direct answer to a user's query at the top of search results,
+                                often pulling content from high-authority websites. Similar to featured snippets and increasingly
+                                integrated into AI Overviews.
+                            </p>
+                            <p class="term-related">Related: Featured Snippet, AI Overviews, Position Zero, SERP</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">API (Application Programming Interface)</h3>
+                            <p class="term-definition">
+                                A set of protocols and tools that allows different software applications to communicate and share data
+                                with each other. APIs enable marketers to connect AI platforms, analytics tools, and marketing systems
+                                to create integrated workflows and automated processes.
+                            </p>
+                            <p class="term-example">Example: Using OpenAI's API to integrate ChatGPT capabilities into your website
+                                or marketing automation platform.</p>
+                            <p class="term-related">Related: Integration, Automation, AI Platforms, Tool Use</p>
                         </div>
 
                         <div class="glossary-term">
@@ -282,6 +365,28 @@
                             </p>
                             <p class="term-related">Related: Microsoft Copilot, AI Search, Conversational Search</p>
                         </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Bot (Web Bot)</h3>
+                            <p class="term-definition">
+                                An automated software program that performs repetitive tasks on the internet. In SEO and AI GEO,
+                                bots primarily refer to search engine crawlers (like Googlebot) that discover and index web content.
+                                Understanding bot behavior is essential for ensuring your content is properly crawled and indexed.
+                            </p>
+                            <p class="term-example">Example: Googlebot, Bingbot, and various AI platform crawlers that gather
+                                content for training and retrieval.</p>
+                            <p class="term-related">Related: Crawler, Spider, Googlebot, Indexing, Robots.txt</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Breadcrumbs</h3>
+                            <p class="term-definition">
+                                A navigation element that shows users their location within a website's hierarchy, typically displayed
+                                as a trail of links (e.g., Home > Guides > SEO). Breadcrumbs improve user experience, help search
+                                engines understand site structure, and can appear in search results as breadcrumb schema.
+                            </p>
+                            <p class="term-related">Related: Site Architecture, Internal Links, Schema Markup, User Experience</p>
+                        </div>
                     </div>
 
                     <!-- C Section -->
@@ -307,6 +412,18 @@
                                 larger documents.
                             </p>
                             <p class="term-related">Related: Tokens, Memory, LLM</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Canonical URL</h3>
+                            <p class="term-definition">
+                                The preferred version of a web page when multiple URLs contain similar or duplicate content.
+                                Using canonical tags (rel="canonical") tells search engines which version to index and rank,
+                                preventing duplicate content issues that can dilute SEO value.
+                            </p>
+                            <p class="term-example">Example: If a product page is accessible via multiple URLs, the canonical
+                                tag indicates the primary version.</p>
+                            <p class="term-related">Related: Duplicate Content, Redirects, Technical SEO, URL Structure</p>
                         </div>
 
                         <div class="glossary-term">
@@ -342,6 +459,52 @@
                                 "email marketing tool"</p>
                             <p class="term-related">Related: Natural Language Processing, Voice Search</p>
                         </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Computer Vision</h3>
+                            <p class="term-definition">
+                                AI technology that enables machines to interpret and analyze visual information from images and videos.
+                                In marketing, computer vision powers visual search, product recognition, content moderation, and
+                                automated image tagging, helping brands understand how visual content performs and resonates with audiences.
+                            </p>
+                            <p class="term-example">Example: Google Lens identifying products in photos or Pinterest's visual search feature.</p>
+                            <p class="term-related">Related: Image Recognition, AI Platforms, Visual Search</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Crawl Budget</h3>
+                            <p class="term-definition">
+                                The number of pages a search engine bot will crawl on your website within a given timeframe.
+                                Large sites need to optimize crawl budget by ensuring bots can efficiently access important pages,
+                                avoiding duplicate content, fixing broken links, and using robots.txt to block low-value pages.
+                                Proper crawl budget management ensures your best content gets indexed quickly.
+                            </p>
+                            <p class="term-related">Related: Crawler, Googlebot, Robots.txt, Technical SEO, Sitemap</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Crawler (Web Crawler)</h3>
+                            <p class="term-definition">
+                                An automated bot that systematically browses the web to discover and index web pages for search
+                                engines and AI platforms. Also called a "spider" or "bot." Crawlers follow links, read content,
+                                and report back to update search indexes.
+                            </p>
+                            <p class="term-example">Example: Googlebot crawls billions of pages daily to keep Google's search
+                                index fresh.</p>
+                            <p class="term-related">Related: Bot, Spider, Googlebot, Indexing, Web Crawling</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">CTR (Click-Through Rate)</h3>
+                            <p class="term-definition">
+                                The percentage of people who click on your link after seeing it in search results or AI responses.
+                                A critical metric for measuring the effectiveness of your titles, descriptions, and positioning.
+                                High CTR indicates compelling, relevant content that matches user intent.
+                            </p>
+                            <p class="term-example">Example: If your page appears in search results 1,000 times and receives
+                                50 clicks, your CTR is 5%.</p>
+                            <p class="term-related">Related: SERP, Meta Description, Title Tag, Organic Traffic</p>
+                        </div>
                     </div>
 
                     <!-- D Section -->
@@ -356,6 +519,17 @@
                                 in both traditional search and AI platforms.
                             </p>
                             <p class="term-related">Related: Backlinks, E-E-A-T, Trust Signals</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Duplicate Content</h3>
+                            <p class="term-definition">
+                                Identical or substantially similar content that appears on multiple web pages, either within
+                                the same site or across different domains. Duplicate content can confuse search engines about
+                                which version to rank and may dilute your SEO efforts. Use canonical tags and 301 redirects
+                                to address duplicate content issues.
+                            </p>
+                            <p class="term-related">Related: Canonical URL, SEO, Content Quality, Redirects</p>
                         </div>
                     </div>
 
@@ -395,6 +569,18 @@
                             </p>
                             <p class="term-related">Related: AI Overviews, SERP, Position Zero</p>
                         </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Fine-Tuning</h3>
+                            <p class="term-definition">
+                                The process of taking a pre-trained AI model and further training it on specific data to adapt it
+                                for a particular use case or brand voice. For marketers, fine-tuning enables AI tools to understand
+                                industry-specific terminology, match brand tone, or optimize for specific marketing objectives without
+                                starting from scratch.
+                            </p>
+                            <p class="term-example">Example: Training ChatGPT on your company's content to write in your brand voice.</p>
+                            <p class="term-related">Related: Machine Learning, Training Data, LLM, Customization</p>
+                        </div>
                     </div>
 
                     <!-- G Section -->
@@ -420,6 +606,17 @@
                         </div>
 
                         <div class="glossary-term">
+                            <h3 class="term-title">Googlebot</h3>
+                            <p class="term-definition">
+                                Google's web crawler that discovers, scans, and indexes web pages for Google Search. Understanding
+                                how Googlebot works helps ensure your content is properly crawled and appears in both traditional
+                                search results and AI Overviews. Different versions exist for desktop, mobile, and specialized
+                                content types.
+                            </p>
+                            <p class="term-related">Related: Bot, Crawler, Spider, Indexing, Robots.txt, Google Search</p>
+                        </div>
+
+                        <div class="glossary-term">
                             <h3 class="term-title">Grok</h3>
                             <p class="term-definition">
                                 X (Twitter)'s AI assistant with real-time access to platform data. Particularly
@@ -438,6 +635,21 @@
                         </div>
                     </div>
 
+                    <!-- H Section -->
+                    <div class="glossary-section" id="H">
+                        <h2 class="glossary-letter">H</h2>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">HTTPS (Hypertext Transfer Protocol Secure)</h3>
+                            <p class="term-definition">
+                                The secure, encrypted version of HTTP that protects data transmitted between a user's browser
+                                and a website. HTTPS is a ranking signal for Google and builds user trust by ensuring privacy
+                                and security. The padlock icon in browsers indicates an HTTPS connection.
+                            </p>
+                            <p class="term-related">Related: Security, SSL Certificate, Trust Signals, Technical SEO</p>
+                        </div>
+                    </div>
+
                     <!-- I Section -->
                     <div class="glossary-section" id="I">
                         <h2 class="glossary-letter">I</h2>
@@ -450,11 +662,70 @@
                             </p>
                             <p class="term-related">Related: Crawling, Sitemap, Robots.txt</p>
                         </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Inference</h3>
+                            <p class="term-definition">
+                                The process of an AI model using its trained knowledge to generate outputs, make predictions, or answer
+                                questions in real-time. When you submit a prompt to ChatGPT or ask an AI platform a question, the model
+                                is performing inference. For marketers, understanding inference helps explain response times and costs
+                                when using AI tools.
+                            </p>
+                            <p class="term-related">Related: LLM, Model, Latency, AI Platforms</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Internal Links</h3>
+                            <p class="term-definition">
+                                Links that connect one page on your website to another page on the same domain. Strategic internal
+                                linking helps users navigate your site, distributes page authority, signals content importance to
+                                search engines, and helps AI platforms understand topic relationships and site structure.
+                            </p>
+                            <p class="term-related">Related: Site Architecture, Navigation, Anchor Text, Link Authority</p>
+                        </div>
+                    </div>
+
+                    <!-- K Section -->
+                    <div class="glossary-section" id="K">
+                        <h2 class="glossary-letter">K</h2>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Keyword</h3>
+                            <p class="term-definition">
+                                A word or phrase that users enter into search engines to find information. While traditional SEO
+                                focused heavily on exact keyword matching, AI platforms understand semantic meaning and context,
+                                making natural language and topic authority more important than keyword density.
+                            </p>
+                            <p class="term-related">Related: Semantic Search, Long-Tail Keywords, Search Intent, SEO</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Knowledge Graph</h3>
+                            <p class="term-definition">
+                                Google's database of entities, facts, and relationships that powers enhanced search results,
+                                including knowledge panels and rich answers. Information from the Knowledge Graph often appears
+                                in AI Overviews and influences how AI platforms understand topic authority and entity relationships.
+                            </p>
+                            <p class="term-example">Example: Searching for "Apple CEO" displays a knowledge panel with Tim Cook's
+                                information pulled from the Knowledge Graph.</p>
+                            <p class="term-related">Related: Entity SEO, Schema Markup, Structured Data, Google</p>
+                        </div>
                     </div>
 
                     <!-- L Section -->
                     <div class="glossary-section" id="L">
                         <h2 class="glossary-letter">L</h2>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Latency</h3>
+                            <p class="term-definition">
+                                The delay between submitting a request to an AI system and receiving a response. Lower latency means
+                                faster responses. In marketing applications like chatbots or real-time personalization, latency
+                                directly impacts user experience. High latency can frustrate users, while optimized latency creates
+                                seamless interactions.
+                            </p>
+                            <p class="term-related">Related: Inference, User Experience, Performance, AI Platforms</p>
+                        </div>
 
                         <div class="glossary-term">
                             <h3 class="term-title">LLM (Large Language Model)</h3>
@@ -465,6 +736,18 @@
                                 power most AI platforms and conversational search experiences.
                             </p>
                             <p class="term-related">Related: ChatGPT, Claude, Gemini, AI Platforms</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Long-Tail Keywords</h3>
+                            <p class="term-definition">
+                                Longer, more specific keyword phrases (typically 3+ words) that have lower search volume but
+                                higher conversion intent. Long-tail keywords are often easier to rank for and align perfectly
+                                with conversational AI queries where users ask detailed, natural language questions.
+                            </p>
+                            <p class="term-example">Example: "best email marketing software for small e-commerce businesses"
+                                vs. "email software"</p>
+                            <p class="term-related">Related: Keywords, Search Intent, Conversational Search, AI GEO</p>
                         </div>
                     </div>
 
@@ -523,6 +806,16 @@
                         </div>
 
                         <div class="glossary-term">
+                            <h3 class="term-title">Mobile-First Indexing</h3>
+                            <p class="term-definition">
+                                Google's indexing approach that primarily uses the mobile version of a website's content for
+                                indexing and ranking. Since most users now search on mobile devices, ensuring your site provides
+                                an excellent mobile experience is critical for both SEO and AI platform visibility.
+                            </p>
+                            <p class="term-related">Related: Responsive Design, User Experience, Technical SEO, Google</p>
+                        </div>
+
+                        <div class="glossary-term">
                             <h3 class="term-title">Multimodal AI</h3>
                             <p class="term-definition">
                                 AI systems that can understand and generate multiple types of content (text, images,
@@ -546,6 +839,17 @@
                         </div>
 
                         <div class="glossary-term">
+                            <h3 class="term-title">Neural Network</h3>
+                            <p class="term-definition">
+                                A computational system inspired by the structure of the human brain, consisting of interconnected
+                                nodes (neurons) organized in layers that process information. Neural networks are the fundamental
+                                architecture behind modern AI capabilities, enabling systems to recognize patterns, learn from data,
+                                and make intelligent decisions without explicit programming.
+                            </p>
+                            <p class="term-related">Related: Deep Learning, Machine Learning, AI, Model</p>
+                        </div>
+
+                        <div class="glossary-term">
                             <h3 class="term-title">Newsjacking</h3>
                             <p class="term-definition">
                                 The practice of injecting your brand into breaking news stories to gain visibility.
@@ -566,6 +870,16 @@
                                 technology powers many AI platforms.
                             </p>
                             <p class="term-related">Related: ChatGPT, GPT-4, LLM</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Organic Traffic</h3>
+                            <p class="term-definition">
+                                Visitors who arrive at your website through unpaid search results rather than paid advertisements.
+                                In the AI era, organic traffic increasingly comes from citations in AI platform responses, making
+                                AI GEO optimization crucial alongside traditional SEO.
+                            </p>
+                            <p class="term-related">Related: SEO, AI GEO, SERP, CTR, Citation</p>
                         </div>
                     </div>
 
@@ -595,6 +909,17 @@
                         </div>
 
                         <div class="glossary-term">
+                            <h3 class="term-title">Page Speed</h3>
+                            <p class="term-definition">
+                                How quickly a web page loads and becomes interactive for users. Page speed is a confirmed
+                                ranking factor for Google and critical for user experience. Slow pages increase bounce rates
+                                and reduce conversions. Tools like Google PageSpeed Insights measure and provide recommendations
+                                for improving speed.
+                            </p>
+                            <p class="term-related">Related: Core Web Vitals, User Experience, Technical SEO, Performance</p>
+                        </div>
+
+                        <div class="glossary-term">
                             <h3 class="term-title">Planning (AI)</h3>
                             <p class="term-definition">
                                 The cognitive process where an AI agent breaks down a complex goal into a sequence of
@@ -602,6 +927,16 @@
                                 tasks.
                             </p>
                             <p class="term-related">Related: Agentic AI, Chain of Thought, Reasoning</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Position Zero</h3>
+                            <p class="term-definition">
+                                The featured snippet position at the very top of Google's search results, above the traditional
+                                #1 organic listing. Content in Position Zero receives high visibility and is frequently used by
+                                AI platforms as source material for responses. Also called "rank zero."
+                            </p>
+                            <p class="term-related">Related: Featured Snippet, Answer Box, AI Overviews, SERP</p>
                         </div>
 
                         <div class="glossary-term">
@@ -659,12 +994,46 @@
                         </div>
 
                         <div class="glossary-term">
+                            <h3 class="term-title">Redirect</h3>
+                            <p class="term-definition">
+                                An instruction that automatically sends users and search engines from one URL to another.
+                                301 redirects (permanent) pass link authority and are used when content permanently moves.
+                                302 redirects (temporary) are for short-term changes. Proper redirect implementation prevents
+                                broken links and preserves SEO value.
+                            </p>
+                            <p class="term-related">Related: URL Structure, Technical SEO, Link Authority, Canonical URL</p>
+                        </div>
+
+                        <div class="glossary-term">
                             <h3 class="term-title">Reverse Prompting</h3>
                             <p class="term-definition">
                                 A content optimization strategy where you write content to answer the specific prompt
                                 a user would give to an AI. "Answering the prompt before it's asked."
                             </p>
                             <p class="term-related">Related: AI GEO, Intent Optimization, Perplexity</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Robots Meta Tag</h3>
+                            <p class="term-definition">
+                                An HTML meta tag that provides page-level instructions to search engine crawlers about whether
+                                to index the page and follow its links. Common values include "noindex" (don't index this page),
+                                "nofollow" (don't follow links), and "noarchive" (don't cache). More precise than robots.txt for
+                                controlling individual page crawling and indexing.
+                            </p>
+                            <p class="term-example">Example: &lt;meta name="robots" content="noindex, follow"&gt;</p>
+                            <p class="term-related">Related: Robots.txt, Indexing, Crawler, Technical SEO</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Robots.txt</h3>
+                            <p class="term-definition">
+                                A text file placed in a website's root directory that tells search engine crawlers which pages
+                                or sections of the site they can or cannot access. While important for managing crawl budget,
+                                blocking pages in robots.txt doesn't guarantee they won't appear in search results.
+                            </p>
+                            <p class="term-example">Example: Blocking admin pages or duplicate content from being crawled.</p>
+                            <p class="term-related">Related: Crawler, Bot, Indexing, Technical SEO</p>
                         </div>
                     </div>
 
@@ -683,6 +1052,18 @@
                         </div>
 
                         <div class="glossary-term">
+                            <h3 class="term-title">Search Intent</h3>
+                            <p class="term-definition">
+                                The underlying goal or purpose behind a user's search query. Understanding whether users want
+                                information (informational), to navigate to a site (navigational), to make a purchase (transactional),
+                                or to compare options (commercial investigation) is crucial for creating content that matches their
+                                needs and ranks well in both search engines and AI platforms.
+                            </p>
+                            <p class="term-example">Example: "how to optimize for AI" (informational) vs. "buy SEO tools" (transactional)</p>
+                            <p class="term-related">Related: Keywords, Long-Tail Keywords, User Experience, Content Strategy</p>
+                        </div>
+
+                        <div class="glossary-term">
                             <h3 class="term-title">SearchGPT</h3>
                             <p class="term-definition">
                                 OpenAI's web search feature integrated into ChatGPT, providing real-time web search
@@ -691,6 +1072,18 @@
                                 with current web information.
                             </p>
                             <p class="term-related">Related: ChatGPT, OpenAI, AI Search, Web Browsing</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Semantic HTML</h3>
+                            <p class="term-definition">
+                                HTML code that uses tags with meaningful names that clearly describe their content and purpose,
+                                such as &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt;, and &lt;footer&gt; instead
+                                of generic &lt;div&gt; tags. Semantic HTML improves accessibility for screen readers, helps search
+                                engines understand page structure, and makes code more maintainable. Essential for both human
+                                accessibility and technical SEO.
+                            </p>
+                            <p class="term-related">Related: Accessibility, HTML, Technical SEO, ARIA Labels, Schema Markup</p>
                         </div>
 
                         <div class="glossary-term">
@@ -728,6 +1121,16 @@
                             </p>
                             <p class="term-related">Related: Indexing, Crawling, SEO</p>
                         </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Spider</h3>
+                            <p class="term-definition">
+                                Another term for a web crawler or bot that automatically browses and indexes web pages. The name
+                                comes from the way these programs "crawl" across the web of interconnected pages. Search engines
+                                use spiders to discover new content and update their indexes.
+                            </p>
+                            <p class="term-related">Related: Crawler, Bot, Googlebot, Web Crawling, Indexing</p>
+                        </div>
                     </div>
 
                     <!-- T Section -->
@@ -745,6 +1148,40 @@
                         </div>
 
                         <div class="glossary-term">
+                            <h3 class="term-title">Title Tag</h3>
+                            <p class="term-definition">
+                                The HTML element that specifies the title of a web page, appearing in browser tabs and as the
+                                clickable headline in search results. Title tags are a critical ranking factor and should be
+                                descriptive, include target keywords naturally, and be compelling to encourage clicks. Optimal
+                                length is 50-60 characters.
+                            </p>
+                            <p class="term-example">Example: &lt;title&gt;AI Optimization Guide for Marketing Professionals | AI GEO&lt;/title&gt;</p>
+                            <p class="term-related">Related: Meta Description, SEO, CTR, On-Page SEO</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Training Data</h3>
+                            <p class="term-definition">
+                                The information used to teach an AI model how to perform tasks, recognize patterns, or make predictions.
+                                Training data consists of examples the model learns from during development. The quality, diversity, and
+                                relevance of training data directly impact how well an AI system performs and whether it produces biased
+                                or accurate results.
+                            </p>
+                            <p class="term-related">Related: Machine Learning, Model, Fine-Tuning, AI Bias</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Transformer</h3>
+                            <p class="term-definition">
+                                A revolutionary neural network architecture introduced in 2017 that enables AI models to understand
+                                relationships and context in data more effectively. Transformers use an "attention mechanism" to process
+                                information, making them exceptionally good at language tasks. This architecture powers most modern
+                                language models including GPT, Gemini, and Claude.
+                            </p>
+                            <p class="term-related">Related: LLM, Neural Network, GPT, Model Architecture</p>
+                        </div>
+
+                        <div class="glossary-term">
                             <h3 class="term-title">Trust Signals</h3>
                             <p class="term-definition">
                                 Elements that indicate website credibility and reliability, such as SSL certificates,
@@ -755,9 +1192,47 @@
                         </div>
                     </div>
 
+                    <!-- U Section -->
+                    <div class="glossary-section" id="U">
+                        <h2 class="glossary-letter">U</h2>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">URL Structure</h3>
+                            <p class="term-definition">
+                                The format and organization of web page addresses. Clean, descriptive URLs that use hyphens
+                                to separate words, include relevant keywords, and reflect site hierarchy improve both user
+                                experience and SEO. Avoid long, complex URLs with unnecessary parameters.
+                            </p>
+                            <p class="term-example">Example: Good: /guides/ai-optimization/ Bad: /page?id=12345&cat=2</p>
+                            <p class="term-related">Related: Site Architecture, Technical SEO, User Experience</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">User Experience (UX)</h3>
+                            <p class="term-definition">
+                                The overall experience a person has when interacting with your website, including ease of navigation,
+                                page speed, mobile responsiveness, readability, and accessibility. Excellent UX is increasingly
+                                important for SEO as search engines prioritize user satisfaction metrics. Google's Core Web Vitals
+                                measure key UX factors.
+                            </p>
+                            <p class="term-related">Related: Page Speed, Mobile-First, Core Web Vitals, Bounce Rate</p>
+                        </div>
+                    </div>
+
                     <!-- V Section -->
                     <div class="glossary-section" id="V">
                         <h2 class="glossary-letter">V</h2>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Vector Database</h3>
+                            <p class="term-definition">
+                                A specialized database that stores data as mathematical representations (vectors) that AI models can
+                                understand and search through efficiently. Vector databases enable fast semantic search and power
+                                RAG systems by helping AI quickly find relevant information. Essential for building AI applications
+                                that need to search and retrieve information from large knowledge bases.
+                            </p>
+                            <p class="term-related">Related: RAG, Semantic Search, AI Platforms, Database</p>
+                        </div>
 
                         <div class="glossary-term">
                             <h3 class="term-title">Voice Search</h3>
@@ -774,12 +1249,35 @@
                         <h2 class="glossary-letter">W</h2>
 
                         <div class="glossary-term">
+                            <h3 class="term-title">WCAG (Web Content Accessibility Guidelines)</h3>
+                            <p class="term-definition">
+                                International standards developed by the W3C that define how to make web content accessible to
+                                people with disabilities. WCAG provides guidelines for making content perceivable, operable,
+                                understandable, and robust. Compliance levels range from A (basic) to AAA (highest). Following
+                                WCAG improves accessibility, SEO, and overall user experience while reducing legal risk.
+                            </p>
+                            <p class="term-related">Related: Accessibility, ARIA Labels, Semantic HTML, User Experience</p>
+                        </div>
+
+                        <div class="glossary-term">
                             <h3 class="term-title">Web Crawling</h3>
                             <p class="term-definition">
                                 The process by which search engines and AI platforms systematically browse the web
                                 to discover and index content. Also called "spidering."
                             </p>
                             <p class="term-related">Related: Indexing, Robots.txt, Sitemap</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">XML Sitemap</h3>
+                            <p class="term-definition">
+                                A structured file that lists all important URLs on your website along with metadata like last
+                                modification date, change frequency, and priority. XML sitemaps help search engine crawlers
+                                discover and efficiently index your content, especially new pages, deep pages, or sites with
+                                complex architecture. Submit sitemaps through Google Search Console and Bing Webmaster Tools.
+                            </p>
+                            <p class="term-example">Example: sitemap.xml file submitted to search engines for better crawl efficiency.</p>
+                            <p class="term-related">Related: Sitemap, Crawler, Indexing, Crawl Budget, Technical SEO</p>
                         </div>
                     </div>
 
@@ -796,6 +1294,19 @@
                                 zero-click results is crucial for modern AI GEO strategy.
                             </p>
                             <p class="term-related">Related: AI Overviews, Featured Snippets, SERP</p>
+                        </div>
+
+                        <div class="glossary-term">
+                            <h3 class="term-title">Zero-Party Data</h3>
+                            <p class="term-definition">
+                                Information that customers intentionally and proactively share with a brand, such as preferences,
+                                interests, communication preferences, or feedback from surveys and quizzes. Unlike inferred data,
+                                zero-party data is explicitly provided by users in exchange for personalized experiences. This data
+                                is highly valuable for AI-powered personalization while respecting privacy.
+                            </p>
+                            <p class="term-example">Example: A user completing a style quiz to receive personalized product
+                                recommendations.</p>
+                            <p class="term-related">Related: Personalization, Customer Data, Privacy, First-Party Data</p>
                         </div>
                     </div>
                 </div>
