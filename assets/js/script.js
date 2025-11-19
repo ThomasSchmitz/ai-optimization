@@ -137,19 +137,74 @@ function generateBreadcrumbs() {
     let breadcrumbHTML = '<li><a href="/index.html">Home</a></li>';
     let currentPath = '';
     
+    // Custom mappings for intermediate paths
+    const pathMapping = {
+        '/pages': null, // Non-clickable
+        '/pages/tools': '/pages/tools-directory.html',
+        '/pages/guides': null,
+        '/pages/industries': null,
+        '/pages/platforms': null,
+        '/pages/resources': null,
+        '/pages/learn': '/pages/learn/index.html'
+    };
+
+    // Custom labels for specific paths/files
+    const labelMapping = {
+        'eeat-assessment': 'E-E-A-T Assessment',
+        'eeat-optimization': 'E-E-A-T Optimization',
+        'b2b': 'B2B',
+        'saas': 'SaaS',
+        'you-com': 'You.com',
+        'chatgpt': 'ChatGPT',
+        'gemini': 'Gemini',
+        'claude': 'Claude',
+        'copilot': 'Copilot',
+        'grok': 'Grok',
+        'perplexity': 'Perplexity',
+        'meta-ai': 'Meta AI',
+        'voice-search': 'Voice Search',
+        'local-seo-ai': 'Local SEO AI',
+        'technical-seo': 'Technical SEO',
+        'schema-markup': 'Schema Markup',
+        'agentic-ai-optimization': 'Agentic AI Optimization'
+    };
+    
     pathParts.forEach((part, index) => {
         currentPath += '/' + part;
         
         // Clean up the part name for display
         let displayName = part.replace('.html', '').replace(/-/g, ' ');
-        displayName = displayName.charAt(0).toUpperCase() + displayName.slice(1);
+        
+        // Check for custom label
+        const cleanPart = part.replace('.html', '');
+        if (labelMapping[cleanPart]) {
+            displayName = labelMapping[cleanPart];
+        } else {
+            displayName = displayName.charAt(0).toUpperCase() + displayName.slice(1);
+        }
         
         if (index === pathParts.length - 1) {
             // Last item (current page)
             breadcrumbHTML += `<li><span>${displayName}</span></li>`;
         } else {
             // Parent directories
-            breadcrumbHTML += `<li><a href="${currentPath}">${displayName}</a></li>`;
+            let url = currentPath;
+            let isClickable = true;
+
+            // Check mappings
+            if (pathMapping.hasOwnProperty(currentPath)) {
+                if (pathMapping[currentPath] === null) {
+                    isClickable = false;
+                } else {
+                    url = pathMapping[currentPath];
+                }
+            }
+
+            if (isClickable) {
+                breadcrumbHTML += `<li><a href="${url}">${displayName}</a></li>`;
+            } else {
+                breadcrumbHTML += `<li><span>${displayName}</span></li>`;
+            }
         }
     });
     
