@@ -1,0 +1,55 @@
+<!-- Template for including utilities in HTML pages -->
+
+<!-- In <head> section: -->
+<link rel="stylesheet" href="../../assets/css/styles.css">
+<link rel="stylesheet" href="../../assets/css/utilities.css">
+
+<!-- Load utility scripts first -->
+<script src="../../assets/js/utils/security.js"></script>
+<script src="../../assets/js/utils/error-handler.js"></script>
+<script src="../../assets/js/utils/performance.js"></script>
+<script src="../../assets/js/utils/accessibility.js"></script>
+
+<!-- Load main application scripts -->
+<script src="../../assets/js/includes.js"></script>
+
+<!-- At end of <body>, before </body>: -->
+<script src="../../assets/js/script.js" defer></script>
+
+<!-- For search pages, also include: -->
+<script src="../../assets/js/search.js" defer></script>
+
+<!-- Example: Complete <head> section -->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your page description">
+    <title>Your Page Title | AI GEO</title>
+    
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/utilities.css">
+    
+    <script src="../../assets/js/utils/security.js"></script>
+    <script src="../../assets/js/utils/error-handler.js"></script>
+    <script src="../../assets/js/utils/performance.js"></script>
+    <script src="../../assets/js/utils/accessibility.js"></script>
+    <script src="../../assets/js/includes.js"></script>
+</head>
+<body>
+    <!-- Header component -->
+    <div id="header-placeholder" data-include="../../components/header.html"></div>
+    
+    <main id="main">
+        <!-- Your content here -->
+    </main>
+    
+    <!-- Footer component -->
+    <div id="footer-placeholder" data-include="../../components/footer.html"></div>
+    
+    <script src="../../assets/js/script.js" defer></script>
+</body>
+</html>
+-->

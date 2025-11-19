@@ -38,25 +38,45 @@
     };
 
     // Load HTML content from a file and insert it into a target element
-    function loadInclude(url, targetSelector) {
+    function loadInclude(url, targetSelector, retries = 3) {
         return fetch(window.AI_GEO.resolveUrl(url))
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Failed to load ${url}: ${response.statusText}`);
                 }
+                
+                // Validate content type
+                const contentType = response.headers.get('content-type');
+                if (contentType && !contentType.includes('text/html')) {
+                    throw new TypeError('Expected HTML content');
+                }
+                
                 return response.text();
             })
             .then(html => {
                 const target = document.querySelector(targetSelector);
                 if (target) {
-                    target.innerHTML = html;
+                    // Sanitize HTML if Security utility is available
+                    if (window.AI_GEO && window.AI_GEO.Security) {
+                        // Allow safe HTML tags for component includes
+                        const safeHTML = window.AI_GEO.Security.sanitizeHTMLWithTags(html);
+                        target.innerHTML = safeHTML;
+                    } else {
+                        // Fallback to direct insertion (for first load before utils are available)
+                        target.innerHTML = html;
+                    }
 
                     // Fix all URLs in the loaded content
                     fixUrlsInElement(target);
                 }
             })
             .catch(error => {
-                console.error('Include load error:', error);
+                // Use ErrorHandler if available, otherwise fallback to console
+                if (window.AI_GEO && window.AI_GEO.ErrorHandler) {
+                    window.AI_GEO.ErrorHandler.handle(error, 'includes', true);
+                } else {
+                    console.error('Include load error:', error);
+                }
             });
     }
 
@@ -110,14 +130,20 @@
         });
 
         // When all includes are loaded, trigger a custom event
-        Promise.all(promises).then(() => {
-            document.dispatchEvent(new CustomEvent('includesLoaded'));
+        Promise.all(promises)
+            .then(() => {
+                document.dispatchEvent(new CustomEvent('includesLoaded'));
 
-            // Load theme toggle script
-            const script = document.createElement('script');
-            script.src = window.AI_GEO.resolveUrl('/assets/js/theme-toggle.js');
-            document.body.appendChild(script);
-        });
+                // Load theme toggle script
+                const script = document.createElement('script');
+                script.src = window.AI_GEO.resolveUrl('/assets/js/theme-toggle.js');
+                document.body.appendChild(script);
+            })
+            .catch(error => {
+                if (window.AI_GEO && window.AI_GEO.ErrorHandler) {
+                    window.AI_GEO.ErrorHandler.handle(error, 'includes', true);
+                }
+            });
     }
 
     // Auto-load header and footer if placeholder elements exist

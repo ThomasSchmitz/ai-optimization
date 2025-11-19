@@ -7,10 +7,25 @@
     async function loadSearchIndex() {
         try {
             const response = await fetch('/assets/data/search-index.json');
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            // Validate content type
+            const contentType = response.headers.get('content-type');
+            if (!contentType || !contentType.includes('application/json')) {
+                throw new TypeError('Expected JSON response');
+            }
+            
             const data = await response.json();
             searchIndex = data.pages || [];
         } catch (error) {
-            console.error('Error loading search index:', error);
+            if (window.AI_GEO && window.AI_GEO.ErrorHandler) {
+                window.AI_GEO.ErrorHandler.handle(error, 'search', true);
+            } else {
+                console.error('Error loading search index:', error);
+            }
             searchIndex = [];
         }
     }
@@ -142,23 +157,34 @@
                 'resource': 'Resource'
             };
             
+            const Security = window.AI_GEO && window.AI_GEO.Security;
+            
+            // Sanitize user input before displaying
+            const safeQuery = Security ? Security.escapeHTML(query) : query;
             const snippet = getSnippet(result.matchedText, query);
             const highlightedSnippet = highlightTerm(snippet, query);
             const highlightedTitle = highlightTerm(result.title, query);
+            const safeURL = Security ? Security.sanitizeURL(result.url) : result.url;
             
             return `
                 <div class="search-result">
                     <span class="result-category">${categoryLabels[result.category] || 'Page'}</span>
                     <h3 class="result-title">
-                        <a href="${result.url}">${highlightedTitle}</a>
+                        <a href="${safeURL}">${highlightedTitle}</a>
                     </h3>
                     <p class="result-snippet">${highlightedSnippet}</p>
-                    <div class="result-url">${window.location.origin}${result.url}</div>
+                    <div class="result-url">${window.location.origin}${safeURL}</div>
                 </div>
             `;
         }).join('');
         
         resultsContainer.innerHTML = resultsHTML;
+        
+        // Announce results to screen readers
+        if (window.AI_GEO && window.AI_GEO.A11y) {
+            const message = `Found ${results.length} result${results.length !== 1 ? 's' : ''}`;
+            window.AI_GEO.A11y.announce(message, 'polite');
+        }
     }
     
     // Handle search
@@ -196,10 +222,18 @@
         
         // Real-time search as user types (debounced)
         let searchTimeout;
-        searchInput.addEventListener('input', function() {
+        const debouncedSearch = function() {
             clearTimeout(searchTimeout);
             searchTimeout = setTimeout(handleSearch, 300);
-        });
+        };
+        
+        // Use Performance utility if available
+        if (window.AI_GEO && window.AI_GEO.Performance) {
+            const debounced = window.AI_GEO.Performance.debounce(handleSearch, 300);
+            searchInput.addEventListener('input', debounced);
+        } else {
+            searchInput.addEventListener('input', debouncedSearch);
+        }
         
         // Handle filter buttons
         filterButtons.forEach(button => {

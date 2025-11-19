@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle Test</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <style>
+        body {
+            padding: 50px;
+            min-height: 100vh;
+        }
+        .test-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        .status {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background: var(--bg-alt);
+        }
+        .theme-display {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🎨 Theme Toggle Test</h1>
+        
+        <div class="test-section">
+            <h2>Current Theme</h2>
+            <div class="status">
+                <p class="theme-display" id="current-theme">Loading...</p>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Toggle Switch</h2>
+            <p style="margin-bottom: 20px;">Click the switch below to toggle between dark and light mode:</p>
+            
+            <div class="theme-toggle-wrapper" style="margin: 0 auto; justify-content: center;">
+                <input type="checkbox" class="theme-toggle-checkbox" id="theme-toggle-test">
+                <label for="theme-toggle-test" class="theme-toggle-label" aria-label="Toggle Dark/Light Mode">
+                    <span class="toggle-icon">🌙</span>
+                    <span class="toggle-icon">☀️</span>
+                    <span class="theme-toggle-ball"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Instructions</h2>
+            <ul style="text-align: left; max-width: 400px; margin: 0 auto;">
+                <li>Click the toggle switch above</li>
+                <li>The background should change color</li>
+                <li>The text color should change</li>
+                <li>The switch ball should slide</li>
+                <li>Refresh the page - your choice should be remembered</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>Keyboard Test</h2>
+            <p>Press <kbd>Tab</kbd> to focus the switch, then press <kbd>Space</kbd> or <kbd>Enter</kbd> to toggle</p>
+        </div>
+
+        <div class="test-section">
+            <h2>Debug Info</h2>
+            <div class="status">
+                <p>localStorage theme: <strong id="storage-theme">-</strong></p>
+                <p>Checkbox checked: <strong id="checkbox-state">-</strong></p>
+                <p>Body has light-mode class: <strong id="light-mode-class">-</strong></p>
+            </div>
+            <button onclick="clearTheme()" style="margin-top: 10px; padding: 10px 20px; cursor: pointer;">
+                Clear Saved Theme
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/theme-toggle.js"></script>
+    <script>
+        function updateDebugInfo() {
+            const theme = localStorage.getItem('theme') || 'not set';
+            const checkbox = document.getElementById('theme-toggle-test');
+            const hasLightMode = document.documentElement.classList.contains('light-mode');
+            
+            document.getElementById('current-theme').textContent = hasLightMode ? '☀️ Light Mode' : '🌙 Dark Mode';
+            document.getElementById('storage-theme').textContent = theme;
+            document.getElementById('checkbox-state').textContent = checkbox ? checkbox.checked : 'not found';
+            document.getElementById('light-mode-class').textContent = hasLightMode ? 'YES' : 'NO';
+        }
+
+        function clearTheme() {
+            localStorage.removeItem('theme');
+            location.reload();
+        }
+
+        // Update debug info every second
+        setInterval(updateDebugInfo, 1000);
+        updateDebugInfo();
+
+        // Listen for theme changes
+        document.addEventListener('change', function(e) {
+            if (e.target.classList.contains('theme-toggle-checkbox')) {
+                console.log('Theme toggle changed:', e.target.checked);
+                setTimeout(updateDebugInfo, 100);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -57,6 +57,7 @@ function initializeDropdowns() {
                 return;
             }
             toggle.dataset.dropdownBound = 'true';
+            
             // Desktop: hover behavior with delay to prevent premature closing
             if (window.innerWidth > 768) {
                 dropdown.addEventListener('mouseenter', function() {
@@ -64,6 +65,8 @@ function initializeDropdowns() {
                     dropdowns.forEach(other => {
                         if (other !== dropdown) {
                             other.classList.remove('active');
+                            const otherToggle = other.querySelector('.dropdown-toggle');
+                            if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
                         }
                     });
 
@@ -73,6 +76,7 @@ function initializeDropdowns() {
                         closeTimeout = null;
                     }
                     this.classList.add('active');
+                    toggle.setAttribute('aria-expanded', 'true');
                 });
                 
                 dropdown.addEventListener('mouseleave', function() {
@@ -80,6 +84,7 @@ function initializeDropdowns() {
                     const self = this;
                     closeTimeout = setTimeout(function() {
                         self.classList.remove('active');
+                        toggle.setAttribute('aria-expanded', 'false');
                     }, 300); // 300ms delay
                 });
             }
@@ -89,15 +94,42 @@ function initializeDropdowns() {
                 e.preventDefault();
                 e.stopPropagation();
                 
+                const isActive = dropdown.classList.contains('active');
+                
                 // Close other dropdowns
                 dropdowns.forEach(other => {
                     if (other !== dropdown) {
                         other.classList.remove('active');
+                        const otherToggle = other.querySelector('.dropdown-toggle');
+                        if (otherToggle) otherToggle.setAttribute('aria-expanded', 'false');
                     }
                 });
                 
                 // Toggle current dropdown
                 dropdown.classList.toggle('active');
+                toggle.setAttribute('aria-expanded', !isActive);
+            });
+            
+            // Keyboard navigation
+            toggle.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    const isActive = dropdown.classList.contains('active');
+                    dropdown.classList.toggle('active');
+                    toggle.setAttribute('aria-expanded', !isActive);
+                }
+                if (e.key === 'Escape') {
+                    dropdown.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.focus();
+                }
+                if (e.key === 'ArrowDown' && menu) {
+                    e.preventDefault();
+                    dropdown.classList.add('active');
+                    toggle.setAttribute('aria-expanded', 'true');
+                    const firstLink = menu.querySelector('a');
+                    if (firstLink) firstLink.focus();
+                }
             });
         }
     });
@@ -299,8 +331,8 @@ function enableSmoothScroll() {
     smoothScrollBound = true;
 }
 
-// Add active state to navigation based on scroll position
-window.addEventListener('scroll', function() {
+// Add active state to navigation based on scroll position (throttled)
+const handleScroll = function() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
     
@@ -320,7 +352,14 @@ window.addEventListener('scroll', function() {
             link.classList.add('active');
         }
     });
-});
+};
+
+// Use throttled version if Performance utility is available
+if (window.AI_GEO && window.AI_GEO.Performance) {
+    window.addEventListener('scroll', window.AI_GEO.Performance.throttle(handleScroll, 100));
+} else {
+    window.addEventListener('scroll', handleScroll);
+}
 
 // Add animation on scroll for cards
 const observerOptions = {

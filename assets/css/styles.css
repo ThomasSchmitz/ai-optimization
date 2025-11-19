@@ -78,6 +78,7 @@
 .theme-toggle-label .toggle-icon {
     color: #f1c40f;
     font-size: 12px;
+    pointer-events: none; /* Allow clicks to pass through */
 }
 
 .theme-toggle-label .fa-moon {
@@ -99,6 +100,7 @@
     transform: translateX(0px);
     transition: transform 0.2s linear, background-color 0.2s;
     box-shadow: 0 0 8px var(--primary-color);
+    pointer-events: none; /* Allow clicks to pass through to label */
 }
 
 .theme-toggle-checkbox:checked + .theme-toggle-label .theme-toggle-ball {
