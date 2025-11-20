@@ -1,0 +1,76 @@
+---
+// Footer component
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t mt-20" style="border-color: var(--border-color);">
+  <div class="container py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold">
+          <span class="text-primary">AI</span>
+          <span class="text-secondary">Optimization</span>
+        </h3>
+        <p class="text-sm text-light">
+          Comprehensive guides and strategies for optimizing your digital presence for AI platforms and search engines.
+        </p>
+      </div>
+      
+      <!-- Guides -->
+      <div class="space-y-4">
+        <h4 class="font-semibold text-white">Guides</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/guides/content-strategy" class="text-light hover:text-primary transition-colors">Content Strategy</a></li>
+          <li><a href="/guides/technical-seo" class="text-light hover:text-primary transition-colors">Technical SEO</a></li>
+          <li><a href="/guides/schema-markup" class="text-light hover:text-primary transition-colors">Schema Markup</a></li>
+          <li><a href="/guides/eeat-optimization" class="text-light hover:text-primary transition-colors">E-E-A-T Optimization</a></li>
+        </ul>
+      </div>
+      
+      <!-- Platforms -->
+      <div class="space-y-4">
+        <h4 class="font-semibold text-white">Platforms</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/platforms/chatgpt" class="text-light hover:text-primary transition-colors">ChatGPT</a></li>
+          <li><a href="/platforms/perplexity" class="text-light hover:text-primary transition-colors">Perplexity AI</a></li>
+          <li><a href="/platforms/gemini" class="text-light hover:text-primary transition-colors">Google Gemini</a></li>
+          <li><a href="/platforms/claude" class="text-light hover:text-primary transition-colors">Claude AI</a></li>
+        </ul>
+      </div>
+      
+      <!-- Resources -->
+      <div class="space-y-4">
+        <h4 class="font-semibold text-white">Resources</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/tools/" class="text-light hover:text-primary transition-colors">Tools Directory</a></li>
+          <li><a href="/resources/" class="text-light hover:text-primary transition-colors">Downloads</a></li>
+          <li><a href="/glossary" class="text-light hover:text-primary transition-colors">Glossary</a></li>
+          <li><a href="/contact" class="text-light hover:text-primary transition-colors">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="mt-12 pt-8 border-t flex flex-col sm:flex-row justify-between items-center gap-4" style="border-color: var(--border-color);">
+      <p class="text-sm text-light">
+        © {currentYear} AI Optimization. All rights reserved.
+      </p>
+      <div class="flex gap-6 text-sm">
+        <a href="/privacy" class="text-light hover:text-primary transition-colors">Privacy Policy</a>
+        <a href="/terms" class="text-light hover:text-primary transition-colors">Terms of Service</a>
+        <a href="/sitemap.xml" class="text-light hover:text-primary transition-colors">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  html:not(.dark) footer {
+    @apply bg-light-bg;
+  }
+  
+  html:not(.dark) footer h4 {
+    @apply text-gray-900;
+  }
+</style>

@@ -1,0 +1,53 @@
+{
+  "name": "ai-optimization",
+  "type": "module",
+  "version": "2.0.0",
+  "description": "AI GEO - Generative Engine Optimization (Astro Migration)",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "lint": "eslint . --ext .js,.ts,.astro",
+    "lint:fix": "eslint . --ext .js,.ts,.astro --fix",
+    "format": "prettier --write \"**/*.{js,ts,astro,md,json}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,astro,md,json}\"",
+    "type-check": "tsc --noEmit",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
+  },
+  "keywords": [
+    "AI",
+    "SEO",
+    "GEO",
+    "optimization",
+    "ChatGPT",
+    "Gemini",
+    "Perplexity",
+    "Claude"
+  ],
+  "author": "AI GEO",
+  "license": "MIT",
+  "dependencies": {
+    "@astrojs/check": "^0.9.0",
+    "@astrojs/mdx": "^3.1.0",
+    "@astrojs/sitemap": "^3.1.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "astro": "^4.16.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.6.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "astro-pagefind": "^1.6.0",
+    "eslint": "^9.0.0",
+    "eslint-plugin-astro": "^1.0.0",
+    "prettier": "^3.3.0",
+    "prettier-plugin-astro": "^0.14.0"
+  }
+}

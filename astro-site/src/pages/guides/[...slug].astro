@@ -1,0 +1,156 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((guide) => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+const { Content } = await guide.render();
+---
+
+<BaseLayout 
+  title={guide.data.title}
+  description={guide.data.description}
+  publishDate={guide.data.publishDate}
+>
+  <!-- Guide Hero Section -->
+  <section class="guide-hero bg-gradient-to-b from-dark-bg to-dark-bg-alt py-20">
+    <div class="container">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="text-6xl mb-6">{guide.data.icon}</div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{guide.data.title}</h1>
+        <p class="text-xl text-light mb-8">{guide.data.description}</p>
+        
+        <div class="flex flex-wrap justify-center gap-6 mb-8">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">⏱️</span>
+            <span class="text-sm text-light">{guide.data.readTime}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">📊</span>
+            <span class="text-sm text-light">{guide.data.difficulty}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">🎯</span>
+            <span class="text-sm text-light">{guide.data.audience}</span>
+          </div>
+        </div>
+        
+        <div class="flex justify-center gap-4">
+          <a href="#content" class="btn btn-primary">Start Reading</a>
+          <a href="#checklist" class="btn btn-secondary">View Checklist</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guide Content -->
+  <article id="content" class="container max-w-4xl py-16">
+    <div class="prose prose-lg dark:prose-invert prose-primary max-w-none">
+      <Content />
+    </div>
+  </article>
+
+  <!-- Related Guides -->
+  <section class="container max-w-4xl py-16 border-t" style="border-color: var(--border-color);">
+    <h2 class="text-2xl font-bold mb-6">Related Guides</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- We'll populate this dynamically later -->
+      <p class="text-light">More related guides coming soon...</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  html:not(.dark) .guide-hero {
+    @apply bg-gradient-to-b from-light-bg to-light-bg-alt;
+  }
+  
+  .prose {
+    @apply text-white;
+  }
+  
+  html:not(.dark) .prose {
+    @apply text-gray-900;
+  }
+  
+  .prose h2 {
+    @apply text-3xl font-bold mt-12 mb-6 text-primary;
+  }
+  
+  .prose h3 {
+    @apply text-2xl font-bold mt-8 mb-4;
+  }
+  
+  .prose h4 {
+    @apply text-xl font-semibold mt-6 mb-3;
+  }
+  
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  
+  .prose ul, .prose ol {
+    @apply my-6 space-y-2;
+  }
+  
+  .prose li {
+    @apply leading-relaxed;
+  }
+  
+  .prose a {
+    @apply text-primary hover:text-secondary underline;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-white;
+  }
+  
+  html:not(.dark) .prose strong {
+    @apply text-gray-900;
+  }
+  
+  .prose table {
+    @apply w-full my-8 border-collapse;
+  }
+  
+  .prose th {
+    @apply bg-dark-card text-left p-3 border font-semibold;
+    border-color: var(--border-color);
+  }
+  
+  .prose td {
+    @apply p-3 border;
+    border-color: var(--border-color);
+  }
+  
+  html:not(.dark) .prose th {
+    @apply bg-gray-100;
+  }
+  
+  .prose code {
+    @apply bg-dark-card px-2 py-1 rounded text-secondary text-sm;
+  }
+  
+  html:not(.dark) .prose code {
+    @apply bg-gray-100;
+  }
+  
+  .prose pre {
+    @apply bg-dark-card p-4 rounded-lg overflow-x-auto my-6;
+  }
+  
+  html:not(.dark) .prose pre {
+    @apply bg-gray-900;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-primary pl-4 italic my-6;
+  }
+</style>

@@ -4,7 +4,150 @@ An educational website designed to help marketing professionals optimize their p
 
 ## About
 
-AI Generative Engine Optimization (AI GEO) is the practice of optimizing your online presence to be more visible and accurately represented in AI-powered tools and search engines. As AI becomes the primary interface for information discovery, traditional SEO strategies must evolve.
+# AI Optimization - Generative Engine Optimization
+
+Educational resource for optimizing content visibility across AI platforms (ChatGPT, Gemini, Perplexity, Claude, and more).
+
+## 🚀 Quick Start
+
+### Active Development (New Astro Site)
+```bash
+cd astro-site
+npm install
+npm run dev
+```
+Visit http://localhost:4321
+
+See **[astro-site/README.md](astro-site/README.md)** for complete documentation.
+
+### Migration Information
+This repository is migrating from legacy HTML to a modern Astro framework. See **[docs/migration/MIGRATION_PLAN.md](docs/migration/MIGRATION_PLAN.md)** for the complete roadmap.
+
+---
+
+## 📁 Repository Structure
+
+### **astro-site/** - Active Astro Project ✨
+Modern static site generator with TypeScript, Tailwind CSS, and MDX content.
+- **Status**: In active development
+- **Docs**: [astro-site/README.md](astro-site/README.md)
+- **Tech Stack**: Astro, Tailwind, TypeScript, MDX
+
+### **legacy/** - Archived HTML Site 📦
+Original HTML/CSS/JavaScript implementation.
+- **Status**: Archived (reference only)
+- **Purpose**: Historical reference during migration
+- **Note**: No longer actively developed
+
+### **docs/** - Documentation 📚
+Organized documentation by category:
+- **migration/** - Migration guides, AI requirements, setup instructions
+- **legacy/** - Archived legacy documentation
+- **design/** - Design guidelines and templates
+- **project/** - Contributing, roadmap, project management
+
+### **scripts/** - Utility Scripts 🛠️
+Helper scripts for development and deployment.
+
+---
+
+## 🎯 What is AI GEO?
+
+**AI Generative Engine Optimization (AI GEO)** is the practice of optimizing digital content to appear in AI-generated responses and recommendations. As billions of users shift from traditional search to AI assistants, visibility in these platforms becomes critical for business growth.
+
+---
+
+## 📖 Key Documentation
+
+### Getting Started
+- **[Astro Site README](astro-site/README.md)** - Development guide for new site
+- **[Migration Plan](docs/migration/MIGRATION_PLAN.md)** - Complete migration roadmap
+- **[Setup Guide](docs/migration/SETUP.md)** - Installation instructions
+
+### Technical Documentation
+- **[AI Requirements](docs/migration/AI_REQUIREMENTS.md)** - AI optimization specifications
+- **[Design Guide](docs/design/design-style-guide.md)** - Design system documentation
+
+### Project Management
+- **[Contributing](docs/project/CONTRIBUTING.md)** - Contribution guidelines
+- **[Roadmap](docs/project/ROADMAP.md)** - Future plans
+
+---
+
+## 🏗️ Development Status
+
+**Current Phase**: Migrating to Astro (Phase 2 - Component Development)
+
+**Progress**:
+- ✅ Phase 1: Project setup & scaffolding
+- 🔄 Phase 2: Component development
+- ⏳ Phases 3-10: Content migration, optimization, testing
+
+See [docs/migration/MIGRATION_PLAN.md](docs/migration/MIGRATION_PLAN.md) for detailed progress.
+
+---
+
+## 🛠️ Technology Stack
+
+### New Stack (Astro Site)
+- **Framework**: Astro (static site generation)
+- **Styling**: Tailwind CSS
+- **Content**: MDX (Markdown + Components)
+- **Language**: TypeScript
+- **Testing**: Playwright
+- **Search**: Pagefind
+
+### Legacy Stack (Archived)
+- HTML5, CSS3, Vanilla JavaScript
+- See `legacy/` directory
+
+---
+
+## 🎨 Design System
+
+**Tron: Ares Inspired Theme**
+
+**Dark Mode (Default)**
+- Background: `#050a10`
+- Primary: `#ff2222` (Ares Red Neon)
+- Secondary: `#40f6ff` (Cyan Neon)
+
+**Light Mode**
+- Background: `#f8fbfd`
+- Primary: `#0088aa` (Electric Cyan)
+- Secondary: `#d95f00` (Vibrant Orange)
+
+All color combinations are WCAG 2 AA compliant.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!
+
+1. Review [docs/project/CONTRIBUTING.md](docs/project/CONTRIBUTING.md)
+2. Check open issues
+3. Fork and create a feature branch
+4. Submit a pull request
+
+---
+
+## 📄 License
+
+MIT License - See LICENSE file for details
+
+---
+
+## 🔗 Useful Links
+
+- **Development**: Start in [astro-site/](astro-site/)
+- **Migration Docs**: [docs/migration/](docs/migration/)
+- **Legacy Reference**: [legacy/](legacy/)
+- **Issues**: [GitHub Issues](https://github.com/ThomasSchmitz/ai-optimization/issues)
+
+---
+
+**Built with ❤️ for the AI optimization community**
 
 This website provides comprehensive guides, best practices, and resources for marketing professionals to:
 

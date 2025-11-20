@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark Mode (Default) */
+    --bg-color: #050a10;
+    --bg-alt: #0b101a;
+    --card-bg: #111827;
+    
+    --primary-color: #ff2222;
+    --secondary-color: #40f6ff;
+    --accent-color: #ffffff;
+    
+    --text-color: #f8fafc;
+    --text-light: #cbd5e1;
+    
+    --border-color: rgba(255, 34, 34, 0.3);
+    --grid-color: rgba(255, 34, 34, 0.03);
+  }
+  
+  :root:not(.dark) {
+    /* Light Mode */
+    --bg-color: #f8fbfd;
+    --bg-alt: #edf5f9;
+    --card-bg: #ffffff;
+    
+    --primary-color: #0088aa;
+    --secondary-color: #d95f00;
+    --accent-color: #005f7a;
+    
+    --text-color: #0f1419;
+    --text-light: #3d4854;
+    
+    --border-color: rgba(0, 136, 170, 0.3);
+    --grid-color: rgba(0, 136, 170, 0.06);
+  }
+  
+  * {
+    border-color: var(--border-color);
+  }
+  
+  body {
+    @apply bg-dark-bg text-white;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+  
+  html:not(.dark) body {
+    @apply bg-light-bg text-gray-900;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+}
+
+@layer components {
+  /* Container */
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 focus:ring-primary shadow-glow-primary;
+  }
+  
+  .btn-secondary {
+    @apply border border-secondary text-secondary hover:bg-secondary hover:text-dark-bg focus:ring-secondary;
+  }
+  
+  /* Cards */
+  .card {
+    @apply bg-dark-card rounded-lg p-6 shadow-card transition-all duration-300 hover:shadow-card-lg;
+  }
+  
+  html:not(.dark) .card {
+    @apply bg-white shadow-md hover:shadow-lg;
+  }
+  
+  /* Grid background effect */
+  .grid-bg {
+    background-image: 
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  /* Neon glow effect */
+  .neon-glow {
+    box-shadow: 0 0 10px var(--primary-color),
+                0 0 20px var(--primary-color),
+                0 0 30px var(--primary-color);
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  /* Links */
+  a {
+    @apply text-primary hover:text-secondary transition-colors duration-200;
+  }
+  
+  html:not(.dark) a {
+    @apply text-primary-light hover:text-secondary-light;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  /* Text utilities */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-dark-bg-alt;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-secondary;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 34, 34, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 34, 34, 0.8), 0 0 30px rgba(255, 34, 34, 0.6);
+  }
+}
