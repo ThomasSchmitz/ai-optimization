@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arc Search Optimization Guide – Learn how to show up inside a browser-native AI search and browsing experience." />
+    <meta name="keywords" content="Arc, Arc Search, AI browser, mobile AI search, GEO" />
+    <title>Arc Search Optimization Guide | AI GEO</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <script src="../../assets/js/includes.js"></script>
+</head>
+<body>
+    <div id="header-placeholder" data-include="../../components/header.html">
+        <noscript>
+            <div class="noscript-nav" role="navigation" aria-label="Primary navigation">
+                <a class="noscript-logo" href="/index.html">AI GEO</a>
+                <ul>
+                    <li><a href="/pages/guides/website-optimization.html">Guides</a></li>
+                    <li><a href="/pages/industries/local-business.html">Industries</a></li>
+                    <li><a href="/pages/resources/templates.html">Resources</a></li>
+                    <li><a href="/pages/support.html">Support</a></li>
+                    <li><a href="/pages/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </noscript>
+    </div>
+
+    <main>
+        <section class="platform-hero">
+            <div class="container">
+                <div class="platform-hero-content">
+                    <div class="platform-icon">📱</div>
+                    <h1 class="platform-title">Arc Search Optimization Guide</h1>
+                    <p class="platform-description">
+                        Arc blends mobile browser, search, and AI summarization into one interface. 
+                        Use this guide to optimize your content for Arc’s “browse for me” style experiences.
+                    </p>
+                    <div class="platform-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">Browser-Native</span>
+                            <span class="stat-label">AI Built Into Browsing</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">Mobile-First</span>
+                            <span class="stat-label">Designed for On-the-Go Research</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">Summarization</span>
+                            <span class="stat-label">Reads Pages, Writes Answers</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta-buttons">
+                        <a href="#optimization" class="btn btn-primary">View Optimization Guide</a>
+                        <a href="#checklist" class="btn btn-secondary">Open Checklist</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="toc-container">
+                    <h2>Table of Contents</h2>
+                    <nav class="table-of-contents">
+                        <ul>
+                            <li><a href="#overview">Platform Overview</a></li>
+                            <li><a href="#behavior">How Arc Search Works</a></li>
+                            <li><a href="#optimization">Optimization Strategies</a></li>
+                            <li><a href="#mobile">Mobile & UX Considerations</a></li>
+                            <li><a href="#implementation">Implementation Roadmap</a></li>
+                            <li><a href="#checklist">Optimization Checklist</a></li>
+                            <li><a href="#resources">Resources & Tools</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section id="overview" class="content-section alt-bg">
+            <div class="container">
+                <h2>What is Arc Search?</h2>
+                <p class="section-intro">
+                    Arc is a browser and mobile app that uses AI to summarize the web for you. 
+                    Instead of only showing links, Arc can “browse for you,” read multiple pages, 
+                    and deliver a synthesized answer.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="icon">🧭</div>
+                        <h3>AI + Browser Hybrid</h3>
+                        <p>
+                            Arc doesn’t behave like a typical search box. It’s a browser that uses 
+                            AI to interpret queries, choose pages to visit, and summarize what it finds.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">📲</div>
+                        <h3>Mobile-First Experience</h3>
+                        <p>
+                            On phones, Arc’s “browse for me” mode is designed for users who want 
+                            answers, not tabs. That makes mobile readability a core GEO signal.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🧩</div>
+                        <h3>Source Blending</h3>
+                        <p>
+                            Arc pulls from multiple pages and blends them into one answer. It often 
+                            favors well-structured, scannable articles it can parse quickly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="behavior" class="content-section">
+            <div class="container">
+                <h2>How Arc Search Works</h2>
+                <p class="section-intro">
+                    Arc typically starts with a prompt, opens several relevant pages, and then 
+                    uses AI to create a summary. The user can dive into original sources as needed.
+                </p>
+
+                <div class="info-boxes">
+                    <div class="info-box">
+                        <h3>Selection Behavior</h3>
+                        <ul>
+                            <li>Leans on mainstream search indexes to find candidate pages.</li>
+                            <li>Prefers pages that load quickly and render cleanly on mobile.</li>
+                            <li>Surfaces recognizable brands and clear topical authority.</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h3>Summarization</h3>
+                        <ul>
+                            <li>Extracts headings, list items, and key sentences.</li>
+                            <li>Combines overlapping information from multiple sites.</li>
+                            <li>May compress long sections into a few bullet points.</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <h3>User Flow</h3>
+                        <ul>
+                            <li>Users skim Arc’s summary first.</li>
+                            <li>They tap into original pages for depth, visuals, and trust.</li>
+                            <li>Your page often acts as the “source of detail,” not the first touch.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="optimization" class="content-section alt-bg">
+            <div class="container">
+                <h2>Optimization Strategies for Arc</h2>
+                <p class="section-intro">
+                    The best way to optimize for Arc is to create pages that AI can 
+                    summarize easily, while still rewarding users who click through.
+                </p>
+
+                <div class="strategy-list">
+                    <div class="strategy-item">
+                        <h3>1. Design for Summaries</h3>
+                        <ul>
+                            <li>Use clear H2/H3s that describe each section’s main takeaway.</li>
+                            <li>Include bullet lists for key steps, pros/cons, and checklists.</li>
+                            <li>Add a TL;DR or summary section Arc can lift directly.</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h3>2. Make Mobile the Default</h3>
+                        <ul>
+                            <li>Test pages on small screens; avoid horizontal scrolling.</li>
+                            <li>Use readable font sizes and adequate line spacing.</li>
+                            <li>Keep interactive elements large enough for touch.</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h3>3. Strengthen Topical Authority</h3>
+                        <ul>
+                            <li>Publish clusters of related content around key topics.</li>
+                            <li>Interlink guides, glossaries, and case studies.</li>
+                            <li>Demonstrate E-E-A-T with author bios and source citations.</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h3>4. Optimize for Speed & Stability</h3>
+                        <ul>
+                            <li>Compress images and defer non-critical scripts.</li>
+                            <li>Avoid heavy popups or modals that could block content.</li>
+                            <li>Monitor Core Web Vitals, especially on mobile connections.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mobile" class="content-section">
+            <div class="container">
+                <h2>Mobile & UX Considerations for Arc</h2>
+                <p class="section-intro">
+                    Arc’s sweet spot is mobile browsing with AI assistance. Small UX wins 
+                    compound into better GEO performance.
+                </p>
+
+                <div class="strategy-list">
+                    <div class="strategy-item">
+                        <h3>Readable Layouts</h3>
+                        <ul>
+                            <li>Keep paragraphs short (2–4 lines on mobile).</li>
+                            <li>Use subheadings frequently to break up long sections.</li>
+                            <li>Choose high-contrast color combinations for text and backgrounds.</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h3>Tap-Friendly Design</h3>
+                        <ul>
+                            <li>Use large, spaced buttons for CTAs.</li>
+                            <li>Avoid tiny links placed too close together.</li>
+                            <li>Provide sticky or easy-to-reach navigation options.</li>
+                        </ul>
+                    </div>
+                    <div class="strategy-item">
+                        <h3>Context-Aware CTAs</h3>
+                        <ul>
+                            <li>Assume users just read a summary elsewhere; offer depth and tools.</li>
+                            <li>Promote calculators, templates, and checklists instead of generic CTAs.</li>
+                            <li>Align calls-to-action with the query’s intent (research vs. purchase).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="implementation" class="content-section alt-bg">
+            <div class="container">
+                <h2>Implementation Roadmap</h2>
+                <p class="section-intro">
+                    Integrate Arc into your GEO strategy with a mobile-first, summary-aware plan.
+                </p>
+
+                <div class="implementation-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Identify Arc-Relevant Journeys</h3>
+                            <ul>
+                                <li>Focus on informational and “explain this topic” searches.</li>
+                                <li>Map 10–20 queries where users want fast mobile answers.</li>
+                                <li>Choose or create pages to own those journeys.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Refactor for Arc Summaries</h3>
+                            <ul>
+                                <li>Add TL;DR sections and strong subheadings.</li>
+                                <li>Turn key information into bullets and tables.</li>
+                                <li>Ensure pages pass mobile usability and speed checks.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Test “Browse for Me” Scenarios</h3>
+                            <ul>
+                                <li>Use Arc on mobile to run target queries.</li>
+                                <li>Observe which sites get summarized and why.</li>
+                                <li>Iterate on content structure and performance based on findings.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist" class="content-section">
+            <div class="container">
+                <h2>Arc Search Optimization Checklist</h2>
+                <p class="section-intro">
+                    Confirm your pages are Arc-ready before you scale campaigns around them.
+                </p>
+
+                <div class="checklist-grid">
+                    <div class="checklist-section">
+                        <h3>✅ Structure</h3>
+                        <ul class="checklist">
+                            <li>Clear H2/H3s that map to key subtopics.</li>
+                            <li>TL;DR or summary section near the top.</li>
+                            <li>Bulleted lists for steps, pros/cons, and key data.</li>
+                        </ul>
+                    </div>
+                    <div class="checklist-section">
+                        <h3>✅ Mobile UX</h3>
+                        <ul class="checklist">
+                            <li>Readable font sizes and adequate spacing.</li>
+                            <li>No layout-breaking elements on small screens.</li>
+                            <li>Tap-friendly CTAs and navigation.</li>
+                        </ul>
+                    </div>
+                    <div class="checklist-section">
+                        <h3>✅ Performance</h3>
+                        <ul class="checklist">
+                            <li>Good Core Web Vitals on mobile.</li>
+                            <li>Optimized images and minimal blocking scripts.</li>
+                            <li>No intrusive interstitials on entry.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="content-section alt-bg">
+            <div class="container">
+                <h2>Resources & Tools</h2>
+                <p class="section-intro">
+                    Explore Arc and related AI GEO resources.
+                </p>
+
+                <div class="resources-grid">
+                    <div class="resource-category">
+                        <h3>Official</h3>
+                        <ul class="resource-list">
+                            <li><a href="https://arc.net/" target="_blank" rel="noopener">Arc Browser</a></li>
+                            <li><a href="https://arc.net/arc-search" target="_blank" rel="noopener">Arc Search</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h3>AI GEO Guides</h3>
+                        <ul class="resource-list">
+                            <li><a href="../../index.html#what-is-ai-geo">What is AI GEO?</a></li>
+                            <li><a href="../../pages/guides/website-optimization.html">Website Optimization Guide</a></li>
+                            <li><a href="../../pages/guides/technical-seo.html">Technical SEO Guide</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h3>Related Platforms</h3>
+                        <ul class="resource-list">
+                            <li><a href="perplexity.html">Perplexity Optimization Guide</a></li>
+                            <li><a href="you-com.html">You.com Optimization Guide</a></li>
+                            <li><a href="emerging-ai.html">Emerging AI Platforms</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-box" style="margin-top: 3rem;">
+                    <h3>Turn Arc into a Mobile GEO Lab</h3>
+                    <p>
+                        Arc is still a smaller player, but it’s a preview of how AI may be 
+                        baked directly into browsing. Use it to stress-test mobile UX, summary 
+                        design, and GEO fundamentals before they become table stakes.
+                    </p>
+                    <a href="#checklist" class="btn btn-primary">Review the Checklist</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder" data-include="../../components/footer.html">
+        <noscript>
+            <div class="noscript-footer">
+                <p><strong>AI GEO</strong> · Generative Engine Optimization</p>
+                <p><a href="/pages/contact.html">Contact</a> · <a href="/pages/support.html">Support</a> · <a href="/pages/resources/templates.html">Resources</a></p>
+            </div>
+        </noscript>
+    </div>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
