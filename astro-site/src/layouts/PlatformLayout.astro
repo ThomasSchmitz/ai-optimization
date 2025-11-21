@@ -1,0 +1,221 @@
+---
+/**
+ * PlatformLayout - Layout for AI platform pages
+ * Features: Platform hero, optimization checklist, case studies
+ */
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import PlatformHero from '@/components/PlatformHero.astro';
+import SEO from '@/components/SEO.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  platform: {
+    name: string;
+    logo?: string;
+    color?: string;
+    features?: string[];
+  };
+  checklist?: Array<{
+    title: string;
+    description: string;
+    completed?: boolean;
+  }>;
+  caseStudies?: Array<{
+    title: string;
+    company: string;
+    result: string;
+    metric: string;
+    description: string;
+  }>;
+  relatedPlatforms?: Array<{
+    name: string;
+    slug: string;
+    description: string;
+  }>;
+}
+
+const {
+  title,
+  description,
+  platform,
+  checklist = [],
+  caseStudies = [],
+  relatedPlatforms = [],
+} = Astro.props;
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Platforms', href: '/platforms' },
+  { label: platform.name, href: Astro.url.pathname },
+];
+
+// Schema for Platform page
+const platformSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description: description,
+  url: new URL(Astro.url.pathname, Astro.site),
+  about: {
+    '@type': 'SoftwareApplication',
+    name: platform.name,
+    applicationCategory: 'AI Platform',
+    description: description,
+  },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      item: new URL(item.href, Astro.site),
+    })),
+  },
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <SEO slot="head" title={title} description={description} schema={platformSchema} />
+
+  <div class="container py-8">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <!-- Platform Hero Section -->
+    <PlatformHero platformName={platform.name} description={description} icon={platform.logo} />
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-12">
+      <!-- Main Content -->
+      <article class="lg:col-span-8 prose prose-invert max-w-none">
+        <slot />
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-4 space-y-8">
+        <!-- Quick Start CTA -->
+        <div class="sticky top-20 space-y-6">
+          <div
+            class="p-6 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/30"
+          >
+            <h3 class="text-lg font-semibold mb-2">Quick Start Guide</h3>
+            <p class="text-sm text-light mb-4">
+              Optimize for {platform.name} in 5 simple steps
+            </p>
+            <a
+              href={`#getting-started`}
+              class="inline-block px-4 py-2 bg-primary text-white rounded hover:bg-primary/80 transition-colors"
+            >
+              Get Started
+            </a>
+          </div>
+
+          <!-- Download Resources -->
+          <div class="p-6 rounded-lg bg-dark-card border border-secondary/30">
+            <h3 class="text-lg font-semibold mb-4">Resources</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a
+                  href={`/downloads/${platform.name.toLowerCase()}-checklist.pdf`}
+                  class="flex items-center gap-2 text-light hover:text-primary transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    ></path>
+                  </svg>
+                  Optimization Checklist
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`/downloads/${platform.name.toLowerCase()}-guide.pdf`}
+                  class="flex items-center gap-2 text-light hover:text-primary transition-colors"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    ></path>
+                  </svg>
+                  Complete Guide PDF
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Related Platforms -->
+          {
+            relatedPlatforms.length > 0 && (
+              <div class="p-6 rounded-lg bg-dark-card border border-primary/30">
+                <h3 class="text-lg font-semibold mb-4">Related Platforms</h3>
+                <ul class="space-y-3">
+                  {relatedPlatforms.map(relatedPlatform => (
+                    <li>
+                      <a
+                        href={`/platforms/${relatedPlatform.slug}`}
+                        class="block p-3 rounded hover:bg-dark-bg transition-colors group"
+                      >
+                        <h4 class="font-medium text-white group-hover:text-primary transition-colors">
+                          {relatedPlatform.name}
+                        </h4>
+                        <p class="text-sm text-light mt-1">{relatedPlatform.description}</p>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          }
+        </div>
+      </aside>
+    </div>
+
+    <!-- Optimization Checklist -->
+    {/* TODO: Implement checklist with proper categories structure */}
+    {
+      checklist.length > 0 && (
+        <section class="mt-16">
+          <h2 class="text-3xl font-bold mb-8">Optimization Checklist</h2>
+          <div class="space-y-4">
+            {checklist.map((item, index) => (
+              <div class="p-4 rounded-lg bg-dark-card border border-primary/30">
+                <h3 class="font-semibold mb-2">
+                  {index + 1}. {item.title}
+                </h3>
+                <p class="text-sm text-light">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <!-- Case Studies -->
+    {
+      caseStudies.length > 0 && (
+        <section class="mt-16">
+          <h2 class="text-3xl font-bold mb-8">Success Stories</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {caseStudies.map(study => (
+              <div class="p-6 rounded-lg bg-dark-card border border-secondary/30">
+                <h3 class="text-xl font-semibold mb-2">{study.title}</h3>
+                <p class="text-sm text-secondary mb-3">{study.company}</p>
+                <p class="text-light mb-4">{study.description}</p>
+                <div class="flex items-center gap-4 text-sm">
+                  <span class="text-primary font-bold">{study.metric}</span>
+                  <span class="text-light">{study.result}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>

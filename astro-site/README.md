@@ -5,6 +5,7 @@ Modern, performant website for AI Generative Engine Optimization education and r
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+ ([Download](https://nodejs.org/))
 - npm or pnpm
 
@@ -42,16 +43,16 @@ http://localhost:4321
 
 ## 🧞 Commands
 
-| Command | Action |
-|---------|--------|
-| `npm install` | Install dependencies |
-| `npm run dev` | Start dev server at `localhost:4321` |
-| `npm run build` | Build production site to `./dist/` |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Format code with Prettier |
-| `npm run type-check` | Check TypeScript types |
-| `npm run test` | Run E2E tests with Playwright |
+| Command              | Action                               |
+| -------------------- | ------------------------------------ |
+| `npm install`        | Install dependencies                 |
+| `npm run dev`        | Start dev server at `localhost:4321` |
+| `npm run build`      | Build production site to `./dist/`   |
+| `npm run preview`    | Preview production build locally     |
+| `npm run lint`       | Run ESLint                           |
+| `npm run format`     | Format code with Prettier            |
+| `npm run type-check` | Check TypeScript types               |
+| `npm run test`       | Run E2E tests with Playwright        |
 
 ## 🎨 Technology Stack
 
@@ -71,11 +72,11 @@ http://localhost:4321
 
 ```yaml
 ---
-title: "Your Guide Title"
-description: "SEO-friendly description"
+title: 'Your Guide Title'
+description: 'SEO-friendly description'
 publishDate: 2025-11-20
 lastUpdated: 2025-11-20
-category: "platform"
+category: 'platform'
 featured: true
 ---
 ```
@@ -107,18 +108,22 @@ Similar process in `src/content/platforms/` with platform-specific schema.
 ## 🔧 Configuration
 
 ### Site URL
+
 Update in `astro.config.mjs` with your Bluehost domain:
+
 ```javascript
 export default defineConfig({
-  site: 'https://yourdomain.com',  // Replace with your Bluehost domain
+  site: 'https://yourdomain.com', // Replace with your Bluehost domain
   // ...
 });
 ```
 
 ### Theme Colors
+
 Customize in `tailwind.config.mjs` under `theme.extend.colors`
 
 ### SEO
+
 Global SEO settings in `src/layouts/BaseLayout.astro`
 
 ## 🚢 Deployment
@@ -156,6 +161,7 @@ npm run build
    - Contact Bluehost support for setup
 
 **Important Notes:**
+
 - Always upload the **contents** of `dist/`, not the folder itself
 - Clear browser cache after deployment
 - Test on a subdomain first if available
@@ -192,6 +198,7 @@ MIT
 **Platform**: Bluehost Shared Hosting
 
 **Deployment Checklist:**
+
 - [ ] Run `npm run build` locally
 - [ ] Test build with `npm run preview`
 - [ ] Upload `dist/*` to Bluehost `public_html/`

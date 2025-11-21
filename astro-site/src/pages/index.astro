@@ -2,46 +2,74 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
 const pageTitle = 'AI GEO';
-const pageDescription = 'Learn how to optimize your product sales websites and online presence for AI visibility in ChatGPT, Gemini, Copilot, Grok, Meta AI, You.com, Voice Search, and AI search overviews.';
+const pageDescription =
+  'Learn how to optimize your product sales websites and online presence for AI visibility in ChatGPT, Gemini, Copilot, Grok, Meta AI, You.com, Voice Search, and AI search overviews.';
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Page Subnav -->
+  <nav
+    class="page-subnav border-b"
+    style="border-color: var(--border-color);"
+    aria-label="Home page sections"
+  >
+    <div class="container">
+      <span class="page-subnav-label text-sm font-semibold mr-4">On this page:</span>
+      <ul class="flex flex-wrap gap-4 text-sm">
+        <li><a href="#home" class="hover:text-primary transition-colors">Overview</a></li>
+        <li>
+          <a href="#what-is-ai-geo" class="hover:text-primary transition-colors">What is AI GEO?</a>
+        </li>
+        <li>
+          <a href="#ai-marketing-funnel" class="hover:text-primary transition-colors"
+            >AI Marketing Funnel</a
+          >
+        </li>
+        <li>
+          <a href="#ai-tools" class="hover:text-primary transition-colors">Major AI Platforms</a>
+        </li>
+        <li>
+          <a href="#best-practices" class="hover:text-primary transition-colors">Best Practices</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   <main class="min-h-screen">
     <!-- Hero Section -->
-    <section class="hero py-20 md:py-32 grid-bg">
+    <section id="home" class="hero py-20 md:py-32">
       <div class="container">
         <div class="max-w-4xl mx-auto text-center animate-fade-in">
-          <h1 class="text-gradient mb-6">
-            Get Found When It Matters Most: AI Search Optimization
-          </h1>
-          <p class="text-xl md:text-2xl text-light-bg-alt dark:text-dark-bg-alt mb-10 leading-relaxed">
-            Over 1 billion people now use AI tools like ChatGPT, Gemini, and Perplexity to research products and
-            make purchase decisions. Is your brand visible when they ask?
+          <h1 class="text-gradient mb-6">Get Found When It Matters Most: AI Search Optimization</h1>
+          <p class="text-xl md:text-2xl mb-10 leading-relaxed" style="color: var(--text-light);">
+            Over 1 billion people now use AI tools like ChatGPT, Gemini, and Perplexity to research
+            products and make purchase decisions. Is your brand visible when they ask? Learn how to
+            optimize for AI Generative Engine Optimization (AI GEO) and ensure your business appears
+            in AI-powered search results and recommendations.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#what-is-ai-geo" class="btn btn-primary">
-              Understand AI GEO
-            </a>
-            <a href="#ai-tools" class="btn btn-secondary">
-              See Major Platforms
-            </a>
+            <a href="#what-is-ai-geo" class="btn btn-primary"> Understand AI GEO </a>
+            <a href="#ai-tools" class="btn btn-secondary"> See Major Platforms </a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- What is AI GEO Section -->
-    <section id="what-is-ai-geo" class="py-20 bg-dark-bg-alt dark:bg-dark-bg-alt">
+    <section id="what-is-ai-geo" class="py-20 bg-light-bg-alt dark:bg-dark-bg-alt">
       <div class="container">
         <h2 class="text-center mb-12">What is AI GEO?</h2>
         <div class="max-w-3xl mx-auto text-lg leading-relaxed space-y-6">
           <p>
-            <strong class="text-primary">AI Generative Engine Optimization (AI GEO)</strong> is the practice of optimizing your
-            digital presence to appear in AI-generated responses, recommendations, and search results.
+            <strong class="text-primary">AI Generative Engine Optimization (AI GEO)</strong> is the practice
+            of optimizing your digital presence to appear in AI-generated responses, recommendations,
+            and search results. As billions of people shift from traditional search engines to conversational
+            AI assistants, your visibility in these platforms directly impacts your business growth.
           </p>
           <p>
-            As billions of people shift from traditional search engines to conversational AI assistants,
-            your visibility in these platforms directly impacts your business growth.
+            Unlike traditional SEO that focuses on ranking in search engine results pages, AI GEO
+            ensures your brand is mentioned, cited, and recommended when AI tools answer questions
+            about your industry, products, or services.
           </p>
         </div>
 
@@ -49,58 +77,987 @@ const pageDescription = 'Learn how to optimize your product sales websites and o
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
           <div class="card animate-slide-up">
             <div class="text-5xl mb-4">🎯</div>
-            <h3 class="text-xl mb-3">Direct Answers & Citations</h3>
-            <p class="text-light-bg-alt dark:text-dark-bg-alt">
-              AI tools provide direct answers rather than link lists. Get your brand in that answer.
+            <h3 class="text-xl font-semibold mb-3">Direct Answers & Citations</h3>
+            <p class="text-light">
+              AI tools provide direct answers rather than link lists. When users ask "What's the
+              best CRM for small businesses?" you want your brand in that answer—not buried in
+              search results they'll never click.
             </p>
           </div>
 
           <div class="card animate-slide-up" style="animation-delay: 0.1s;">
             <div class="text-5xl mb-4">📊</div>
-            <h3 class="text-xl mb-3">Control Your Narrative</h3>
-            <p class="text-light-bg-alt dark:text-dark-bg-alt">
-              AI models form their understanding from publicly available information. Ensure accurate representation.
+            <h3 class="text-xl font-semibold mb-3">Control Your Narrative</h3>
+            <p class="text-light">
+              AI models form their understanding of your brand from publicly available information.
+              Proper optimization ensures accurate, favorable representation of your products,
+              services, and unique value proposition.
             </p>
           </div>
 
           <div class="card animate-slide-up" style="animation-delay: 0.2s;">
             <div class="text-5xl mb-4">🚀</div>
-            <h3 class="text-xl mb-3">First-Mover Advantage</h3>
-            <p class="text-light-bg-alt dark:text-dark-bg-alt">
-              While 80% of businesses ignore AI optimization, early adopters are capturing market share.
+            <h3 class="text-xl font-semibold mb-3">First-Mover Advantage</h3>
+            <p class="text-light">
+              While 80% of businesses still ignore AI optimization, early adopters are capturing
+              market share. Companies optimizing for AI now are building dominance that will
+              compound over time.
             </p>
           </div>
 
           <div class="card animate-slide-up" style="animation-delay: 0.3s;">
             <div class="text-5xl mb-4">💡</div>
-            <h3 class="text-xl mb-3">Future-Proof Marketing</h3>
-            <p class="text-light-bg-alt dark:text-dark-bg-alt">
-              By 2026, over 50% of all search queries will be AI-mediated. Optimize now.
+            <h3 class="text-xl font-semibold mb-3">Future-Proof Your Marketing</h3>
+            <p class="text-light">
+              AI adoption is accelerating rapidly. By 2026, analysts predict that over 50% of all
+              search queries will be AI-mediated. Optimizing now ensures you're ready for the
+              inevitable shift.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20">
+    <!-- AI Marketing Funnel Section -->
+    <section id="ai-marketing-funnel" class="py-20">
+      <div class="container">
+        <h2 class="text-center mb-6">How Consumers Use AI Throughout Their Journey</h2>
+        <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-light">
+          Modern consumers rely on AI at every stage of their decision-making process. Understanding
+          how AI influences each layer of the marketing funnel helps you optimize your presence
+          where it matters most.
+        </p>
+
+        <div class="space-y-8 max-w-5xl mx-auto">
+          <!-- Awareness Stage -->
+          <div class="card border-l-4" style="border-left-color: var(--primary);">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="text-4xl">🔍</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-1">Awareness</h3>
+                <p class="text-light text-sm">Discovering Solutions</p>
+              </div>
+            </div>
+            <h4 class="font-semibold mb-3">How Consumers Use AI:</h4>
+            <ul class="space-y-2 mb-4 text-light">
+              <li>
+                <strong>Exploratory Searches:</strong> "What are the best tools for project management?"
+              </li>
+              <li>
+                <strong>Problem Identification:</strong> "How can I improve my website's SEO?"
+              </li>
+              <li><strong>Trend Discovery:</strong> "What's new in AI marketing automation?"</li>
+              <li>
+                <strong>Educational Queries:</strong> "Explain generative engine optimization"
+              </li>
+            </ul>
+            <div class="bg-primary/10 border border-primary/20 rounded-lg p-4">
+              <p class="text-sm">
+                <strong>💡 Optimization Strategy:</strong> Create comprehensive educational content,
+                guides, and thought leadership pieces that AI can cite when answering broad industry
+                questions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Consideration Stage -->
+          <div class="card border-l-4" style="border-left-color: var(--secondary);">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="text-4xl">⚖️</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-1">Consideration</h3>
+                <p class="text-light text-sm">Evaluating Options</p>
+              </div>
+            </div>
+            <h4 class="font-semibold mb-3">How Consumers Use AI:</h4>
+            <ul class="space-y-2 mb-4 text-light">
+              <li><strong>Comparisons:</strong> "Compare Mailchimp vs HubSpot vs Klaviyo"</li>
+              <li><strong>Feature Research:</strong> "Does X product have Y feature?"</li>
+              <li><strong>Reviews & Ratings:</strong> "What do users say about [your product]?"</li>
+              <li><strong>Use Case Validation:</strong> "Best CRM for small businesses"</li>
+            </ul>
+            <div class="bg-secondary/10 border border-secondary/20 rounded-lg p-4">
+              <p class="text-sm">
+                <strong>💡 Optimization Strategy:</strong> Ensure product features, specifications, and
+                comparison content are clearly structured. Encourage and showcase customer reviews with
+                schema markup.
+              </p>
+            </div>
+          </div>
+
+          <!-- Decision Stage -->
+          <div class="card border-l-4" style="border-left-color: #10b981;">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="text-4xl">✅</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-1">Decision</h3>
+                <p class="text-light text-sm">Making the Purchase</p>
+              </div>
+            </div>
+            <h4 class="font-semibold mb-3">How Consumers Use AI:</h4>
+            <ul class="space-y-2 mb-4 text-light">
+              <li><strong>Final Validation:</strong> "Is [your product] worth the price?"</li>
+              <li><strong>Pricing Queries:</strong> "How much does [your product] cost?"</li>
+              <li>
+                <strong>Trust Signals:</strong> "Is [your company] legitimate and trustworthy?"
+              </li>
+              <li><strong>Deal Finding:</strong> "Are there discounts for [your product]?"</li>
+            </ul>
+            <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+              <p class="text-sm">
+                <strong>💡 Optimization Strategy:</strong> Keep pricing, testimonials, and trust signals
+                (certifications, awards, case studies) current and easily accessible. Use structured
+                data for offers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Retention Stage -->
+          <div class="card border-l-4" style="border-left-color: #f59e0b;">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="text-4xl">🔄</div>
+              <div>
+                <h3 class="text-2xl font-bold mb-1">Retention</h3>
+                <p class="text-light text-sm">Ongoing Support & Expansion</p>
+              </div>
+            </div>
+            <h4 class="font-semibold mb-3">How Consumers Use AI:</h4>
+            <ul class="space-y-2 mb-4 text-light">
+              <li>
+                <strong>Support Queries:</strong> "How do I set up [feature] in [your product]?"
+              </li>
+              <li><strong>Troubleshooting:</strong> "Fix common issues with [your product]"</li>
+              <li><strong>Advanced Usage:</strong> "Best practices for using [your product]"</li>
+              <li>
+                <strong>Expansion:</strong> "What additional features does [your product] offer?"
+              </li>
+            </ul>
+            <div class="bg-amber-500/10 border border-amber-500/20 rounded-lg p-4">
+              <p class="text-sm">
+                <strong>💡 Optimization Strategy:</strong> Maintain comprehensive FAQs, help documentation,
+                and tutorial content that AI can reference to assist your existing customers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Funnel Bottom Line -->
+        <div class="card bg-primary/5 border-2 border-primary/30 mt-8 max-w-5xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4">🎯 The Bottom Line</h3>
+          <p class="text-lg text-light">
+            AI is now the primary research assistant for consumers at every stage of their journey.
+            By optimizing your content for AI visibility across the entire funnel, you ensure your
+            brand is present when potential customers are gathering information, comparing options,
+            making decisions, and seeking support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Tools Section -->
+    <section id="ai-tools" class="py-20 bg-light-bg-alt dark:bg-dark-bg-alt">
+      <div class="container">
+        <h2 class="text-center mb-6">Major AI Platforms Shaping Consumer Decisions</h2>
+        <p class="text-lg text-center max-w-4xl mx-auto mb-12 text-light">
+          These are the AI platforms where your potential customers are already searching,
+          researching, and making purchase decisions. Each platform has unique characteristics, user
+          demographics, and optimization requirements. We provide comprehensive guides for each
+          major platform below, plus coverage of emerging platforms and international AI tools that
+          may be critical for your specific market.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- ChatGPT -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-3">ChatGPT (OpenAI)</h3>
+            <p class="text-light mb-4">
+              The most widely used conversational AI, ChatGPT helps users find information, make
+              decisions, and discover products. Features SearchGPT for web search integration.
+              Optimize your content to be cited in ChatGPT's responses.
+            </p>
+            <ul class="space-y-2 mb-4 text-sm text-light">
+              <li>✓ SearchGPT web search integration</li>
+              <li>✓ Real-time information access</li>
+              <li>✓ Source citations with links</li>
+            </ul>
+            <div class="flex gap-3 text-sm">
+              <a
+                href="https://chat.openai.com/"
+                target="_blank"
+                rel="noopener"
+                class="text-primary hover:underline">Visit ChatGPT →</a
+              >
+              <span class="text-light">|</span>
+              <a href="/platforms/chatgpt/" class="text-primary hover:underline"
+                >Optimization Guide →</a
+              >
+            </div>
+          </div>
+
+          <!-- Google Gemini -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-3">Google Gemini</h3>
+            <p class="text-light mb-4">
+              Google's multimodal AI integrates deeply with search. Appearing in Gemini responses
+              can significantly boost visibility in the Google ecosystem.
+            </p>
+            <ul class="space-y-2 mb-4 text-sm text-light">
+              <li>✓ Integration with Google Search</li>
+              <li>✓ AI Overviews in search results</li>
+              <li>✓ Multimodal understanding (text, images, video)</li>
+            </ul>
+            <div class="flex gap-3 text-sm">
+              <a
+                href="https://gemini.google.com/"
+                target="_blank"
+                rel="noopener"
+                class="text-primary hover:underline">Visit Gemini →</a
+              >
+              <span class="text-light">|</span>
+              <a href="/platforms/gemini/" class="text-primary hover:underline"
+                >Optimization Guide →</a
+              >
+            </div>
+          </div>
+
+          <!-- Microsoft Copilot -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-3">Microsoft Copilot</h3>
+            <p class="text-light mb-4">
+              Integrated across Microsoft products and Bing, Copilot reaches enterprise users and
+              consumers making purchase decisions.
+            </p>
+            <ul class="space-y-2 mb-4 text-sm text-light">
+              <li>✓ Bing integration</li>
+              <li>✓ Office suite integration</li>
+              <li>✓ Enterprise focus</li>
+            </ul>
+            <div class="flex gap-3 text-sm">
+              <a
+                href="https://copilot.microsoft.com/"
+                target="_blank"
+                rel="noopener"
+                class="text-primary hover:underline">Visit Copilot →</a
+              >
+              <span class="text-light">|</span>
+              <a href="/platforms/copilot/" class="text-primary hover:underline"
+                >Optimization Guide →</a
+              >
+            </div>
+          </div>
+
+          <!-- Grok -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-3">Grok (X)</h3>
+            <p class="text-light mb-4">
+              X's AI assistant with real-time access to platform conversations, ideal for brands
+              with strong social media presence.
+            </p>
+            <ul class="space-y-2 mb-4 text-sm text-light">
+              <li>✓ Real-time X data access</li>
+              <li>✓ Social conversation analysis</li>
+              <li>✓ Trending topic awareness</li>
+            </ul>
+            <div class="flex gap-3 text-sm">
+              <a
+                href="https://grok.x.ai/"
+                target="_blank"
+                rel="noopener"
+                class="text-primary hover:underline">Visit Grok →</a
+              >
+              <span class="text-light">|</span>
+              <a href="/platforms/grok/" class="text-primary hover:underline">Optimization Guide →</a
+              >
+            </div>
+          </div>
+
+          <!-- Claude -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-3">Claude (Anthropic)</h3>
+            <p class="text-light mb-4">
+              Known for nuanced understanding and detailed responses, Claude is popular among
+              professionals and researchers. Features extended context (200K tokens) for complex
+              analysis.
+            </p>
+            <ul class="space-y-2 mb-4 text-sm text-light">
+              <li>✓ Long-form content analysis</li>
+              <li>✓ Detailed reasoning (Claude 3.5)</li>
+              <li>✓ Professional user base</li>
+            </ul>
+            <div class="flex gap-3 text-sm">
+              <a
+                href="https://claude.ai/"
+                target="_blank"
+                rel="noopener"
+                class="text-primary hover:underline">Visit Claude →</a
+              >
+              <span class="text-light">|</span>
+              <a href="/platforms/claude/" class="text-primary hover:underline"
+                >Optimization Guide →</a
+              >
+            </div>
+          </div>
+
+          <!-- Perplexity AI -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-3">Perplexity AI</h3>
+            <p class="text-light mb-4">
+              A search-focused AI that provides sourced answers, making citation and authority
+              crucial for visibility. Features Pro Search for deep research.
+            </p>
+            <ul class="space-y-2 mb-4 text-sm text-light">
+              <li>✓ Search-oriented responses</li>
+              <li>✓ Clear source citations</li>
+              <li>✓ Real-time information</li>
+            </ul>
+            <div class="flex gap-3 text-sm">
+              <a
+                href="https://www.perplexity.ai/"
+                target="_blank"
+                rel="noopener"
+                class="text-primary hover:underline">Visit Perplexity →</a
+              >
+              <span class="text-light">|</span>
+              <a href="/platforms/perplexity/" class="text-primary hover:underline"
+                >Optimization Guide →</a
+              >
+            </div>
+          </div>
+
+          <!-- Meta AI -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-3">Meta AI</h3>
+            <p class="text-light mb-4">
+              Meta's AI assistant integrated across Facebook, Instagram, WhatsApp, and Messenger,
+              reaching billions of users in social contexts where product discovery happens.
+            </p>
+            <ul class="space-y-2 mb-4 text-sm text-light">
+              <li>✓ Integration with Meta platforms</li>
+              <li>✓ Social media presence</li>
+              <li>✓ Billions of users reach</li>
+            </ul>
+            <div class="flex gap-3 text-sm">
+              <a
+                href="https://www.meta.ai/"
+                target="_blank"
+                rel="noopener"
+                class="text-primary hover:underline">Visit Meta AI →</a
+              >
+              <span class="text-light">|</span>
+              <a href="/platforms/meta-ai/" class="text-primary hover:underline"
+                >Optimization Guide →</a
+              >
+            </div>
+          </div>
+
+          <!-- You.com -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-3">You.com</h3>
+            <p class="text-light mb-4">
+              Privacy-focused AI search engine that provides comprehensive answers with clear source
+              citations, making it ideal for brands focused on thought leadership and authoritative
+              content.
+            </p>
+            <ul class="space-y-2 mb-4 text-sm text-light">
+              <li>✓ AI search with citations</li>
+              <li>✓ Privacy-focused approach</li>
+              <li>✓ Source attribution</li>
+            </ul>
+            <div class="flex gap-3 text-sm">
+              <a
+                href="https://you.com/"
+                target="_blank"
+                rel="noopener"
+                class="text-primary hover:underline">Visit You.com →</a
+              >
+              <span class="text-light">|</span>
+              <a href="/platforms/you-com/" class="text-primary hover:underline"
+                >Optimization Guide →</a
+              >
+            </div>
+          </div>
+
+          <!-- Voice Search -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-3">Voice Search (Alexa, Siri, Google Assistant)</h3>
+            <p class="text-light mb-4">
+              Voice assistants from Amazon, Apple (enhanced with Apple Intelligence), and Google
+              answer millions of queries daily, particularly for local businesses, product
+              recommendations, and quick factual answers.
+            </p>
+            <ul class="space-y-2 mb-4 text-sm text-light">
+              <li>✓ Voice-optimized content</li>
+              <li>✓ Local search priority</li>
+              <li>✓ Featured snippet optimization</li>
+            </ul>
+            <div class="flex gap-3 text-sm">
+              <a href="/platforms/voice-search/" class="text-primary hover:underline"
+                >Voice Search Guide →</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Platforms CTA -->
+        <div class="text-center mt-12">
+          <a href="/platforms/" class="btn btn-primary btn-lg">
+            View All AI Platforms Directory →
+          </a>
+          <p class="text-sm text-light mt-4">
+            Explore comprehensive optimization guides for all major AI platforms
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick-Start Optimization Guide Section -->
+    <section id="optimization-guides" class="py-20">
+      <div class="container">
+        <h2 class="text-center mb-6">Quick-Start Optimization Guide</h2>
+        <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-light">
+          Start improving your AI visibility today with these proven strategies. Each area below
+          includes actionable steps you can implement immediately, regardless of your technical
+          expertise.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <!-- Website Optimization -->
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+              <span>📱</span> Website Optimization
+            </h3>
+
+            <h4 class="font-semibold mt-4 mb-2">Structured Content</h4>
+            <ul class="space-y-1 text-light text-sm mb-4">
+              <li>• Use semantic HTML with proper heading hierarchy (H1, H2, H3)</li>
+              <li>• Implement schema markup (JSON-LD) for products, reviews, FAQs</li>
+              <li>• Create clear, descriptive meta descriptions</li>
+              <li>• Use alt text for images with relevant keywords</li>
+            </ul>
+
+            <h4 class="font-semibold mt-4 mb-2">Content Strategy</h4>
+            <ul class="space-y-1 text-light text-sm mb-4">
+              <li>• Write clear, concise product descriptions</li>
+              <li>• Include specifications in easily parseable formats</li>
+              <li>• Add FAQ sections addressing common queries</li>
+              <li>• Create comparison content for your products vs. alternatives</li>
+              <li>• Maintain updated, accurate information</li>
+            </ul>
+
+            <h4 class="font-semibold mt-4 mb-2">Technical Elements</h4>
+            <ul class="space-y-1 text-light text-sm">
+              <li>• Ensure fast page load speeds</li>
+              <li>• Implement HTTPS for security</li>
+              <li>• Create XML sitemaps</li>
+              <li>• Use clean, crawlable URL structures</li>
+            </ul>
+          </div>
+
+          <!-- Social Media Optimization -->
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+              <span>🌐</span> Social Media Optimization
+            </h3>
+
+            <h4 class="font-semibold mt-4 mb-2">Platform Presence</h4>
+            <ul class="space-y-1 text-light text-sm mb-4">
+              <li>• Maintain consistent branding across all platforms</li>
+              <li>• Complete all profile information thoroughly</li>
+              <li>• Use keywords in bios and descriptions</li>
+              <li>• Include website links in profiles</li>
+            </ul>
+
+            <h4 class="font-semibold mt-4 mb-2">Content Best Practices</h4>
+            <ul class="space-y-1 text-light text-sm mb-4">
+              <li>• Post regularly with valuable, informative content</li>
+              <li>• Use relevant hashtags strategically</li>
+              <li>• Engage with your audience authentically</li>
+              <li>• Share customer testimonials and reviews</li>
+              <li>• Create educational content about your products/services</li>
+            </ul>
+
+            <h4 class="font-semibold mt-4 mb-2">X/Twitter Strategy</h4>
+            <ul class="space-y-1 text-light text-sm">
+              <li>• Participate in trending conversations when relevant</li>
+              <li>• Use threads to provide detailed information</li>
+              <li>• Optimize for Grok's real-time data access</li>
+            </ul>
+          </div>
+
+          <!-- Content Creation -->
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+              <span>✍️</span> Content Creation
+            </h3>
+
+            <h4 class="font-semibold mt-4 mb-2">Writing for AI</h4>
+            <ul class="space-y-1 text-light text-sm mb-4">
+              <li>• Use natural language and conversational tone</li>
+              <li>• Answer questions directly and concisely</li>
+              <li>• Include key information in the first paragraph</li>
+              <li>• Use bullet points and lists for easy parsing</li>
+              <li>• Define technical terms and acronyms</li>
+            </ul>
+
+            <h4 class="font-semibold mt-4 mb-2">Authority Building</h4>
+            <ul class="space-y-1 text-light text-sm mb-4">
+              <li>• Cite credible sources and research</li>
+              <li>• Include expert quotes and insights</li>
+              <li>• Share original data and case studies</li>
+              <li>• Build quality backlinks from reputable sites</li>
+              <li>• Maintain a blog with regular updates</li>
+            </ul>
+
+            <h4 class="font-semibold mt-4 mb-2">Multimedia Content</h4>
+            <ul class="space-y-1 text-light text-sm">
+              <li>• Create video content with transcripts</li>
+              <li>• Add descriptive captions to images</li>
+              <li>• Include infographics with text alternatives</li>
+              <li>• Optimize podcast descriptions and show notes</li>
+            </ul>
+          </div>
+
+          <!-- Reviews & Reputation -->
+          <div class="card">
+            <h3 class="text-2xl font-bold mb-4 flex items-center gap-2">
+              <span>⭐</span> Reviews & Reputation
+            </h3>
+
+            <h4 class="font-semibold mt-4 mb-2">Review Management</h4>
+            <ul class="space-y-1 text-light text-sm mb-4">
+              <li>• Encourage satisfied customers to leave reviews</li>
+              <li>• Respond to all reviews professionally</li>
+              <li>• Display reviews prominently on your website</li>
+              <li>• Use schema markup for review snippets</li>
+            </ul>
+
+            <h4 class="font-semibold mt-4 mb-2">Brand Mentions</h4>
+            <ul class="space-y-1 text-light text-sm">
+              <li>• Monitor brand mentions across the web</li>
+              <li>• Engage with mentions positively</li>
+              <li>• Encourage user-generated content</li>
+              <li>• Build relationships with influencers and media</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Practices Section -->
+    <section id="best-practices" class="py-20 bg-light-bg-alt dark:bg-dark-bg-alt">
+      <div class="container">
+        <h2 class="text-center mb-6">10 Essential Best Practices for AI Visibility</h2>
+        <p class="text-lg text-center max-w-3xl mx-auto mb-12 text-light">
+          These proven principles form the foundation of successful AI optimization. Companies
+          implementing these practices consistently see improved citations, better brand
+          positioning, and increased traffic from AI-powered search.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              1
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Focus on E-E-A-T</h3>
+              <p class="text-light text-sm">
+                Demonstrate <strong
+                  >Experience, Expertise, Authoritativeness, and Trustworthiness</strong
+                >
+                in all your content. AI models prioritize authoritative sources.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              2
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Create Comprehensive Content</h3>
+              <p class="text-light text-sm">
+                Provide thorough, detailed information that fully answers user queries. AI tools
+                favor complete, helpful content over shallow pages.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              3
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Use Structured Data</h3>
+              <p class="text-light text-sm">
+                Implement schema.org markup to help AI understand your content's context,
+                relationships, and meaning.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              4
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Maintain Accuracy</h3>
+              <p class="text-light text-sm">
+                Keep all information current and accurate. AI models can penalize or avoid citing
+                sources with outdated or incorrect information.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              5
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Build Link Authority</h3>
+              <p class="text-light text-sm">
+                Earn backlinks from reputable sources in your industry. Quality links signal
+                authority to AI models.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              6
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Ensure Bot-Accessible Design</h3>
+              <p class="text-light text-sm">
+                AI crawlers need clean, accessible HTML. Keep navigation links in the light DOM (not
+                hidden in JavaScript), use semantic HTML tables for data, avoid heavy JavaScript
+                dependencies for core content, and ensure text is in actual HTML (not rendered in
+                canvas). Progressive enhancement beats JavaScript-only sites.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              7
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Optimize for Questions</h3>
+              <p class="text-light text-sm">
+                Structure content to answer common questions directly and concisely. Many AI queries
+                are conversational and question-based. Use FAQ schema markup and natural language
+                headings that match how people actually ask questions.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              8
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Monitor AI Citations</h3>
+              <p class="text-light text-sm">
+                Regularly test how your brand appears in AI responses by querying major platforms.
+                Track citation frequency, accuracy, and context. Adjust your strategy based on
+                what's working and what needs improvement.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              9
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Diversify Content Formats</h3>
+              <p class="text-light text-sm">
+                Create content in multiple formats (text, video, images, audio, infographics) to
+                maximize visibility across different AI capabilities. Multimodal AI models like
+                Gemini can understand and cite from various content types.
+              </p>
+            </div>
+          </div>
+
+          <div class="card flex gap-4">
+            <div
+              class="flex-shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl"
+            >
+              10
+            </div>
+            <div>
+              <h3 class="text-lg font-bold mb-2">Cite Original Sources</h3>
+              <p class="text-light text-sm">
+                Link to authoritative, original sources when making claims or sharing data. AI
+                models prioritize content that demonstrates research rigor and transparency. Your
+                credibility increases when you cite reputable sources, and you build reciprocal
+                authority networks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- What to Avoid -->
+        <div class="card bg-red-500/5 border-2 border-red-500/20 mt-8 max-w-6xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4">⚠️ What to Avoid</h3>
+          <ul class="space-y-2 text-light">
+            <li>
+              <strong>JavaScript-Only Content:</strong> AI crawlers struggle with content that requires
+              JavaScript execution. Keep critical content in HTML
+            </li>
+            <li>
+              <strong>Shadow DOM Navigation:</strong> Links and navigation hidden in web components may
+              not be crawlable. Use standard HTML elements
+            </li>
+            <li>
+              <strong>Keyword Stuffing:</strong> AI models detect and penalize unnatural keyword usage.
+              Write for humans first
+            </li>
+            <li>
+              <strong>Duplicate Content:</strong> Original content is valued much more highly. Syndication
+              without proper canonicalization hurts visibility
+            </li>
+            <li>
+              <strong>Thin Content:</strong> Short, superficial pages are less likely to be cited. Provide
+              comprehensive, valuable information
+            </li>
+            <li>
+              <strong>Misleading Information:</strong> Accuracy is critical for AI trust signals. False
+              claims damage long-term credibility
+            </li>
+            <li>
+              <strong>Hidden Text or Cloaking:</strong> All optimization should be user-facing and transparent.
+              What bots see should match what users see
+            </li>
+            <li>
+              <strong>Poor Mobile Experience:</strong> Mobile-friendly, responsive design is essential
+              for AI accessibility and ranking
+            </li>
+            <li>
+              <strong>Broken Links & 404s:</strong> AI models penalize sites with poor maintenance. Regularly
+              audit and fix broken links
+            </li>
+            <li>
+              <strong>No Source Attribution:</strong> Making claims without citations reduces authority.
+              Always link to credible sources
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-20">
+      <div class="container">
+        <h2 class="text-center mb-12">Resources & Tools</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <!-- Testing Tools -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-4">Testing Tools</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <strong>AI Search Testing:</strong>
+                <span class="text-light block mt-1"
+                  >Regularly query major AI tools for your brand and products to monitor visibility</span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://search.google.com/search-console"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-primary hover:underline"><strong>Google Search Console</strong></a
+                >
+                <span class="text-light block mt-1"
+                  >Monitor how your site appears in Google Search and AI Overviews</span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.bing.com/webmasters"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-primary hover:underline"><strong>Bing Webmaster Tools</strong></a
+                >
+                <span class="text-light block mt-1">Track performance in Microsoft's ecosystem</span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://validator.schema.org/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-primary hover:underline"><strong>Schema Markup Validator</strong></a
+                >
+                <span class="text-light block mt-1"
+                  >Ensure your structured data is correctly implemented</span
+                >
+              </li>
+              <li>
+                <a
+                  href="https://search.google.com/test/rich-results"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-primary hover:underline"><strong>Google Rich Results Test</strong></a
+                >
+                <span class="text-light block mt-1">Test and validate structured data</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Learning Resources -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-4">Learning Resources</h3>
+            <ul class="space-y-2 text-sm text-light">
+              <li>• Study how AI tools currently cite and reference sources</li>
+              <li>• Follow AI platform updates and announcements</li>
+              <li>• Join marketing communities focused on AI optimization</li>
+              <li>• Monitor industry leaders' AI GEO strategies</li>
+              <li>• Attend webinars and conferences on AI and search</li>
+              <li>
+                • <a
+                  href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-primary hover:underline">Google's Helpful Content Guidelines</a
+                >
+              </li>
+              <li>
+                • <a
+                  href="https://schema.org/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-primary hover:underline">Schema.org Documentation</a
+                >
+              </li>
+              <li>
+                • <a
+                  href="https://platform.openai.com/docs"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-primary hover:underline">OpenAI API Documentation</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Implementation Checklist -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-4">Implementation Checklist</h3>
+            <ul class="space-y-2 text-sm text-light">
+              <li>☐ Audit current content for AI-friendliness</li>
+              <li>☐ Implement schema markup on all pages</li>
+              <li>☐ Create or update FAQ sections</li>
+              <li>☐ Optimize meta descriptions and titles</li>
+              <li>☐ Ensure all product information is current</li>
+              <li>☐ Build comprehensive guides and resources</li>
+              <li>☐ Encourage and manage customer reviews</li>
+              <li>☐ Monitor brand mentions across AI platforms</li>
+              <li>☐ Track competitor AI visibility</li>
+              <li>☐ Regularly test and adjust strategy</li>
+            </ul>
+          </div>
+
+          <!-- Metrics to Track -->
+          <div class="card">
+            <h3 class="text-xl font-bold mb-4">Metrics to Track</h3>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <strong>Citation Frequency:</strong>
+                <span class="text-light block mt-1"
+                  >How often your brand appears in AI responses</span
+                >
+              </li>
+              <li>
+                <strong>Positioning:</strong>
+                <span class="text-light block mt-1"
+                  >Where you appear in AI-generated lists or recommendations</span
+                >
+              </li>
+              <li>
+                <strong>Accuracy:</strong>
+                <span class="text-light block mt-1"
+                  >How correctly AI tools describe your brand and products</span
+                >
+              </li>
+              <li>
+                <strong>Sentiment:</strong>
+                <span class="text-light block mt-1">The tone and context of AI mentions</span>
+              </li>
+              <li>
+                <strong>Traffic from AI:</strong>
+                <span class="text-light block mt-1">Referral traffic from AI platforms</span>
+              </li>
+              <li>
+                <strong>Conversion Rates:</strong>
+                <span class="text-light block mt-1">How AI-sourced traffic converts</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 bg-light-bg-alt dark:bg-dark-bg-alt">
       <div class="container">
         <div class="max-w-3xl mx-auto text-center">
           <h2 class="mb-6">Start Optimizing for AI Today</h2>
-          <p class="text-xl mb-10">
-            Don't wait until your competitors dominate AI search results. Every day you delay
-            is market share lost.
+          <p class="text-lg mb-4">
+            Don't wait until your competitors dominate AI search results. The platforms above
+            collectively serve billions of users making purchase decisions right now. Every day you
+            delay is market share lost to competitors who are already optimizing their AI
+            visibility.
+          </p>
+          <p class="mb-10 text-light">
+            Explore our comprehensive platform-specific guides to understand exactly how to optimize
+            for each major AI tool, or dive into our implementation strategies to start improving
+            your visibility immediately.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/platforms" class="btn btn-primary">
-              Explore Platform Guides
-            </a>
-            <a href="/guides" class="btn btn-secondary">
-              View All Guides
-            </a>
+            <a href="#ai-tools" class="btn btn-primary"> Explore Platform Guides </a>
+            <a href="#optimization-guides" class="btn btn-secondary"> View Quick-Start Guide </a>
           </div>
         </div>
       </div>
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  .page-subnav {
+    padding: 1rem 0;
+    background: var(--card-bg);
+  }
+
+  .page-subnav .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .page-subnav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>

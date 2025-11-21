@@ -23,7 +23,7 @@ const {
   title = 'Optimization Checklist',
   intro = 'Follow these steps to optimize your presence for maximum visibility and accurate representation.',
   categories,
-  showDownload = true
+  showDownload = true,
 } = Astro.props;
 ---
 
@@ -33,44 +33,50 @@ const {
       <h2>{title}</h2>
       <p class="checklist-intro">{intro}</p>
     </div>
-    
+
     <div class="checklist-content">
-      {categories.map((category) => (
-        <div class="checklist-category">
-          <h3 class="checklist-category-title">
-            <span class="category-icon">{category.icon}</span>
-            {category.title}
-          </h3>
-          <ul class="checklist-items">
-            {category.items.map((item) => (
-              <li class="checklist-item">
-                <input 
-                  type="checkbox" 
-                  id={item.id} 
-                  class="checklist-checkbox"
-                  data-checklist-item
-                />
-                <label for={item.id}>
-                  <strong>{item.title}</strong> - {item.description}
-                </label>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      {
+        categories.map(category => (
+          <div class="checklist-category">
+            <h3 class="checklist-category-title">
+              <span class="category-icon">{category.icon}</span>
+              {category.title}
+            </h3>
+            <ul class="checklist-items">
+              {category.items.map(item => (
+                <li class="checklist-item">
+                  <input
+                    type="checkbox"
+                    id={item.id}
+                    class="checklist-checkbox"
+                    data-checklist-item
+                  />
+                  <label for={item.id}>
+                    <strong>{item.title}</strong> - {item.description}
+                  </label>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
     </div>
 
-    {showDownload && (
-      <div class="checklist-download">
-        <a href="/downloads/optimization-checklist.pdf" class="btn btn-primary" download>
-          <span>📥</span> Download Complete Checklist
-        </a>
-      </div>
-    )}
-    
+    {
+      showDownload && (
+        <div class="checklist-download">
+          <a href="/downloads/optimization-checklist.pdf" class="btn btn-primary" download>
+            <span>📥</span> Download Complete Checklist
+          </a>
+        </div>
+      )
+    }
+
     <div class="checklist-progress">
       <div class="progress-text">
-        Progress: <span id="checklist-progress-count">0</span> / <span id="checklist-total-count">0</span>
+        Progress: <span id="checklist-progress-count">0</span> / <span id="checklist-total-count"
+          >0</span
+        >
       </div>
       <div class="progress-bar-container">
         <div id="checklist-progress-bar" class="progress-bar" style="width: 0%"></div>
@@ -85,47 +91,47 @@ const {
     const progressCount = document.getElementById('checklist-progress-count');
     const totalCount = document.getElementById('checklist-total-count');
     const progressBar = document.getElementById('checklist-progress-bar');
-    
+
     if (!progressCount || !totalCount || !progressBar) return;
-    
+
     // Set total count
     totalCount.textContent = String(checkboxes.length);
-    
+
     // Load saved progress from localStorage
     const savedProgress = JSON.parse(localStorage.getItem('checklist-progress') || '{}');
-    checkboxes.forEach((checkbox) => {
+    checkboxes.forEach(checkbox => {
       const id = (checkbox as HTMLInputElement).id;
       if (savedProgress[id]) {
         (checkbox as HTMLInputElement).checked = true;
       }
     });
-    
+
     // Update progress display
     function updateProgress() {
-      const checked = Array.from(checkboxes).filter((cb) => (cb as HTMLInputElement).checked).length;
+      const checked = Array.from(checkboxes).filter(cb => (cb as HTMLInputElement).checked).length;
       const percentage = checkboxes.length > 0 ? (checked / checkboxes.length) * 100 : 0;
-      
+
       if (progressCount) progressCount.textContent = String(checked);
       if (progressBar) progressBar.style.width = `${percentage}%`;
-      
+
       // Save progress
       const progress: Record<string, boolean> = {};
-      checkboxes.forEach((cb) => {
+      checkboxes.forEach(cb => {
         const checkbox = cb as HTMLInputElement;
         progress[checkbox.id] = checkbox.checked;
       });
       localStorage.setItem('checklist-progress', JSON.stringify(progress));
     }
-    
+
     // Add event listeners
-    checkboxes.forEach((checkbox) => {
+    checkboxes.forEach(checkbox => {
       checkbox.addEventListener('change', updateProgress);
     });
-    
+
     // Initial update
     updateProgress();
   }
-  
+
   initChecklist();
   document.addEventListener('astro:page-load', initChecklist);
 </script>
@@ -134,12 +140,12 @@ const {
   .optimization-checklist {
     padding: 3rem 0;
   }
-  
+
   .checklist-header {
     text-align: center;
     margin-bottom: 3rem;
   }
-  
+
   .checklist-header h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -149,28 +155,28 @@ const {
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .checklist-intro {
     font-size: 1.125rem;
     color: var(--text-light);
     max-width: 700px;
     margin: 0 auto;
   }
-  
+
   .checklist-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 3rem;
   }
-  
+
   .checklist-category {
     background: var(--dark-bg-alt);
     border: 1px solid var(--border-color);
     border-radius: 0.75rem;
     padding: 2rem;
   }
-  
+
   .checklist-category-title {
     display: flex;
     align-items: center;
@@ -180,11 +186,11 @@ const {
     color: var(--text-white);
     margin: 0 0 1.5rem 0;
   }
-  
+
   .category-icon {
     font-size: 1.75rem;
   }
-  
+
   .checklist-items {
     list-style: none;
     margin: 0;
@@ -193,12 +199,12 @@ const {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .checklist-item {
     display: flex;
     gap: 0.75rem;
   }
-  
+
   .checklist-checkbox {
     flex-shrink: 0;
     width: 1.25rem;
@@ -207,34 +213,34 @@ const {
     cursor: pointer;
     accent-color: var(--primary);
   }
-  
+
   .checklist-item label {
     color: var(--text-light);
     line-height: 1.6;
     cursor: pointer;
   }
-  
+
   .checklist-item label strong {
     color: var(--text-white);
   }
-  
+
   .checklist-item input:checked + label {
     opacity: 0.6;
     text-decoration: line-through;
   }
-  
+
   .checklist-download {
     display: flex;
     justify-content: center;
     margin: 2rem 0;
   }
-  
+
   .checklist-progress {
     margin-top: 2rem;
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
   }
-  
+
   .progress-text {
     text-align: center;
     font-size: 1.125rem;
@@ -242,7 +248,7 @@ const {
     color: var(--text-white);
     margin-bottom: 1rem;
   }
-  
+
   .progress-bar-container {
     height: 0.75rem;
     background: var(--dark-bg-alt);
@@ -250,14 +256,14 @@ const {
     overflow: hidden;
     border: 1px solid var(--border-color);
   }
-  
+
   .progress-bar {
     height: 100%;
     background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
     transition: width 0.3s ease;
     border-radius: 1rem;
   }
-  
+
   .btn {
     display: inline-flex;
     align-items: center;
@@ -270,34 +276,34 @@ const {
     font-weight: 600;
     transition: all 0.2s;
   }
-  
+
   .btn:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.4);
   }
-  
+
   @media (max-width: 768px) {
     .checklist-header h2 {
       font-size: 2rem;
     }
-    
+
     .checklist-category {
       padding: 1.5rem;
     }
   }
-  
+
   /* Light mode */
   html:not(.dark) .checklist-category {
     background: var(--card-bg);
   }
-  
+
   html:not(.dark) .checklist-category-title,
   html:not(.dark) .checklist-item label strong,
   html:not(.dark) .progress-text {
     color: var(--text-color);
   }
-  
+
   html:not(.dark) .progress-bar-container {
     background: var(--bg-alt);
   }

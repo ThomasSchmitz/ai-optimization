@@ -44,11 +44,13 @@ export default {
       },
       
       boxShadow: {
-        'glow-primary': '0 0 12px rgba(255, 34, 34, 0.6)',
-        'glow-secondary': '0 0 12px rgba(64, 246, 255, 0.6)',
-        'glow-text': '0 0 10px rgba(255, 34, 34, 0.5)',
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3)',
-        'card-lg': '0 0 20px rgba(255, 34, 34, 0.3), 0 0 10px rgba(255, 34, 34, 0.2)',
+        'glow-primary': '0 0 12px rgba(255, 34, 34, 0.6), 0 0 24px rgba(255, 34, 34, 0.3)',
+        'glow-primary-lg': '0 0 20px rgba(255, 34, 34, 0.8), 0 0 40px rgba(255, 34, 34, 0.4)',
+        'glow-secondary': '0 0 12px rgba(64, 246, 255, 0.6), 0 0 24px rgba(64, 246, 255, 0.3)',
+        'glow-text': '0 0 10px rgba(255, 34, 34, 0.6), 0 0 20px rgba(255, 34, 34, 0.3)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 34, 34, 0.1)',
+        'card-lg': '0 0 20px rgba(255, 34, 34, 0.3), 0 0 10px rgba(255, 34, 34, 0.2), 0 8px 16px rgba(0, 0, 0, 0.4)',
+        'card-hover': '0 0 25px rgba(255, 34, 34, 0.4), 0 0 15px rgba(255, 34, 34, 0.25), 0 12px 20px rgba(0, 0, 0, 0.5)',
       },
       
       animation: {

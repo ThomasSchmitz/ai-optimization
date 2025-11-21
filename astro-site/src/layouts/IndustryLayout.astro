@@ -1,0 +1,269 @@
+---
+/**
+ * IndustryLayout - Layout for industry-specific optimization pages
+ * Features: Industry hero, use cases, best practices, tools
+ */
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+import SEO from '@/components/SEO.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  industry: {
+    name: string;
+    icon?: string;
+    overview?: string;
+  };
+  useCases?: Array<{
+    title: string;
+    description: string;
+    example: string;
+  }>;
+  bestPractices?: Array<{
+    title: string;
+    description: string;
+    tips: string[];
+  }>;
+  tools?: Array<{
+    name: string;
+    description: string;
+    category: string;
+    url?: string;
+  }>;
+  relatedIndustries?: Array<{
+    name: string;
+    slug: string;
+    description: string;
+  }>;
+}
+
+const {
+  title,
+  description,
+  industry,
+  useCases = [],
+  bestPractices = [],
+  tools = [],
+  relatedIndustries = [],
+} = Astro.props;
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Industries', href: '/industries' },
+  { label: industry.name, href: Astro.url.pathname },
+];
+
+// Schema for Industry page
+const industrySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description: description,
+  url: new URL(Astro.url.pathname, Astro.site),
+  about: {
+    '@type': 'Thing',
+    name: industry.name,
+    description: industry.overview || description,
+  },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      item: new URL(item.href, Astro.site),
+    })),
+  },
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <SEO slot="head" title={title} description={description} schema={industrySchema} />
+
+  <div class="container py-8">
+    <Breadcrumb items={breadcrumbItems} />
+
+    <!-- Industry Hero Section -->
+    <section class="mt-8 mb-12">
+      <div class="flex items-start gap-6">
+        {industry.icon && <div class="text-6xl">{industry.icon}</div>}
+        <div class="flex-1">
+          <h1 class="text-4xl font-bold mb-4">{title}</h1>
+          <p class="text-xl text-light mb-6">{description}</p>
+          {industry.overview && <p class="text-light leading-relaxed">{industry.overview}</p>}
+        </div>
+      </div>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Main Content -->
+      <article class="lg:col-span-8 space-y-12">
+        <!-- Page Content -->
+        <div class="prose prose-invert max-w-none">
+          <slot />
+        </div>
+
+        <!-- Use Cases -->
+        {
+          useCases.length > 0 && (
+            <section>
+              <h2 class="text-3xl font-bold mb-6">Industry Use Cases</h2>
+              <div class="space-y-6">
+                {useCases.map((useCase, index) => (
+                  <div class="p-6 rounded-lg bg-dark-card border border-primary/30">
+                    <h3 class="text-xl font-semibold mb-3">
+                      {index + 1}. {useCase.title}
+                    </h3>
+                    <p class="text-light mb-4">{useCase.description}</p>
+                    <div class="p-4 rounded bg-dark-bg border-l-4 border-secondary">
+                      <p class="text-sm font-mono text-secondary">Example:</p>
+                      <p class="text-sm mt-2">{useCase.example}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )
+        }
+
+        <!-- Best Practices -->
+        {
+          bestPractices.length > 0 && (
+            <section>
+              <h2 class="text-3xl font-bold mb-6">Best Practices</h2>
+              <div class="space-y-6">
+                {bestPractices.map(practice => (
+                  <div class="p-6 rounded-lg bg-dark-card border border-secondary/30">
+                    <h3 class="text-xl font-semibold mb-3">{practice.title}</h3>
+                    <p class="text-light mb-4">{practice.description}</p>
+                    <ul class="space-y-2">
+                      {practice.tips.map(tip => (
+                        <li class="flex items-start gap-3">
+                          <svg
+                            class="w-5 h-5 text-secondary mt-0.5 flex-shrink-0"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                          <span class="text-light">{tip}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )
+        }
+
+        <!-- Recommended Tools -->
+        {
+          tools.length > 0 && (
+            <section>
+              <h2 class="text-3xl font-bold mb-6">Recommended Tools</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {tools.map(tool => (
+                  <div class="p-5 rounded-lg bg-dark-card border border-primary/30 hover:border-primary/60 transition-colors">
+                    <div class="flex items-start justify-between mb-3">
+                      <h3 class="font-semibold text-lg">{tool.name}</h3>
+                      <span class="text-xs px-2 py-1 rounded bg-primary/20 text-primary">
+                        {tool.category}
+                      </span>
+                    </div>
+                    <p class="text-sm text-light mb-3">{tool.description}</p>
+                    {tool.url && (
+                      <a
+                        href={tool.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm text-secondary hover:text-secondary/80 transition-colors flex items-center gap-1"
+                      >
+                        Learn More
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          )
+        }
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-4 space-y-6">
+        <div class="sticky top-20 space-y-6">
+          <!-- Industry Stats -->
+          <div
+            class="p-6 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/30"
+          >
+            <h3 class="text-lg font-semibold mb-4">Industry Insights</h3>
+            <div class="space-y-4">
+              <div>
+                <p class="text-sm text-light mb-1">AI Adoption Rate</p>
+                <p class="text-2xl font-bold text-primary">High</p>
+              </div>
+              <div>
+                <p class="text-sm text-light mb-1">Optimization Priority</p>
+                <p class="text-2xl font-bold text-secondary">Critical</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Get Started CTA -->
+          <div class="p-6 rounded-lg bg-dark-card border border-secondary/30">
+            <h3 class="text-lg font-semibold mb-2">Ready to Optimize?</h3>
+            <p class="text-sm text-light mb-4">
+              Get a customized strategy for {industry.name}
+            </p>
+            <a
+              href="/contact"
+              class="inline-block w-full text-center px-4 py-2 bg-primary text-white rounded hover:bg-primary/80 transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
+
+          <!-- Related Industries -->
+          {
+            relatedIndustries.length > 0 && (
+              <div class="p-6 rounded-lg bg-dark-card border border-primary/30">
+                <h3 class="text-lg font-semibold mb-4">Related Industries</h3>
+                <ul class="space-y-3">
+                  {relatedIndustries.map(related => (
+                    <li>
+                      <a
+                        href={`/industries/${related.slug}`}
+                        class="block p-3 rounded hover:bg-dark-bg transition-colors group"
+                      >
+                        <h4 class="font-medium text-white group-hover:text-primary transition-colors">
+                          {related.name}
+                        </h4>
+                        <p class="text-sm text-light mt-1">{related.description}</p>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          }
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

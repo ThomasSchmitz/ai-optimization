@@ -28,48 +28,51 @@ const fullTitle = title === siteName ? siteName : `${title} - ${siteName}`;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    
+
     <!-- Primary Meta Tags -->
     <title>{fullTitle}</title>
     <meta name="title" content={fullTitle} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.site)} />
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={fullTitle} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.site)} />
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <!-- Theme Color -->
     <meta name="theme-color" content="#050a10" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#f8fbfd" media="(prefers-color-scheme: light)" />
-    
+
     <!-- Schema.org Organization -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": siteName,
-      "url": Astro.site,
-      "logo": new URL("/images/logo.png", Astro.site),
-      "description": "AI Generative Engine Optimization - Learn how to optimize for AI platforms",
-      "sameAs": [
-        // Add social media URLs here
-      ]
-    })} />
-    
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: siteName,
+        url: Astro.site,
+        logo: new URL('/images/logo.png', Astro.site),
+        description: 'AI Generative Engine Optimization - Learn how to optimize for AI platforms',
+        sameAs: [
+          // Add social media URLs here
+        ],
+      })}
+    />
+
     <!-- Initialize theme before page loads to prevent flash -->
     <script is:inline>
       const theme = (() => {
@@ -81,7 +84,7 @@ const fullTitle = title === siteName ? siteName : `${title} - ${siteName}`;
         }
         return 'dark';
       })();
-      
+
       if (theme === 'light') {
         document.documentElement.classList.remove('dark');
       } else {
@@ -90,7 +93,7 @@ const fullTitle = title === siteName ? siteName : `${title} - ${siteName}`;
       window.localStorage.setItem('theme', theme);
     </script>
   </head>
-  
+
   <body>
     <Header />
     <main>

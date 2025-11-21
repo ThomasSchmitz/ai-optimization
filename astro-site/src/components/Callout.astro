@@ -21,13 +21,18 @@ const icons = {
 };
 ---
 
-<div class={`callout border-l-4 p-6 my-6 rounded-r-lg ${styles[type]}`} style="border-color: var(--border-color);">
-  {title && (
-    <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
-      <span class="text-2xl">{icons[type]}</span>
-      <span>{title}</span>
-    </h3>
-  )}
+<div
+  class={`callout border-l-4 p-6 my-6 rounded-r-lg ${styles[type]}`}
+  style="border-color: var(--border-color);"
+>
+  {
+    title && (
+      <h3 class="flex items-center gap-2 text-lg font-semibold mb-3">
+        <span class="text-2xl">{icons[type]}</span>
+        <span>{title}</span>
+      </h3>
+    )
+  }
   <div class="callout-content">
     <slot />
   </div>
@@ -37,11 +42,11 @@ const icons = {
   .callout {
     backdrop-filter: blur(10px);
   }
-  
+
   .callout-content :global(p:last-child) {
     margin-bottom: 0;
   }
-  
+
   html:not(.dark) .callout {
     @apply bg-opacity-20;
   }

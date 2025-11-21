@@ -30,49 +30,49 @@ const Tag = href ? 'a' : 'div';
     text-decoration: none;
     color: inherit;
   }
-  
+
   a.feature-card:hover {
     border-color: var(--primary);
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   }
-  
+
   .feature-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     line-height: 1;
   }
-  
+
   .feature-title {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-white);
     margin: 0 0 0.75rem 0;
   }
-  
+
   .feature-description {
     color: var(--text-light);
     line-height: 1.6;
     margin: 0;
     flex-grow: 1;
   }
-  
+
   .feature-link {
     margin-top: 1rem;
     color: var(--secondary);
     font-weight: 500;
     font-size: 0.875rem;
   }
-  
+
   a.feature-card:hover .feature-link {
     color: var(--primary);
   }
-  
+
   /* Light mode */
   html:not(.dark) .feature-card {
     background: var(--card-bg);
   }
-  
+
   html:not(.dark) .feature-title {
     color: var(--text-color);
   }

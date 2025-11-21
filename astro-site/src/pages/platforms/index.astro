@@ -1,0 +1,156 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+
+// Get all platform entries
+const platforms = await getCollection('platforms');
+
+// Sort platforms by category and featured status
+const sortedPlatforms = platforms.sort((a, b) => {
+  // Featured first
+  if (a.data.featured && !b.data.featured) return -1;
+  if (!a.data.featured && b.data.featured) return 1;
+  
+  // Then by category
+  const categoryOrder = { major: 1, voice: 2, emerging: 3, international: 4 };
+  return (categoryOrder[a.data.category] || 5) - (categoryOrder[b.data.category] || 5);
+});
+
+// Group by category
+const platformsByCategory = sortedPlatforms.reduce((acc, platform) => {
+  const category = platform.data.category;
+  if (!acc[category]) acc[category] = [];
+  acc[category].push(platform);
+  return acc;
+}, {} as Record<string, typeof platforms>);
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Platforms', href: '/platforms/' },
+];
+
+const categoryLabels: Record<string, string> = {
+  major: 'Major AI Platforms',
+  voice: 'Voice Assistants',
+  emerging: 'Emerging Platforms',
+  international: 'International Platforms',
+};
+
+const categoryDescriptions: Record<string, string> = {
+  major: 'Leading AI platforms with the largest user bases and market impact',
+  voice: 'Voice-activated AI assistants and smart speakers',
+  emerging: 'New and innovative AI platforms gaining traction',
+  international: 'Regional AI platforms with strong local presence',
+};
+---
+
+<BaseLayout
+  title="AI Platforms Directory"
+  description="Comprehensive directory of AI platforms for optimization. Learn how to optimize your content for ChatGPT, Gemini, Claude, Perplexity, and more."
+>
+  <Breadcrumb items={breadcrumbItems} />
+
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-light-bg-alt dark:bg-dark-bg-alt">
+      <div class="container">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-gradient mb-6">AI Platforms Directory</h1>
+          <p class="text-xl md:text-2xl mb-8" style="color: var(--text-light);">
+            Comprehensive guides for optimizing your content across major AI platforms.
+            Each platform has unique characteristics, user demographics, and optimization requirements.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center text-sm">
+            <div class="bg-primary/10 px-4 py-2 rounded-full">
+              <span class="text-primary font-semibold">{platforms.length}</span> Platforms
+            </div>
+            <div class="bg-secondary/10 px-4 py-2 rounded-full">
+              <span class="text-secondary font-semibold">Billions</span> of Users
+            </div>
+            <div class="bg-accent/10 px-4 py-2 rounded-full">
+              <span style="color: var(--accent-color);" class="font-semibold">Free</span> Guides
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platforms by Category -->
+    <section class="py-16">
+      <div class="container">
+        <div class="max-w-6xl mx-auto space-y-16">
+          {Object.entries(platformsByCategory).map(([category, categoryPlatforms]) => (
+            <div>
+              <div class="mb-8">
+                <h2 class="text-3xl font-bold mb-3">{categoryLabels[category]}</h2>
+                <p class="text-lg" style="color: var(--text-light);">
+                  {categoryDescriptions[category]}
+                </p>
+              </div>
+
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {categoryPlatforms.map((platform) => (
+                  <a
+                    href={`/platforms/${platform.slug}/`}
+                    class="card block hover:scale-[1.02] transition-transform"
+                  >
+                    <div class="flex items-start gap-4 mb-4">
+                      <div class="text-4xl">{platform.data.platform === 'chatgpt' ? '🤖' : platform.data.platform === 'gemini' ? '✨' : platform.data.platform === 'copilot' ? '🤖' : platform.data.platform === 'claude' ? '🧠' : platform.data.platform === 'perplexity' ? '🔍' : platform.data.platform === 'grok' ? '🚀' : platform.data.platform === 'meta-ai' ? '📱' : platform.data.platform === 'you-com' ? '🔐' : platform.data.platform === 'voice-search' ? '🎤' : platform.data.platform === 'google-ai-overviews' ? '🌐' : platform.data.platform === 'google-assistant' ? '🗣️' : platform.data.platform === 'alexa' ? '🔊' : platform.data.platform === 'siri' ? '🍎' : '🤖'}</div>
+                      <div class="flex-1">
+                        <h3 class="text-xl font-bold mb-2" style="color: var(--text-color);">
+                          {platform.data.title}
+                        </h3>
+                        {platform.data.featured && (
+                          <span class="inline-block bg-primary/20 text-primary text-xs px-2 py-1 rounded-full mb-2">
+                            Featured
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    
+                    <p class="text-sm mb-4" style="color: var(--text-light);">
+                      {platform.data.description}
+                    </p>
+
+                    <div class="flex items-center justify-between text-sm">
+                      <div style="color: var(--text-light);">
+                        <strong style="color: var(--text-color);">{platform.data.users}</strong> users
+                      </div>
+                      <div class="text-primary font-medium">
+                        View Guide →
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-light-bg-alt dark:bg-dark-bg-alt">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6">Start Optimizing Today</h2>
+          <p class="text-lg mb-8" style="color: var(--text-light);">
+            Each platform guide includes specific optimization strategies, testing methods,
+            and best practices to improve your visibility in AI-powered search results.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/" class="btn btn-primary">Back to Home</a>
+            <a href="/guides/content-strategy/" class="btn btn-secondary">Content Strategy Guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .card:hover h3 {
+    color: var(--primary-color);
+  }
+</style>

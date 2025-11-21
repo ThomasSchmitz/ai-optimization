@@ -17,10 +17,12 @@ const guidesCollection = defineCollection({
     featured: z.boolean().default(false),
     author: z.string().default('AI GEO'),
     relatedGuides: z.array(z.string()).optional(),
-    schema: z.object({
-      type: z.string(),
-      additionalData: z.record(z.any()).optional(),
-    }).optional(),
+    schema: z
+      .object({
+        type: z.string(),
+        additionalData: z.record(z.any()).optional(),
+      })
+      .optional(),
   }),
 });
 
@@ -30,14 +32,23 @@ const platformsCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    platform: z.enum(['chatgpt', 'gemini', 'claude', 'perplexity', 'copilot', 'grok', 'meta-ai', 'you-com', 'voice-search']),
+    platform: z.string(), // Changed to string for flexibility with all platform names
+    category: z.enum(['major', 'emerging', 'voice', 'international']).default('major'),
     publishDate: z.date(),
     lastUpdated: z.date(),
     users: z.string().optional(), // e.g., "200M+"
     website: z.string().url(),
     features: z.array(z.string()),
     featured: z.boolean().default(false),
+    ogImage: z.string().optional(),
     relatedPlatforms: z.array(z.string()).optional(),
+    relatedGuides: z.array(z.string()).optional(),
+    schema: z
+      .object({
+        type: z.string().default('Article'),
+        author: z.string().default('AI GEO'),
+      })
+      .optional(),
   }),
 });
 
@@ -52,16 +63,20 @@ const industriesCollection = defineCollection({
     lastUpdated: z.date(),
     featured: z.boolean().default(false),
     relatedIndustries: z.array(z.string()).optional(),
-    caseStudies: z.array(z.object({
-      company: z.string(),
-      result: z.string(),
-    })).optional(),
+    caseStudies: z
+      .array(
+        z.object({
+          company: z.string(),
+          result: z.string(),
+        })
+      )
+      .optional(),
   }),
 });
 
 // Export collections
 export const collections = {
-  'guides': guidesCollection,
-  'platforms': platformsCollection,
-  'industries': industriesCollection,
+  guides: guidesCollection,
+  platforms: platformsCollection,
+  industries: industriesCollection,
 };
