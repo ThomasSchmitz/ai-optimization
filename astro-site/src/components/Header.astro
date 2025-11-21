@@ -1,5 +1,10 @@
 ---
 // Header component with navigation
+import Navigation from './Navigation.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import MobileMenu from './MobileMenu.astro';
+
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="sticky top-0 z-50 w-full border-b backdrop-blur supports-[backdrop-filter]:bg-dark-bg/60" style="border-color: var(--border-color);">
@@ -7,18 +12,14 @@
     <div class="flex items-center gap-8">
       <!-- Logo -->
       <a href="/" class="flex items-center gap-2 text-xl font-bold no-underline">
-        <span class="text-primary">AI</span>
-        <span class="text-secondary">Optimization</span>
+        <span class="text-primary">AI GEO</span>
+        <p class="tagline hidden lg:block text-xs text-light ml-2">Generative Engine Optimization</p>
       </a>
       
       <!-- Desktop Navigation -->
-      <ul class="hidden md:flex items-center gap-6">
-        <li><a href="/guides/" class="text-sm font-medium hover:text-primary transition-colors">Guides</a></li>
-        <li><a href="/platforms/" class="text-sm font-medium hover:text-primary transition-colors">Platforms</a></li>
-        <li><a href="/industries/" class="text-sm font-medium hover:text-primary transition-colors">Industries</a></li>
-        <li><a href="/tools/" class="text-sm font-medium hover:text-primary transition-colors">Tools</a></li>
-        <li><a href="/resources/" class="text-sm font-medium hover:text-primary transition-colors">Resources</a></li>
-      </ul>
+      <div class="hidden md:block">
+        <Navigation currentPath={currentPath} />
+      </div>
     </div>
     
     <div class="flex items-center gap-4">
@@ -37,77 +38,21 @@
       </button>
       
       <!-- Theme Toggle -->
-      <button 
-        id="theme-toggle"
-        class="p-2 rounded-md hover:bg-dark-bg-alt transition-colors"
-        aria-label="Toggle theme"
-      >
-        <svg class="w-5 h-5 sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-        </svg>
-        <svg class="w-5 h-5 moon-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-        </svg>
-      </button>
+      <ThemeToggle />
       
-      <!-- Mobile Menu Button -->
-      <button 
-        id="mobile-menu-button"
-        class="md:hidden p-2 rounded-md hover:bg-dark-bg-alt transition-colors"
-        aria-label="Toggle menu"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+      <!-- Mobile Menu -->
+      <MobileMenu currentPath={currentPath} />
     </div>
   </nav>
-  
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t" style="border-color: var(--border-color);">
-    <ul class="container py-4 space-y-2">
-      <li><a href="/guides/" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Guides</a></li>
-      <li><a href="/platforms/" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Platforms</a></li>
-      <li><a href="/industries/" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Industries</a></li>
-      <li><a href="/tools/" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Tools</a></li>
-      <li><a href="/resources/" class="block py-2 text-sm font-medium hover:text-primary transition-colors">Resources</a></li>
-    </ul>
-  </div>
 </header>
 
-<script>
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  
-  mobileMenuButton?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
-  });
-  
-  // Theme toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  const sunIcon = document.querySelector('.sun-icon');
-  const moonIcon = document.querySelector('.moon-icon');
-  
-  function updateThemeIcon() {
-    const isDark = document.documentElement.classList.contains('dark');
-    sunIcon?.classList.toggle('hidden', !isDark);
-    moonIcon?.classList.toggle('hidden', isDark);
+<style>
+  header {
+    background-color: rgba(5, 10, 16, 0.95);
+    backdrop-filter: blur(10px);
   }
   
-  themeToggle?.addEventListener('click', () => {
-    const isDark = document.documentElement.classList.contains('dark');
-    document.documentElement.classList.toggle('dark', !isDark);
-    localStorage.setItem('theme', isDark ? 'light' : 'dark');
-    updateThemeIcon();
-  });
-  
-  // Initialize theme icon
-  updateThemeIcon();
-</script>
-
-<style>
   html:not(.dark) header {
-    @apply bg-light-bg/60;
+    background-color: rgba(255, 255, 255, 0.95);
   }
 </style>

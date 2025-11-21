@@ -1,0 +1,165 @@
+---
+// Mobile menu component
+import Navigation from './Navigation.astro';
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<div id="mobile-menu-overlay" class="mobile-menu-overlay hidden">
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <a href="/" class="mobile-logo">
+        <span class="text-primary">AI</span>
+        <span class="text-secondary">Optimization</span>
+      </a>
+      <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    
+    <div class="mobile-menu-content">
+      <Navigation currentPath={currentPath} />
+    </div>
+  </div>
+</div>
+
+<button id="mobile-menu-trigger" class="mobile-menu-trigger md:hidden" aria-label="Open menu">
+  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+  </svg>
+</button>
+
+<script>
+  function initMobileMenu() {
+    const trigger = document.getElementById('mobile-menu-trigger');
+    const close = document.getElementById('mobile-menu-close');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    
+    trigger?.addEventListener('click', () => {
+      overlay?.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    close?.addEventListener('click', () => {
+      overlay?.classList.add('hidden');
+      document.body.style.overflow = '';
+    });
+    
+    overlay?.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+  
+  initMobileMenu();
+  document.addEventListener('astro:page-load', initMobileMenu);
+</script>
+
+<style>
+  .mobile-menu-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-white);
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: background 0.2s;
+  }
+  
+  .mobile-menu-trigger:hover {
+    background: var(--dark-bg-alt);
+  }
+  
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    backdrop-filter: blur(4px);
+  }
+  
+  .mobile-menu-overlay.hidden {
+    display: none;
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 320px;
+    background: var(--dark-bg);
+    box-shadow: -4px 0 6px -1px rgb(0 0 0 / 0.1);
+    overflow-y: auto;
+  }
+  
+  .mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .mobile-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .mobile-menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-white);
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: background 0.2s;
+  }
+  
+  .mobile-menu-close:hover {
+    background: var(--dark-bg-alt);
+  }
+  
+  .mobile-menu-content {
+    padding: 1rem;
+  }
+  
+  .mobile-menu-content :global(.nav-links) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .mobile-menu-content :global(.dropdown-menu) {
+    position: static;
+    margin-top: 0.5rem;
+    box-shadow: none;
+  }
+  
+  .mobile-menu-content :global(.mega-menu.show) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Light mode */
+  html:not(.dark) .mobile-menu {
+    background: var(--bg-color);
+  }
+</style>

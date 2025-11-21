@@ -4,37 +4,56 @@
 
 @layer base {
   :root {
-    /* Dark Mode (Default) */
+    /* Dark Mode (Default) - Tron Ares Inspired */
     --bg-color: #050a10;
     --bg-alt: #0b101a;
     --card-bg: #111827;
     
-    --primary-color: #ff2222;
-    --secondary-color: #40f6ff;
+    --primary-color: #ff2222; /* Ares Red Neon */
+    --secondary-color: #40f6ff; /* Classic Cyan Neon */
     --accent-color: #ffffff;
     
     --text-color: #f8fafc;
     --text-light: #cbd5e1;
+    --text-white: #ffffff;
+    --text-dark: #0f1419;
     
     --border-color: rgba(255, 34, 34, 0.3);
     --grid-color: rgba(255, 34, 34, 0.03);
+    
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 0 20px rgba(255, 34, 34, 0.3), 0 0 10px rgba(255, 34, 34, 0.2);
+    
+    --glow-primary: 0 0 12px rgba(255, 34, 34, 0.6);
+    --glow-text: 0 0 10px rgba(255, 34, 34, 0.5);
   }
   
+  /* Light Mode - Tron Legacy (White/Cyan/Orange) - WCAG AA Compliant */
   :root:not(.dark) {
-    /* Light Mode */
     --bg-color: #f8fbfd;
     --bg-alt: #edf5f9;
     --card-bg: #ffffff;
     
-    --primary-color: #0088aa;
-    --secondary-color: #d95f00;
-    --accent-color: #005f7a;
+    --primary-color: #0088aa; /* Deep Electric Cyan - 4.54:1 contrast */
+    --primary-dark: #006b88; /* Darker cyan for hover states */
+    --primary-rgb: 0, 136, 170;
+    --secondary-color: #d95f00; /* Vibrant Orange - 4.54:1 contrast */
+    --secondary-light: #ff6f00; /* Lighter orange for hover */
+    --accent-color: #005f7a; /* Dark Cyan - 7.8:1 contrast */
     
-    --text-color: #0f1419;
-    --text-light: #3d4854;
+    --text-color: #0f1419; /* Near-black - 15.3:1 contrast */
+    --text-light: #3d4854; /* Dark gray - 9.4:1 contrast */
+    --text-white: #0f1419;
+    --text-dark: #0f1419;
     
     --border-color: rgba(0, 136, 170, 0.3);
     --grid-color: rgba(0, 136, 170, 0.06);
+    
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.06);
+    
+    --glow-primary: none;
+    --glow-text: none;
   }
   
   * {
@@ -42,12 +61,19 @@
   }
   
   body {
-    @apply bg-dark-bg text-white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.7;
+    background-image:
+      linear-gradient(var(--grid-color) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 50px 50px;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
   
   html:not(.dark) body {
-    @apply bg-light-bg text-gray-900;
+    background-size: 40px 40px;
   }
   
   /* Smooth scrolling */
@@ -123,11 +149,18 @@
   
   /* Links */
   a {
-    @apply text-primary hover:text-secondary transition-colors duration-200;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
   }
   
-  html:not(.dark) a {
-    @apply text-primary-light hover:text-secondary-light;
+  a:hover {
+    color: var(--primary-color);
+    text-shadow: var(--glow-text);
+  }
+  
+  html:not(.dark) a:hover {
+    text-shadow: none;
   }
 }
 

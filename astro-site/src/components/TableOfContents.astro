@@ -1,0 +1,137 @@
+---
+// Table of Contents Component
+export interface TOCHeading {
+  depth: number;
+  text: string;
+  slug: string;
+}
+
+interface Props {
+  headings: TOCHeading[];
+  title?: string;
+}
+
+const { headings, title = 'Table of Contents' } = Astro.props;
+
+// Filter to only show h2 and h3
+const filteredHeadings = headings.filter(h => h.depth <= 3);
+---
+
+{filteredHeadings.length > 0 && (
+  <nav class="table-of-contents" aria-label="Table of Contents">
+    <h2 class="toc-title">{title}</h2>
+    <ul class="toc-list">
+      {filteredHeadings.map((heading) => (
+        <li class:list={['toc-item', `toc-depth-${heading.depth}`]}>
+          <a href={`#${heading.slug}`} class="toc-link">
+            {heading.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<script>
+  function initTOC() {
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const sections = Array.from(tocLinks).map(link => {
+      const id = (link as HTMLAnchorElement).href.split('#')[1];
+      return document.getElementById(id);
+    });
+    
+    // Highlight current section
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocLinks.forEach((link) => {
+              const href = (link as HTMLAnchorElement).href.split('#')[1];
+              link.classList.toggle('active', href === id);
+            });
+          }
+        });
+      },
+      { rootMargin: '-100px 0px -66%' }
+    );
+    
+    sections.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+  }
+  
+  initTOC();
+  document.addEventListener('astro:page-load', initTOC);
+</script>
+
+<style>
+  .table-of-contents {
+    position: sticky;
+    top: 5rem;
+    padding: 1.5rem;
+    background: var(--dark-bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+  }
+  
+  .toc-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .toc-item {
+    margin: 0;
+  }
+  
+  .toc-link {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    transition: color 0.2s;
+    border-left: 2px solid transparent;
+    padding-left: 0.75rem;
+  }
+  
+  .toc-link:hover,
+  .toc-link.active {
+    color: var(--primary);
+    border-left-color: var(--primary);
+  }
+  
+  .toc-depth-3 .toc-link {
+    padding-left: 1.5rem;
+    font-size: 0.8125rem;
+  }
+  
+  /* Light mode */
+  html:not(.dark) .table-of-contents {
+    background: var(--card-bg);
+  }
+  
+  html:not(.dark) .toc-title {
+    color: var(--text-color);
+  }
+  
+  @media (max-width: 1024px) {
+    .table-of-contents {
+      position: static;
+      max-height: none;
+    }
+  }
+</style>

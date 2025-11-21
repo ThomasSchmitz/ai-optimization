@@ -1,0 +1,252 @@
+---
+// Case Study Component - Only for VERIFIED case studies
+export interface CaseStudyResult {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  companyName: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: CaseStudyResult[];
+  quote?: string;
+  quoteAuthor?: string;
+  sourceUrl: string;
+  verified?: boolean;
+}
+
+const {
+  companyName,
+  industry,
+  challenge,
+  solution,
+  results,
+  quote,
+  quoteAuthor,
+  sourceUrl,
+  verified = false
+} = Astro.props;
+---
+
+<section class="case-study">
+  <div class="case-study-header">
+    <div class="case-study-company">
+      <h3 class="company-name">{companyName}</h3>
+      <span class="company-industry">{industry}</span>
+      {verified && <span class="verified-badge" title="Verified case study">✓ Verified</span>}
+    </div>
+    <a href={sourceUrl} class="source-link" target="_blank" rel="noopener noreferrer">
+      View Original Source →
+    </a>
+  </div>
+  
+  <div class="case-study-content">
+    <div class="case-study-section challenge">
+      <h4>
+        <span class="section-icon">🎯</span>
+        Challenge
+      </h4>
+      <p>{challenge}</p>
+    </div>
+
+    <div class="case-study-section solution">
+      <h4>
+        <span class="section-icon">💡</span>
+        Solution
+      </h4>
+      <p>{solution}</p>
+    </div>
+
+    <div class="case-study-section results">
+      <h4>
+        <span class="section-icon">📈</span>
+        Results
+      </h4>
+      <div class="results-grid">
+        {results.map((result) => (
+          <div class="result-stat">
+            <span class="stat-number">{result.value}</span>
+            <span class="stat-description">{result.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {quote && (
+      <div class="case-study-quote">
+        <blockquote>{quote}</blockquote>
+        {quoteAuthor && <cite>{quoteAuthor}</cite>}
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .case-study {
+    background: var(--dark-bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .case-study-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .case-study-company {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .company-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin: 0;
+  }
+  
+  .company-industry {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 1rem;
+  }
+  
+  .source-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  
+  .source-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+  
+  .case-study-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .case-study-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin: 0 0 1rem 0;
+  }
+  
+  .section-icon {
+    font-size: 1.25rem;
+  }
+  
+  .case-study-section p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .result-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--dark-bg);
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  
+  .stat-description {
+    font-size: 0.875rem;
+    color: var(--text-light);
+  }
+  
+  .case-study-quote {
+    padding: 1.5rem;
+    background: var(--dark-bg);
+    border-left: 4px solid var(--primary);
+    border-radius: 0.5rem;
+  }
+  
+  .case-study-quote blockquote {
+    margin: 0 0 1rem 0;
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--text-white);
+    line-height: 1.6;
+  }
+  
+  .case-study-quote cite {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-style: normal;
+  }
+  
+  @media (max-width: 768px) {
+    .case-study {
+      padding: 1.5rem;
+    }
+    
+    .results-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Light mode */
+  html:not(.dark) .case-study {
+    background: var(--card-bg);
+  }
+  
+  html:not(.dark) .case-study-section h4,
+  html:not(.dark) .company-name,
+  html:not(.dark) .case-study-quote blockquote {
+    color: var(--text-color);
+  }
+  
+  html:not(.dark) .result-stat,
+  html:not(.dark) .case-study-quote {
+    background: var(--bg-alt);
+  }
+</style>

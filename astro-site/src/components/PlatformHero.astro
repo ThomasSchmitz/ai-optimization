@@ -1,0 +1,190 @@
+---
+// Platform Hero Component
+export interface PlatformStat {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  platformName: string;
+  description: string;
+  icon?: string;
+  stats?: PlatformStat[];
+  showCTA?: boolean;
+}
+
+const { 
+  platformName, 
+  description, 
+  icon = '🤖',
+  stats = [],
+  showCTA = true 
+} = Astro.props;
+---
+
+<section class="platform-hero">
+  <div class="container">
+    <div class="platform-hero-content">
+      <div class="platform-icon" aria-hidden="true">
+        {icon}
+      </div>
+      
+      <h1 class="platform-title">{platformName}</h1>
+      
+      <p class="platform-description">{description}</p>
+      
+      {stats.length > 0 && (
+        <div class="platform-stats">
+          {stats.map((stat) => (
+            <div class="stat-item">
+              <span class="stat-value">{stat.value}</span>
+              <span class="stat-label">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+      )}
+      
+      {showCTA && (
+        <div class="hero-cta-buttons">
+          <a href="#optimization-guide" class="btn btn-primary">
+            View Optimization Guide
+          </a>
+          <a href="#checklist" class="btn btn-secondary">
+            Download Checklist
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .platform-hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-bg-alt) 100%);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .platform-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .platform-icon {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .platform-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .platform-description {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .platform-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+    padding: 2rem;
+    background: var(--dark-bg);
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-color);
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .hero-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.4);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+  
+  .btn-secondary:hover {
+    background: var(--secondary);
+    color: var(--dark-bg);
+  }
+  
+  @media (max-width: 768px) {
+    .platform-title {
+      font-size: 2rem;
+    }
+    
+    .platform-description {
+      font-size: 1rem;
+    }
+    
+    .platform-stats {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Light mode */
+  html:not(.dark) .platform-hero {
+    background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-alt) 100%);
+  }
+  
+  html:not(.dark) .platform-stats {
+    background: var(--card-bg);
+  }
+</style>

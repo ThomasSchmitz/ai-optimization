@@ -1,0 +1,104 @@
+---
+// Breadcrumb component with structured data
+export interface BreadcrumbItem {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+
+// Generate breadcrumb schema
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": item.label,
+    "item": new URL(item.href, Astro.site).toString()
+  }))
+};
+---
+
+{items.length > 0 && (
+  <nav class="breadcrumb-container" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb">
+        {items.map((item, index) => (
+          <li class="breadcrumb-item">
+            {index < items.length - 1 ? (
+              <>
+                <a href={item.href} class="breadcrumb-link">{item.label}</a>
+                <span class="breadcrumb-separator" aria-hidden="true">/</span>
+              </>
+            ) : (
+              <span class="breadcrumb-current" aria-current="page">{item.label}</span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </div>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </nav>
+)}
+
+<style>
+  .breadcrumb-container {
+    border-bottom: 1px solid var(--border-color);
+    background: var(--dark-bg-alt);
+    padding: 0.75rem 0;
+  }
+  
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .breadcrumb-link {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .breadcrumb-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-current {
+    color: var(--text-white);
+    font-weight: 500;
+  }
+  
+  .breadcrumb-separator {
+    color: var(--text-light);
+    opacity: 0.5;
+  }
+  
+  /* Light mode */
+  html:not(.dark) .breadcrumb-container {
+    background: var(--bg-alt);
+  }
+  
+  html:not(.dark) .breadcrumb-current {
+    color: var(--text-color);
+  }
+</style>
