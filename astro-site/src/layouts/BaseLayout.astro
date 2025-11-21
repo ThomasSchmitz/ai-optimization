@@ -8,8 +8,6 @@ export interface Props {
   description: string;
   canonicalURL?: string;
   image?: string;
-  publishDate?: Date;
-  lastUpdated?: Date;
 }
 
 const {
@@ -17,8 +15,6 @@ const {
   description,
   canonicalURL = new URL(Astro.url.pathname, Astro.site),
   image = '/images/og-default.jpg',
-  publishDate,
-  lastUpdated,
 } = Astro.props;
 
 const siteName = 'AI GEO';

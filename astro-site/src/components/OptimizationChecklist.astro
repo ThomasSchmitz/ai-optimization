@@ -105,8 +105,8 @@ const {
       const checked = Array.from(checkboxes).filter((cb) => (cb as HTMLInputElement).checked).length;
       const percentage = checkboxes.length > 0 ? (checked / checkboxes.length) * 100 : 0;
       
-      progressCount.textContent = String(checked);
-      progressBar.style.width = `${percentage}%`;
+      if (progressCount) progressCount.textContent = String(checked);
+      if (progressBar) progressBar.style.width = `${percentage}%`;
       
       // Save progress
       const progress: Record<string, boolean> = {};

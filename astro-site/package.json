@@ -47,6 +47,7 @@
     "astro-pagefind": "^1.6.0",
     "eslint": "^9.0.0",
     "eslint-plugin-astro": "^1.0.0",
+    "lightningcss": "^1.30.2",
     "prettier": "^3.3.0",
     "prettier-plugin-astro": "^0.14.0"
   }

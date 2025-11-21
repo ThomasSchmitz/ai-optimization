@@ -17,34 +17,40 @@ const { Content } = await guide.render();
 <BaseLayout 
   title={guide.data.title}
   description={guide.data.description}
-  publishDate={guide.data.publishDate}
 >
   <!-- Guide Hero Section -->
   <section class="guide-hero bg-gradient-to-b from-dark-bg to-dark-bg-alt py-20">
     <div class="container">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="text-6xl mb-6">{guide.data.icon}</div>
+        {guide.data.icon && <div class="text-6xl mb-6">{guide.data.icon}</div>}
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">{guide.data.title}</h1>
         <p class="text-xl text-light mb-8">{guide.data.description}</p>
         
-        <div class="flex flex-wrap justify-center gap-6 mb-8">
-          <div class="flex items-center gap-2">
-            <span class="text-2xl">⏱️</span>
-            <span class="text-sm text-light">{guide.data.readTime}</span>
+        {(guide.data.readTime || guide.data.difficulty || guide.data.audience) && (
+          <div class="flex flex-wrap justify-center gap-6 mb-8">
+            {guide.data.readTime && (
+              <div class="flex items-center gap-2">
+                <span class="text-2xl">⏱️</span>
+                <span class="text-sm text-light">{guide.data.readTime}</span>
+              </div>
+            )}
+            {guide.data.difficulty && (
+              <div class="flex items-center gap-2">
+                <span class="text-2xl">📊</span>
+                <span class="text-sm text-light">{guide.data.difficulty}</span>
+              </div>
+            )}
+            {guide.data.audience && (
+              <div class="flex items-center gap-2">
+                <span class="text-2xl">🎯</span>
+                <span class="text-sm text-light">{guide.data.audience}</span>
+              </div>
+            )}
           </div>
-          <div class="flex items-center gap-2">
-            <span class="text-2xl">📊</span>
-            <span class="text-sm text-light">{guide.data.difficulty}</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="text-2xl">🎯</span>
-            <span class="text-sm text-light">{guide.data.audience}</span>
-          </div>
-        </div>
+        )}
         
         <div class="flex justify-center gap-4">
           <a href="#content" class="btn btn-primary">Start Reading</a>
-          <a href="#checklist" class="btn btn-secondary">View Checklist</a>
         </div>
       </div>
     </div>
