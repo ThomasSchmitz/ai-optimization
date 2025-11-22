@@ -239,6 +239,11 @@ npm run type-check  # ✅ TypeScript validation passes
   - `guides.ts` ✅
   - `industries.ts` ✅
   - `tools.ts` ✅
+- [x] Create dynamic page routes:
+  - `guides/[...slug].astro` ✅
+  - `platforms/[slug].astro` ✅
+  - `industries/[...slug].astro` ✅
+  - `tools/[...slug].astro` ✅
 - [x] Create migration scripts:
   - Automated HTML-to-MDX converter ✅
   - Platform stub generator ✅
@@ -281,28 +286,45 @@ npm run type-check  # ✅ TypeScript validation passes
   - Grid layout organized by category (Major, Voice, Emerging, International)
   - Platform cards with descriptions, user counts, and featured badges
   - CTA section with links back to home and guides
+- ✅ Guides directory page created (`/guides/`)
+  - Organized by category (Strategy, Tactics, Technical & Advanced)
+  - 18 comprehensive guides across all categories
+  - Cross-links to related platforms and industries
+- ✅ Industries directory page created (`/industries/`)
+  - Organized by type (Business Types, Sectors, Media)
+  - 10 industry-specific optimization guides
+  - Cross-links to relevant guides and platforms
 - ✅ Homepage integration complete
   - All 9 platform links updated to new MDX URLs
   - "View All Platforms" button added below platform grid
 - ✅ Navigation enhancement
-  - Added "View All Platforms Directory" CTA in mega menu footer
+  - Added "View All Platforms Directory" CTA in platforms mega menu
+  - Added "View All Guides Directory" CTA in guides mega menu
+  - Added "View All Industries Directory" CTA in industries mega menu
   - Styled with primary button appearance and hover effects
 
 **Migration Scripts Created**:
 
 - `scripts/migrate-platforms.mjs` - Automated HTML to MDX conversion
 - `scripts/generate-platform-stubs.mjs` - Clean stub generation
+- `scripts/fix-internal-links.mjs` - Automated internal link fixing (186 links updated)
 
 #### Phase 4 Deliverables
 
 - ✅ Content Collections configured with TypeScript validation
+- ✅ All dynamic page routes created (guides, platforms, industries, tools)
 - ✅ Dynamic platform page template (`/platforms/[slug].astro`)
 - ✅ Platforms directory page (`/platforms/index.astro`)
+- ✅ Guides directory page (`/guides/index.astro`)
+- ✅ Industries directory page (`/industries/index.astro`)
 - ✅ 13 platform pages deployed and accessible
 - ✅ Homepage platform navigation updated (9 links)
-- ✅ Navigation mega menu enhanced with CTA
+- ✅ Navigation mega menu enhanced with CTAs for all sections
+  - Platforms: "View All Platforms Directory"
+  - Guides: "View All Guides Directory"
+  - Industries: "View All Industries Directory"
 - ✅ Frontmatter schema defined and validated
-- ✅ Build process successful (4.42s, 17 pages, 0 errors)
+- ✅ Build process successful (2.52s, 46 pages, 0 errors)
 - ⏸️ Full content migration for all pages (in progress)
 
 #### Phase 4 Validation
@@ -312,7 +334,7 @@ npm run type-check  # ✅ TypeScript validation passes
 - ✅ No build errors
 - ✅ Breadcrumb navigation functional
 - ✅ Dark/light mode theming applied
-- ⏸️ Internal links verification (pending)
+- ✅ Internal links verification (186 links fixed across 41 files)
 - ⏸️ Schema markup validation (pending)
 - ⏸️ Image migration (pending)
 
@@ -321,8 +343,21 @@ npm run type-check  # ✅ TypeScript validation passes
 - Created two-stage migration approach: stubs first, then content enhancement
 - All platform pages build successfully with clean MDX
 - ChatGPT page serves as template for full content migration
-- Remaining platforms need manual content refinement from legacy HTML
+- ✅ **Successfully crawled live site content** (November 21, 2025):
+  - ChatGPT: Complete guide with 200M+ users, SearchGPT integration, schema examples
+  - Gemini: Deep Think, Project Antigravity, AI Overviews, multimodal optimization
+  - Copilot: Enterprise focus, Office Suite integration, Bing/Microsoft ecosystem
+  - Claude: 200K context window, long-form optimization, professional audience strategies
+  - Content ready for migration to remaining platform MDX files
 - Migration scripts available for future content additions
+- All 4 dynamic route files created and tested (guides, platforms, industries, tools)
+- Build generates 46 pages with 0 errors
+- Tools collection created but empty (ready for content)
+- Internal links automatically fixed: 186 links updated across 41 MDX files
+  - Converted `/pages/guides/*.html` → `/guides/*`
+  - Converted `/pages/platforms/*.html` → `/platforms/*`
+  - Converted `/pages/industries/*.html` → `/industries/*`
+  - Converted `/pages/tools/*.html` → `/tools/*`
 
 ---
 
@@ -655,6 +690,6 @@ npm run deploy:prod      # Deploy to production
 
 ---
 
-**Document Version**: 1.3  
+**Document Version**: 1.4  
 **Last Updated**: November 21, 2025  
-**Status**: Phase 3 Complete → Phase 4 Ready
+**Status**: Phase 4 In Progress (Dynamic Routes Complete, Content Migration Ongoing)

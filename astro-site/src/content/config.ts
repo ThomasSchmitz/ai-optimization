@@ -74,9 +74,27 @@ const industriesCollection = defineCollection({
   }),
 });
 
+// Define the schema for tools
+const toolsCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    category: z.enum(['seo', 'analytics', 'content', 'technical', 'monitoring']),
+    publishDate: z.date(),
+    lastUpdated: z.date(),
+    featured: z.boolean().default(false),
+    pricing: z.enum(['free', 'freemium', 'paid']).optional(),
+    website: z.string().url().optional(),
+    relatedTools: z.array(z.string()).optional(),
+    tags: z.array(z.string()).optional(),
+  }),
+});
+
 // Export collections
 export const collections = {
   guides: guidesCollection,
   platforms: platformsCollection,
   industries: industriesCollection,
+  tools: toolsCollection,
 };

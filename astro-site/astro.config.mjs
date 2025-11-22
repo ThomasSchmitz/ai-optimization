@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://yourdomain.com', // TODO: Update with your actual domain
+  site: 'https://www.learnaigeo.com',
   
   integrations: [
     mdx({

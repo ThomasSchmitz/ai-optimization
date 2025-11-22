@@ -1,0 +1,138 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+
+const guides = await getCollection('guides');
+
+// Organize guides by category
+const guidesByCategory = guides.reduce((acc, guide) => {
+  const category = guide.data.category || 'other';
+  if (!acc[category]) acc[category] = [];
+  acc[category].push(guide);
+  return acc;
+}, {} as Record<string, typeof guides>);
+
+const categoryInfo = {
+  platform: { title: 'Platform Guides', icon: '🤖', description: 'Platform-specific optimization strategies' },
+  strategy: { title: 'Strategy & Planning', icon: '🎯', description: 'High-level AI visibility strategies' },
+  technical: { title: 'Technical Optimization', icon: '⚙️', description: 'Technical SEO and implementation' },
+  content: { title: 'Content Optimization', icon: '✍️', description: 'Content creation and optimization' },
+  analytics: { title: 'Analytics & Tracking', icon: '📊', description: 'Measurement and analysis' },
+};
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Guides', href: '/guides' },
+];
+---
+
+<BaseLayout
+  title="AI Optimization Guides | AI GEO"
+  description="Comprehensive guides for optimizing your digital presence for AI search engines, chatbots, and voice assistants. Learn strategies, tactics, and technical implementation."
+>
+  <Breadcrumb items={breadcrumbItems} />
+
+  <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-light-bg-alt dark:bg-dark-bg-alt">
+      <div class="container">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="text-6xl mb-6">📚</div>
+          <h1 class="text-gradient mb-6">AI Optimization Guides</h1>
+          <p class="text-xl md:text-2xl mb-8" style="color: var(--text-light);">
+            In-depth guides covering every aspect of AI Generative Engine Optimization (AI GEO).
+            From strategy to implementation, we've got you covered.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guides Grid -->
+    <section class="py-16">
+      <div class="container">
+        {Object.entries(guidesByCategory).map(([category, categoryGuides]) => {
+          const info = categoryInfo[category as keyof typeof categoryInfo] || {
+            title: category,
+            icon: '📄',
+            description: ''
+          };
+          
+          return (
+            <div class="mb-16">
+              <div class="flex items-center gap-3 mb-8">
+                <span class="text-4xl">{info.icon}</span>
+                <div>
+                  <h2 class="text-3xl font-bold mb-1">{info.title}</h2>
+                  {info.description && (
+                    <p class="text-light">{info.description}</p>
+                  )}
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {categoryGuides.map(guide => (
+                  <a
+                    href={`/guides/${guide.slug}`}
+                    class="card hover:shadow-glow-lg transition-all group"
+                  >
+                    {guide.data.icon && (
+                      <div class="text-4xl mb-4">{guide.data.icon}</div>
+                    )}
+                    <h3 class="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                      {guide.data.title}
+                    </h3>
+                    <p class="text-light mb-4 line-clamp-3">
+                      {guide.data.description}
+                    </p>
+                    <div class="flex flex-wrap gap-3 text-xs text-light">
+                      {guide.data.readTime && (
+                        <span class="flex items-center gap-1">
+                          ⏱️ {guide.data.readTime}
+                        </span>
+                      )}
+                      {guide.data.difficulty && (
+                        <span class="flex items-center gap-1">
+                          📊 {guide.data.difficulty}
+                        </span>
+                      )}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-light-bg-alt dark:bg-dark-bg-alt">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-6">Need Platform-Specific Help?</h2>
+          <p class="text-lg mb-8 text-light">
+            Check out our platform-specific optimization guides for ChatGPT, Gemini, Perplexity, and more.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/platforms" class="btn btn-primary">
+              View All Platforms →
+            </a>
+            <a href="/industries" class="btn btn-secondary">
+              Browse by Industry →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

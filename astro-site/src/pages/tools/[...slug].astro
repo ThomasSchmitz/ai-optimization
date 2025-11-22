@@ -1,0 +1,156 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/Breadcrumb.astro';
+
+export async function getStaticPaths() {
+  const tools = await getCollection('tools');
+  return tools.map((tool) => ({
+    params: { slug: tool.slug },
+    props: { tool },
+  }));
+}
+
+const { tool } = Astro.props;
+const { Content } = await tool.render();
+
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Tools', href: '/tools' },
+  { label: tool.data.title, href: Astro.url.pathname },
+];
+---
+
+<BaseLayout title={tool.data.title} description={tool.data.description}>
+  <Breadcrumb items={breadcrumbItems} />
+  
+  <main class="min-h-screen">
+    <!-- Tool Hero -->
+    <section class="py-16 md:py-24 bg-light-bg-alt dark:bg-dark-bg-alt">
+      <div class="container">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 mb-6">
+            <span class="text-primary font-semibold text-sm uppercase tracking-wide">
+              {tool.data.category}
+            </span>
+            {tool.data.pricing && (
+              <>
+                <span class="text-light">•</span>
+                <span class="text-secondary font-medium text-sm">
+                  {tool.data.pricing}
+                </span>
+              </>
+            )}
+          </div>
+          
+          <h1 class="text-gradient mb-6">{tool.data.title}</h1>
+          
+          <p class="text-xl md:text-2xl mb-8" style="color: var(--text-light);">
+            {tool.data.description}
+          </p>
+          
+          <div class="flex flex-wrap items-center justify-center gap-4 text-sm text-light">
+            {tool.data.lastUpdated && (
+              <span>
+                Last updated: {new Date(tool.data.lastUpdated).toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </span>
+            )}
+            {tool.data.website && (
+              <>
+                <span>•</span>
+                <a 
+                  href={tool.data.website} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="text-primary hover:text-secondary transition-colors"
+                >
+                  Visit Website →
+                </a>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <article class="py-16">
+      <div class="container">
+        <div class="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
+          <Content />
+        </div>
+      </div>
+    </article>
+
+    <!-- Related Tools -->
+    {tool.data.relatedTools && tool.data.relatedTools.length > 0 && (
+      <section class="py-16 bg-light-bg-alt dark:bg-dark-bg-alt">
+        <div class="container">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">Related Tools</h2>
+            <div class="grid gap-4">
+              {tool.data.relatedTools.map((relatedTool) => (
+                <a
+                  href={`/tools/${relatedTool}`}
+                  class="block p-6 bg-light-card dark:bg-dark-card rounded-lg border border-light-border dark:border-dark-border hover:shadow-glow-lg transition-all"
+                >
+                  <span class="text-primary hover:text-secondary transition-colors font-medium">
+                    {relatedTool} →
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style>
+  article :global(h2) {
+    @apply text-3xl font-bold mt-12 mb-6;
+    color: var(--text-color);
+  }
+  
+  article :global(h3) {
+    @apply text-2xl font-bold mt-8 mb-4;
+    color: var(--text-color);
+  }
+  
+  article :global(p) {
+    @apply mb-4 leading-relaxed;
+    color: var(--text-light);
+  }
+  
+  article :global(ul), article :global(ol) {
+    @apply mb-6 space-y-2;
+    color: var(--text-light);
+  }
+  
+  article :global(li) {
+    @apply leading-relaxed;
+  }
+  
+  article :global(a) {
+    @apply text-primary hover:text-secondary transition-colors;
+  }
+  
+  article :global(code) {
+    @apply bg-dark-card px-2 py-1 rounded text-sm;
+    color: var(--secondary-color);
+  }
+  
+  article :global(pre) {
+    @apply bg-dark-card p-4 rounded-lg overflow-x-auto my-6;
+  }
+  
+  article :global(blockquote) {
+    @apply border-l-4 border-primary pl-6 py-2 my-6 italic;
+    color: var(--text-light);
+  }
+</style>
