@@ -122,6 +122,11 @@ const resourcesNav: NavItem[] = [
         AI Platforms <span class="dropdown-arrow">▼</span>
       </button>
       <div class="dropdown-menu mega-menu">
+        <div class="mega-menu-header">
+          <a href="/platforms/" class="mega-menu-cta">
+            View All Platforms Directory →
+          </a>
+        </div>
         {
           platformsNav.map(section => (
             <div class="mega-menu-column">
@@ -141,11 +146,6 @@ const resourcesNav: NavItem[] = [
             </div>
           ))
         }
-        <div class="mega-menu-footer">
-          <a href="/platforms/" class="mega-menu-cta">
-            View All Platforms Directory →
-          </a>
-        </div>
       </div>
     </li>
 
@@ -155,6 +155,11 @@ const resourcesNav: NavItem[] = [
         Guides <span class="dropdown-arrow">▼</span>
       </button>
       <div class="dropdown-menu mega-menu">
+        <div class="mega-menu-header">
+          <a href="/guides/" class="mega-menu-cta">
+            View All Guides Directory →
+          </a>
+        </div>
         {
           guidesNav.map(section => (
             <div class="mega-menu-column">
@@ -174,11 +179,6 @@ const resourcesNav: NavItem[] = [
             </div>
           ))
         }
-        <div class="mega-menu-footer">
-          <a href="/guides/" class="mega-menu-cta">
-            View All Guides Directory →
-          </a>
-        </div>
       </div>
     </li>
 
@@ -188,6 +188,11 @@ const resourcesNav: NavItem[] = [
         Industries <span class="dropdown-arrow">▼</span>
       </button>
       <div class="dropdown-menu mega-menu">
+        <div class="mega-menu-header">
+          <a href="/industries/" class="mega-menu-cta">
+            View All Industries Directory →
+          </a>
+        </div>
         {
           industriesNav.map(section => (
             <div class="mega-menu-column">
@@ -207,11 +212,6 @@ const resourcesNav: NavItem[] = [
             </div>
           ))
         }
-        <div class="mega-menu-footer">
-          <a href="/industries/" class="mega-menu-cta">
-            View All Industries Directory →
-          </a>
-        </div>
       </div>
     </li>
 
@@ -347,7 +347,9 @@ const resourcesNav: NavItem[] = [
     top: 100%;
     left: 0;
     margin-top: 0.5rem;
-    background: var(--dark-bg-alt);
+    background: rgba(5, 10, 16, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
@@ -424,11 +426,11 @@ const resourcesNav: NavItem[] = [
     color: var(--primary);
   }
 
-  .mega-menu-footer {
+  .mega-menu-header {
     grid-column: 1 / -1;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
     text-align: center;
   }
 
@@ -457,7 +459,9 @@ const resourcesNav: NavItem[] = [
 
   /* Light mode */
   html:not(.dark) .dropdown-menu {
-    background: var(--card-bg);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: var(--shadow-lg);
   }
 
