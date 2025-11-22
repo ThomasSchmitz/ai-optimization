@@ -1,6 +1,6 @@
 ---
-title: "Google AI Overviews"
-description: "Learn how to optimize your content for Google AI Overviews visibility, citations, and AI-powered recommendations."
+title: "Google AI Overviews Optimization Guide"
+description: "Complete guide to appearing in Google's AI Overviews (SGE), understanding citation selection, and optimizing for AI-powered search results."
 platform: "google-ai-overviews"
 category: "major"
 publishDate: 2025-01-15
@@ -8,99 +8,640 @@ lastUpdated: 2025-11-21
 users: "Billions"
 website: "https://blog.google/products/search/"
 features:
-  - "AI-powered search and recommendations"
-  - "Citation and source attribution"
-  - "Real-time information access"
+  - "AI-powered search summaries"
+  - "Multiple source citations"
+  - "Conversational format"
+  - "Rich media integration"
 featured: true
 ogImage: "/images/platforms/google-ai-overviews-og.png"
-relatedPlatforms: []
+relatedPlatforms: ["gemini", "google-assistant"]
 relatedGuides:
   - "content-strategy"
   - "schema-markup"
+  - "eeat-optimization"
 schema:
   type: "Article"
   author: "AI GEO"
 ---
 
-## Platform Overview
+import Callout from '@/components/Callout.astro';
+import FeatureCard from '@/components/FeatureCard.astro';
 
-Google AI Overviews is an AI-powered platform that helps users discover information, make decisions, and find solutions. Optimizing for this platform ensures your brand appears in relevant AI-generated responses and recommendations.
+## Understanding Google AI Overviews
 
-## Key Features
+[AI Overviews](https://blog.google/products/search/generative-ai-google-search-may-2024/) represent Google's most significant search innovation in decades, fundamentally changing how users interact with search results. Learn more in the [AI Overviews help article](https://support.google.com/websearch/answer/14103150).
 
-- AI-powered search and recommendations
-- Real-time information access
-- Source citations and attribution
-- Conversational interface
-- Integration with broader ecosystem
+AI Overviews are AI-generated summaries that appear at the top of Google Search results, synthesizing information from multiple authoritative sources to provide comprehensive answers to user queries. Powered by [Google Gemini](https://deepmind.google/technologies/gemini/), they combine the power of large language models with Google's vast search index and knowledge graph.
 
-## Optimization Strategies
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
+  <FeatureCard 
+    icon="📍" 
+    title="Position Zero++" 
+    description="AI Overviews appear above all traditional results, even above featured snippets. They occupy the most prominent position on the search results page, claiming significant screen real estate, especially on mobile devices."
+  />
 
-### 1. Content Structure
+  <FeatureCard 
+    icon="🔗" 
+    title="Multiple Citations" 
+    description="Unlike featured snippets which cite one source, AI Overviews typically cite 3-6 sources with inline links and expandable source cards. This creates multiple opportunities for visibility within a single AI Overview."
+  />
 
-Create well-structured, authoritative content that AI can easily understand and cite:
+  <FeatureCard 
+    icon="💬" 
+    title="Conversational Format" 
+    description="AI Overviews present information in a natural, conversational format, making complex information more accessible. They include follow-up question suggestions to deepen exploration."
+  />
 
+  <FeatureCard 
+    icon="🎨" 
+    title="Rich Media Integration" 
+    description="AI Overviews can include images, videos, product carousels, and interactive elements, providing a multimodal search experience that goes beyond text-only responses."
+  />
+</div>
+
+<Callout type="warning" title="Why AI Overviews Matter">
+Being cited in an AI Overview provides exponentially more visibility than traditional search results. Users see your brand as an authoritative source before they even scroll to organic results, resulting in higher-quality traffic and significantly improved brand perception.
+</Callout>
+
+## How AI Overviews Work
+
+Understanding the mechanics of AI Overviews helps you optimize effectively. Here's the process from query to citation.
+
+### The 6-Step Process
+
+**1. Query Analysis**
+
+When a user enters a query, Google's AI analyzes the intent, complexity, and type of information needed. It determines whether to show an AI Overview based on query characteristics.
+
+Factors considered:
+- Query complexity and length
+- Information need (factual, comparison, how-to, etc.)
+- User search history and context
+- Whether a comprehensive answer adds value
+
+**2. Source Identification**
+
+Google's search algorithms identify potentially relevant sources from its index, prioritizing pages that rank highly for related queries and demonstrate strong [E-E-A-T signals](https://developers.google.com/search/docs/fundamentals/creating-helpful-content).
+
+Selection criteria:
+- Traditional search rankings for related queries
+- Domain authority and trust signals
+- Content freshness and update frequency
+- Existing featured snippet presence
+
+**3. Content Evaluation**
+
+Gemini analyzes identified sources to understand content quality, relevance, and how well they answer the specific query. It evaluates both textual and structural elements.
+
+Evaluation factors:
+- Relevance to the specific query
+- Content depth and comprehensiveness
+- Accuracy and factual correctness
+- Author expertise and credentials
+- Content structure and organization
+- Supporting evidence and citations
+
+**4. Information Synthesis**
+
+The AI synthesizes information from selected sources to create a comprehensive, coherent response that addresses all aspects of the user's query.
+
+Synthesis process:
+- Extracting key points from each source
+- Organizing information logically
+- Identifying consensus and differing viewpoints
+- Creating a cohesive narrative
+
+**5. Citation Assignment**
+
+Sources are cited with inline links throughout the AI Overview. Citations are placed strategically to show which sources contributed specific information.
+
+Citation placement:
+- Inline numbered citations [1], [2], etc.
+- Source cards with titles and URLs
+- Clickable links to source pages
+- Preview snippets from sources
+
+**6. Display & Interaction**
+
+The AI Overview is displayed prominently with follow-up questions and the ability to expand sources for more information.
+
+User experience features:
+- Collapsible/expandable format
+- Follow-up question suggestions
+- Source card expansion
+- Related searches
+
+## When AI Overviews Appear
+
+AI Overviews don't appear for every query. Understanding when they appear helps you target optimization efforts effectively.
+
+### Queries That Trigger AI Overviews
+
+**Complex Informational Queries**
+
+Questions requiring synthesis of multiple sources:
+- "What are the benefits and drawbacks of..."
+- "How does X compare to Y and Z..."
+- "What factors should I consider when..."
+
+**How-to and Instructional**
+
+Step-by-step processes and guides:
+- "How to optimize for AI search"
+- "Steps to implement schema markup"
+- "Best practices for E-E-A-T"
+
+**Research and Comparison**
+
+Product research, evaluations, and comparisons:
+- "Best AI optimization tools for..."
+- "ChatGPT vs Gemini for business"
+- "Top SEO strategies for 2025"
+
+**Multi-Faceted Topics**
+
+Topics with multiple important aspects:
+- "AI GEO comprehensive guide"
+- "Understanding Google E-E-A-T"
+- "Multimodal search optimization"
+
+### Queries Less Likely to Show AI Overviews
+
+**Navigational Queries**
+
+Searches for specific websites or brands:
+- "Facebook login"
+- "Amazon customer service"
+- "Nike official website"
+
+**Simple Factual Queries**
+
+One-word answers or basic facts:
+- "Weather today"
+- "Time in Tokyo"
+- "Define optimization"
+
+**Transactional Queries**
+
+Direct purchase intent:
+- "Buy iPhone 15 Pro"
+- "Cheap flights to Paris"
+- "Pizza delivery near me"
+
+**YMYL Sensitive Topics**
+
+Medical, legal, financial advice requiring expert verification:
+- Specific medical diagnoses
+- Legal advice queries
+- Financial investment decisions
+
+<Callout type="tip" title="Optimization Strategy">
+Focus your AI Overview optimization efforts on complex, informational queries in your niche. Analyze your [Google Search Console](https://search.google.com/search-console) data to identify queries that drive impressions but have declining CTR—these may now show AI Overviews.
+</Callout>
+
+## How to Appear in AI Overviews
+
+Earning citations in AI Overviews requires a strategic approach combining traditional SEO excellence with AI-specific optimization.
+
+### 1. Build Strong Traditional SEO Foundation
+
+AI Overviews heavily favor sources that already rank well in traditional search. Your existing SEO success directly influences AI citation potential.
+
+Action items:
+- Achieve page 1 rankings for target queries
+- Optimize for [Core Web Vitals](https://web.dev/vitals/)
+- Build high-quality backlink profile
+- Ensure mobile-first compliance
+- Maintain fast page load speeds
+- Fix all technical SEO issues
+
+<Callout type="info">
+**Why it works:** Google's AI prioritizes sources that its traditional algorithms already trust. Strong SEO = strong AI citation potential.
+</Callout>
+
+### 2. Target Featured Snippet Optimization
+
+Content that earns featured snippets has significantly higher chances of being cited in AI Overviews. There's strong overlap between the two.
+
+Action items:
+- Provide concise 40-60 word answers
+- Use question-based headings
+- Structure content with lists and tables
+- Implement FAQ schema markup
+- Place direct answers early in content
+- Follow with detailed explanations
+
+<Callout type="info">
+**Why it works:** Featured snippet optimization signals that your content provides clear, authoritative answers—exactly what AI Overviews need.
+</Callout>
+
+### 3. Demonstrate E-E-A-T Excellence
+
+AI Overviews prioritize authoritative, trustworthy sources. Demonstrable expertise is crucial for citation selection.
+
+Action items:
+- Add detailed author bios with credentials
+- Implement Person and Organization schema
+- Cite authoritative external sources
+- Include case studies with real data
+- Show first-hand experience
+- Display trust signals (privacy, security, contact)
+
+<Callout type="info">
+**Why it works:** Gemini can extract and evaluate author credentials and expertise signals, making them direct ranking factors for AI Overviews.
+</Callout>
+
+### 4. Create Comprehensive, In-Depth Content
+
+AI Overviews synthesize multiple perspectives. Comprehensive content that addresses topics thoroughly is more likely to be cited.
+
+Action items:
+- Cover topics comprehensively (2000+ words)
+- Address related subtopics and questions
+- Include multiple perspectives
+- Provide examples and case studies
+- Add visual aids and diagrams
+- Link to related content on your site
+
+<Callout type="info">
+**Why it works:** Comprehensive content provides the depth Gemini needs to answer complex queries fully, increasing citation likelihood.
+</Callout>
+
+### 5. Optimize Content Structure
+
+Well-structured content is easier for AI to understand, extract, and cite. Clear organization improves citation potential.
+
+Action items:
 - Use clear heading hierarchy (H1, H2, H3)
-- Start with direct answers to common questions
-- Include FAQ sections
-- Use bullet points and lists for easy parsing
-- Maintain updated, accurate information
+- Break content into scannable sections
+- Use bullet points and numbered lists
+- Add comparison tables
+- Include summary sections
+- Implement proper HTML semantic markup
 
-### 2. Technical Optimization
+<Callout type="info">
+**Why it works:** Clear structure helps Gemini understand content relationships and extract relevant information accurately.
+</Callout>
 
-Ensure your site is technically sound and easy for AI to access:
+### 6. Implement Rich Schema Markup
 
-- Fast page load speeds
-- Mobile-responsive design
-- Secure HTTPS connection
-- Clean, crawlable URL structure
-- XML sitemap submission
-- Proper robots.txt configuration
+Schema markup helps Google understand your content's context, purpose, and credibility, influencing AI citation decisions.
 
-### 3. Authority Signals
+Action items:
+- [Article](https://schema.org/Article)/[BlogPosting](https://schema.org/BlogPosting) schema for content
+- [FAQPage](https://schema.org/FAQPage) schema for Q&A content
+- [HowTo](https://schema.org/HowTo) schema for guides
+- [Person](https://schema.org/Person) schema for authors
+- [Organization](https://schema.org/Organization) schema for company info
+- [Review](https://schema.org/Review) schema for ratings/testimonials
 
-Build trust and authority signals:
+<Callout type="info">
+**Why it works:** Schema provides structured data that AI can easily parse and understand, improving content interpretation accuracy.
+</Callout>
 
-- Display author credentials
-- Show publication and update dates
-- Link to authoritative sources
-- Include customer reviews and testimonials
-- Maintain comprehensive about/contact pages
+## Integration with Traditional Google Search SEO
 
-### 4. Schema Markup
+Unlike standalone AI platforms, Google AI Overviews are deeply integrated with traditional search. Your existing SEO efforts directly benefit AI visibility.
 
-Implement structured data to help AI understand your content:
+### Synergistic Benefits
 
-- Article schema for content pages
-- Product schema for e-commerce
-- FAQ schema for question-answer content
-- Organization schema for brand identity
-- Review schema for testimonials
+**Synergistic Optimization**
 
-## Testing Your Visibility
+Improvements to traditional SEO automatically enhance AI Overview citation potential. You're not choosing between two strategies—you're reinforcing one comprehensive approach.
 
-Regularly test how your brand appears in AI responses:
+**Ranking Signals Transfer**
 
-- Query the platform with brand-related questions
-- Test product and service queries
-- Monitor competitor mentions
-- Track citation frequency
-- Analyze response accuracy
+Backlinks, domain authority, user engagement metrics, and other traditional ranking signals all contribute to AI Overview citation selection. Your SEO equity translates to AI visibility.
 
-## Best Practices
+**Dual Visibility Opportunity**
 
-- Maintain current, accurate information
-- Create comprehensive, unique content
-- Build authoritative backlinks
-- Encourage and showcase customer reviews
-- Monitor platform updates and adapt strategies
+Even when AI Overviews appear, traditional organic results still display below. Strong SEO gives you the chance to appear in both the AI Overview and organic listings.
 
-## Resources
+**Future-Proofed Strategy**
 
-- [Platform Website](https://blog.google/products/search/)
-- [Content Strategy Guide](/guides/content-strategy)
-- [Schema Markup Guide](/guides/schema-markup)
-- [E-E-A-T Optimization](/guides/eeat-optimization)
+As Google evolves its AI integration, your strong SEO foundation ensures you benefit from new AI features as they roll out. Quality content and technical excellence remain constant requirements.
+
+### SEO Elements That Directly Impact AI Overviews
+
+**Technical SEO**
+- Mobile-first indexing compliance
+- Core Web Vitals optimization
+- HTTPS security
+- [Structured data](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) implementation
+- XML sitemap and indexing
+- Page speed optimization
+
+**Authority Signals**
+- High-quality backlinks
+- Domain authority
+- Brand mentions
+- Content freshness
+- User engagement metrics
+- Social signals
+
+## Featured Snippets for AI Overviews
+
+Featured snippet optimization is one of the most direct paths to AI Overview citations. Master snippet optimization to increase your citation probability.
+
+### The Featured Snippet → AI Overview Pipeline
+
+Research shows strong correlation between featured snippet presence and AI Overview citations. Pages that win featured snippets are significantly more likely to be cited in AI Overviews for related queries.
+
+### Snippet Formats
+
+**Paragraph Snippets**
+
+Example query: "What is AI GEO?"
+
+Optimal answer format:
+
+"AI GEO (Generative Engine Optimization) is the practice of optimizing content and digital presence to maximize visibility and accurate representation in AI-powered platforms like ChatGPT, Google Gemini, and Microsoft Copilot. It combines traditional SEO principles with AI-specific strategies."
+
+Best practices:
+- 40-60 words for optimal length
+- Place immediately after question heading
+- Use complete sentences
+- Include key terms naturally
+- Follow with detailed expansion
+
+**List Snippets**
+
+Example query: "How to optimize for AI Overviews"
+
+Optimal answer format:
+1. Build strong traditional SEO foundation
+2. Target featured snippet optimization
+3. Demonstrate E-E-A-T excellence
+4. Create comprehensive content
+5. Implement rich schema markup
+
+Best practices:
+- Use numbered lists for sequential steps
+- Use bullet points for collections
+- Keep items concise (1-2 lines each)
+- Aim for 5-8 items
+- Expand on each item in following paragraphs
+
+**Table Snippets**
+
+Best practices:
+- Use semantic HTML tables
+- Include clear column headers
+- Keep data concise and scannable
+- Limit to 3-5 columns
+- Add Table schema markup
+
+## Content Optimization Strategies
+
+Specific content strategies to maximize your AI Overview citation potential.
+
+### Answer-First Content Structure
+
+The "Answer-First" approach places the complete, concise answer immediately after the heading, then expands with context, examples, and details.
+
+Template structure:
+```
+## What is [Topic]?
+[40-60 word concise answer]
+
+[Detailed explanation paragraph 1]
+
+[Detailed explanation paragraph 2]
+
+- [Supporting point 1]
+- [Supporting point 2]
+```
+
+### Query-Intent Alignment
+
+Match your content precisely to the specific intent behind target queries. Use Google Search Console to identify actual user queries.
+
+Intent matching checklist:
+- Identify primary query intent (informational, comparison, how-to)
+- Create headings that mirror actual queries
+- Address all aspects of the query
+- Provide depth appropriate to query complexity
+- Include related subtopics users care about
+
+### Comprehensive Topic Coverage
+
+AI Overviews favor sources that thoroughly address topics. Create pillar content that becomes the definitive resource.
+
+Comprehensive content elements:
+- Main topic explanation (what, why, how)
+- Related subtopics and variations
+- Common questions and concerns
+- Examples and case studies
+- Step-by-step guides or processes
+- Comparisons and alternatives
+- Expert insights and analysis
+- Visual aids and diagrams
+
+### Evidence-Based Content
+
+Support claims with data, research, and credible sources. AI Overviews prioritize well-researched, fact-based content.
+
+Evidence integration:
+- Cite authoritative external sources
+- Include relevant statistics and data
+- Link to research studies
+- Show methodology for original research
+- Update data regularly
+- Provide context for statistics
+
+## Tracking Visibility in AI Overviews
+
+Monitor your AI Overview presence to understand performance and identify optimization opportunities.
+
+### Manual Query Testing
+
+**Frequency:** Weekly for priority queries, monthly for all target queries
+
+Process:
+1. Create list of target queries (20-50)
+2. Test in Google Search (signed out, incognito)
+3. Document AI Overview presence
+4. Note your citation position (if present)
+5. Screenshot AI Overview for records
+6. Track competitor citations
+
+What to track:
+- Does AI Overview appear?
+- Are you cited? In what position?
+- What text is cited from your content?
+- Who else is cited?
+- What follow-up questions appear?
+
+### Google Search Console Analysis
+
+**Frequency:** Weekly review of key metrics
+
+Key metrics to monitor:
+- **CTR Changes:** Declining CTR for high-ranking pages may indicate AI Overview presence
+- **Impression Share:** Growing impressions with flat/declining clicks suggest AI Overview impact
+- **Position vs. CTR:** Position 1-3 pages with low CTR likely face AI Overview competition
+- **Query Patterns:** Identify new query opportunities
+
+Analysis process:
+1. Export top 100 queries by impressions
+2. Calculate CTR vs. expected for position
+3. Flag queries with CTR below benchmark
+4. Manually test flagged queries
+5. Prioritize optimization for AI Overview queries
+
+### Traffic Pattern Analysis
+
+**Frequency:** Monthly deep dive
+
+Analytics to review:
+- **Organic Traffic Trends:** Overall changes in Google organic traffic
+- **Landing Page Performance:** Traffic changes by page
+- **User Behavior:** Time on site, bounce rate, pages per session
+- **Conversion Patterns:** Conversion rates from organic traffic
+
+What to look for:
+- Traffic increases for cited pages
+- Higher engagement from AI-driven traffic
+- Changes in traffic quality metrics
+- New traffic sources or patterns
+
+### Competitive Monitoring
+
+**Frequency:** Monthly competitor analysis
+
+Competitive intelligence:
+- Which competitors appear in AI Overviews?
+- What types of content get them cited?
+- What queries do they dominate?
+- What can you learn from their approach?
+
+Action items:
+- Document competitor citations
+- Analyze their content structure
+- Identify gaps in their coverage
+- Find opportunities they're missing
+- Create superior content
+
+## Business Impact of AI Overview Citations
+
+Understanding the business value of AI Overview visibility helps justify optimization investment and set realistic expectations.
+
+### Key Metrics
+
+**Visibility Amplification: 10-15x**
+
+Being cited in an AI Overview provides 10-15x more visibility than ranking #7 in traditional organic results. AI Overviews claim significant screen real estate, especially on mobile.
+
+**Traffic Quality: Higher**
+
+AI-driven traffic typically shows higher engagement rates (time on site, pages per session) compared to traditional organic traffic. Users arriving from AI citations are more informed and engaged.
+
+**Conversion Impact: Improved**
+
+Citations in AI Overviews correlate with improved conversion rates. Being recognized as an authoritative source builds trust and credibility that drives conversions.
+
+**Brand Authority: Significant**
+
+Brands cited in AI Overviews often see increased brand search volume and social mentions. AI citations position you as a thought leader and trusted expert in your field.
+
+### Important Considerations
+
+**Traffic Volume May Decrease**
+
+AI Overviews answer questions directly, potentially reducing click-through rates even when you're cited. However, the traffic you do receive is higher quality and more likely to convert.
+
+**Focus on Quality Over Quantity**
+
+Success metrics shift from raw traffic numbers to engagement quality, conversion rates, and brand authority. Adapt your KPIs to reflect this new reality.
+
+**Multi-Query Presence Matters**
+
+Being cited for one query is good; being consistently cited across multiple related queries establishes thought leadership and compounds benefits over time.
+
+**Long-Term Investment**
+
+AI Overview optimization is an ongoing process, not a one-time effort. Consistent content quality, regular updates, and sustained E-E-A-T building yield compounding returns.
+
+## AI Overviews Optimization Checklist
+
+Complete checklist for maximizing your AI Overview citation potential.
+
+### SEO Foundation
+- [ ] Page 1 rankings for target queries
+- [ ] Core Web Vitals passing thresholds
+- [ ] Mobile-first optimization complete
+- [ ] HTTPS enabled site-wide
+- [ ] Fast page load times (under 2 seconds)
+- [ ] High-quality backlink profile
+- [ ] No technical SEO issues
+
+### Featured Snippet Optimization
+- [ ] 40-60 word concise answers provided
+- [ ] Question-based headings used
+- [ ] Content structured with lists/tables
+- [ ] FAQ schema implemented
+- [ ] Direct answers placed early
+- [ ] Detailed explanations follow answers
+
+### E-E-A-T Signals
+- [ ] Author bios with credentials
+- [ ] Person schema for authors
+- [ ] Organization schema implemented
+- [ ] External citations to authorities
+- [ ] Original research/data included
+- [ ] Case studies with real results
+- [ ] Trust signals displayed (privacy, contact)
+
+### Content Quality
+- [ ] Comprehensive topic coverage (2000+ words)
+- [ ] All query aspects addressed
+- [ ] Multiple perspectives included
+- [ ] Examples and case studies provided
+- [ ] Visual aids and diagrams added
+- [ ] Related subtopics covered
+- [ ] Content regularly updated
+
+### Structure & Markup
+- [ ] Clear heading hierarchy (H1-H3)
+- [ ] Scannable content sections
+- [ ] Bullet points and numbered lists
+- [ ] Comparison tables included
+- [ ] Article/BlogPosting schema
+- [ ] FAQPage schema for Q&A
+- [ ] HowTo schema for guides
+
+### Monitoring & Tracking
+- [ ] Target query list created
+- [ ] Weekly manual testing scheduled
+- [ ] Search Console reviewed weekly
+- [ ] Traffic patterns analyzed monthly
+- [ ] Citation appearances documented
+- [ ] Competitor monitoring active
+- [ ] Optimization impact tracked
+
+## Additional Resources
+
+### Related Guides
+- [Google Gemini Optimization Guide](/platforms/gemini)
+- [Website Technical Optimization](/guides/website-optimization)
+- [Content Strategy for AI](/guides/content-strategy)
+- [E-E-A-T & Authority Building](/guides/eeat-optimization)
+
+### Tools
+- [Google Rich Results Test](https://search.google.com/test/rich-results) - Test structured data
+- [Google Search Console](https://search.google.com/search-console) - Monitor search performance
+- [PageSpeed Insights](https://pagespeed.web.dev/) - Test Core Web Vitals
+- [Schema Markup Validator](https://validator.schema.org/) - Validate schema.org markup
+- [Web.dev Measure](https://web.dev/measure/) - Comprehensive site testing
+
+### External Resources
+- [Google Search Central](https://developers.google.com/search/docs) - Official SEO documentation
+- [Google Search Blog](https://blog.google/products/search/) - Latest updates
+- [AI Overviews Announcement](https://blog.google/products/search/generative-ai-google-search-may-2024/) - Official launch details
+- [AI Overviews Help](https://support.google.com/websearch/answer/14103150) - User guidance
+- [Creating Helpful Content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content) - E-E-A-T guidelines
+- [Web.dev](https://web.dev/) - Web development best practices
+- [Schema.org](https://schema.org/) - Structured data documentation
 
 ---
 
